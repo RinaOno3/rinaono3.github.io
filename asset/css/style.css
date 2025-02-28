@@ -637,6 +637,14 @@ button {
 
 /* 下層ページ */
 
+/* ヘッダーサブ */
+.header-sub {
+    background: #D70C18;
+}
+
+.header-sub .header-container{
+    background: #D70C18;
+}
 
 
 /* ページタイトル部分 */
@@ -665,5 +673,9 @@ button {
 @media (max-width: 1024px)  {
     .page-sub {
         padding-top: 55px; /* ヘッダーの高さ分余白を確保 */
+    }
+
+    .page-title {
+        background-image: url(/asset/img/page_ttl_sp.jpg)!important;
     }
 }
