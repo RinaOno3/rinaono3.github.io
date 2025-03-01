@@ -54,3 +54,30 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+// 画像拡大モーダル
+document.addEventListener("DOMContentLoaded", function () {
+    const expandButtons = document.querySelectorAll(".expand-button");
+    const closeButtons = document.querySelectorAll(".close-modal");
+
+    expandButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const modalId = this.getAttribute("data-modal");
+            document.getElementById(modalId).style.display = "flex";
+        });
+    });
+
+    closeButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            this.closest(".image-modal").style.display = "none";
+        });
+    });
+
+    document.querySelectorAll(".image-modal").forEach(modal => {
+        modal.addEventListener("click", function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    });
+});
