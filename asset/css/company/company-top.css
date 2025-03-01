@@ -1,17 +1,5 @@
 @charset "UTF-8";
 
-/* ページタイトル部分 */
-.page-title {
-    background-image: url(/asset/img/page_ttl.jpg);
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    padding: 60px 20px;
-    color: #333;
-    font-size: 2rem;
-    font-weight: bold;
-}
-
 /* コンテンツエリア */
 .content-wrapper {
     padding: 40px 20px;
