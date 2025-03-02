@@ -81,3 +81,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+// MAPリンクをクリックしたら新しいタブで開く
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".map-link").forEach(link => {
+        link.setAttribute("target", "_blank");
+    });
+});
+
