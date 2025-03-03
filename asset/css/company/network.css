@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .container h2 {
-    font-size: 3.2rem;
+    font-size: 2.4rem;
     font-weight: bold;
 }
 
@@ -45,7 +45,7 @@
         font-weight: bold;
         padding: 15px;
         border-bottom: 1px solid #707070;
-        font-size: 1.8rem;
+        font-size: 1.2rem;
         vertical-align: text-top;
         
     }
@@ -53,7 +53,7 @@
     .details-table td {
         width: 100%;
         border-bottom: 1px solid #707070;
-        font-size: 1.8rem;
+        font-size: 1.2rem;
     }
 
     .details-table tbody tr:first-of-type {
@@ -110,8 +110,8 @@
     }
 
     .network_tx_area {
-        padding: 0 60px;
-        font-size: 1.5rem;
+        padding: 0 20px;
+        font-size: 1.2rem;
     }
 
     .network_tx_area p {
@@ -139,7 +139,7 @@
         display: block;
         width: 100%;
         text-align: left;
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         padding: 10px;
         background-color: #f8f8f8;
     }
@@ -148,7 +148,7 @@
         display: block;
         width: 100%;
         text-align: left;
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         padding: 1.5rem;
         border-top: 1px solid #4b4b4b;
         border-bottom: 1px solid #4b4b4b;
@@ -173,7 +173,7 @@
     }
 
     .container h2 {
-        font-size: 2.4rem;
+        font-size: 2.0rem;
     }
 }
 
@@ -196,8 +196,13 @@
 }
 
 .note {
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     margin-top: 2rem;
+}
+
+.sec_1,.sec_2 {
+    width: 80%;
+    margin: 0 auto;
 }
 
 .sec_2 .details-table {
