@@ -147,6 +147,9 @@
     margin: 0;
     flex-grow: 1;
     line-height: 1.6;
+    align-items: center;
+    gap: 5px;
+    display: flex
 }
 
 .news-list p img {
@@ -399,6 +402,7 @@
 
 /* 採用情報セクション */
 .recruit-info {
+    position: relative;
     background: url('/asset/img/bg_sec_6.jpg') no-repeat center center/cover;
     height: 920px;
     /* 適宜調整 */
@@ -408,6 +412,17 @@
     margin: 80px;
 }
 
+/* 黒の半透明オーバーレイ */
+.recruit-info::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* 透明度50%の黒 */
+    z-index: 1;
+}
 /* テキスト部分 */
 .recruit-content {
     padding: 20px;
@@ -473,6 +488,8 @@
 
 /* タイトルと説明 */
 .sec_content {
+    position: relative;
+    z-index: 2;
     display: flex;
     max-width: 1700px;
     margin: auto;
@@ -787,6 +804,10 @@
     color: #d01e28;
 }
 
+.footer-links li:not(:last-child)::after {
+    content: "｜"; /* 区切り線 */
+    margin-left: 10px; /* 縦線と文字の間隔 */
+}
 /* 著作権表示 */
 .copyright {
     color: #333;

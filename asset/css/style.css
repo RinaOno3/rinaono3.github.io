@@ -260,13 +260,13 @@ button {
     background: none;
     border: none;
     color: white;
-    font-weight: bold;
     text-decoration: none;
     font-size: 14px;
     transition: opacity 0.3s ease;
     gap: 10px;
     position: relative;
     padding-left: 15px;
+    line-height: 1.2;
 }
 
 /* 擬似要素で左側に白の縦線を追加 */
@@ -400,6 +400,10 @@ button {
 
 .tx_b {
     color: #231815;
+}
+
+.tx_w {
+    color: #ffffff;
 }
 
 @media (max-width: 1024px) {
@@ -655,13 +659,13 @@ button {
     text-align: center;
     padding: 60px 20px 20px;
     color: #333;
-    font-size: 2rem;
+    font-size: 3.0rem;
     font-weight: bold;
     max-height: 340px;
 }
 
 .page-title p {
-    font-size: 1rem;
+    font-size: 1.8rem;
     font-weight: normal;
 }
 
@@ -778,6 +782,7 @@ button {
     }
 
     .page-title p {
+        font-size: 1.0rem;
         margin: 0;
     }
      /* ページボタン */
