@@ -193,12 +193,15 @@ p {
 }
 
 .privacy-policy-ul {
+    list-style-position: inside; /* ※の位置を調整 */
     padding-left: 0;
     margin-bottom: 40px;
 }
 
 .privacy-policy-ul li {
     padding-left: 0;
+    padding-left: 20px; /* インデントを調整 */
+    text-indent: -18px; /* 先頭の「※」を整列 */
 }
 
 .tel_area {
@@ -214,6 +217,7 @@ p {
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
 
 @media screen and (max-width: 768px)  {
 
@@ -290,6 +294,15 @@ p {
     .philosophy-box {
         padding: 0 20px 40px 20px;
         box-shadow: 5px 5px 0px 0px #d80c18;
+    }
+
+    .privacy-policy-ul  {
+        font-size: 1.4rem;
+    }
+
+    .privacy-policy-ul li {
+        padding-left: 14px; /* インデントを調整 */
+        text-indent: -14px; /* 先頭の「※」を整列 */
     }
 
     
