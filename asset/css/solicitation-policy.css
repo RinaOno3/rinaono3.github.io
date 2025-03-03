@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+.solicitation-policy {
+background-color: #F8F8F8;
+}
+
+ol {
+    list-style: decimal ;
+    list-style-type: decimal ;
+    font-size: 2.0rem;
+   
+}
+
+li {
+    margin-bottom: 40px;
+    padding-left: 20px;
+    line-height: 1.5;
+}
+
+.solictitation_wrp {
+    max-width: 950px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 70px 50px 70px 60px;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.solicitation-policy .content-wrapper {
+    padding: 100px 20px;
+}
+
+@media screen and (max-width: 768px)  {
+
+    ol {
+     
+        font-size: 1.6rem;
+       
+    }
+
+    .solicitation-policy .content-wrapper {
+        padding: 50px 35px 100px;
+    }
+
+    .solictitation_wrp {
+        padding: 30px 20px 50px 40px;
+    }
+
+    li {
+        padding-left: 15px
+        ;
+    }
+
+}
