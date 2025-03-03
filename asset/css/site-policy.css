@@ -5,7 +5,7 @@
     font-weight: bold;
     color: #D80C18;
     border: 2px solid #D80C18;
-    padding: 10px 20px;
+    padding: 10px 30px;
     text-align: left;
     margin-bottom: 25px;
 }
@@ -13,9 +13,9 @@
 /* === 共通ボックスデザイン === */
 .content-box {
     margin-top: 20px;
-    width: 90%;
+    width: 93%;
     margin-inline: auto;
-    padding: 0 30px;
+    font-size: 1.6rem;
 }
 
 .content-box h3 {
@@ -24,33 +24,13 @@
     margin-bottom: 10px;
 }
 
-/* === リストスタイル === */
-.content-box ul {
-    list-style-type: none;
-    padding-left: 15px;
-}
-
-.content-box ul li {
-    position: relative;
-    padding-left: 15px;
-    font-size: 1.4rem;
-    margin-bottom: 5px;
-}
-
-/* 各リストの「—」マーク */
-.content-box ul li::before {
-    content: "— ";
-    position: absolute;
-    left: 0;
-    color: #333;
-    font-weight: bold;
-}
 
 /* === リンクのスタイル === */
 .content-box ul li a {
-    text-decoration: none;
+    text-decoration: underline;
     color: #333;
     transition: opacity 0.3s ease-in-out;
+
 }
 
 .content-box ul li a:hover {
@@ -58,5 +38,22 @@
 }
 
 .sitemap_list {
-    margin-bottom: 25px;
+    margin-bottom: 60px;
+}
+
+@media screen and (max-width: 768px) {
+    .section-title {
+        padding: 5px 15px;
+    }
+    .section-title {
+        margin-bottom: 8px;
+    }
+
+    .content-box ul li a {
+        font-size: 1.5rem;
+    }
+
+    .sitemap_list {
+        margin-bottom: 28px;
+    }
 }
