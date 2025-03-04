@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/* コンテンツ全体 */
+.business-policy {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ボックス枠（白背景・枠線） */
+.policy-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+/* 赤い見出し部分 */
+.policy-highlight {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #D80C18;
+    margin: 30px 0;
+    line-height: 1.6;
+}
+
+/* 通常テキスト */
+.policy-text {
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+/* PCでは通常表示 */
+.img_governance {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* SP（スマホ）時は横スクロール可能にする */
+@media screen and (max-width: 768px) {
+    .img_governance {
+        overflow-x: auto;
+        white-space: nowrap;
+        display: flex;
+        justify-content: start;
+    }
+
+    .img_governance img {
+        min-width: 120%;
+        max-width: none;
+        height: auto;
+    }
+}
+
