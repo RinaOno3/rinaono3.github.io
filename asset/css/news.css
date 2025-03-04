@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+/* === 全体のスタイル === */
+.news-release {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* 見出しのスタイル */
+.news-release h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+}
+
+/* ニュースリストのコンテナ */
+.news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 各ニュースのアイテム */
+.news-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 日付 */
+.news-date {
+    font-size: 1.4rem;
+    color: #555;
+    white-space: nowrap;
+}
+
+/* タグ */
+.news-tag {
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #D80C18;
+    padding: 5px 10px;
+    border-radius: 12px;
+    margin-right: 10px;
+}
+
+/* "New" の赤色表示 */
+.news-new {
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+/* ニュースのタイトル */
+.news-title {
+    font-size: 1.6rem;
+    flex-grow: 1;
+}
+
+/* PC向け：レイアウト調整 */
+@media (min-width: 769px) {
+    .news-item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .news-title {
+        margin-left: 15px;
+    }
+}
+
+/* SP向け：縦並びレイアウト */
+@media (max-width: 768px) {
+    .news-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .news-date,
+    .news-tag {
+        font-size: 1.2rem;
+    }
+
+    .news-title {
+        font-size: 1.5rem;
+        margin-top: 8px;
+    }
+}
