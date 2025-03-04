@@ -89,3 +89,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".accordion-btn");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+            this.classList.toggle("active"); // 「＋」→「−」を切り替え
+
+            const content = this.nextElementSibling;
+
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null; // 閉じる
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px"; // 開く
+                setTimeout(() => {
+                    content.style.maxHeight = "none"; // 高さ制限を解除（文章が増えてもOK）
+                }, 300); // アニメーション時間後に解除
+            }
+        });
+    });
+});
+
