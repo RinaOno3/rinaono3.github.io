@@ -1,0 +1,271 @@
+/* コンテンツエリア */
+.content-wrapper {
+    padding: 0;
+    font-size: 1.8rem;
+    max-width: inherit;
+    margin: 0 auto;
+}
+
+.services-section {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.services-image img {
+    width: 100%;
+    display: block;
+}
+
+.services-overlay {
+    position: absolute;
+    top: 0;
+    width: 45%;
+    height: 100%;
+    padding: 40px 60px;
+    background: #ffffff;
+    opacity: 0.9;
+    z-index: 2;
+}
+
+.services-overlay.item-1 {
+    left: 40%;
+}
+
+.services-overlay.item-2 {
+    left: 20%;
+}
+
+.services-overlay.item-3 {
+    left: 40%;
+}
+
+.services-overlay h3 {
+    font-size: 2.2rem;
+    color: #D80C18;
+}
+
+.total-service-section {
+    padding: 20px 20%;
+}
+
+.total-service-section h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 2.2rem;
+    color: #D80C18;
+}
+
+.card-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
+}
+
+.card {
+    width: 50%;
+    padding: 15px 25px;
+    line-height: 1.1;
+}
+
+.image-position {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-image {
+    width: 100%;
+}
+
+.card-overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    height: 50px;
+    background: #D80C18;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-overlay p {
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.accident-service-section {
+    padding: 0 20%;
+}
+
+.accident-label {
+    width: 100%;
+    background: #D80C18;
+}
+
+.accident-label p {
+    height: 50px;
+    color: #ffffff;
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accident-sentence {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accident-sentence p {
+    margin: 20px 50px;
+}
+
+.accident-service-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.accident-service-1,
+.accident-service-2 {
+    width: 50%;
+    padding: 30px;
+}
+
+.accident-service-1 h3,
+.accident-service-2 h3 {
+    padding: 10px;
+    font-size: 2.2rem;
+    color: #D80C18;
+    border-bottom: 2px solid #D80C18;
+    text-align: center;
+}
+
+.accident-service-2 p {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.accident-service-2 ul {
+    list-style: outside;
+    margin: 0 0 30px 30px;
+}
+
+.personal-section {
+    padding: 50px 15%;
+    background: #f8f8f8;
+}
+
+.personal-box {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.personal-image {
+    width: 50%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.personal-sentence {
+    width: 50%;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.personal-section h3 {
+    font-size: 2.2rem;
+}
+
+.red-line {
+    padding-bottom: 5px;
+    border-bottom: 2px solid #D80C18;
+}
+
+.more-button {
+    width: 160px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .content-wrapper {
+        font-size: 1.6rem;
+    }
+
+    .services-overlay {
+        position: relative;
+        width: 100%;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-overlay.item-1,
+    .services-overlay.item-2,
+    .services-overlay.item-3 {
+        left: 0;
+    }
+
+    .services-overlay h3 {
+        font-size: 1.8rem;
+    }
+
+    .total-service-section {
+        padding: 10px;
+    }    
+
+    .card {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .card-overlay p {
+        font-size: 1.6rem;
+    }
+    
+    .accident-service-section {
+        padding: 20px;
+    }
+    
+    .accident-sentence p {
+        margin: 0;
+        width: 100%;
+    }
+    
+    .accident-service-1,
+    .accident-service-2 {
+        width: 100%;
+        padding: 30px 0 0;
+    }
+    
+    .personal-section {
+        padding: 30px;
+    }
+    
+    .personal-box {
+        box-shadow: none;
+    }
+    
+    .personal-image {
+        width: 100%;
+    }
+    
+    .personal-sentence {
+        width: 100%;
+        padding-left: 0;
+        align-items: center;
+    }
+}
