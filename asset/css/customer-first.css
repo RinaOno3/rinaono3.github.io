@@ -4,6 +4,10 @@
     display: none;
 }
 
+.tx_left {
+    text-align: left;
+}
+
 @media (max-width: 768px) {
     .page-sp-only {
         display: block;
@@ -20,6 +24,12 @@
     max-width: 1000px;
     margin: 0 auto;
     margin-bottom: 25px;
+}
+
+.sec_5_wrp h4 {
+    max-width: 488px;
+    width: 100%;
+    margin-inline: auto;
 }
 
 
@@ -87,11 +97,12 @@
 
 
 .discription {
-    padding: 30px;
+    padding: 30px 0;
     font-size: 2rem;
     text-align: center;
     font-weight: bold;
     margin-bottom: 20px;
+    text-align: left;
 }
 
 .dt_date {
@@ -212,7 +223,7 @@
 }
 
 .last_section_box {
-    max-width: 660px;
+    max-width: 700px;
     width: 100%;
     margin-inline: auto;
     margin-top: 50px;
@@ -359,6 +370,38 @@
     background: #b30000;
 }
 
+.accordion-btn {
+    display: flex;
+    align-items: flex-start; /* 上揃え */
+    text-align: left;
+    background-color: #D80C18;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+}
+
+/* 「運営方針X.」のスタイル */
+.accordion-btn .heading {
+    flex-shrink: 0; /* 文字のサイズに合わせる */
+    min-width: 4em; /* 適宜調整 */
+    font-weight: bold;
+}
+
+/* 2行目以降のインデント */
+.accordion-btn .content {
+    flex-grow: 1; /* 残りのスペースを埋める */
+    padding-left: 10px; /* インデント調整 */
+    display: flex;
+    flex-wrap: wrap; /* 長すぎる場合折り返す */
+    align-items: center;
+}
+
+
 @media screen and (max-width: 768px)  {
 
     .customer-first .content-wrapper {
@@ -460,4 +503,11 @@
     .customer-first .page-btn--prev::before {
         left: 9rem;
     }
+
+    .accordion-btn {
+        flex-direction: column;
+        font-size: 1.6rem;
+        padding-right: 40px;
+    }
 } 
+
