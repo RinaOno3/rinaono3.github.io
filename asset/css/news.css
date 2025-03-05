@@ -5,11 +5,12 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
+    border: 1px solid #707070;
 }
 
 /* 見出しのスタイル */
-.news .news-title {
-    font-size: 6rem;
+.page-news .news-title {
+    font-size: 4.5rem;
     margin-bottom: 0;
     border-bottom: 2px solid #000;
     padding-bottom: 5px;
@@ -35,17 +36,18 @@
 
 /* 日付 */
 .news-date {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #555;
     white-space: nowrap;
 }
 
 /* タグ */
 .news-tag {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    line-height: 1.4;
     color: #fff;
     background-color: #D80C18;
-    padding: 5px 15px;
+    padding: 2px 15px;
     border-radius: 50px;
     margin-right: 10px;
     max-width: 150px;
@@ -54,7 +56,7 @@
 /* "New" の赤色表示 */
 .news-new {
     color: red;
-    font-size: 2.2rem;
+    font-size: 1.4rem;
     font-weight: bold;
     margin-left: 5px;
     min-width: 50px;  /* 固定幅を指定 */
@@ -64,7 +66,7 @@
 }
 
 .news-content {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     word-break: break-word; /* 単語内でも折り返し */
     overflow-wrap: break-word; /* 長い単語やURLも折り返す */
     display: block; /* インライン要素のままだと折り返されないため */
@@ -83,7 +85,7 @@
 .pagination {
     text-align: center;
     margin-top: 30px;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .pagination ul {
@@ -117,7 +119,7 @@
 /* タブリスト（縦並び） */
 .tab-list {
     position: relative;
-    width: 180px;
+    width: 140px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -130,7 +132,7 @@
     opacity: 0;
     transform: translateY(10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
-    padding: 12px 15px;
+    padding: 10px;
     background: #f8f8f8;
     border-bottom: 1px solid #ddd;
     font-size: 16px;
@@ -142,8 +144,8 @@
     display: block;
     opacity: 1;
     transform: translateY(0);
-    background: #D80C18;
-    color: #fff;
+    background: #f8f8f8;
+    color: #333;
 }
 
 .tab-list.open{
@@ -175,14 +177,7 @@
 
 /* アクティブ時の矢印変更 */
 .tab-item.active::after {
-    background-image: url(/asset/img/icon_news_arrow_w.svg);
-}
-
-/* ホバー時のアニメーション */
-.tab-item:hover {
-    background: #D80C18;
-    color: #fff;
-    transition: background 0.3s ease, color 0.3s ease;
+    background-image: url(/asset/img/icon_news_arrow_r.png);
 }
 
 .tab-content {
@@ -239,7 +234,7 @@
         height: 15px;
     }
 
-    .news .news-title {
+    .page-news .news-title {
         font-size: 2.4rem;
     }
 
