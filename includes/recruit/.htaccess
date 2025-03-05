@@ -1,0 +1,5 @@
+
+AuthUserFile "/home/clane000/check-demo.site/htpasswd/mst-is.check-demo.site/.htpasswd"
+AuthName "Member Site"
+AuthType BASIC
+require valid-user

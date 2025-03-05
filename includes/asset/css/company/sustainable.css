@@ -1,0 +1,428 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+section {
+  margin: 0;
+  padding: 0;
+}
+
+/* ページタイトル */
+.page-title h1 {
+  margin-bottom: 40px;
+}
+
+.page-title p {
+  margin: 20px 0;
+  font-size: 1.8rem;
+  line-height: 1.6em;
+}
+
+/* Sustainability */
+.container1 {
+  width: 1280px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.vertical-line {
+  width: 1px;
+  background-color: #D80C18;
+}
+
+.content {
+  flex-grow: 1;
+  /* コンテンツ部分をフレキシブルに拡張 */
+  padding: 20px;
+}
+
+.subtitle_1 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #D80C18;
+}
+
+.title_1 {
+  font-family: "Outfit", sans-serif;
+  font-size: 70px;
+  font-weight: normal;
+  color: #D80C18;
+  margin-bottom: 20px;
+}
+
+.heading,
+.heading2 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: #D80C18;
+  margin-left: 55px;
+  margin-bottom: 10px;
+}
+
+.text,
+.text2 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  color: #333333;
+  line-height: 1.6;
+  margin-left: 55px;
+  margin-bottom: 50px;
+}
+
+
+/* 事業を通じた社会貢献 */
+.outer-container2 {
+  width: 100%;
+  padding-bottom: 50px;
+  background: #F8F8F8;
+}
+
+.container2 {
+  width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title_2 {
+  color: #D80C18;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  padding-top: 30px;
+}
+
+.columns {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.column {
+  width: 50%;
+  /* margin: 30px; */
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.column:nth-child(even) {
+  padding-left: 50px;
+  /* 右側のカラムに左マージン */
+}
+
+.column:nth-child(odd) {
+  padding-right: 50px;
+  /* 左側のカラムに右マージン */
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #D80C18;
+  opacity: 66%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-text {
+  color: #fff;
+  font-family: "Yu Gothic", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.comment {
+  color: #333333;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  text-align: justify;
+  line-height: 1.6em;
+  padding-top: 10px;
+}
+
+
+/* EGSへの取り組み */
+.outer-container3 {
+  width: 100%;
+  padding-bottom: 70px;
+}
+
+.title-bar {
+  width: 100%;
+  height: 40px;
+  background-color: #D80C18;
+  display: flex;
+  align-items: center;
+}
+
+.red_bottomline {
+  width: 100%;
+  border-bottom: 1px solid #D80C18;
+}
+
+.red_topline {
+  width: 100%;
+  border-top: 1px solid #D80C18;
+}
+
+.title-bar-text {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: #fff;
+  margin-top: -40px;
+}
+
+.container3 {
+  width: 1280px;
+  margin: 0px auto;
+  padding: 0px;
+}
+
+.section-title3 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: normal;
+  font-size: 70px;
+  color: #9E9C9C;
+}
+
+.section-title3 span {
+  color: #D80C18;
+}
+
+.content3 {
+  display: flex;
+  align-items: center;
+}
+
+.image-area {
+  width: 50%;
+}
+
+.image-area img {
+  width: 100%;
+  height: auto;
+}
+
+.text-area {
+  width: 50%;
+  height: auto;
+  padding-left: 50px;
+}
+
+.subtitle_3 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.comment {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: medium;
+  font-size: 18px;
+  color: #333;
+}
+
+
+/*  トップに戻るボタン   */
+.top_button {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  background: none;
+  padding-bottom: 150px;
+  cursor: pointer;
+}
+
+
+@media (max-width: 767px) {
+
+  /* ページタイトル */
+  .page-title h1 {
+    margin-bottom: 0px;
+  }
+
+  .page-title p {
+    margin: 20px 0;
+    font-size: 1.1rem;
+    line-height: 1.6em;
+  }
+
+  /* container1 */
+  .container1 {
+    width: 100%;
+    flex-direction: column;
+    /* 縦並び */
+  }
+
+  .vertical-line {
+    display: none;
+    /* 縦線を非表示 */
+  }
+
+  .content {
+    padding: 30px;
+  }
+
+  .subtitle_1,
+  .title_1,
+  .heading,
+  .heading2,
+  .text,
+  .text2 {
+    margin-left: 0;
+    /* 左マージン削除 */
+    text-align: justify;
+  }
+
+  .title_1 {
+    font-size: 50px;
+  }
+
+  /* 事業を通じた社会貢献 */
+  .outer-container2 {
+    padding-bottom: 0px;
+  }
+
+  .container2 {
+    width: 100%;
+    padding: 30px;
+    /* パディング調整 */
+  }
+
+  .title_2 {
+    font-size: 32px;
+    padding: 10px 0px;
+  }
+
+  .columns {
+    flex-direction: column;
+    /* 縦並びにする */
+  }
+
+  .column {
+    width: 100%;
+    /* 幅を100%にする */
+    padding: 10px;
+    /* パディングを調整 */
+  }
+
+  .column:nth-child(even),
+  .column:nth-child(odd) {
+    padding-left: 10px;
+    /* パディングを調整 */
+    padding-right: 10px;
+    /* パディングを調整 */
+  }
+
+  .image-wrapper img {
+    height: auto;
+    /* 画像の高さを自動調整 */
+  }
+
+  .image-text {
+    font-size: 20px;
+    /* テキストのフォントサイズを調整 */
+  }
+
+  .comment {
+    font-size: 15px;
+    padding-bottom: 10px;
+    /* コメントのフォントサイズを調整 */
+  }
+
+
+  /* EGSへの取り組み */
+  .outer-container3 {
+    padding-bottom: 10px;
+  }
+
+  .container3 {
+    /* position: relative; */
+    width: 100%;
+    padding: 0px 30px;
+    /* パディングを調整 */
+  }
+
+  .section-title3 {
+    font-size: 50px;
+    /* タイトルのフォントサイズを調整 */
+  }
+
+  .title-bar-text {
+    text-align: center;
+  }
+
+  .red_bottomline {
+    width: 100%;
+    border-bottom: 1px solid #D80C18;
+  }
+
+  .red_topline {
+    width: 100%;
+    margin-top: 50px;
+    border-top: 1px solid #D80C18;
+  }
+
+  .content3 {
+    position: relative;
+  }
+
+  .image-area {
+    width: 100%;
+    float: left;
+  }
+
+  .image-area img {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .subtitle_3 {
+    position: absolute;
+    top: -105px;
+    left: -150px;
+    font-size: 24px;
+    margin-bottom: 0px;
+    /* サブタイトルのフォントサイズを調整 */
+  }
+
+  .text-area {
+    width: 65%;
+    float: right;
+    position: absolute;
+    margin-left: 150px;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .top_button {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    /* パディングを調整 */
+  }
+}

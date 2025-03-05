@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/* === 大項目（赤枠） === */
+.section-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #D80C18;
+    border: 2px solid #D80C18;
+    padding: 10px 20px;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+/* === 共通ボックスデザイン === */
+.content-box {
+    margin-top: 20px;
+    width: 90%;
+    margin-inline: auto;
+    padding: 0 30px;
+}
+
+.content-box h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* === リストスタイル === */
+.content-box ul {
+    list-style-type: none;
+    padding-left: 15px;
+}
+
+.content-box ul li {
+    position: relative;
+    padding-left: 15px;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+/* 各リストの「—」マーク */
+.content-box ul li::before {
+    content: "— ";
+    position: absolute;
+    left: 0;
+    color: #333;
+    font-weight: bold;
+}
+
+/* === リンクのスタイル === */
+.content-box ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.content-box ul li a:hover {
+    opacity: 0.7;
+}
+
+.sitemap_list {
+    margin-bottom: 25px;
+}

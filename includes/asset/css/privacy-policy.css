@@ -1,0 +1,374 @@
+@charset "UTF-8";
+
+.privacy-policy　a {
+    cursor: pointer; /* カーソルをポインターに */
+    text-decoration: none; /* デフォルトの下線を削除（必要に応じて） */
+    color: inherit; /* 親の色を継承 */
+    transition: opacity 0.3s ease-in-out; /* なめらかに変化 */
+}
+
+.privacy-policy　a:hover {
+    opacity: 0.7; /* ホバー時に透明度を70%に */
+}
+
+.page-pc-only {
+    display: flex;
+}
+.page-sp-only {
+    display: none;
+}
+
+.top_tx {
+    font-size: 1.6rem;
+    margin-bottom: 80px;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+section h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+section p {
+    font-size: 1.6rem;
+    font-weight: normal;
+    padding-left: 30px;
+} 
+
+section ul {
+    font-size: 1.6rem;
+}
+
+section ul li {
+    padding-left: 30px;
+}
+
+.ul_top_p {
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+
+.sub_sec{
+    text-indent: -3em; /* 数字部分を左に出す */
+    padding-left: 6em; /* 本文の開始位置を調整 */
+    display: block;
+}
+
+.name_tx {
+    width: 100%;
+    font-size: 1.8rem;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+/* === コンテンツエリア === */
+.contact-info {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    position: relative;
+}
+
+/* === 赤いタイトルバー（box-shadowで実装） === */
+.contact-header {
+    background-color: #D80C18;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
+    box-shadow: 10px 0 0 #D80C18, -10px 0 0 #D80C18;
+}
+
+/* === コンテンツボックス（ボーダー＆影で再現） === */
+.contact-container {
+    border: 1px solid #D80C18;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 10px 0 0 #D80C18, -10px 0 0 #D80C18;
+}
+
+/* === 見出しデザイン === */
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* === 各情報（住所・電話番号など） === */
+p {
+    font-size: 1.4rem;
+    margin: 5px 0;
+}
+
+/* === 注意書き（小さく灰色） === */
+.note {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* === 連絡先リスト（東京・名古屋・大阪） === */
+.contact-numbers {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.contact-numbers p {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.philosophy-box {
+    position: relative;
+    background: white;
+    border: 2px solid #D80C18;
+    padding: 0px 50px 60px 40px;;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 15px 15px 0px 0px #d80c18;
+    border-radius: 0px;
+    text-align: left;
+    margin-top: 100px;
+}
+
+/* === ヘッダーセクション（全体） === */
+.section-header {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    width: 40%;
+}
+   
+
+.section-header_wrp {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-left: 15px solid #D80C18;
+    width: 400px;
+
+}
+
+
+/* === タイトル（テキスト） === */
+.section-header h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0;
+   
+}
+
+.section-header_link {
+    cursor: pointer;
+    text-decoration: none; /* 下線を消す（必要に応じて） */
+    color: inherit; /* 親の色を継承 */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.section-header_link:hover {
+    opacity: 0.7;
+    box-shadow: 0 2px 0 #004080; /* 影を内側にする */
+    transform: translateY(3px); /* 押し込んだようにする */
+}
+
+.privacy-policy-ttl{
+    font-size: 2.8rem;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    background-color: #D80C18;
+    padding: 18px;
+    margin-top: -20px;
+    margin-bottom: 40px;
+}
+
+
+.philosophy-box p {
+    padding-left: 0;
+}
+
+.philosophy-box h3 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.privacy-policy-ul {
+    list-style-position: inside; /* ※の位置を調整 */
+    padding-left: 0;
+    margin-bottom: 40px;
+}
+
+.privacy-policy-ul li {
+    padding-left: 0;
+    padding-left: 20px; /* インデントを調整 */
+    text-indent: -18px; /* 先頭の「※」を整列 */
+}
+
+.philosophy-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.philosophy-label {
+    font-weight: bold;
+    text-align: left;
+    min-width: 100px; /* ラベルの幅を統一 */
+}
+
+.philosophy-details {
+    text-align: left;
+}
+
+.philosophy-details p, .philosophy-label p {
+    margin: 5px 0;
+}
+
+/* スマホ用（画面幅が768px以下） */
+@media screen and (max-width: 768px) {
+    .philosophy-info {
+        display: block; /* 縦並び */
+    }
+
+    .philosophy-label p {
+        display: block; /* ラベルとデータを同じ行に */
+        font-weight: bold;
+    }
+
+    .philosophy-details p {
+        display: inline; /* ラベルとデータを同じ行に */
+        margin-left: 10px; /* ラベルとの間隔を調整 */
+    }
+
+    /* スマホ用の改行調整 */
+    .philosophy-details p a {
+        display: inline-block; /* リンクは別行 */
+    }
+}
+
+.tel_area {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.flex_wrp {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+@media screen and (max-width: 768px)  {
+
+    .page-sp-only {
+        display: inline;
+    }
+
+    .page-pc-only {
+        display: none;
+    }
+
+    .section-header {
+        padding: 0;
+        display: block;
+        width: 100%;
+    }
+
+    .section-header_wrp {
+        border-left: 15px solid #D80C18;
+        padding: 10px 20px;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .tel_area {
+       flex-direction: column;
+    }
+
+    .flex_wrp {
+        margin-top: 50px;
+       flex-direction: column;
+    }
+
+    .privacy-policy .content-wrapper {
+        padding: 0 35px ;
+    }
+
+    .top_tx {
+      padding: 0;
+      margin-bottom: 55px;
+      font-size: 1.6rem;
+    }
+    
+    section p {
+        padding-left: 0;
+        font-size: 1.6rem;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+    }
+
+    section  {
+
+        margin-bottom: 25px;
+
+    }
+
+    .name_tx {
+        font-size: 1.6rem;
+    }
+
+    .privacy-policy-ttl {
+        font-size: 1.6rem;
+        padding: 5px 25px;
+        display: block;
+    }
+
+    .philosophy-box h3 {
+        font-size: 1.6rem;
+    }
+
+    .philosophy-box p {
+        font-size: 1.6rem;
+    }
+
+    .philosophy-box {
+        padding: 0 20px 40px 20px;
+        box-shadow: 5px 5px 0px 0px #d80c18;
+    }
+
+    .privacy-policy-ul  {
+        font-size: 1.4rem;
+    }
+
+    .privacy-policy-ul li {
+        padding-left: 14px; /* インデントを調整 */
+        text-indent: -14px; /* 先頭の「※」を整列 */
+        margin-bottom: 20px; /* インデントを調整 */
+    }
+
+    
+    
+
+  
+    
+}
+
+
+

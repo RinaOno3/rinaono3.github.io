@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>座談会</title>
+    <!-- Google Fonts 読み込み -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- スタイルシートの読み込み -->
+    <link rel="stylesheet" href="/recruit/assets/css/normalize.css">
+    <link rel="stylesheet" href="/recruit/assets/css/style.css">
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header class="header fixed-header">
+        <div class="header-container">
+            <!-- ロゴ -->
+             <div class="logo_area_wrp">
+                <a class="logo" href="/recruit/">
+                    <picture>
+                        <source srcset="/recruit/assets/images/common/logo_sp.png" media="(max-width: 768px)">
+                        <img src="/recruit/assets/images/common/logo.png" alt="MSTロゴ">
+                    </picture>
+                    <span class="pc-nav">RECRUIT SITE</span>
+                </a>
+                <div class="entry_btn_area">
+                <a class="st-header_btn st-header_btn--first" href="https://job.axol.jp/hy/s/mst-is_25/entry/agreement" target="_blank">25年卒<br>ENTRY</a>
+                <a class="st-header_btn st-header_btn--last" href="https://job.axol.jp/qd/s/mst-is_26/entry/" target="_blank">26年卒<br>ENTRY</a>
+            </div>
+        </div>
+            <!-- PCナビゲーション -->
+            <nav class="nav pc-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">会社・仕事を知る</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">人を知る</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">働く環境</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">採用情報</a>
+                    </li>
+                </ul>
+                <!-- サブメニュー全体 -->
+                <div class="sub-menu-container">
+                    <ul class="sub-menu">
+                        <li><a href="/recruit/about/message.html">メッセージ</a></li>
+                        <li><a href="/recruit/about/agent.html">保険代理店とは</a></li>
+                        <li><a href="/recruit/about/mst.html">MST保険サービスとは</a></li>
+                        <li><a href="/recruit/about/jobs.html">職種紹介</a></li>
+                    </ul>
+                    <ul class="sub-menu">
+                        <li><a href="/recruit/member/members.html">先輩紹介</a></li>
+                        <li><a href="/recruit/member/dialogue.html">座談会</a></li>
+                    </ul>
+                    <ul class="sub-menu">
+                        <li><a href="/recruit/works/training.html">人材育成</a></li>
+                        <li><a href="/recruit/works/benefits.html">福利厚生・働く環境</a></li>
+                    </ul>
+                    <ul class="sub-menu">
+                        <li><a href="/recruit/recruit/new.html">募集要項（新卒）</a></li>
+                        <li><a href="/recruit/recruit/career.html">募集要項（キャリア）</a></li>
+                        <li><a href="/recruit/recruit/faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- ハンバーガーメニュー（スマホ版） -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- スマホ版ナビゲーション -->
+            <nav class="mobile-menu" id="mobileMenu">
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <span class="menu-heading">会社・仕事を知る</span>
+                        <ul>
+                            <li><a href="/recruit/about/message.html">メッセージ</a></li>
+                            <li><a href="/recruit/about/agent.html">保険代理店とは</a></li>
+                            <li><a href="/recruit/about/mst.html">MST保険サービスとは</a></li>
+                            <li><a href="/recruit/about/jobs.html">職種紹介</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <span class="menu-heading">人を知る</span>
+                        <ul>
+                            <li><a href="/recruit/member/members.html">先輩紹介</a></li>
+                            <li><a href="/recruit/member/dialogue.html">座談会</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <span class="menu-heading">働く環境</span>
+                        <ul>
+                            <li><a href="/recruit/works/training.html">人材育成</a></li>
+                            <li><a href="/recruit/works/benefits.html">福利厚生・働く環境</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <span class="menu-heading">採用情報</span>
+                        <ul>
+                            <li><a href="/recruit/recruit/new.html">募集要項（新卒）</a></li>
+                            <li><a href="/recruit/recruit/career.html">募集要項（キャリア）</a></li>
+                            <li><a href="/recruit/recruit/faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- 会話columnバージョン -->
+    <main class="page_roundtable">
+        <div class="page_roundtable__title">
+            <div class="page_roundtable__title-content">
+                <h1 class="page_roundtable__title-heading">
+                    <span class="ttl_w">社員座談会</span><br>
+                    <span>仕事を通じて成長し</span><br>
+                    <span>それぞれの未来を描く</span>
+                </h1>
+            </div>
+            <picture>
+                <source srcset="/recruit/assets/images/dialogue/fv_sp.jpg" media="(max-width: 768px)">
+                <img src="/recruit/assets/images/dialogue/fv.jpg" alt="座談会のメイン画像">
+            </picture>
+
+        </div>
+        <div class="page_wrp">
+            <section class="roundtable-section">
+                <!-- メンバーのリスト -->
+                <div class="roundtable-members">
+                    <ul class="roundtable-members-list">
+                        <li>
+                            <img src="/recruit/assets/images/dialogue/icon_take01.png" alt="社員1">
+                            <div class="roundtable-name-wrapper">
+                                <p class="roundtable-name">藤原 秀樹<br>東京営業第七部<br>2019年入社</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="/recruit/assets/images/dialogue/icon_take02.png" alt="社員2">
+                            <div class="roundtable-name-wrapper">
+                                <p class="roundtable-name">本間 美那<br>MSTリスクコンサルティング<br>2018年入社</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="/recruit/assets/images/dialogue/icon_take03.png" alt="社員3">
+                            <div class="roundtable-name-wrapper">
+                                <p class="roundtable-name">安達 陸<br>東京営業第二部<br>2021年入社</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="/recruit/assets/images/dialogue/icon_take04.png" alt="社員4">
+                            <div class="roundtable-name-wrapper">
+                                <p class="roundtable-name">洲崎 友里<br>ライフユニゾンセンター<br>2012年入社</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- メインの座談会紹介 -->
+                <div class="roundtable-main">
+                    <div class="roundtable-content">
+                        <div class="roundtable-title-wrapper">
+                            <h2 class="roundtable-title">営業がしたいという人は<br>保険代理店が向いているかも</h2>
+                        </div>
+                        <p class="tx_blue">まず簡単に自己紹介をお願いします。</p>
+                        <div class="roundtable_talk_box">
+                            <div class="icon_take_img">
+                                <img src="/recruit/assets/images/dialogue/icon_take04.png" alt="洲崎さん" width="100" height="100">
+                                <p>洲崎</p>
+                            </div>
+                            <p class="roundtable-description">
+                                人事部に所属していて、ダイバーシティ&インクルージョンの推進や社内研修、採用などに携わっています。大阪、名古屋、東京で法人営業をして今年からまったく違う部署に来たので、これまでとは違う楽しさとしんどさを感じています。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="roundtable-image">
+                        <picture>
+                            <source srcset="/recruit/assets/images/dialogue/item1_1_sp.jpg" media="(max-width: 768px)">
+                            <img src="/recruit/assets/images/dialogue/item1_1.jpg" alt="座談会風景１">
+                        </picture>
+                    </div>
+                </div>
+                <div class="roundtable_talk_box">
+                    <div class="icon_take_img">
+                        <img src="/recruit/assets/images/dialogue/icon_take02.png" alt="洲崎さん" width="100" height="100">
+                        <p>本間</p>
+                    </div>
+                    <p class="roundtable-description">
+                        私は大阪で法人営業を4年経験した後、2022年から東京に戻ってきてMSTリスクコンサルティングに出向しています。担当領域は再生可能エネルギーや公立大学、スタートアップ企業などです。
+                    </p>
+                </div>
+                <div class="roundtable_talk_box">
+                    <div class="icon_take_img">
+                        <img src="/recruit/assets/images/dialogue/icon_take01.png" alt="藤原" width="100" height="100">
+                        <p>藤原</p>
+                    </div>
+                    <p class="roundtable-description">
+                        私は6年間ずっと東京の法人営業です。今は東京営業第七部に所属していて、担当エリアは築地、小松川周辺と新潟です。
+                    </p>
+                </div>
+                <div class="roundtable_talk_box">
+                    <div class="icon_take_img">
+                        <img src="/recruit/assets/images/dialogue/icon_take03.png" alt="安達" width="100" height="100">
+                        <p>安達</p>
+                    </div>
+                    <p class="roundtable-description">
+                        私も入社以来東京の法人営業で、八王子、四ツ谷、荻窪といった中央線沿線を担当しています。
+                    </p>
+                </div>
+
+
+
+            </section>
+            <section class="page_roundtable__discussion">
+                <div class="">
+                    <picture class="">
+                        <source srcset="/recruit/assets/images/dialogue/item2_1_sp.jpg" media="(max-width: 768px)">
+                        <img src="/recruit/assets/images/dialogue/item2_1.jpg" alt="座談会風景" class="full_img">
+                    </picture>
+
+                    <p class="tx_blue mt100">皆さん学生時代からエムエスティ保険サービスという会社はご存じでしたか？</p>
+                    <div class="discussion-wrapper">
+                        <!-- 左カラム -->
+                        <div class="discussion-column">
+                            <div class="discussion-item">
+                                <div class="discussion-icon">
+                                    <img src="/recruit/assets/images/dialogue/icon_take03.png" alt="安達">
+                                    <p>安達</p>
+                                </div>
+                                <p class="discussion-text">
+                                    私は父と叔父が保険代理店で働いていたので、この業態は知っていたのですが、エムエスティ保険サービスの社名までは知りませんでした。就職活動をしているときに、父から国内トップクラスの代理店だと教えてもらいました。
+                                </p>
+                            </div>
+                            <div class="discussion-item">
+                                <div class="discussion-icon">
+                                    <img src="/recruit/assets/images/dialogue/icon_take04.png" alt="洲崎">
+                                    <p>洲崎</p>
+                                </div>
+                                <p class="discussion-text">
+                                    私は銀行か保険会社に入りたいと思っていて、銀行も保険もできるところはないかと探していました。そこで知ったのがエムエスティで、事業内容を見て面白そうだと思ったのが入社のきっかけです。
+                                </p>
+                            </div>
+                            <div class="discussion-item">
+                                <div class="discussion-icon">
+                                    <img src="/recruit/assets/images/dialogue/icon_take01.png" alt="藤原">
+                                    <p>藤原</p>
+                                </div>
+                                <p class="discussion-text">
+                                    私はそもそも代理店ってなんぞや？という感じで、保険会社と代理店の区別もついていませんでした。ただ、調べていくうちに実際にお客さまと話をする機会は代理店のほうが多いんだなと知って、エムエスティにたどり着きました。
+                                </p>
+                            </div>
+                            <div class="discussion-item">
+                                <div class="discussion-icon">
+                                    <img src="/recruit/assets/images/dialogue/icon_take04.png" alt="洲﨑">
+                                    <p>洲﨑</p>
+                                </div>
+                                <p class="discussion-text">
+                                    営業がしたい人って、保険会社と代理店の違いを説明したら、だったら代理店だね、というふうになることがよくある気がしますね。
+                                </p>
+                            </div>
+                            <div class="discussion-item">
+                                <div class="discussion-icon">
+                                    <img src="/recruit/assets/images/dialogue/icon_take01.png" alt="藤原">
+                                    <p>藤原</p>
+                                </div>
+                                <p class="discussion-text">
+                                    それで調べると出てきますよね。エムエスティが。
+                                </p>
+                            </div>                          
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="page_roundtable__discussion">
+                <div class="roundtable-main row_content">
+                    <div class="roundtable-content">
+                        <div class="roundtable-title-wrapper">
+                            <h2 class="roundtable-title">面接で重視されるのは志望動機よりも打ち込んだこと</h2>
+                        </div>
+                        <div class="roundtable_talk_box">
+                            <div class="icon_take_img">
+                                <img src="/recruit/assets/images/dialogue/icon_take02.png" alt="本間" width="100" height="100">
+                                <p>本間</p>
+                            </div>
+                            <p class="roundtable-description">
+                                私は大学までソフトテニスをやっていて、体育会系向けの合同説明会に参加したら、
+                                そこにエムエスティが来ていました。それまで保険にはまったく興味がなかったんですけど、
+                                人事の方が気さくに話しかけてくださって、じゃあ受けてみようかなと。それで面接に行ったら
+                                志望動機などは一切聞かれなくて、人だけを見ている感じがしたんです。一次も二次も。
+                                そんな会社は何十社と受けた中でここしかなかったので、それが決め手になりました。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="roundtable-image">
+                        <picture>
+                            <source srcset="/recruit/assets/images/dialogue/item3_1_sp.jpg" media="(max-width: 768px)">
+                            <img src="/recruit/assets/images/dialogue/item3_1.jpg" alt="座談会風景2">
+                        </picture>
+                    </div>
+                </div>
+                <p class="tx_blue">今では本間さんが面接官をすることもありますよね。志望動機は聞きます？ </p>
+                <div class="discussion-wrapper">
+                    <!-- 左カラム -->
+                    <div class="discussion-column">
+                        <div class="discussion-item">
+                            <div class="discussion-icon">
+                                <img src="/recruit/assets/images/dialogue/icon_take02.png" alt="本間">
+                                <p>本間</p>
+                            </div>
+                            <p class="discussion-text">
+                                私が担当するのは一次面接なので、あまり聞かないですね。
+                            </p>
+                        </div>
+                        <div class="discussion-item">
+                            <div class="discussion-icon">
+                                <img src="/recruit/assets/images/dialogue/icon_take01.png" alt="藤原">
+                                <p>藤原</p>
+                            </div>
+                            <p class="discussion-text">
+                                一次だと私も聞かれなかったし、私がやるときも聞きません。会話の中で学生さんの側から言ってくることはありますけどね。
+                            </p>
+                        </div>
+                        <div class="discussion-item">
+                            <div class="discussion-icon">
+                                <img src="/recruit/assets/images/dialogue/icon_take04.png" alt="洲崎">
+                                <p>洲崎</p>
+                            </div>
+                            <p class="discussion-text">
+                                それまで知らなかった会社だと、志望動機を聞いても軽いもの、ありきたりなものしか出てこない気がするんですよ。そんなところを掘り下げて聞いたところで人となりはわからないし、それが弱いからって落とすのもナンセンスかなと。だから、人柄とかポテンシャルを重視して、経験やエピソードを中心に聞いていましたね。
+                            </p>
+                        </div>
+                        <div class="discussion-item">
+                            <div class="discussion-icon">
+                                <img src="/recruit/assets/images/dialogue/icon_take03.png" alt="安達">
+                                <p>安達</p>
+                            </div>
+                            <p class="discussion-text">
+                                私は面接する側になったのは今年からなんですけど、いちばん大事にしていることは、自分が一緒に働きたいかですね。
+                            </p>
+                        </div>
+                        <div class="discussion-item">
+                            <div class="discussion-icon">
+                                <img src="/recruit/assets/images/dialogue/icon_take01.png" alt="藤原">
+                                <p>藤原</p>
+                            </div>
+                            <p class="discussion-text">
+                                まったく同じですね。それが一次面接官の役割だと思っています。あと、先程洲﨑さんがエピソードの話をされていましたけど、これは何でもいいと私は思っているんです。部活でも趣味でも、その人が今まで何をやってきて苦労したり努力したりしてきたのか、それが会社に入ってからの業務につながるものだと思っているので、そこも重視しています。
+                            </p>
+                        </div>
+                        <div class="discussion-item">
+                            <p class="tx_blue">すると、推し活でもいいわけですね。東京のライブが外れたから札幌に行ったとか。</p>
+                        </div>
+                        <div class="discussion-item">
+                            <div class="discussion-icon">
+                                <img src="/recruit/assets/images/dialogue/icon_take01.png" alt="藤原">
+                                <p>藤原</p>
+                            </div>
+                            <p class="discussion-text">
+                                むしろ面白いと思いますね。この面白いというのが、一緒に働きたいというところにつながるわけです。
+                            </p>
+                        </div>               
+                    </div>
+                </div>
+            </section>
+            <section class="page_roundtable__discussion">
+                <picture class="">
+                    <source srcset="/recruit/assets/images/dialogue/item4_1_sp.jpg" media="(max-width: 768px)">
+                    <img src="/recruit/assets/images/dialogue/item4_1.jpg" alt="座談会風景" class="full_img">
+                </picture>
+
+                <div class="roundtable-title-wrapper mt100">
+                    <h2 class="roundtable-title ">自分の失敗と反省から<br>
+                        プロ意識や責任感が芽生える</h2>
+                </div>
+                <p class="tx_blue ">皆さんの入社後の変化や、学生時代との違いについて教えてください。</p>
+                <div class="discussion-wrapper">
+                    <!-- 左カラム -->
+                    <div class="discussion-column">
+                        <div class="discussion-item">
+                            <div class="discussion-icon">
+                                <img src="/recruit/assets/images/dialogue/icon_take01.png" alt="藤原">
+                                <p>藤原</p>
+                            </div>
+                            <p class="discussion-text">
+                                時間の管理で苦労しました。ずっと野球部だったので規則正しい生活はしていたんですけど、それは決められた通りにやっていただけでした。ところが、営業の仕事ではお客さまの都合を考えたうえで、自分で能動的に決めていかないといけないので。
+                            </p>
+                        </div>
+                        <div class="discussion-item">
+                            <div class="discussion-icon">
+                                <img src="/recruit/assets/images/dialogue/icon_take03.png" alt="安達">
+                                <p>安達</p>
+                            </div>
+                            <p class="discussion-text">
+                                そうですね。学生時代は何か与えられてやるような感じだったんですけど、社会人になるとスケジュール管理も含めて計画的に行動しないといけないので、ずいぶん意識は変わりました。それで、先輩社員の真似をして、毎朝To
+                                Do Listを作成して、急な依頼などが来ても大丈夫なように優先順位をつけるようになりました。
+                            </p>
+                        </div>
+                        <div class="discussion-item">
+                            <div class="discussion-icon">
+                                <img src="/recruit/assets/images/dialogue/icon_take02.png" alt="本間">
+                                <p>本間</p>
+                            </div>
+                            <p class="discussion-text">
+                                私は東京出身なので、配属が大阪だったことにまず驚きました。一人暮らしも初めてで、いろいろと苦労がありましたが、しばらくすると意外と住みやすいなと思うようになりました。今になってみれば、良い経験ですね。
+                            </p>
+                        </div>
+                        <div class="discussion-item">
+                            <div class="discussion-icon">
+                                <img src="/recruit/assets/images/dialogue/icon_take04.png" alt="洲崎">
+                                <p>洲崎</p>
+                            </div>
+                            <p class="discussion-text">
+                                私の場合、初めは若手だから、経験不足だからという甘えがありました。しかし、それでお客さまにご迷惑をおかけしたことで、プロ意識が出てきたように思います。人からああしなさい、こうしなさいと言われても意識というのはそう簡単に変わるものではなくて、失敗したり注意されたりしたことで、そこでハッとなって、ようやく変わっていくものなのかなという気がしています。
+                            </p>
+                        </div>
+                        <div class="discussion-item">
+                            <div class="discussion-icon">
+                                <img src="/recruit/assets/images/dialogue/icon_take02.png" alt="本間">
+                                <p>本間</p>
+                            </div>
+                            <p class="discussion-text">
+                                保険に加入していなかったり、適切に支払われなかったりといったことで、事業継続が滞ることや、最悪の場合倒産してしまう可能性もあります。そういったところの責任感を持つのは学生にはないことで、とても大切なことだと思います。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="page_roundtable__discussion">
+                <p class="tx_blue ">ほかに、社会人になって気づいたことはありますか？</p>
+                <div class="discussion-wrapper">
+                    <!-- 左カラム -->
+                    <div class="discussion-column">
+                        <div class="discussion-item">
+                            <div class="discussion-icon">
+                                <img src="/recruit/assets/images/dialogue/icon_take01.png" alt="藤原">
+                                <p>藤原</p>
+                            </div>
+                            <p class="discussion-text">
+                                上司に言われたことなんですけど、自分が相当な負けず嫌いだということです。
+                            </p>
+                        </div>
+                       
+                        <div class="discussion-item">
+                            <div class="discussion-icon">
+                                <img src="/recruit/assets/images/dialogue/icon_take04.png" alt="洲崎">
+                                <p>洲崎</p>
+                            </div>
+                            <p class="discussion-text">
+                                それは私も思いました。周りにはすごい人がいっぱいいたんですけど、すごいからあきらめるのではなくて、自分もそうなりたい、少しずつでも近づいていきたいと思って仕事に取り組んでいました。
+                            </p>
+                        </div>  
+                        <div class="discussion-item">
+                            <div class="discussion-icon">
+                                <img src="/recruit/assets/images/dialogue/icon_take01.png" alt="藤原">
+                                <p>藤原</p>
+                            </div>
+                            <p class="discussion-text">
+                                負けず嫌いでなければならないわけではないですけど、粘り強さは必要ですね。学生さんの中には銀行からの紹介だから契約が取りやすいと思っている方がいるかもしれませんけど。
+                            </p>
+                        </div>                     
+                        <div class="discussion-item">
+                            <div class="discussion-icon">
+                                <img src="/recruit/assets/images/dialogue/icon_take04.png" alt="洲崎">
+                                <p>洲崎</p>
+                            </div>
+                            <p class="discussion-text">
+                                そんなことはないですよね。
+                            </p>
+                        </div>
+                        <div class="discussion-item">
+                            <div class="discussion-icon">
+                                <img src="/recruit/assets/images/dialogue/icon_take01.png" alt="藤原">
+                                <p>藤原</p>
+                            </div>
+                            <p class="discussion-text">
+                                テレアポや飛び込み営業をしなくていいので効率の良い営業ができるのはエムエスティの良さだと思いますけど、良さに甘えちゃいけない。
+                            </p>
+                        </div>
+                        <div class="discussion-item">
+                            <div class="discussion-icon">
+                                <img src="/recruit/assets/images/dialogue/icon_take04.png" alt="洲崎">
+                                <p>洲崎</p>
+                            </div>
+                            <p class="discussion-text">
+                                そもそも、私たちの仕事というのは、例えばお客さまが火災保険に入りたいとおっしゃっていても、賠償とかサイバーの保険のほうが重要じゃないかというようなところを商談で察知して、必要な提案ができるかというのが大切なんです。御用聞き営業ではなくコンサル営業ですから。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="page_roundtable__discussion">
+                <div class="roundtable-title-wrapper">
+                    <h2 class="roundtable-title">いろいろなキャリアプランが描けるのが<br>この会社の良いところ</h2>
+                </div>
+                <p class="tx_blue ">今後の皆さんのキャリアプランや取り組みたいことについて教えてください。</p>
+                <div class="discussion-wrapper">
+                    <!-- 左カラム -->
+                    <div class="discussion-column">
+                        <div class="discussion-item">
+                            <div class="discussion-icon">
+                                <img src="/recruit/assets/images/dialogue/icon_take03.png" alt="安達">
+                                <p>安達</p>
+                            </div>
+                            <p class="discussion-text">
+                                海外勤務にチャレンジしてみたいと思っています。英語力は学生時代からの強みですし、海外拠点があるというのもエムエスティを志望した理由のひとつなので、いずれは行きたいという話は上司にもしています。
+                            </p>
+                        </div>
+                        <div class="discussion-item">
+                            <div class="discussion-icon">
+                                <img src="/recruit/assets/images/dialogue/icon_take02.png" alt="本間">
+                                <p>本間</p>
+                            </div>
+                            <p class="discussion-text">
+                                MSTリスクコンサルティングは海外展開されているお客さまが多いので、英語で仕様書を作成することもありますし、お客さまが英語の契約書を送ってきて、これに合う保険を用意してほしいというオーダーを受けることもあります。ですから海外事業というのはいつも意識していますし、もっと英語を勉強しなければと思いますね。
+                            </p>
+                        </div>
+                        <div class="discussion-item">
+                            <div class="discussion-icon">
+                                <img src="/recruit/assets/images/dialogue/icon_take04.png" alt="洲崎">
+                                <p>洲崎</p>
+                            </div>
+                            <p class="discussion-text">
+                                経営者の方とじかに話をして信頼いただき、こちらを向いていただける瞬間がすごく楽しいので、国内の法人マーケットをメインでやりたいなと思っています。
+                            </p>
+                        </div>
+                        <div class="discussion-item">
+                            <div class="discussion-icon">
+                                <img src="/recruit/assets/images/dialogue/icon_take02.png" alt="本間">
+                                <p>本間</p>
+                            </div>
+                            <p class="discussion-text">
+                                仲良くなる楽しさというのはありますね。ご依頼をいただく件数が明らかに増えたりとか、それまで上司の方を向いていた方が私の目を見て話してくださるようになったりとか、そういうことがあって、もっと頑張ろうと思えるんですよね。
+                            </p>
+                        </div>
+                        <div class="discussion-item">
+                            <div class="discussion-icon">
+                                <img src="/recruit/assets/images/dialogue/icon_take01.png" alt="藤原">
+                                <p>藤原</p>
+                            </div>
+                            <p class="discussion-text">
+                                そうですね。私も国内志向なんですけど、将来的には大企業営業としてマーケットを開拓したいと思っています。希望がすぐ通るかどうかはわからないですけど、いろいろなキャリアプランが描けるのはこの会社のいいところだと思います。
+                            </p>
+                        </div>                       
+                       <div class="discussion-item">
+                            <p class="tx_blue ">本日は皆さんありがとうございました！</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <div class="button-wrapper bottom_bnt_area">
+                <a href="/recruit/member/members.html" class="button button--rounded">
+                    先輩紹介
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <a href="https://www.mst-is.co.jp/" class="footer-link" target="_blank" rel="noopener noreferrer">
+                エムエスティ保険サービス株式会社　コーポレートサイト
+                <img src="/recruit/assets/images/common/icon_link_r.svg" alt="responsive">
+            </a>
+        </div>
+    </footer>
+
+
+    <!-- JavaScriptの読み込み -->
+    <script src="/recruit/assets/js/main.js"></script>
+</body>
+
+</html>
