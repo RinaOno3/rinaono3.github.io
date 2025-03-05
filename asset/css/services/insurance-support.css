@@ -1,0 +1,697 @@
+@charset "UTF-8";
+
+/* insuranceセクション*/
+/* insurance-Supportセクション */
+@media screen and (max-width: 767px) {
+	.content-wrapper--insurance {
+		padding: 0.9375rem 1rem;
+	}
+}
+
+.page-title--insurance {
+	padding: 6rem 2rem 6rem;
+}
+
+.insurance-support {
+	padding-top: 2.8125rem;
+	padding-bottom: 5.5rem;
+}
+@media screen and (max-width: 767px) {
+	.insurance-support {
+		padding-top: initial;
+		padding-bottom: 3.75rem;
+	}
+}
+
+.insurance-support__inner {
+	width: min(100%, 66.6875rem);
+	margin-inline: auto;
+}
+@media screen and (max-width: 767px) {
+	.insurance-support__inner {
+		width: min(100%, 50rem);
+	}
+}
+
+.insurance-support__title {
+	text-align: center;
+	font-size: 2.25rem;
+	font-weight: 700;
+	color: #d80c18;
+}
+@media screen and (max-width: 767px) {
+	.insurance-support__title {
+		font-size: 2.5rem;
+	}
+}
+
+.insurance-support__content {
+	display: flex;
+	gap: 4.0625rem;
+	margin-top: 2.9375rem;
+}
+@media screen and (max-width: 767px) {
+	.insurance-support__content {
+		flex-direction: column-reverse;
+		gap: 1.0625rem;
+		margin-top: 1.0625rem;
+	}
+}
+
+.insurance-support__text {
+	width: 30.9375rem;
+	font-size: 1.125rem;
+	font-weight: 700;
+	line-height: 1.8888888889;
+	color: #959090;
+}
+@media screen and (max-width: 767px) {
+	.insurance-support__text {
+		width: 100%;
+		font-size: 1.5rem;
+		line-height: 1.3333333333;
+		color: #333333;
+	}
+}
+
+.insurance-support__text p:nth-child(2) {
+	margin-top: 1.875rem;
+}
+@media screen and (max-width: 767px) {
+	.insurance-support__text p:nth-child(2) {
+		margin-top: 1.25rem;
+	}
+}
+
+.insurance-support__img {
+	flex: 1;
+}
+
+.insurance-support__img img {
+	aspect-ratio: 507/338;
+	object-fit: cover;
+	height: auto;
+}
+
+.insurance-merit {
+    padding: 50px 20px;
+}
+
+.insurance-merit__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.insurance-merit__title {
+	text-align: center;
+	font-size: 2.25rem;
+	font-weight: 700;
+	color: #d80c18;
+}
+
+@media screen and (max-width: 767px) {
+	.insurance-merit__title {
+		font-size: 2.5rem;
+	}
+	insurance-support__img img{
+	    width:100%;
+	}
+}
+
+
+.insurance-merit__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin:40px 0;
+}
+
+.insurance-merit__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.insurance-merit__number {
+    font-size: 60px;
+    font-weight: bold;
+	color: #d80c18;
+    min-width: 60px;
+    text-align: center;
+}
+
+.insurance-merit__content {
+    text-align: left;
+}
+
+.insurance-merit__name {
+    font-size: 18px;
+    font-weight: bold;
+	color: #d80c18;
+    margin: 0;
+}
+
+.insurance-merit__text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+    .insurance-merit__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .insurance-merit__item {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .insurance-merit__number {
+        font-size: 50px;
+        min-width: 50px;
+    }
+}
+
+.insurance-buy_bg{
+    background:#E6E6E6;
+}
+
+.insurance-buy {
+    padding: 50px 20px;
+}
+
+.insurance-buy__title {
+	text-align: center;
+	font-size: 2.25rem;
+	font-weight: 700;
+	color: #d80c18;
+}
+
+@media screen and (max-width: 767px) {
+	.insurance-buy__title {
+		font-size: 2.5rem;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.insurance-buy__pic {
+		width: 114px;
+	}
+}
+
+.insurance-buy img {
+    padding: 0px 20px 10px;
+}
+
+.flow_wrp {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 0px;
+}
+
+.flow_step {
+    display: flex;
+    align-items: center;
+}
+.flow_box {
+    flex: 1;
+    background-color: white;
+    border: 1px solid #D80C18;
+    padding: 20px;
+    text-align: center;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* すべてのボックスの高さを統一 */
+.flow_wrp .flow_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* 親要素に合わせて高さを統一 */
+}
+
+/* すべてのボックスの高さを揃える */
+.flow_box p {
+    flex-grow: 1;
+}
+.flow_number {
+    font-size: 32px;
+    font-weight: bold;
+    color: #D80C18;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.flow_content {
+    text-align: center;
+}
+
+.flow_title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #D80C18;
+    margin-bottom: 10px;
+}
+
+.flow_text {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.flow_arrow {
+    font-size: 24px;
+    font-weight: bold;
+    color: #D80C18;
+    text-align: center;
+    margin: 0 10px;
+}
+
+/* 矢印の位置を微調整 */
+.flow_box:nth-child(5) .flow_arrow {
+    display: none; /* 最後の矢印を非表示 */
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+    .flow_wrp {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .flow_step {
+        flex: 0 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .flow_box {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .flow_arrow {
+        transform: rotate(90deg);
+    }
+}
+
+.insurance-menu {
+	padding-top: 2.8125rem;
+	padding-bottom: 5.5rem;
+}
+@media screen and (max-width: 767px) {
+	.insurance-menu {
+		padding-top: initial;
+		padding-bottom: 3.75rem;
+	}
+}
+
+.insurance-menu__inner {
+	margin-inline: auto;
+}
+@media screen and (max-width: 767px) {
+	.insurance-menu__inner {
+		width: min(100%, 50rem);
+	}
+}
+
+.insurance-menu__title {
+	text-align: center;
+	font-size: 2.25rem;
+	font-weight: 700;
+	color: #d80c18;
+}
+@media screen and (max-width: 767px) {
+	.insurance-menu__title {
+		font-size: 2.5rem;
+	}
+}
+
+.insurance-menu__content {
+	display: flex;
+	gap: 4.0625rem;
+	margin-top: 2.9375rem;
+}
+@media screen and (max-width: 767px) {
+	.insurance-menu__content {
+		flex-direction: column-reverse;
+		gap: 1.0625rem;
+		margin-top: 1.0625rem;
+	}
+}
+
+/* 偶数番目の要素のレイアウトを反転 */
+.insurance-menu__inner:nth-child(even) .insurance-menu__content {
+    flex-direction: row-reverse;
+}
+
+.insurance-menu__text {
+	width: 50%;
+	font-size: 1.125rem;
+	font-weight: 700;
+	line-height: 1.8888888889;
+	color: #959090;
+}
+@media screen and (max-width: 767px) {
+	.insurance-menu__text {
+		width: 100%;
+		font-size: 0.9375rem;
+		line-height: 1.3333333333;
+		color: #333333;
+	}
+}
+
+.insurance-menu__text h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #D80C18;
+    position: relative;
+    padding-left: 10px; /* 左側の余白 */
+    display: flex;
+    align-items: center;
+}
+
+/* 右側の赤いライン */
+.insurance-menu__text h3::before {
+    content: "";
+    display: block;
+    width: 10px; /* ラインの幅 */
+    height: 30px; /* h3 の高さと同じにする */
+    background-color: #D80C18;
+    margin-right: 10px; /* テキストとの間隔 */
+}
+.insurance-menu__text p:nth-child(2) {
+	margin-top: 1.875rem;
+}
+@media screen and (max-width: 767px) {
+	.insurance-menu__text p:nth-child(2) {
+		margin-top: 1.25rem;
+	}
+}
+
+.insurance-menu__img {
+	flex: 1;
+}
+
+.insurance-menu__img img {
+	aspect-ratio: 507/338;
+	object-fit: cover;
+	height: auto;
+}
+
+.service-menu-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.service-menu-text {
+    text-align: left;
+    margin: 0 auto;
+}
+
+.service-menu-text h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #D80C18;
+    position: relative;
+    padding-left: 10px; /* 左側の余白 */
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* 右側の赤いライン */
+.service-menu-text h3::before {
+    content: "";
+    display: block;
+    width: 10px; /* ラインの幅 */
+    height: 40px; /* h3 の高さと同じにする */
+    background-color: #D80C18;
+    margin-right: 10px; /* テキストとの間隔 */
+}
+
+.service-menu-text p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ボックス全体の配置 */
+.service-menu-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* 各ボックスのスタイル */
+.mini-box {
+    flex: 1;
+    min-width: 220px; /* 幅を調整 */
+    background-color: white;
+    text-align: center;
+}
+
+/* 赤背景の見出し */
+.RedBack {
+    background-color: #D80C18;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* テキスト部分 */
+.text {
+    padding: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+    background-color: #fff;
+    border-top: none;
+    text-align: left;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+    .service-menu-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mini-box {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+.case_bg{
+    background:#F8F8F8;
+}
+
+.case-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 20px;
+    border: 2px solid #D80C18;
+    margin:20px 0;
+    padding: 20px;
+    background: white;
+    box-shadow: 10px 10px 0px 0px #D80C18;
+}
+
+/* ケーススタディのコンテンツ */
+.case-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    padding: 30px;
+    position: relative;
+    width: 100%;
+    gap: 20px;
+}
+
+/* タイトル */
+.case-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #D80C18;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+@media (max-width: 768px) {
+    .case-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+/* 左側のテキスト */
+.case-text {
+    flex: 1 1 50%;
+}
+
+/* 右側の画像 */
+.case-image {
+    flex: 1 1 50%;
+    text-align: right;
+}
+
+.case-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top:60px;
+}
+
+/* 赤背景の見出し */
+.case-header {
+    background-color: #D80C18;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* リストのスタイル */
+.case-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.case-list li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* 課題・理由の枠 */
+.radius-grey,
+.radius-red {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.radius-grey {
+    background-color: #e0e0e0;
+    color: black;
+}
+
+.radius-red {
+    background-color: #D80C18;
+    color: white;
+}
+
+/* 効果のボックスを横並びに */
+.case-effect {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid gray;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    margin-top: 20px;
+}
+
+/* 効果の左側（赤いボックス） */
+.case-effect-header {
+    background-color: #D80C18;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 25px;
+    flex: 0 0 150px;
+    text-align: center;
+}
+
+/* 効果の右側（テキスト部分） */
+.case-effect-text {
+    font-size: 14px;
+    padding: 10px;
+    color: black;
+    font-weight: bold;
+    line-height: 1.6;
+    flex: 1;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+    .case-effect {
+        flex-direction: column;
+    }
+
+    .case-effect-header {
+        flex: none;
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .case-effect-text {
+        width: 100%;
+    }
+    .case-item {
+        flex-direction: column;
+    }
+
+    .case-text, .case-image {
+        flex: none;
+        width: 100%;
+    }
+
+    .case-container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 20px;
+        border: 2px solid #D80C18;
+        background: white;
+        margin: 0 10px 10px 0 ;
+    }
+
+    .case-study{
+        width: 100%;
+    }
+}
+
+.page-sp-only {
+    display: none;
+}
+
+/* 横線の基本スタイル */
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: #D80C18;
+    margin: 10px 0;
+    border: none;
+}
+/* スマホ対応 */
+@media (max-width: 768px) {
+    .page-sp-only {
+        display: block;
+    }
+}
+
