@@ -14,6 +14,8 @@
 
 .services-image img {
     width: 100%;
+    height: 350px;
+    object-fit: cover;
     display: block;
 }
 
@@ -66,7 +68,6 @@
 .card {
     width: 50%;
     padding: 15px 25px;
-    line-height: 1.1;
 }
 
 .image-position {
@@ -85,7 +86,7 @@
     bottom: 0;
     z-index: 2;
     width: 100%;
-    height: 50px;
+    height: 70px;
     background: #D80C18;
     color: #ffffff;
     display: flex;
@@ -95,7 +96,9 @@
 
 .card-overlay p {
     font-size: 2.2rem;
+    font-weight: bold;
     text-align: center;
+    line-height: 1.3;
 }
 
 .accident-service-section {
@@ -108,9 +111,10 @@
 }
 
 .accident-label p {
-    height: 50px;
+    height: 70px;
     color: #ffffff;
     font-size: 2.2rem;
+    font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -120,6 +124,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: bold;
 }
 
 .accident-sentence p {
@@ -195,14 +200,51 @@
 }
 
 .more-button {
-    width: 160px;
+    width: 180px;
 }
 
+@media screen and (max-width: 1024px) {
+    .page-title p {
+        font-size: 1.6rem;
+    }
+
+    .content-wrapper {
+        font-size: 1.6rem;
+    }
+
+    .services-overlay {
+        width: 60%;
+    }
+
+    .services-overlay.item-1 {
+        left: 30%;
+    }
+    
+    .services-overlay.item-2 {
+        left: 10%;
+    }
+    
+    .services-overlay.item-3 {
+        left: 30%;
+    }
+
+    .personal-section .pc_only {
+        display: block !important;
+    }
+
+    .personal-section .sp_only {
+        display: none !important;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .content-wrapper {
         font-size: 1.6rem;
     }
+
+    .services-image img {
+        height: auto;
+    }    
 
     .services-overlay {
         position: relative;
@@ -268,4 +310,13 @@
         padding-left: 0;
         align-items: center;
     }
+
+    .personal-section .pc_only {
+        display: none !important;
+    }
+
+    .personal-section .sp_only {
+        display: block !important;
+    }
+
 }

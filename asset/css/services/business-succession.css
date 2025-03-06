@@ -14,7 +14,7 @@
 }
 @media screen and (max-width: 767px) {
 	.content-wrapper--business {
-		padding: 0.9375rem 1rem 0 ;
+		padding: 0.9375rem 1rem 20px ;
 	}
 }
 
@@ -88,7 +88,6 @@
 
 .business-support__text p:nth-child(1) {
 	margin-top: 1.875rem;
-	font-weight: 700;
 }
 
 .business-support__text p:nth-child(2) {
@@ -112,6 +111,13 @@
 	aspect-ratio: 507/338;
 	object-fit: cover;
 	height: auto;
+}
+
+.case-list {
+    list-style-type: square;
+    padding-left: 30px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 /* Business-riskセクション */
@@ -288,14 +294,14 @@
 }
 
 .business-fund__number {
-	font-size: 6.25rem;
+	font-size: 6.00rem;
 	line-height: 1.2;
 	color: #d80c18;
 	font-weight: bold;
 }
 @media screen and (max-width: 767px) {
 	.business-fund__number {
-		font-size: 3.125rem;
+		font-size: 3.00rem;
 		line-height: 1.2;
 	}
 }
@@ -314,7 +320,7 @@
 }
 
 .business-fund__text {
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 	font-weight: 700;
 	line-height: 1.8888888889;
 	margin-top: 0.5rem;
@@ -471,15 +477,14 @@
 
 .business-step__name {
 	text-align: center;
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 	font-weight: 700;
 	color: #d80c18;
 }
 
 .business-step__text {
 	margin-top: 2.3125rem;
-	font-size: 1.6rem;
-	font-weight: 700;
+	font-size: 1.4rem;
 	line-height: 1.25;
 }
 @media screen and (max-width: 767px) {
@@ -528,13 +533,12 @@
 }
 
 .business-case__title {
-	font-size: 8rem;
-	font-family: "Outfit", sans-serif;
-	font-weight: 400;
-	line-height: 1.2;
-	text-transform: uppercase;
-	text-align: center;
-	color: #d80c18;
+    font-size: 4rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
+    color: #D80C18;
+    text-align: center;
+    margin-bottom: 40px;
 }
 @media screen and (max-width: 767px) {
 	.business-case__title {
@@ -544,11 +548,13 @@
 }
 
 .business-case__container {
+	max-width: 840px;
+	margin-inline: auto;
 	position: relative;
-	padding: 8.125rem 2.3125rem 2.8125rem 2.75rem;
+	padding: 50px 30px;
 	margin-top: 5.9375rem;
 	margin-bottom: 6.25rem;
-	border: 1px solid #d80c18;
+	border: 2px solid #d80c18;
 	box-shadow: 1.125rem 1.125rem 0 0.125rem #d80c18;
 }
 @media screen and (max-width: 767px) {
@@ -582,12 +588,12 @@
 
 .business-case__heading {
 	position: absolute;
-	font-size: 2.8rem;
+	font-weight: bold;
+	font-size: 1.8rem;
 	top: -1.625rem;
 	left: 2.75rem;
 	text-align: center;
     padding: 15px 35px;
-	font-weight: normal;
 	line-height: 1.4666666667;
 	background-color: #d80c18;
 	color: #ffffff;
@@ -614,7 +620,7 @@
 
 .business-case__item {
 	font-weight: bold;
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 	line-height: 1.8888888889;
 }
 @media screen and (max-width: 767px) {
@@ -630,7 +636,7 @@
 	margin-top: 2.1875rem;
 	margin-bottom: 1rem;
 	padding-inline: 2rem;
-	font-size: 1.8rem;
+	font-size: 1.4rem;
 	font-weight: 700;
 	color: #ffffff;
 	text-align: center;
@@ -668,7 +674,7 @@
 
 .business-case__list-item {
 	position: relative;
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 	line-height: 1.3888888889;
 	padding-left: 2rem;
 	text-indent: -0.8rem;
@@ -739,7 +745,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 1.6rem;
+	font-size: 1.8rem;
+	font-weight: bold;
 	line-height: 1.4444444444;
 	background-color: #d80c18;
 	color: #ffffff;
@@ -757,7 +764,7 @@
 
 .business-case__group-text {
 	font-weight: bold;
-	font-size: 2rem;
+	font-size: 1.4rem;
 	line-height: 1.5;
 	color: #d80c18;
 }

@@ -22,8 +22,8 @@
 
 .insurance-support__title {
     text-align: center;
-    font-size: 3.2rem;
-    font-weight: 700;
+    font-size: 3.6rem;
+    font-weight: bold;
     color: #d80c18;
 }
 
@@ -92,8 +92,8 @@
 
 .insurance-merit__title {
     text-align: center;
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 3.6rem;
+    font-weight: bold;
     color: #d80c18;
 }
 
@@ -116,17 +116,18 @@
 }
 
 .insurance-merit__item {
-    align-items: center;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 30px;
 }
 
 .insurance-merit__number {
     font-family: 'Outfit', sans-serif;
     font-size: 60px;
+    font-weight: bold;
     color: #d80c18;
     text-align: center;
+    line-height: 1.2;
 }
 
 .insurance-merit__content {
@@ -134,7 +135,7 @@
 }
 
 .insurance-merit__name {
-    font-size: 2.8rem;
+    font-size: 3.0rem;
     font-weight: bold;
     color: #d80c18;
     margin: 0;
@@ -173,8 +174,8 @@
 
 .insurance-buy__title {
     text-align: center;
-    font-size: 3.2rem;
-    font-weight: 700;
+    font-size: 3.6rem;
+    font-weight: bold;
     color: #d80c18;
 }
 
@@ -561,11 +562,12 @@
     width: 100%;
     gap: 20px;
     border: 2px solid #D80C18;
-    margin: 20px 0;
+    margin: 20px auto;
     padding: 20px;
     background: white;
     box-shadow: 10px 10px 0px 0px #D80C18;
     position: relative;
+    max-width: 840px;
 }
 
 /* ケーススタディのコンテンツ */
@@ -582,9 +584,9 @@
 
 /* タイトル */
 .case-title {
-    font-size: 6rem;
+    font-size: 4rem;
     font-family: 'Outfit', sans-serif;
-    font-weight: normal;
+    font-weight: bold;
     color: #D80C18;
     text-align: center;
     margin-bottom: 40px;
@@ -613,55 +615,40 @@
 .case-image img {
     max-width: 100%;
     height: auto;
-    margin-top: 60px;
+    margin-top: 25px;
 }
 
 /* 赤背景の見出し */
 .case-header {
     background-color: #D80C18;
-    color: white;
-    font-size: 2.8rem;
-    text-align: center;
-    padding: 12px 15px;
-    margin-bottom: 20px;
-    position: relative;
-    transform: translateY(-43px);
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 15px 25px;
+    position: absolute;
+    top: -40px;
+    left: 0px;
+    z-index: 2;
 }
 
 .case-description {
     margin-top: 0;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     padding-left: 20px;
     margin-bottom: 30px;
 }
 
 /* リストのスタイル */
 .case-list {
-    list-style-type: none;
-    padding: 0;
-    margin-bottom: 30px;
-}
-
-.case-list li {
-    padding-left: 20px;
-    font-size: 16px;
-    margin-bottom: 5px;
+    list-style-type: square;
+    padding-left: 30px;
+    font-size: 14px;
     font-weight: bold;
-}
-
-.case-list li::before {
-    content: "■";
-    /* 四角の記号 */
-    color: black;
-    /* 色（必要に応じて変更） */
-    font-size: 1.2rem;
-    /* 大きさ */
-    display: inline-block;
-    /* インライン要素として配置 */
+    margin-top:35px;
 }
 
 .case-reason {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin: 0;
     font-weight: bold;
     padding-left: 20px;
@@ -673,16 +660,19 @@
     display: inline-block;
     padding: 0 15px;
     border-radius: 20px;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 1.8;
     font-weight: bold;
     margin: 0 0 10px 0;
 }
 
 .radius-grey {
-    background-color: #959090;
+    background-color: #777;
     color: #fff;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 5px 25px;
+    margin:20px 0px;
 }
 
 .radius-red {
@@ -725,10 +715,8 @@
 .case-study {
     display: flex;
     flex-direction: column;
-    gap: 100px;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 60px 20px;
 }
 
 /* スマホ対応 */
@@ -749,9 +737,8 @@
         font-size: 1.6rem;
         line-height: 1.8;
         font-weight: bold;
-        margin: 0 0 10px 0;
+        margin: 0 0 10px 10px;
         flex: 0;
-
     }
 
     .case-effect-text {
@@ -771,7 +758,7 @@
         align-items: flex-start;
         width: 100%;
         gap: 5px;
-        border: 1px solid #D80C18;
+        border: 2px solid #D80C18;
         background: white;
         margin: 0 10px 10px 0;
         position: relative;
@@ -890,6 +877,11 @@
         font-size: 1.5rem;
     }
 
+    .radius-grey,
+    .radius-red {
+        margin-left: 10px;
+    }
+
     .page-insurance-support .page-btn--next::before {
         left: 16rem;
     }
@@ -899,6 +891,13 @@
     display: none;
 }
 
+.divider_gray {
+    width: 100%;
+    height: 1px;
+    background-color: #D80C18;
+    margin: 10px 0;
+    border: none;
+}
 /* 横線の基本スタイル */
 .divider {
     width: 100%;
