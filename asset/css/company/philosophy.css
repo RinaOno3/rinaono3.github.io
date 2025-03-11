@@ -36,7 +36,6 @@
     background: white;
     border: 2px solid #D80C18;
     padding: 40px;
-    max-width: 800px;
     margin: 0 auto;
     text-align: center;
     box-shadow: 15px 15px 0px 0px #d80c18;
@@ -61,7 +60,7 @@
 
 /* テキストのスタイル */
 .philosophy-text {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     color: #333;
     line-height: 1.6;
     margin-top: 20px;
@@ -79,12 +78,11 @@
 }
 
 .sec_3 .philosophy-box .philosophy-text span {
-     font-size: 3.2rem;
+     font-size: 2.8rem;
 }
 
 .action_area {
         display: block;
-        max-width: 800px;
         margin-inline: auto;
     }
 

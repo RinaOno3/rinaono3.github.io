@@ -25,12 +25,17 @@
 }
 
 
+.content-box ul li {
+    text-indent: -3em; /* 数字部分を左に出す */
+    padding-left: 4em; /* 本文の開始位置を調整 */
+    display: block;
+}
+
 /* === リンクのスタイル === */
 .content-box ul li a {
     text-decoration: underline;
     color: #333;
     transition: opacity 0.3s ease-in-out;
-
 }
 
 .content-box ul li a:hover {

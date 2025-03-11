@@ -64,33 +64,39 @@ button {
     cursor: pointer;
     background: none;
 }
+
 /*  トップに戻るボタン   */
 #scroll-top {
     position: fixed;
     right: 5%;
     bottom: 8%;
-    width: 40px;  /* ボタンのサイズ */
+    width: 40px;
+    /* ボタンのサイズ */
     height: 40px;
     cursor: pointer;
-    display: none;  /* 初期状態では非表示 */
-    z-index: 1000; /* 他の要素より上に表示 */
-  }
-  
-  #scroll-top img {
+    display: none;
+    /* 初期状態では非表示 */
+    z-index: 1000;
+    /* 他の要素より上に表示 */
+}
+
+#scroll-top img {
     width: 100%;
     height: auto;
-    opacity: 0.7; /* 透明度を少し下げる */
+    opacity: 0.7;
+    /* 透明度を少し下げる */
     transition: opacity 0.3s ease-in-out;
-  }
-  
-  #scroll-top:hover img {
-    opacity: 1; /* ホバー時に明るくする */
-  }
+}
 
-  .show-scroll {
+#scroll-top:hover img {
+    opacity: 1;
+    /* ホバー時に明るくする */
+}
+
+.show-scroll {
     display: block !important;
 }
-  
+
 
 
 
@@ -116,6 +122,17 @@ button {
     /* 75% 透過 */
 }
 
+/* 通常時のヘッダー（薄い背景） */
+.header-top {
+    background-color: rgba(51, 51, 51, 0.35);
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* スクロール時のヘッダー（濃い背景） */
+.header-top.scrolled {
+    background-color: rgba(51, 51, 51, 0.85); /* 濃くする */
+}
+
 /* ロゴ設定 */
 .logo img {
     max-width: 340px;
@@ -139,31 +156,20 @@ button {
     text-decoration: none;
     padding: 5px 10px;
     display: block;
+   
 }
 
 .submenu_ttl_wrp {
+    font-size: 2rem;
     width: 70%;
     margin-inline: auto;
 }
 
 .submenu_ttl {
+    font-weight: bold;
     display: block;
     color: #fff;
-}
-
-.submenu_ttl::before {
-    content: url(/asset/img/nav_menu_arrow.svg);
-    /* 矢印の記号 */
-    font-size: 14px;
-    /* サイズ調整（必要に応じて変更） */
-    color: white;
-    /* 矢印の色（背景に合わせて変更） */
-    margin-right: 8px;
-    /* 文字との間隔 */
-    display: inline-block;
-    /* インライン要素として表示 */
-    transition: transform 0.3s ease;
-    /* ホバー時のアニメーション */
+    margin: 0;
 }
 
 /* 矢印（`>`）を `.submenu li a` に適用 */
@@ -174,7 +180,13 @@ button {
     margin-right: 10px;
     font-size: 1.4rem;
     color: white;
+    transition: transform 0.3s ease; 
 }
+
+.submenu li a:hover::before {
+    transform: translateX(5px); /* 右に少し動かす */
+}
+
 
 
 /* サブメニューの初期設定（非表示） */
@@ -206,25 +218,26 @@ button {
 }
 
 /* メニューがホバーされたときに `a` の背景色を変更 */
-.menu-item:hover > a {
-    background-color: #000; /* 好きな色に変更 */
-    color: white; /* テキスト色も変更（必要なら） */
+.menu-item:hover>a {
+    background-color: #000;
+    /* 好きな色に変更 */
+    color: white;
 }
 
 
 /* `.submenu` を横並びにする */
 .header-container .submenu {
     display: flex;
-    gap: 20px;
+    gap: 10px 25px;
     list-style: none;
     justify-content: left;
     flex-wrap: wrap;
-    max-width: 1200px;
+    max-width: 1300px;
     /* 最大幅 */
 }
 
-/* `.submenu` のリンク */
-.submenu li a {
+/* 通常のスタイル（width: 180px が適用される） */
+.submenu-wrapper .submenu li:not(.exclude) {
     position: relative;
     color: white;
     padding: 12px 20px;
@@ -232,21 +245,43 @@ button {
     display: block;
     transition: color 0.3s;
     white-space: nowrap;
+    width: 180px;/* 180px を上書き */
+
 }
+
+/* `.exclude` クラスがついたものには width を適用しない */
+.submenu-wrapper .submenu li.exclude {
+    width: fit-content;
+}
+   
+   
+
+/* 
+.submenu-wrapper .submenu li a {
+    position: relative;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.6rem;
+    display: block;
+    transition: color 0.3s;
+    white-space: nowrap;
+    width: 180px;
+} */
+
+
 
 /* `.submenu` のホバー時 */
 .submenu li a:hover {
-    color: #d01e28;
+   font-weight: bold;
 }
 
 /* メニューアイテム */
+.menu-item2,
 .menu-item {
     font-size: 1.8rem;
 }
 
-.menu-item a:hover {
-    background: #000;
-} 
+
 /* `.submenu-wrapper` に `mouseleave` しても消えないようにする */
 .submenu-wrapper:hover {
     opacity: 1;
@@ -267,6 +302,8 @@ button {
     position: relative;
     padding-left: 15px;
     line-height: 1.2;
+    transition: transform 0.3s ease-in-out;
+    ;
 }
 
 /* 擬似要素で左側に白の縦線を追加 */
@@ -286,7 +323,8 @@ button {
 }
 
 .lang-switch:hover {
-    opacity: 0.8;
+    font-weight: 700;
+    transform: scale(1.005);
 }
 
 /* `.header-buttons` のレイアウト調整 */
@@ -310,7 +348,8 @@ button {
     border-radius: 0 0px 25px 25px;
     text-decoration: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease;
+    /* 変更をスムーズに */
     max-width: 370px;
 }
 
@@ -320,7 +359,17 @@ button {
 }
 
 .contact-button:hover {
-    background: #f5f5f5;
+    background: #d01e28;
+    color: white;
+}
+
+.contact-button img {
+    transition: filter 0.3s ease;
+}
+
+/* アイコンの色が影響する場合 */
+.contact-button:hover img {
+    filter: brightness(0) invert(1);
 }
 
 .contact-button img {
@@ -345,7 +394,8 @@ button {
     text-align: center;
     overflow: hidden;
     z-index: 10;
-    transition: all 0.3s ease; /* スムーズなアニメーション */
+    transition: all 0.3s ease;
+    /* スムーズなアニメーション */
 }
 
 .more-button::after {
@@ -365,13 +415,16 @@ button {
     top: 50%;
     transform: translateY(-50%);
     font-size: 2.0rem;
-    right: 10px; /* 初期位置 */
-    transition: right 0.3s ease; /* 右方向のアニメーション */
+    right: 10px;
+    /* 初期位置 */
+    transition: right 0.3s ease;
+    /* 右方向のアニメーション */
 }
 
 /* ホバー時に矢印を 5px 右に動かす */
 .more-button:hover .arrow {
-    right: 2px; /* 5px 右へ */
+    right: 2px;
+    /* 5px 右へ */
 }
 
 /* タイトル */
@@ -405,6 +458,58 @@ button {
 .tx_w {
     color: #ffffff;
 }
+
+.link_recruit {
+    position: relative;
+}
+
+.link_recruit::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url(/asset/img/icon_link_box.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 42px;
+    top: 60%;
+    transform: translateY(-50%);
+}
+
+.link_recruit_w {
+    position: relative;
+}
+
+.link_recruit_w::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url(/asset/img/icon_link_box.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: -7px;
+    top: 60%;
+    transform: translateY(-50%);
+    filter: invert(1); /* 黒→白に反転 */
+}
+
+/* PC用の設定 (デフォルトで非表示) */
+@media screen and (min-width: 768px) {
+    .footer-bottom {
+        display: none;
+    }
+}
+
+/* SP用の設定 (表示) */
+@media screen and (max-width: 767px) {
+    .footer-bottom {
+        display: block;
+    }
+}
+    
 
 @media (max-width: 1024px) {
     .logo img {
@@ -450,7 +555,6 @@ button {
         transition: right 0.3s ease, top 0.3s ease;
         /* 右からスライドイン & 上下の移動 */
         z-index: 999;
-        border-left: 5px solid #D70C18;
     }
 
     /* メニューを開いたとき */
@@ -511,7 +615,7 @@ button {
 
     /* 「×」に変化するアニメーション */
     .hamburger.open span:nth-child(1) {
-        transform: translateY(10px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
         background: #D70C18;
         /* バツの色を赤に */
     }
@@ -521,7 +625,7 @@ button {
     }
 
     .hamburger.open span:nth-child(3) {
-        transform: translateY(-6px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
         background: #D70C18;
         /* バツの色を赤に */
     }
@@ -572,6 +676,10 @@ button {
         left: 3%;
     }
 
+    .menu-link:last-child::before {
+        display: none; /* 最後の要素の::beforeを非表示にする */
+    }
+
     /* アコーディオン開いたときに矢印を回転 */
     .menu-item.open .menu-link::before {
         transform: rotate(90deg);
@@ -588,6 +696,8 @@ button {
     .submenu li {
         padding: 8px 0;
         padding-left: 15px;
+        width: 100%;
+       
     }
 
     .submenu a {
@@ -611,7 +721,7 @@ button {
     .nav ul li a {
         padding: 0;
     }
-} 
+}
 
 /* PC専用（PCで表示、SPでは非表示） */
 .pc_only {
@@ -646,7 +756,7 @@ button {
     background: #D70C18;
 }
 
-.header-sub .header-container{
+.header-sub .header-container {
     background: #D70C18;
 }
 
@@ -671,7 +781,8 @@ button {
 
 /* pがない場合の .page-title のパディングを調整 */
 .page-title:not(:has(p)) {
-    padding: 60px 20px; /* pがない場合にパディングを増やす */
+    padding: 60px 20px;
+    /* pがない場合にパディングを増やす */
 }
 
 
@@ -683,16 +794,18 @@ button {
 }
 
 .page-sub {
-    padding-top: 80px; /* ヘッダーの高さ分余白を確保 */
+    padding-top: 80px;
+    /* ヘッダーの高さ分余白を確保 */
 }
 
-@media (max-width: 1024px)  {
+@media (max-width: 1024px) {
     .page-sub {
-        padding-top: 55px; /* ヘッダーの高さ分余白を確保 */
+        padding-top: 55px;
+        /* ヘッダーの高さ分余白を確保 */
     }
 
     .page-title {
-        background-image: url(/asset/img/page_ttl_sp.jpg)!important;
+        background-image: url(/asset/img/page_ttl_sp.jpg) !important;
     }
 }
 
@@ -785,12 +898,13 @@ button {
         font-size: 1.0rem;
         margin: 0;
     }
-     /* ページボタン */
-     .page-btn-wrapper {
+
+    /* ページボタン */
+    .page-btn-wrapper {
         flex-direction: column;
-       align-items: center;
-       gap: 30px;
-       margin: 80px 0;
+        align-items: center;
+        gap: 30px;
+        margin: 80px 0;
     }
 
     .page-btn {
@@ -821,13 +935,14 @@ button {
         right: auto;
         left: 13rem;
     }
+
     .page-btn--next::before {
         content: "→";
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         font-size: 2.0rem;
-        right:auto;
+        right: auto;
         left: 9rem;
     }
 
@@ -846,3 +961,4 @@ button {
     }
 
 }
+

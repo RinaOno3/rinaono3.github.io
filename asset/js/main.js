@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(data => {
                 footerContainer.innerHTML = data;
                 console.log(`✅ ${footerContainerId} のフッターを読み込みました！`);
+                toggleFooterVisibility(); // フッター読み込み後に適用
             })
             .catch(error => console.error(`❌ ${footerContainerId} のフッター読み込みエラー:`, error));
     } else {
@@ -53,10 +54,27 @@ document.addEventListener("DOMContentLoaded", function () {
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
     }
-});
 
-// 画像拡大モーダル
-document.addEventListener("DOMContentLoaded", function () {
+    // ✅ SP時に `footer-top` を非表示にする処理
+    function toggleFooterVisibility() {
+        const footerTop = document.querySelector('.footer-top');
+        if (!footerTop) return;
+
+        if (window.innerWidth < 768) {
+            footerTop.style.display = "none";
+            console.log("✅ SP時に footer-top を非表示にしました");
+        } else {
+            footerTop.style.display = ""; // PC時はデフォルトの表示
+        }
+    }
+
+    // 初回実行
+    toggleFooterVisibility();
+
+    // ウィンドウリサイズ時にも適用
+    window.addEventListener("resize", toggleFooterVisibility);
+
+    // 画像拡大モーダル
     const expandButtons = document.querySelectorAll(".expand-button");
     const closeButtons = document.querySelectorAll(".close-modal");
 
@@ -80,16 +98,13 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
-});
 
-// MAPリンクをクリックしたら新しいタブで開く
-document.addEventListener("DOMContentLoaded", function () {
+    // MAPリンクを新しいタブで開く
     document.querySelectorAll(".map-link").forEach(link => {
         link.setAttribute("target", "_blank");
     });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
+    // アコーディオン
     const buttons = document.querySelectorAll(".accordion-btn");
 
     buttons.forEach(button => {
@@ -103,10 +118,10 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 content.style.maxHeight = content.scrollHeight + "px"; // 開く
                 setTimeout(() => {
-                    content.style.maxHeight = "none"; // 高さ制限を解除（文章が増えてもOK）
-                }, 300); // アニメーション時間後に解除
+                    content.style.maxHeight = "none"; // 高さ制限を解除
+                }, 300);
             }
         });
     });
-});
 
+});

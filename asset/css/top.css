@@ -153,7 +153,7 @@
 }
 
 .news-list p img {
-    width: 40px;
+    width: auto;
     height: 40px;
     display: inline;
 }
@@ -206,6 +206,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 10px;
 }
 
 .slick-slide img {
@@ -274,6 +275,7 @@
     align-items: center;
     width: 100%;
     min-height: 90px;
+    border-radius: 0 0 10px 10px;
 }
 
 .slick-slide.slick-center .slide-caption {
@@ -459,7 +461,8 @@
 
 .sec_Sustainability {
     width: 100%;
-    background: url('/asset/img/bg_sec_5.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
+                url(/asset/img/bg_sec_5.jpg) no-repeat center center / cover;
     height: 680px;
     display: flex;
     align-items: center;
@@ -499,6 +502,7 @@
 }
 
 .sec_ttl {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 40px;
@@ -590,7 +594,7 @@
     height: 130px;
     text-align: center;
     padding: 15px;
-    background-color: rgba(255, 255, 255, 0.70);
+    background-color: rgba(255, 255, 255, 0.90);
     color: #323333;
     font-size: 3.5rem;
     text-decoration: none;
@@ -599,7 +603,7 @@
 }
 
 .company-link:hover {
-    background: rgba(255, 0, 0, 0.1);
+    background: rgba(255, 0, 0, 0.5);
     border: 2px solid rgba(255, 0, 0, 0.6);
 }
 
@@ -631,6 +635,13 @@
     margin: auto;
 }
 
+.group-links .group-item:nth-child(4) .group-link {
+   padding: 5px 30px 5px 2px;
+}
+
+.group-links .group-item:nth-child(4) .group-content img {
+    max-height: 52px;
+}
 /* 個別のリンクアイテム */
 .group-item {
     display: flex;
@@ -654,7 +665,6 @@
 }
 
 .group-link:hover {
-    background: rgba(255, 0, 0, 0.1);
     border: 2px solid rgba(255, 0, 0, 0.6);
 }
 
@@ -749,6 +759,10 @@
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 10px;
+}
+
+.footer-column h3:hover {
+    opacity: 0.8;
 }
 
 /* リンクリスト */
@@ -978,7 +992,7 @@
     }
 
     .news-list p img {
-        width: 25px;
+        width: auto;
         height: 25px;
     }
 
@@ -1083,6 +1097,11 @@
         /* PCでは余白を保持 */
     }
 
+    .recruit-info .sec_content .more_btm_wrp {
+        justify-content: flex-start;
+        margin-left: 30px;
+    }
+ 
     .recruit-info .sec_content {
         padding: 0;
         gap: 215px;
@@ -1292,10 +1311,6 @@
         line-height: 1.6;
     }
 
-    .title-bar {
-        width: 8px;
-        height: 68px;
-    }
 
     .group-service {
         padding: 0 20px 40px 20px;
@@ -1410,14 +1425,17 @@
         min-height: 600px;
     }
 
+
+
     .risk-management .sec_content {
-        padding-left: 0;
+        padding-left: 5%;
         padding-right: 0;
     }
 
     .sec_Sustainability {
         justify-content: center;
-        background-image: url(/asset/img/bg_sec_5_sp.jpg);
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
+                    url(/asset/img/bg_sec_5_sp.jpg) no-repeat center center / cover;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -1473,14 +1491,9 @@
     }
 
     .group-item p {
+        width: 260px;
         font-size: 0.8rem;
         font-weight: normal;
-    }
-
-    .group-link {
-        height: 40px;
-        width: 100%;
-        max-width: 180px;
     }
 
     .group-links {
@@ -1539,7 +1552,7 @@
     }
 
     .sec_ttl {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
         align-items: center;
         gap: 5px;
     }
@@ -1633,7 +1646,15 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 46%;
+        width: 100%;
         justify-content: center;
     }
-}
+
+    .footer_wrp {
+        width: 100%;
+        border-bottom: none;
+    }
+
+    .risk-management .top_tx_area h2 {
+        font-size: 4.2rem; 
+}}

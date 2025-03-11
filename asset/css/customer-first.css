@@ -27,10 +27,55 @@
 }
 
 .sec_5_wrp h4 {
-    max-width: 488px;
     width: 100%;
     margin-inline: auto;
 }
+
+/* ✅ デフォルトのリストマーカーを削除 */
+.indent_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    margin-left: -1.8rem;
+}
+
+/* ✅ 各 <li> のスタイルを統一 */
+.indent_list li {
+    position: relative;
+    padding-left: 1.8rem;
+  
+    line-height: 1.8; /* 読みやすい行間 */
+    list-style-type: none; /* デフォルトのリストマーカーを削除 */
+}
+
+/* ✅ 「・」を手動で追加 */
+.indent_list li::before {
+    content: "・";
+    position: absolute;
+    left: 0;
+    top: -2px; /* 適切な位置に調整 */
+    font-size: 1.2em; /* サイズ調整 */
+    color: inherit; /* 文字色を継承 */
+}
+
+/* ✅ 1つ目と2つ目の <li> の <span> に余白をつける */
+.indent_list li:not(:last-of-type) span {
+    display: block;
+    padding-left: 1.2em; /* 2行目以降のインデント */
+    text-indent: 0;
+}
+
+/* ✅ 最後の <li> の <span> には余白をつけない */
+.indent_list li:last-of-type span {
+    padding-left: 0;
+    text-indent: 0;
+}
+
+
+
+
+
 
 
 
@@ -76,7 +121,12 @@
 
 
 .accordion_wrp {
-    padding: 50px 80px;
+    padding: 50px 60px;
+    word-break: normal;
+    overflow-wrap: break-word;
+    line-break: auto;
+    letter-spacing: 0.1rem;
+
 }
 
 /* === アコーディオンのコンテンツ（デフォルトは閉じる） === */
@@ -129,13 +179,14 @@
     position: relative;
     padding-left: 25px; /* 2行目以降をずらす（黒丸の幅 + 余白） */
     margin-bottom: 1rem;
+    font-size: 1.6rem;
     text-indent: 0; /* text-indent をリセット */
 }
 
 .accordion-list li::before {
-    content: "●";
+    content: "■";
     color: black;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     position: absolute;
     left: 0;
     top: 0;
@@ -143,13 +194,20 @@
 
 .accordion-content h3 {
     font-size: 1.8rem;
+    padding-left: 3rem;
 
+}
+
+.accordion-content h3 + ul {
+
+    padding-left: 5rem;
 }
 
 .accordion-content h4 {
     color: #D80C18;
     font-weight: bold;
     margin-bottom: 1rem;
+    font-size: 1.6rem;
 }
 
 
@@ -167,12 +225,23 @@
     padding: 20px 45px;
 }
 
+.bg_gray .accordion-list li {
+    position: relative;
+    padding-left: 1em; /* 1文字分右に押し出す */
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    text-indent: -1em; /* 1行目だけ左にずらす */
+}
+
 .bg_gray .accordion-list{
     margin-bottom: 20px;
 
 }
 .table_wrp {
     margin-bottom: 50px;
+    width: 100%;
+    max-width: 669px;
+    margin-inline: auto;
 }
 
 .accordion_tx_area {
@@ -184,18 +253,19 @@
 }
 
 .bg_gray p {
+    font-size: 1.6rem;
     padding: 0;
 }
 
 .accordion-item .img_name_tx {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #333;
     text-align: left;
     padding-left: 0;
 }
 
 .accordion-item .img_note {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     padding-left: 0;
 }
 
@@ -207,9 +277,20 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    gap: 45px;
-    margin-bottom: 65px;
+    gap: 20px;
+    margin-bottom: 30px;
 }
+
+.img_box_wrp_2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 20px;
+}
+
 
 .last_section {
     max-width: 900px;
@@ -217,8 +298,15 @@
     margin-inline: auto;
 }
 
+.last_section ul {
+    font-size: 1.2rem;
+    max-width: 700px;
+    width: 100%;
+    margin-inline: auto;
+}
+
 .last_section_ttl {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
  
 }
 
@@ -264,25 +352,18 @@
     margin-bottom: 1.5rem;
 }
 
-.training-list li::before {
-    content: "●"; /* 黒丸を追加 */
-    color: black;
-    font-size: 1.2rem;
-    position: absolute;
-    left: 0;
-    top: 5px;
-}
 
 .training-list h5 {
-    font-weight: bold;
     margin-bottom: 5px;
     font-size: 1.5rem;
+    font-weight: normal;
 }
 
 .training-list p {
     font-size: 1.5rem;
     margin: 0;
     line-height: 1.6;
+    padding-left: 1.5rem;
 }
 
 .link_btn {
@@ -295,6 +376,17 @@
    margin-top: 40px;
    text-decoration: underline;
     
+}
+
+.link_btn::after {
+    content: "";
+    background-image: url("/asset/img/icon_pdf.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 15px;
+    display: inline-block;
+    margin-left: 10px;
 }
 
 
@@ -402,6 +494,57 @@
 }
 
 
+
+.indent {
+    display: inline-block;
+    padding-left: 3.6rem;
+}
+
+h4 + ul li {
+    padding-left: 3.6rem;
+    font-size: 1.6rem;
+    line-height: 1.6; /* 行間の調整（適宜変更してください） */
+    margin-bottom: 8px;
+}
+
+h3 + p {
+   font-size: 1.6rem; /* 例：青色に変更 */
+}
+h4 + p {
+    font-size: 1.6rem;
+}
+
+h3 + ul li {
+    font-size: 1.6rem;
+    text-indent: -1em; /* 1文字分のぶんだけ左にずらす */
+    padding-left: 1em; /* 1文字分のスペースを確保 */
+    line-height: 1.6; /* 行間の調整（適宜変更してください） */
+}
+
+.tx_point {
+    line-height: 3;
+}
+
+
+
+.customer-first .sec_4_p {text-align: left;
+    font-size: 1.6rem;
+    padding-left: 3.6rem;
+    max-width: 900px;
+    width: 100%;
+    padding-left: 21%;
+    
+}
+
+.w-row {
+    background:#fff;
+}
+
+.customer-first {
+    margin-bottom: 80px;
+}
+
+
 @media screen and (max-width: 768px)  {
 
     .customer-first .content-wrapper {
@@ -442,6 +585,7 @@
         padding: 2rem;
         border: 1px solid #ccc;
         margin-bottom: 10px;
+        margin: auto;
     }
 
     .accordion-content h4 {
@@ -508,6 +652,15 @@
         flex-direction: column;
         font-size: 1.6rem;
         padding-right: 40px;
+    }
+
+    .last_section {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .customer-first {
+        margin-bottom: 0;
     }
 } 
 

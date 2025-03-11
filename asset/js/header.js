@@ -18,6 +18,20 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    // ✅ PCヘッダーのスクロール時の背景色変更処理
+    window.addEventListener("scroll", function () {
+        const pcHeader = document.querySelector(".header-top"); // ヘッダーを取得
+        if (pcHeader) {
+            if (window.scrollY > 50) { 
+                pcHeader.classList.add("scrolled"); // スクロールしたら色を濃くする
+            } else {
+                pcHeader.classList.remove("scrolled"); // 上に戻ったら元の色に戻す
+            }
+        } else {
+            console.error("⚠️ ヘッダーが見つかりません！クラス名を確認してください！");
+        }
+    });
+
     // 🔹 SPメニュー（ハンバーガーメニュー＋アコーディオン）
     function loadHeaderJS() {
         console.log("✅ SPメニュー処理を開始");
@@ -29,12 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const headerContainer = header ? header.querySelector(".header-container") : null;
         const spMenuItems = document.querySelectorAll(".sp-menu-item");
 
-        console.log("SP用 header:", header);
-        console.log("hamburger:", hamburger);
-        console.log("nav:", nav);
-        console.log("headerContainer:", headerContainer);
-
-        // 取得できない要素がある場合、エラーメッセージを出して終了
         if (!hamburger || !nav || !header) {
             console.error("⚠️ SPメニューの要素が見つかりません！HTMLのIDやクラスを確認してください！");
             return;
@@ -42,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // 🔹 SPハンバーガーメニューの開閉処理
         function toggleMenu(open) {
-            console.log("メニュー開閉:", open);
             nav.classList.toggle("open", open);
             document.body.style.overflow = open ? "hidden" : "";
             hamburger.classList.toggle("open", open);
@@ -80,3 +87,4 @@ document.addEventListener("DOMContentLoaded", function () {
     // ✅ `fetch` のヘッダー読み込み後に実行
     setTimeout(loadHeaderJS, 300);
 });
+

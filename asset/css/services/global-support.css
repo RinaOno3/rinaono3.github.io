@@ -269,7 +269,6 @@ p {
 .content-wrapper-b {
     background-color: #F8F8F8;
     position: relative;
-    z-index: -2;
 }
 
 .case-study {
@@ -437,5 +436,10 @@ p {
         font-size: 16px;
         text-align: center;
         width: 100%;
+    }
+
+    .page-btn--prev::before,
+    .page-btn--next::before {
+        left: 17rem;
     }
 }
