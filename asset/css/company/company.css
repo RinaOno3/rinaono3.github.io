@@ -125,7 +125,7 @@
 .modal-content {
     position: relative;
     margin: 5% auto; /* 上下5%の余白を確保 */
-    width: 80%;
+    width: 75%;
     max-width: 800px; /* 最大幅の制限 */
 }
 
@@ -135,6 +135,7 @@
     height: auto; /* 縦に拡大可能 */
     display: block;
     margin: auto;
+    background:white;
 }
 
 /* 閉じるボタン */
@@ -145,6 +146,10 @@
     font-size: 30px;
     color: white;
     cursor: pointer;
+}
+
+.sub_note {
+    font-size: 1.2rem;
 }
 
 
@@ -235,4 +240,10 @@
         padding: 0px;
     }
 
+    .modal-content {
+        position: relative;
+        margin: 30% auto;
+        width: 90%;
+        max-width: 800px;
+    }
 }

@@ -131,7 +131,7 @@ p {
     position: relative;
     background: white;
     border: 2px solid #D80C18;
-    padding: 0px 50px 60px 40px;;
+    padding: 0px 50px 0px 40px;;
     margin: 0 auto;
     text-align: center;
     box-shadow: 15px 15px 0px 0px #d80c18;
@@ -140,6 +140,9 @@ p {
     margin-top: 100px;
 }
 
+.sub_line{
+    margin-left:4em;
+}
 /* === ヘッダーセクション（全体） === */
 .section-header {
     display: flex;

@@ -122,12 +122,6 @@
     background: linear-gradient(to right, #D80C18 15%, #777 15%);
 }
 
-.sec_1 p {
-    font-size: 2rem;
-    text-align: center;
-    margin: 0;
-}
-
 .tel_info_area {
     display: flex;
     align-items: center;
@@ -369,6 +363,33 @@
     font-weight: bold;
 }
 
+.insurance-list ul li a {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+    
+.insurance-list ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.insurance-list ul li a::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url(/asset/img/icon_link_box.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: -25px;
+    top: 60%;
+    transform: translateY(-50%);
+    filter: brightness(0);
+}
+
 .sec_2 {
     margin-bottom: 100px;
 }
@@ -380,7 +401,7 @@
     margin: 0;
     position: relative;
     transform: translateY(-60px);
-
+    top:60px;
 }
 
 @media screen and (max-width: 1000px) {

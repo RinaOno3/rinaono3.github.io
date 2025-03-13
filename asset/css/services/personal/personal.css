@@ -23,10 +23,8 @@ html {
   scroll-padding-top: 7rem;
 }
 .ly_personal_wrapper {
-  margin-block-start: 6.5rem;
 
   >*+* {
-    margin-block-start: 5rem;
   }
 }
 .bl_personalAnchor {
@@ -54,10 +52,7 @@ html {
   gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
   margin-block-start: 2rem;
-
-  & img {
-    inline-size: 100%;
-  }
+    margin-block-end: 2rem;
 }
 .bl_personal_txt {
   font-size: 1.5rem;
@@ -79,10 +74,8 @@ html {
 }
 @media screen and (768px <= width) {
   .ly_personal_wrapper {
-    margin-block-start: 7.5rem;
 
     >*+* {
-      margin-block-start: 7rem;
     }
   }
   .bl_personalAnchor {
@@ -90,6 +83,7 @@ html {
     grid-template-columns: repeat(4, 1fr);
     inline-size: 89.4%;
     margin-inline: auto;
+    margin-block-end: 10rem;
   }
   .bl_personalAnchor_link {
     font-size: 1.7rem;
@@ -100,6 +94,7 @@ html {
     gap: 1rem 2.4rem;
     grid-template-columns: repeat(4, 1fr);
     margin-block-start: 4rem;
+    margin-block-end: 4rem;
   }
   .el_lv2Heading {
     border-inline-start-width: 31px;
@@ -128,5 +123,8 @@ html {
     padding: 0px 50px;
     max-width: 800px;
     margin: 0 auto;   
+    font-size: 14px;
 }
+
+
 /*# sourceMappingURL=sourcemaps/personal.css.map */

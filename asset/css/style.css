@@ -138,6 +138,12 @@ button {
     max-width: 340px;
 }
 
+/* ロゴ設定 */
+.logo:hover img {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px #000;
+}
+
 .nav ul {
     width: 100%;
     list-style: none;
@@ -156,8 +162,11 @@ button {
     text-decoration: none;
     padding: 5px 10px;
     display: block;
-   
 }
+
+.nav ul li a.link_recruit_w {
+    padding-right: 20px;
+}   
 
 .submenu_ttl_wrp {
     font-size: 2rem;
@@ -224,7 +233,6 @@ button {
     color: white;
 }
 
-
 /* `.submenu` を横並びにする */
 .header-container .submenu {
     display: flex;
@@ -276,7 +284,6 @@ button {
 }
 
 /* メニューアイテム */
-.menu-item2,
 .menu-item {
     font-size: 1.8rem;
 }
@@ -490,10 +497,10 @@ button {
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    right: -7px;
+    right: 0px;
     top: 60%;
     transform: translateY(-50%);
-    filter: invert(1); /* 黒→白に反転 */
+    filter: brightness(0) invert(1);
 }
 
 /* PC用の設定 (デフォルトで非表示) */

@@ -1,0 +1,442 @@
+@charset "UTF-8";
+.info-text {
+  margin-bottom: 20px;
+  padding:0;
+  font-size: 14px;
+  color: #333;
+}
+
+.info-text.-bottom {
+  text-align:left;
+}
+
+.step-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.step .step-num {
+  padding: 10px 15px;
+  font-weight: bold;
+  color: white;
+  font-size: 18px;
+}
+
+
+.step .step-text {
+  padding: 12.5px 20px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  min-width: 200px;
+  font-size: 16px;
+}
+
+
+/* STEP 1（選択中のステップ） */
+.step.active .step-num {
+  background-color: #d32f2f; /* 赤 */
+}
+
+.step.active .step-text {
+  background-color: #e57373; /* 薄赤 */
+}
+
+/* STEP 2, 3（未選択のステップ） */
+.step.inactive .step-num {
+  background-color: #333; /* 黒 */
+}
+
+.step.inactive .step-text {
+  background-color: #999; /* グレー */
+}
+
+.arrow {
+  color: #666;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 8px;
+}
+.form-container {
+  margin: 50px 0; /* フィールドの間隔 */
+}
+.form-group {
+  display: flex;
+  align-items: center;
+  margin: 15px 0; /* 上下の余白 */
+  flex-wrap: wrap;
+}
+
+.form-group.-shoukai input {
+  margin-left: 250px;
+}
+
+.form-group.-short input {
+  margin-left: 250px;
+  max-width: 240px;
+}
+
+.form-group.-todouhuken select {
+  max-width: 240px;
+}
+
+.red-line {
+  border-top: 1px solid red; /* 上に赤線 */
+  margin: 15px 0; /* 上下の余白 */
+}
+.form-group label {
+  min-width: 250px; /* ラベルの固定幅 */
+  font-weight: bold;
+  font-size:16px;
+}
+
+.required {
+  color: red;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.form-group select {
+  flex: 1; /* 選択ボックスを適切に広げる */
+  padding: 10px;
+  border: 1px solid black;
+  font-size: 14px;
+  min-width: 250px; /* セレクトボックスの最小幅 */
+}
+
+.form-group input {
+  flex: 1; /* 選択ボックスを適切に広げる */
+  padding: 10px;
+  border: 1px solid black;
+  font-size: 14px;
+  min-width: 250px; /* セレクトボックスの最小幅 */
+}
+
+.form-group textarea {
+  flex: 1; /* 選択ボックスを適切に広げる */
+  padding: 10px;
+  border: 1px solid black;
+  font-size: 14px;
+  min-width: 250px; /* セレクトボックスの最小幅 */
+}
+.form-group.-short input {
+  margin-left: 250px;
+  max-width: 240px;
+}
+.form-group.-todouhuken select {
+  max-width: 240px;
+}
+
+/* 個人情報の利用に関するエリア */
+.consent-group {
+  text-align: left;
+}
+
+.consent-group a{
+  font-size: 16px;
+}
+
+/* 「個人情報保護に関する基本方針」のリンク */
+.policy-link {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* チェックボックスとラベルの配置を縦に */
+.checkbox-group {
+  display: flex;
+  align-items: center; /* 縦方向の中央揃え */
+  justify-content: flex-start; /* 左詰め */
+  gap: 5px; /* チェックボックスとラベルの間隔 */
+  width: 100px;
+}
+/* チェックボックスとテキストの間隔を狭く */
+.checkbox-group input[type="checkbox"] {
+  margin: 0;
+min-width: auto;
+}
+.checkbox-group label {
+  font-weight: bold;
+}
+
+/* 注意書き */
+.checkbox-note {
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* 確認ボタン */
+.confirm-btn {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 30px auto 0;
+  background: red;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, transform 0.2s;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+input:focus::placeholder {
+  color: transparent;
+}
+
+.confirm-btn:hover {
+  background: darkred;
+  transform: translateY(-2px);
+}
+
+.confirm-btn::after {
+  content: " →";
+  font-weight: bold;
+}
+.introduce-text {
+font-size: 16px;
+  margin-bottom: 10px;
+  margin-top: 2px;
+  width: 50%;
+}
+
+.address-search {
+  background-color: #CCCCCC;
+  padding: 5px 17px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-left: 22px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, .3);;
+}
+
+@media screen and (max-width: 994px) {
+  .step .step-text {
+    min-width: 100px;
+  }
+  .step .step-num {
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 908px) {
+  .step .step-num {
+    padding: 25px 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+/* ステップナビゲーション全体のデザイン */
+  .step-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: auto;
+  }
+
+/* 各STEPのデザイン */
+  .step {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+/* STEPの番号部分 */
+  .step .step-num {
+    padding: 0 5px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    font-size: 8px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+  }
+
+/* STEPの説明テキスト */
+  .step .step-text {
+    padding: 0 5px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    min-width: 70px;
+    font-size: 9px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+  }
+
+/* アクティブなSTEP（現在のSTEP） */
+  .step.active .step-num {
+    background-color: #d32f2f; /* 赤 */
+  }
+
+  .step.active .step-text {
+    background-color: #e57373; /* 薄赤 */
+  }
+
+/* 非アクティブなSTEP */
+  .step.inactive .step-num {
+    background-color: #333; /* 黒 */
+  }
+
+  .step.inactive .step-text {
+    background-color: #999; /* グレー */
+  }
+
+/* 矢印のスタイル */
+  .arrow {
+    color: #666;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0 5px; /* 矢印の間隔を調整 */
+  }
+
+/* フォーム全体を中央配置＆幅を調整 */
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: auto;
+  }
+
+/* ステップナビゲーションの中央配置 */
+  .step-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    margin: auto;
+    margin-bottom: 22px;
+  }
+
+/* フォームの最大幅を調整 */
+  form {
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+  }
+
+/* ラベルと入力フィールドの配置 */
+  .form-group {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px; /* 入力欄との間隔 */
+    padding-bottom: 10px; /* 赤線とのバランス */
+    width: 100%;
+    max-width: 400px;
+  }
+
+/* ラベルのスタイル */
+  .form-group label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px; /* ラベルと入力欄の間隔を統一 */
+  }
+
+/* 入力フィールドの幅調整 */
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    max-width: 350px;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 3px;
+    font-size: 14px;
+    box-sizing: border-box; /* パディングを含めた幅指定 */
+  }
+
+/* 赤線の幅をフォームに合わせる */
+  .red-line {
+    border-top: 1px solid red;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+  }
+
+/* 個人情報の利用エリアを左揃え */
+  .consent-group {
+    text-align: left;
+  }
+
+/* 「個人情報保護に関する基本方針」のリンク */
+  .policy-link {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+/* チェックボックスとラベルを縦並びに */
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+/* 確認ボタンの幅調整 */
+  .confirm-btn {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    background: red;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.2s;
+  }
+
+  .confirm-btn:hover {
+    background: darkred;
+    transform: translateY(-2px);
+  }
+
+  .confirm-btn::after {
+    content: " →";
+    font-weight: bold;
+  }
+  .form-group.-shoukai input {
+    margin-left: 0;
+  }
+  .form-group.-short input {
+    margin-left: 0;
+    max-width: 200px;
+    min-width: auto;
+  }
+  .introduce-text {
+    width: 100%;
+  }
+}

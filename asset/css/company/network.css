@@ -14,7 +14,7 @@
 }
 
 .img_map {
-    width: 90%;
+    width: 100%;
     height: auto;
     object-fit: cover;
     margin-inline: auto;
@@ -32,27 +32,49 @@
 /* === 共通のテーブルデザイン === */
 .details-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse; /* 余計な隙間を削除 */
+    table-layout: fixed; /* 固定レイアウトで高さを統一しやすく */
     margin-bottom: 80px;
 }
 
+.details-table tr {
+    border-bottom: 1px solid #707070;
+}
+
+.network .th_ttl {
+    font-size: 1.4rem;
+}
 
 /* === PC版のレイアウト（横並び） === */
 @media screen and (min-width: 769px) {
+
+  
+
+    .details-table th, .details-table td {
+        padding: 1.8rem 2.8rem;
+        vertical-align: top; 
+        text-align: left;
+        height: 100%;
+        display: table-cell; /* セルの高さを自動調整 */
+    }
+
+    .details-table tr {
+        display: table-row; /* テーブルの行として正しく表示 */
+    }
+
     .details-table th {
-        width: 30%;
+        width: 25%;
         background-color: #e6e6e6;
-        font-weight: bold;
-        padding: 15px;
-        border-bottom: 1px solid #707070;
         font-size: 1.2rem;
-        vertical-align: text-top;
-        
+        font-weight: bold;
+    }
+    
+    .details-table th span {
+        padding-left: 1.4rem;
     }
 
     .details-table td {
-        width: 100%;
-        border-bottom: 1px solid #707070;
+        width: 75%;
         font-size: 1.2rem;
     }
 
@@ -72,11 +94,6 @@
         margin-top: 5px;
     }
 
-    .details-table th {
-        padding: 1.8rem;
-        text-align: left;
-    }
-    
     .details-table td {
         width: 100%;
         display: flex;
@@ -95,15 +112,15 @@
     }
     
     .tel_area {
-        width: 40%;
+        width: 30%;
         display: flex;
         align-items: center;
         text-align: center;
-        padding: 0 40px;
+        padding: 0 20px;
     }
     
     .address_box {
-        width: 60%;
+        width: 70%;
         padding: 1.8rem;
         border-right: 1px solid #707070;
         position: relative;
@@ -121,6 +138,15 @@
     
 }
 
+
+.fixed-height-row th,
+.fixed-height-row td {
+    max-height: 160px;
+    height: 160px; /* 好きな高さを指定 */
+    vertical-align: middle; /* 縦方向の中央揃え */
+}
+
+
 /* === SP版のレイアウト（縦並び） === */
 @media screen and (max-width: 768px) {
 
@@ -132,7 +158,9 @@
     }
 
     .details-table {
-        border: 1px solid #4b4b4b;
+       border-left: 1px solid #4b4b4b;
+       border-right: 1px solid #4b4b4b;
+       border-top: 1px solid #4b4b4b;
     }
 
     .details-table th {
@@ -144,6 +172,10 @@
         background-color: #f8f8f8;
     }
 
+    .fixed-height-row th, .fixed-height-row td {
+        height: auto;
+    }
+
     .details-table td {
         display: block;
         width: 100%;
@@ -151,7 +183,6 @@
         font-size: 1.2rem;
         padding: 1.5rem;
         border-top: 1px solid #4b4b4b;
-        border-bottom: 1px solid #4b4b4b;
     }
 
     .img_map img{

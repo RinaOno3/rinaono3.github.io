@@ -22,7 +22,7 @@
 
 .insurance-support__title {
     text-align: center;
-    font-size: 3.6rem;
+    font-size: 3.4rem;
     font-weight: bold;
     color: #d80c18;
 }
@@ -92,7 +92,7 @@
 
 .insurance-merit__title {
     text-align: center;
-    font-size: 3.6rem;
+    font-size: 3.4rem;
     font-weight: bold;
     color: #d80c18;
 }
@@ -135,7 +135,7 @@
 }
 
 .insurance-merit__name {
-    font-size: 3.0rem;
+    font-size: 2.8rem;
     font-weight: bold;
     color: #d80c18;
     margin: 0;
@@ -174,7 +174,7 @@
 
 .insurance-buy__title {
     text-align: center;
-    font-size: 3.6rem;
+    font-size: 3.4rem;
     font-weight: bold;
     color: #d80c18;
 }
@@ -189,160 +189,180 @@
     }
 }
 
-.flow_wrp {
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    gap: 12px;
-    padding-right: 10px;
+@media screen and (max-width: 767px) {
+	.insurance-buy__container {
+		width: min(100%, 43.75rem);
+		margin-inline: auto;
+		display: flex;
+		gap: 0.5625rem;
+		margin-top: 0.8125rem;
+	}
 }
 
-.flow_step {
-    display: flex;
-    align-items: center;
-    position: relative;
+.insurance-buy__img {
+	margin-top: 2.625rem;
+}
+@media screen and (max-width: 767px) {
+	.insurance-buy__img {
+		margin-top: initial;
+		display: flex;
+		flex-shrink: 0;
+		width: 13.3333333333%;
+	}
 }
 
-.flow_step::before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    border-left: 20px solid #D80C18;
-    position: absolute;
-    left: 100%;
-    z-index: 9;
-    top: 40%;
-    transform: translateY(-50%);
-
+.insurance-buy__img img {
+	width: 100%;
+	height: auto;
+}
+@media screen and (max-width: 767px) {
+	.insurance-buy__img img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 }
 
-.flow_step:last-child::before {
-    content: none;
+.insurance-buy__list {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 0.6875rem;
+	margin-top: 1rem;
+	width:890px;
+}
+@media screen and (max-width: 767px) {
+	.insurance-buy__list {
+		grid-template-columns: 1fr;
+		gap: 1.1875rem;
+		margin-top: initial;
+		height: 1200px;
+	}
 }
 
-
-.flow_box {
-    flex: 1;
-    background-color: white;
-    border: 1px solid #D80C18;
-    padding: 20px;
-    text-align: center;
-    max-width: 200px;
-    min-width: 180px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
+.insurance-buy__item {
+	position: relative;
+	border: 1px solid #d80c18;
+	padding: 1.9375rem 1.2rem 1.375rem;
+	text-align: left;
+	background: white;
+}
+@media screen and (max-width: 767px) {
+	.insurance-buy__item {
+		padding: 1.6875rem 1.0625rem 2.6875rem 1.25rem;
+	}
 }
 
-/* すべてのボックスの高さを統一 */
-.flow_wrp .flow_box {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    gap: 10px;
+.insurance-buy__item:not(:last-child)::after {
+	content: "";
+	position: absolute;
+	border-style: solid;
+	border-width: 0.90625rem 0 0.90625rem 1.25rem;
+	border-color: transparent transparent transparent #d80c18;
+	right: -1.25rem;
+	top: 9.6rem;
+}
+@media screen and (max-width: 767px) {
+	.insurance-buy__item:not(:last-child)::after {
+		top: initial;
+		right: initial;
+		border-width: 1.25rem 0.90625rem 0 0.90625rem;
+		border-color: #d80c18 transparent transparent transparent;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: -1.25rem;
+	}
 }
 
-/* すべてのボックスの高さを揃える */
-.flow_box p {
-    flex-grow: 1;
+.insurance-buy__wrap {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2.1875rem;
+}
+@media screen and (max-width: 767px) {
+	.insurance-buy__wrap {
+		flex-direction: row;
+		gap: 0.6875rem;
+	}
 }
 
-.flow_number {
-    font-family: 'Outfit', sans-serif;
-    font-size: 4rem;
-    color: #D80C18;
-    display: block;
-    margin-bottom: 10px;
+.insurance-buy__item:nth-child(n + 2) .insurance-buy__wrap {
+	gap: 1.25rem;
+}
+@media screen and (max-width: 767px) {
+	.insurance-buy__item:nth-child(n + 2) .insurance-buy__wrap {
+		gap: 0.6875rem;
+	}
 }
 
-.flow_content {
-    text-align: center;
+.insurance-buy__item:nth-child(5) .insurance-buy__wrap {
+	gap: 2.1875rem;
+}
+@media screen and (max-width: 767px) {
+	.insurance-buy__item:nth-child(5) .insurance-buy__wrap {
+		gap: 0.6875rem;
+	}
 }
 
-.flow_title {
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: #D80C18;
-    margin-bottom: 10px;
+.insurance-buy__number {
+	font-size: 3rem;
+	font-family: "Outfit", sans-serif;
+	line-height: 1.1904761905;
+	color: #d80c18;
+}
+@media screen and (max-width: 767px) {
+	.insurance-buy__number {
+		font-size: 2.7rem;
+		line-height: 1.1851851852;
+	}
 }
 
-.flow_text {
-    font-size: 14px;
-    line-height: 1.4;
+.insurance-buy__name {
+	text-align: center;
+	font-size: 1.6rem;
+	font-weight: 700;
+	color: #d80c18;
 }
 
-/* 矢印の位置を微調整 */
-.flow_box:nth-child(5) .flow_arrow {
-    display: none;
-    /* 最後の矢印を非表示 */
+.insurance-buy__text {
+	margin-top: 2.3125rem;
+	font-size: 1.4rem;
+	line-height: 1.25;
+}
+@media screen and (max-width: 767px) {
+	.insurance-buy__text {
+		width: 95%;
+		margin-inline: auto;
+		font-size: 1.6rem;
+		margin-top: 2.5rem;
+	}
 }
 
-@media (max-width: 970px) {
-    .flow_box {
-        min-width: auto;
-        max-width: 100%;
-    }
+.insurance-buy__item p.insurance-buy__text {
+	margin-top: 2.9rem;
+}
+@media screen and (max-width: 767px) {
+	.insurance-buy__item p.insurance-buy__text {
+		margin-top: 0;
+	}
 }
 
-/* スマホ対応 */
-@media (max-width: 768px) {
-    .flow_wrp {
-        flex-direction: column;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        justify-content: flex-start;
-        gap: 15px;
-    }
+.insurance-buy__item:nth-child(n + 2) .insurance-buy__text {
+	margin-top: 1.3125rem;
+}
+@media screen and (max-width: 767px) {
+	.insurance-buy__item:nth-child(n + 2) .insurance-buy__text {
+		margin-top: 0;
+	}
+}
 
-    .flow_step {
-        width: 100%;
-        flex: 0 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .flow_box {
-        width: 100%;
-        /* 幅を最大化 */
-        padding: 20px;
-        /* 内側の余白を広く */
-        font-size: 1.2rem;
-        /* 文字サイズを少し大きく */
-        gap: 5px;
-
-
-    }
-
-    .flow_header {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        /* 数字とタイトルの間隔 */
-    }
-
-    .flow_step::before {
-        content: "";
-        display: block;
-        width: 0;
-        height: 0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-top: 15px solid #D80C18;
-        position: absolute;
-        left: 50%;
-        bottom: -30px;
-        transform: translateX(-50%);
-        z-index: 9;
-        top: auto;
-    }
-
+.insurance-buy__item:nth-child(5) .insurance-buy__text {
+	margin-top: 2.9rem;
+}
+@media screen and (max-width: 767px) {
+	.insurance-buy__item:nth-child(5) .insurance-buy__text {
+		margin-top: 0;
+	}
 }
 
 .insurance-menu {
@@ -369,7 +389,7 @@
 
 .insurance-menu__title {
     text-align: center;
-    font-size: 3.6rem;
+    font-size: 3.4rem;
     font-weight: 700;
     color: #d80c18;
 }
@@ -638,6 +658,51 @@
     margin-bottom: 30px;
 }
 
+.insurance-case__list {
+	margin-left: 2.1875rem;
+	margin-top: 1rem;
+}
+@media screen and (max-width: 767px) {
+	.insurance-case__list {
+		margin-left: initial;
+		margin-top: 0.5625rem;
+	}
+}
+
+.insurance-case__list-item {
+	position: relative;
+	font-size: 1.4rem;
+	line-height: 1.3888888889;
+	padding-left: 2rem;
+	text-indent: -0.8rem;
+}
+
+.insurance-case__list-item::before {
+	content: "";
+	margin-right: 0.2em;
+	display: inline-block;
+	width: 0.4375rem;
+	height: 0.4375rem;
+	background-color: black;
+	border-radius: 100%;
+	vertical-align: middle;
+}
+@media screen and (max-width: 767px) {
+	.insurance-case__list-item {
+		font-size: 1.5rem;
+		line-height: 1.3333333333;
+	}
+	.insurance-case__list-item::before {
+		content: "";
+		margin-right: 0.3em;
+		display: inline-block;
+		width: 0.5625rem;
+		height: 0.5625rem;
+		background-color: black;
+		border-radius: 100%;
+		vertical-align: middle;
+	}
+}
 /* リストのスタイル */
 .case-list {
     list-style-type: square;
@@ -663,7 +728,7 @@
     font-size: 1.4rem;
     line-height: 1.8;
     font-weight: bold;
-    margin: 0 0 10px 0;
+    margin:20px 0px 10px;
 }
 
 .radius-grey {
@@ -672,7 +737,6 @@
     font-size: 1.4rem;
     font-weight: bold;
     padding: 5px 25px;
-    margin:20px 0px;
 }
 
 .radius-red {
@@ -913,3 +977,10 @@
         display: block;
     }
 }
+
+@media screen and (max-width: 767px) {
+	.u-pc {
+		display: none;
+	}
+}
+

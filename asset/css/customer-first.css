@@ -31,8 +31,13 @@
     margin-inline: auto;
 }
 
+.sec_5_wrp .indent_list {
+    padding-left: 5rem;
+}
+
 /* ✅ デフォルトのリストマーカーを削除 */
 .indent_list {
+    font-size: 1.4rem;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -43,8 +48,7 @@
 /* ✅ 各 <li> のスタイルを統一 */
 .indent_list li {
     position: relative;
-    padding-left: 1.8rem;
-  
+    padding-left: 3.8rem;
     line-height: 1.8; /* 読みやすい行間 */
     list-style-type: none; /* デフォルトのリストマーカーを削除 */
 }
@@ -53,30 +57,18 @@
 .indent_list li::before {
     content: "・";
     position: absolute;
-    left: 0;
+    left: 22px;
     top: -2px; /* 適切な位置に調整 */
     font-size: 1.2em; /* サイズ調整 */
     color: inherit; /* 文字色を継承 */
 }
 
 /* ✅ 1つ目と2つ目の <li> の <span> に余白をつける */
-.indent_list li:not(:last-of-type) span {
+.indent_list li span {
     display: block;
     padding-left: 1.2em; /* 2行目以降のインデント */
     text-indent: 0;
 }
-
-/* ✅ 最後の <li> の <span> には余白をつけない */
-.indent_list li:last-of-type span {
-    padding-left: 0;
-    text-indent: 0;
-}
-
-
-
-
-
-
 
 
 /* === アコーディオンボタンのスタイル === */
@@ -181,6 +173,7 @@
     margin-bottom: 1rem;
     font-size: 1.6rem;
     text-indent: 0; /* text-indent をリセット */
+    font-weight: bold;
 }
 
 .accordion-list li::before {
@@ -193,7 +186,7 @@
 }
 
 .accordion-content h3 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     padding-left: 3rem;
 
 }
@@ -206,7 +199,7 @@
 .accordion-content h4 {
     color: #D80C18;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
     font-size: 1.6rem;
 }
 
@@ -231,6 +224,7 @@
     margin-bottom: 1rem;
     font-size: 1.6rem;
     text-indent: -1em; /* 1行目だけ左にずらす */
+    font-weight: bold;
 }
 
 .bg_gray .accordion-list{
@@ -253,12 +247,12 @@
 }
 
 .bg_gray p {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     padding: 0;
 }
 
 .accordion-item .img_name_tx {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #333;
     text-align: left;
     padding-left: 0;
@@ -289,6 +283,7 @@
     align-items: center;
     margin: 0 auto;
     gap: 20px;
+    padding-left: 3rem;
 }
 
 
@@ -343,12 +338,11 @@
 
 .training-list {
     list-style: none; /* デフォルトのリストスタイルを削除 */
-    padding-left: 0;
+    padding-left: 5rem;
 }
 
 .training-list li {
     position: relative;
-    padding-left: 20px; /* アイコン分の余白を追加 */
     margin-bottom: 1.5rem;
 }
 
@@ -378,17 +372,13 @@
     
 }
 
-.link_btn::after {
-    content: "";
-    background-image: url("/asset/img/icon_pdf.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 20px;
-    height: 15px;
-    display: inline-block;
-    margin-left: 10px;
+@media (max-width: 1700px) {
+    .link_btn img {
+        width: auto;
+        height: 20px;
+        display: inline;
+    }
 }
-
 
 /* 最後の表 */
 .policy-table {
@@ -507,18 +497,25 @@ h4 + ul li {
     margin-bottom: 8px;
 }
 
-h3 + p {
-   font-size: 1.6rem; /* 例：青色に変更 */
+h3 + img + .table_wrp + p {
+   font-size: 1.4rem;
 }
 h4 + p {
     font-size: 1.6rem;
 }
 
-h3 + ul li {
+h4 + p + p {
     font-size: 1.6rem;
-    text-indent: -1em; /* 1文字分のぶんだけ左にずらす */
+}
+
+h3 + ul li {
+    font-size: 1.4rem;
     padding-left: 1em; /* 1文字分のスペースを確保 */
-    line-height: 1.6; /* 行間の調整（適宜変更してください） */
+    line-height: 1.4; /* 行間の調整（適宜変更してください） */
+}
+
+h3 + ul li p{
+    padding-left: 2em; /* 1文字分のスペースを確保 */
 }
 
 .tx_point {
@@ -527,13 +524,13 @@ h3 + ul li {
 
 
 
-.customer-first .sec_4_p {text-align: left;
+.customer-first .sec_4_p {
+    text-align: left;
     font-size: 1.6rem;
-    padding-left: 3.6rem;
-    max-width: 900px;
+    max-width: 565px;
     width: 100%;
-    padding-left: 21%;
-    
+    margin: auto;
+    padding-right: 40px;    
 }
 
 .w-row {
@@ -544,6 +541,11 @@ h3 + ul li {
     margin-bottom: 80px;
 }
 
+.hline {
+    border-top: 1px solid #000; /* 黒い横線を設定 */
+    padding-bottom: 5px; /* 横線とテキストの間隔を調整 */
+    margin: 10px 0; /* 上下の余白を調整 */
+}
 
 @media screen and (max-width: 768px)  {
 
@@ -663,4 +665,22 @@ h3 + ul li {
         margin-bottom: 0;
     }
 } 
+
+.page-btn-pdf{
+    margin: 0;
+    flex-grow: 1;
+    line-height: 1.6;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+    margin-left: 100px;
+}
+
+.page-btn-pdf img {
+    width: auto;
+    height: 25px;
+    display: inline;
+    margin-top: -15px;
+}
+
 
