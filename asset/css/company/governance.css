@@ -1,5 +1,26 @@
 @charset "UTF-8";
+/* だしわけ */
 
+.pc-only,
+.sp-only {
+    display: none;
+}
+
+/* SP（スマホ版）のスタイル */
+@media (max-width: 768px) {
+    .sp-only {
+        display: block;
+        /* スマホ版で表示 */
+    }
+}
+
+/* PC（デスクトップ版）のスタイル */
+@media (min-width: 769px) {
+    .pc-only {
+        display: block;
+        /* PC版で表示 */
+    }
+}
 .governance .content-wrapper {
 padding-bottom: 80px;
 }

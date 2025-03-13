@@ -45,6 +45,8 @@ section ul {
 
 section ul li {
     padding-left: 30px;
+    text-indent: -1em;
+    padding-left: 2em;
 }
 
 .ul_top_p {

@@ -125,3 +125,41 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+// リンククリック時にセクション五を開く
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("✅ `main.js` の実行開始");
+
+    // `#sec_5` へのリンクをクリック時にアコーディオンを開く
+    const sec5Link = document.querySelector('a[href="#sec_5"]');
+    
+    if (sec5Link) {
+        sec5Link.addEventListener("click", function (event) {
+            event.preventDefault(); // 通常のリンク動作を防ぐ
+
+            const target = document.getElementById("sec_5"); // ターゲットのアコーディオン要素を取得
+
+            if (target) {
+                // スムーズスクロール
+                window.scrollTo({
+                    top: target.offsetTop - 100, // ヘッダー分調整
+                    behavior: "smooth"
+                });
+
+                // アコーディオンのコンテンツを取得
+                const content = target.querySelector(".accordion-content");
+                const button = target.querySelector(".accordion-btn");
+
+                // アコーディオンが閉じている場合は開く
+                if (content && button && !content.style.maxHeight) {
+                    button.classList.add("active"); // 「＋」→「−」に切り替え
+                    content.style.maxHeight = content.scrollHeight + "px";
+
+                    setTimeout(() => {
+                        content.style.maxHeight = "none"; // 高さ制限を解除
+                    }, 300);
+                }
+            }
+        });
+    }
+});

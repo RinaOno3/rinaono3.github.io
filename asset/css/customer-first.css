@@ -13,9 +13,12 @@
         display: block;
     }
 }
+
 .accordion-item a {
-    text-decoration: underline; /* アンダーラインを表示 */
-    cursor: pointer; /* カーソルをポインター（手の形）に */
+    text-decoration: underline;
+    /* アンダーラインを表示 */
+    cursor: pointer;
+    /* カーソルをポインター（手の形）に */
 }
 
 
@@ -30,6 +33,7 @@
     width: 100%;
     margin-inline: auto;
 }
+
 
 .sec_5_wrp .indent_list {
     padding-left: 5rem;
@@ -49,8 +53,11 @@
 .indent_list li {
     position: relative;
     padding-left: 3.8rem;
-    line-height: 1.8; /* 読みやすい行間 */
-    list-style-type: none; /* デフォルトのリストマーカーを削除 */
+    line-height: 1.8;
+    /* 読みやすい行間 */
+    list-style-type: none;
+    /* デフォルトのリストマーカーを削除 */
+    margin-bottom: 1rem;
 }
 
 /* ✅ 「・」を手動で追加 */
@@ -58,15 +65,19 @@
     content: "・";
     position: absolute;
     left: 22px;
-    top: -2px; /* 適切な位置に調整 */
-    font-size: 1.2em; /* サイズ調整 */
-    color: inherit; /* 文字色を継承 */
+    top: -2px;
+    /* 適切な位置に調整 */
+    font-size: 1.2em;
+    /* サイズ調整 */
+    color: inherit;
+    /* 文字色を継承 */
 }
 
 /* ✅ 1つ目と2つ目の <li> の <span> に余白をつける */
 .indent_list li span {
     display: block;
-    padding-left: 1.2em; /* 2行目以降のインデント */
+    padding-left: 1.2em;
+    /* 2行目以降のインデント */
     text-indent: 0;
 }
 
@@ -80,13 +91,15 @@
     font-size: 1.8rem;
     font-weight: bold;
     text-align: left;
-    padding: 12px 50px 12px 15px; /* 右側に余白を確保 */
+    padding: 12px 50px 12px 15px;
+    /* 右側に余白を確保 */
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
     position: relative;
     display: flex;
-    align-items: center; /* アイコンとテキストを中央揃え */
+    align-items: center;
+    /* アイコンとテキストを中央揃え */
     justify-content: space-between;
 }
 
@@ -94,21 +107,26 @@
 .accordion-btn::after {
     content: "";
     position: absolute;
-    top: 50%; /* アイコンを親要素の中央に配置 */
+    top: 50%;
+    /* アイコンを親要素の中央に配置 */
     right: 15px;
-    width: 20px; /* アイコンの幅 */
-    height: 20px; /* アイコンの高さ */
+    width: 20px;
+    /* アイコンの幅 */
+    height: 20px;
+    /* アイコンの高さ */
     background-image: url("/asset/img/icon_plus.svg");
     background-size: contain;
     background-repeat: no-repeat;
-    transform: translateY(-50%); /* ちょうど中央に配置 */
+    transform: translateY(-50%);
+    /* ちょうど中央に配置 */
     transition: transform 0.3s ease-in-out;
 }
 
 /* クリック時の「−」ボタンと回転アニメーション */
 .accordion-btn.active::after {
     background-image: url("/asset/img/icon_minus.svg");
-    transform: translateY(-50%) rotate(180deg); /* 180度回転 */
+    transform: translateY(-50%) rotate(180deg);
+    /* 180度回転 */
 }
 
 
@@ -133,7 +151,8 @@
 
 /* === 開いた時のスタイル === */
 .accordion-content.active {
-    max-height: 500px; /* 十分に大きな値（適宜調整） */
+    max-height: 500px;
+    /* 十分に大きな値（適宜調整） */
     padding: 15px;
 }
 
@@ -169,10 +188,12 @@
 
 .accordion-list li {
     position: relative;
-    padding-left: 25px; /* 2行目以降をずらす（黒丸の幅 + 余白） */
+    padding-left: 25px;
+    /* 2行目以降をずらす（黒丸の幅 + 余白） */
     margin-bottom: 1rem;
     font-size: 1.6rem;
-    text-indent: 0; /* text-indent をリセット */
+    text-indent: 0;
+    /* text-indent をリセット */
     font-weight: bold;
 }
 
@@ -191,7 +212,7 @@
 
 }
 
-.accordion-content h3 + ul {
+.accordion-content h3+ul {
 
     padding-left: 5rem;
 }
@@ -220,19 +241,22 @@
 
 .bg_gray .accordion-list li {
     position: relative;
-    padding-left: 1em; /* 1文字分右に押し出す */
+    padding-left: 1em;
+    /* 1文字分右に押し出す */
     margin-bottom: 1rem;
     font-size: 1.6rem;
-    text-indent: -1em; /* 1行目だけ左にずらす */
+    text-indent: -1em;
+    /* 1行目だけ左にずらす */
     font-weight: bold;
 }
 
-.bg_gray .accordion-list{
+.bg_gray .accordion-list {
     margin-bottom: 20px;
 
 }
+
 .table_wrp {
-    margin-bottom: 50px;
+    margin-bottom: 35px;
     width: 100%;
     max-width: 669px;
     margin-inline: auto;
@@ -244,6 +268,18 @@
 
 .customer-first .mb_40 {
     margin-bottom: 40px;
+}
+
+.customer-first .fo_10 {
+    font-size: 1.2rem;
+}
+
+.mb_30 {
+    margin-bottom: 30px;
+}
+
+.indent_list li .pl_0 {
+    padding-left: 0;
 }
 
 .bg_gray p {
@@ -260,7 +296,10 @@
 
 .accordion-item .img_note {
     font-size: 1.1rem;
-    padding-left: 0;
+    text-indent: -1em;
+    /* 「＊」を左にずらす */
+    padding-left: 1em;
+    /* 2行目の頭を揃える */
 }
 
 .img_box_wrp {
@@ -284,6 +323,7 @@
     margin: 0 auto;
     gap: 20px;
     padding-left: 3rem;
+    margin-bottom: 1rem;
 }
 
 
@@ -302,7 +342,7 @@
 
 .last_section_ttl {
     font-size: 1.6rem;
- 
+
 }
 
 .last_section_box {
@@ -321,7 +361,8 @@
     font-size: 16px;
 }
 
-.custom-table th, .custom-table td {
+.custom-table th,
+.custom-table td {
     border: 1px solid #ccc;
     padding: 10px;
 }
@@ -337,7 +378,8 @@
 }
 
 .training-list {
-    list-style: none; /* デフォルトのリストスタイルを削除 */
+    list-style: none;
+    /* デフォルトのリストスタイルを削除 */
     padding-left: 5rem;
 }
 
@@ -361,15 +403,13 @@
 }
 
 .link_btn {
-    display: block;
+    display: inline-block;
     text-align: center;
-    font-size:  2rem;
+    font-size: 2rem;
     font-weight: bold;
-   color: #333;
-   margin-bottom: 60px;
-   margin-top: 40px;
-   text-decoration: underline;
-    
+    color: #333;
+    text-decoration: underline;
+
 }
 
 @media (max-width: 1700px) {
@@ -388,8 +428,10 @@
     margin-bottom: 40px;
 }
 
-.policy-table th, .policy-table td {
-    border-bottom: 1px solid #ccc; /* 下線のみ適用 */
+.policy-table th,
+.policy-table td {
+    border-bottom: 1px solid #ccc;
+    /* 下線のみ適用 */
     padding: 10px;
     text-align: left;
 }
@@ -411,39 +453,52 @@
 .custom-divider {
     width: 100%;
     height: 1px;
-    background-color: #ccc; /* 薄いグレーの線 */
+    background-color: #ccc;
+    /* 薄いグレーの線 */
     margin: 20px 0;
 }
 
 /* SP版のスクロール可能エリア */
 .sp-only {
-    display: none; /* デフォルトは非表示 */
-    overflow-x: auto; /* 横スクロールを有効化 */
-    white-space: nowrap; /* 画像を改行させない */
-    -webkit-overflow-scrolling: touch; /* スムーズスクロール */
-    scrollbar-width: thin; /* Firefox用 */
-    scrollbar-color: #D80C18 #f0f0f0; /* スクロールバーの色（バーの色 背景色） */
+    display: none;
+    /* デフォルトは非表示 */
+    overflow-x: auto;
+    /* 横スクロールを有効化 */
+    white-space: nowrap;
+    /* 画像を改行させない */
+    -webkit-overflow-scrolling: touch;
+    /* スムーズスクロール */
+    scrollbar-width: thin;
+    /* Firefox用 */
+    scrollbar-color: #D80C18 #f0f0f0;
+    /* スクロールバーの色（バーの色 背景色） */
 }
 
 /* 画像が横にスクロールするように調整 */
 .sp-only img {
     display: block;
-    width: 150%; /* スクロールできるように幅を調整 */
-    min-width: 768px; /* 画面より大きくしてスクロール可能に */
-    max-width: none; /* 自動調整を無効化 */
+    width: 150%;
+    /* スクロールできるように幅を調整 */
+    min-width: 768px;
+    /* 画面より大きくしてスクロール可能に */
+    max-width: none;
+    /* 自動調整を無効化 */
 }
 
 /* Webkit（Chrome, Safari用）のスクロールバー */
 .sp-only::-webkit-scrollbar {
-    height: 6px; /* スクロールバーの高さ */
+    height: 6px;
+    /* スクロールバーの高さ */
 }
 
 .sp-only::-webkit-scrollbar-track {
-    background: #f0f0f0; /* スクロールバーの背景 */
+    background: #f0f0f0;
+    /* スクロールバーの背景 */
 }
 
 .sp-only::-webkit-scrollbar-thumb {
-    background: #D80C18; /* スクロールバー本体 */
+    background: #D80C18;
+    /* スクロールバー本体 */
     border-radius: 3px;
 }
 
@@ -454,7 +509,8 @@
 
 .accordion-btn {
     display: flex;
-    align-items: flex-start; /* 上揃え */
+    align-items: flex-start;
+    /* 上揃え */
     text-align: left;
     background-color: #D80C18;
     color: #fff;
@@ -469,17 +525,22 @@
 
 /* 「運営方針X.」のスタイル */
 .accordion-btn .heading {
-    flex-shrink: 0; /* 文字のサイズに合わせる */
-    min-width: 4em; /* 適宜調整 */
+    flex-shrink: 0;
+    /* 文字のサイズに合わせる */
+    min-width: 4em;
+    /* 適宜調整 */
     font-weight: bold;
 }
 
 /* 2行目以降のインデント */
 .accordion-btn .content {
-    flex-grow: 1; /* 残りのスペースを埋める */
-    padding-left: 10px; /* インデント調整 */
+    flex-grow: 1;
+    /* 残りのスペースを埋める */
+    padding-left: 10px;
+    /* インデント調整 */
     display: flex;
-    flex-wrap: wrap; /* 長すぎる場合折り返す */
+    flex-wrap: wrap;
+    /* 長すぎる場合折り返す */
     align-items: center;
 }
 
@@ -490,32 +551,37 @@
     padding-left: 3.6rem;
 }
 
-h4 + ul li {
+h4+ul li {
     padding-left: 3.6rem;
     font-size: 1.6rem;
-    line-height: 1.6; /* 行間の調整（適宜変更してください） */
+    line-height: 1.6;
+    /* 行間の調整（適宜変更してください） */
     margin-bottom: 8px;
 }
 
-h3 + img + .table_wrp + p {
-   font-size: 1.4rem;
-}
-h4 + p {
-    font-size: 1.6rem;
-}
-
-h4 + p + p {
-    font-size: 1.6rem;
-}
-
-h3 + ul li {
+h3+img+.table_wrp+p {
     font-size: 1.4rem;
-    padding-left: 1em; /* 1文字分のスペースを確保 */
-    line-height: 1.4; /* 行間の調整（適宜変更してください） */
 }
 
-h3 + ul li p{
-    padding-left: 2em; /* 1文字分のスペースを確保 */
+h4+p {
+    font-size: 1.6rem;
+}
+
+h4+p+p {
+    font-size: 1.6rem;
+}
+
+h3+ul li {
+    font-size: 1.4rem;
+    padding-left: 1em;
+    /* 1文字分のスペースを確保 */
+    line-height: 1.4;
+    /* 行間の調整（適宜変更してください） */
+}
+
+h3+ul li p {
+    padding-left: 2em;
+    /* 1文字分のスペースを確保 */
 }
 
 .tx_point {
@@ -530,11 +596,10 @@ h3 + ul li p{
     max-width: 565px;
     width: 100%;
     margin: auto;
-    padding-right: 40px;    
 }
 
 .w-row {
-    background:#fff;
+    background: #fff;
 }
 
 .customer-first {
@@ -542,22 +607,27 @@ h3 + ul li p{
 }
 
 .hline {
-    border-top: 1px solid #000; /* 黒い横線を設定 */
-    padding-bottom: 5px; /* 横線とテキストの間隔を調整 */
-    margin: 10px 0; /* 上下の余白を調整 */
+    border-top: 1px solid #000;
+    /* 黒い横線を設定 */
+    padding-bottom: 5px;
+    /* 横線とテキストの間隔を調整 */
+    margin: 10px 0;
+    /* 上下の余白を調整 */
 }
 
-@media screen and (max-width: 768px)  {
+@media screen and (max-width: 768px) {
 
     .customer-first .content-wrapper {
         padding: 20px;
     }
+
     .discription {
         font-size: 1.5rem;
         padding: 0;
         margin: 0;
         font-weight: normal;
     }
+
     .last_section_ttl {
         font-size: 1.5rem;
     }
@@ -574,12 +644,15 @@ h3 + ul li p{
         font-size: 1.5rem;
         padding-left: 0;
     }
-    
+
     .pc-only {
-        display: none; /* PC版を非表示 */
+        display: none;
+        /* PC版を非表示 */
     }
+
     .sp-only {
-        display: block; /* SP版のみ表示 */
+        display: block;
+        /* SP版のみ表示 */
     }
 
     .table_wrp {
@@ -637,7 +710,8 @@ h3 + ul li p{
         border-bottom: 1px solid #ccc;
     }
 
-    .policy-table th, .policy-table td {
+    .policy-table th,
+    .policy-table td {
         width: 50%;
     }
 
@@ -664,16 +738,20 @@ h3 + ul li p{
     .customer-first {
         margin-bottom: 0;
     }
-} 
+}
 
-.page-btn-pdf{
-    margin: 0;
+.page-btn-pdf {
+    text-align: center;
+    font-size: 1.6rem;
     flex-grow: 1;
     line-height: 1.6;
     align-items: center;
     gap: 10px;
-    display: flex;
-    margin-left: 100px;
+    display: block;
+    margin-inline: auto;
+    margin-bottom: 60px;
+    margin-top: 40px;
+
 }
 
 .page-btn-pdf img {
@@ -682,5 +760,3 @@ h3 + ul li p{
     display: inline;
     margin-top: -15px;
 }
-
-
