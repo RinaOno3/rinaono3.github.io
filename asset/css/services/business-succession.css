@@ -154,6 +154,7 @@
 	font-weight: bold;
 	line-height: 1.4444444444;
 	text-align: center;
+	padding-top:1.0rem
 }
 @media screen and (max-width: 767px) {
 	.business-risk__title {

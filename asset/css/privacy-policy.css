@@ -68,6 +68,10 @@ section ul li {
 
 }
 
+.no_textindent{
+    text-indent: 0px;
+}
+
 /* === コンテンツエリア === */
 .contact-info {
     max-width: 800px;

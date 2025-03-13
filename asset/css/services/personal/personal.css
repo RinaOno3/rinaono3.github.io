@@ -118,11 +118,7 @@ html {
   }
 }
 
-.page-title p{
-    text-align: left;
-    padding: 0px 50px;
-    max-width: 800px;
-    margin: 0 auto;   
+.page-title .sub-title{
     font-size: 14px;
 }
 

@@ -75,6 +75,14 @@ p {
     margin-top:10px;
 }
 
+.cat-1,.cat-2,.cat-3,.cat-4 {
+    display: inline-block;
+    color: white;
+    padding: 2px 20px;
+    border-radius: 20px; /* 丸みのあるデザイン */
+    border: none;
+}
+
 .news-title {
     display: block;
     padding: 12px 15px;
@@ -119,6 +127,14 @@ p {
     .news-list {
         padding: 10px;
     }
+    
+    .news-tag {
+        padding: 0 20px ;
+        margin-right: 0;
+        font-size: 1.2rem;
+        white-space: nowrap;
+    }
+    
     .page-btn-wrapper{
         margin: 0;
         gap:0;
