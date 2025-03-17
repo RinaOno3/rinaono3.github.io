@@ -615,6 +615,28 @@ h3+ul li p {
     /* 上下の余白を調整 */
 }
 
+
+.page-btn-pdf {
+    text-align: center;
+    font-size: 1.6rem;
+    flex-grow: 1;
+    line-height: 1.6;
+    align-items: center;
+    gap: 10px;
+    display: block;
+    margin-inline: auto;
+    margin-bottom: 60px;
+    margin-top: 40px;
+
+}
+
+.page-btn-pdf img {
+    width: auto;
+    height: 25px;
+    display: inline;
+    margin-top: -15px;
+}
+
 @media screen and (max-width: 768px) {
 
     .customer-first .content-wrapper {
@@ -738,25 +760,9 @@ h3+ul li p {
     .customer-first {
         margin-bottom: 0;
     }
-}
 
-.page-btn-pdf {
-    text-align: center;
-    font-size: 1.6rem;
-    flex-grow: 1;
-    line-height: 1.6;
-    align-items: center;
-    gap: 10px;
-    display: block;
-    margin-inline: auto;
-    margin-bottom: 60px;
-    margin-top: 40px;
+    .page-btn-pdf {
+        text-align: left;}
 
-}
 
-.page-btn-pdf img {
-    width: auto;
-    height: 25px;
-    display: inline;
-    margin-top: -15px;
 }
