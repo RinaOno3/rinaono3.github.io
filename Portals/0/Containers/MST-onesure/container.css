@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+/* ===========================================================
+ global
+=========================================================== */
+.moduleButton{text-align:right;}
+div[id*="ModuleContent"]{clear:both;}
+div[id*="ModuleContent"]:after{content:"";display:block;clear:both;}
+.moduleSkin:not(.moduleZero) div[id*="ModuleContent"] > *:last-child{margin-bottom:3rem;}
+
+/* ===========================================================
+ zero
+=========================================================== */
+.zeroTitle .Head{display:none;position:absolute;top:-17px;left:72px;margin:0;padding:0 8px;border-radius:2px;background:#666;color:#fff;font-size:10px;line-height:17px;}
+.editMode .zeroTitle{position:relative;}
+.editMode .zeroTitle .Head{display:inline-block;}
+
+/* ===========================================================
+ h2Title
+=========================================================== */
+

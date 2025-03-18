@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head id="Head">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style id="StylePlaceholder" type="text/css"></style>
+	<link id="_Portals__default_" rel="stylesheet" type="text/css" href="/Portals/0/_default/default.css" />
+	<link id="_Portals_0_Skins_MST_sstemp_" rel="stylesheet" type="text/css" href="/Portals/0/Skins/MST-sstemp/skin.css" />
+	<link id="_Portals_0_Containers_MST_sstemp_" rel="stylesheet" type="text/css" href="/Portals/0/Containers/MST-sstemp/container.css" />
+	<link id="_Portals_0_" rel="stylesheet" type="text/css" href="/Portals/0/portal.css" />
+	<script src="/Portals/0/js/tools/jquery-1.11.2.min.js" type="text/javascript"></script>
+	<script src="/Portals/0/js/tools/jquery.cookie.js" type="text/javascript"></script>
+	<link rel="SHORTCUT ICON" href="/Portals/0/favicon.ico" />
+	<title>事故時の連絡先・保険金請求の流れ</title>
+	<meta name="robots" content="noindex">
+	<meta name="format-detection" content="telephone=no">
+	<script type="text/javascript">
+	(function($) {
+	    $(function() {
+	        function getTerminalType() {
+	            var result_value = "0";
+	            $.ajax({
+	                url: 'https://sp.infocms.jp/?v=2&ua=' + navigator.userAgent,
+	                type: "GET",
+	                async: false
+	            }).done(function(data) {
+	                result_value = data;
+	            });
+	            return result_value;
+	        }
+	     
+	        // 0:PC、1:スマホ、2:タブレット
+	        var UAType = getTerminalType();
+	        if (UAType == 1) {
+	            // 以下処理
+	            $('.telLink').each(function(){
+	            var str = $(this).text();
+	                $(this).html($('<a>').attr('href', 'tel:' + str.replace(/-/g, '')).append(str + '</a>'));
+	            });
+	            // ここまで
+	        }
+	    });
+	})(jQuery);
+	</script>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-NM9CT26');
+	</script>
+	<!-- End Google Tag Manager -->
+    <script>
+        function isMobile() {
+            return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        }
+        window.addEventListener("DOMContentLoaded", function() {
+            if (isMobile()) { // モバイルデバイスのとき
+                var spCssFiles = [
+                    "/Portals/0/_default/defaultsmart.css",
+                    "/Portals/0/Skins/MST-sstemp/skinsmart.css",
+                    "/Portals/0/Containers/MST-sstemp/containersmart.css",
+                    "/Portals/0/portalsmart.css"
+                ];
+                spCssFiles.forEach(function(href) {
+                    var link = document.createElement("link");
+                    link.rel = "stylesheet";
+                    link.type = "text/css";
+                    link.href = href;
+                    document.head.appendChild(link);
+                });
+
+                var script = document.createElement("script");
+                script.src = "/Portals/0/js/tools/smartphone.js";
+                document.head.appendChild(script);
+
+                var viewportMeta = document.createElement("meta");
+                viewportMeta.name = "viewport";
+                viewportMeta.content = "width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1";
+                document.getElementsByTagName("head")[0].appendChild(viewportMeta);
+            }
+        });
+    </script>
+</head>
+<body id="Body">
+    <noscript><div class="lblNoScript"><span id="lblNoScript" class="NormalRed">本システムでは、JavaScriptを利用しています。JavaScriptを有効に設定してからご利用ください。</span></div></noscript>
+    <p class="skip"><a href="#dnn_ContentPane"><span id="lblSkipContentPane">本文へスキップします。</span></a></p> 
+    <form name="Form" method="post" action="/Default.aspx?TabId=354" id="Form" enctype="multipart/form-data" style="height: 100%;" class="pcMode">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form'];
+if (!theForm) {
+    theForm = document.Form;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/Portals/0/js/dnncore.js" type="text/javascript"></script>
+<script src="/Portals/0/js/infocms.js" type="text/javascript"></script>
+<script src="/Portals/0/js/MicrosoftAjax.ja.js" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+        
+        
+<script>jQuery.noConflict();</script>
+<script type="text/javascript" src="/Portals/0/js/to-top/to-top_btmu.js"></script>
+<script type="text/javascript" src="/Portals/0/js/smoothScroll/smoothScroll.js"></script>
+<script type="text/javascript" src="/Portals/0/js/matchHeight/jquery.matchHeight.js"></script>
+<script type="text/javascript" src="/Portals/0/js/matchHeight/matchHeight_common.js"></script>
+<script type="text/javascript" src="/Portals/0/js/common/accordion.js"></script>
+<script type="text/javascript">
+(function($){
+	$(document).ready( function(){
+		$(".hMenuBtn").click(function(event){
+			event.stopPropagation();
+			$(".NavSStempPane").slideToggle(150);
+			$(".hMenuBtn").toggleClass("menuOpen");
+		});
+	});
+})(jQuery)
+</script>
+
+<div id="skin1Column" class="skinWrapper">
+    <div id="skinWrapBody">
+        <header id="headBody">
+            <p class="logo"><img src="/Portals/0/Skins/MST-btmu/images/logo.png" alt="エムエスティ保険サービス株式会社 損害保険・生命保険代理店" /></p>
+            <div id="dnn_symbolSStempPane" class="symbolSStempPane">
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1001_ContentPane"><!-- Start_Module_1001 --><div id="dnn_ctr1001_ModuleContent">
+	<div id="dnn_ctr1001_HtmlModule_HtmlModule_lblContent">
+				<p class="symbolText">キョーリン製薬様専用</p>
+		
+</div>
+<!-- End_Module_1001 -->
+</div></div>
+  </div>
+</section>
+
+</div>
+            <aside id="dnn_SideTopSStempPane" class="SideTopSStempPane">
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1002_ContentPane"><!-- Start_Module_1002 --><div id="dnn_ctr1002_ModuleContent">
+	<div id="dnn_ctr1002_HtmlModule_HtmlModule_lblContent">
+	<ul class="subNav pcArea">
+    <li class="external"><a href="https://www.mst-is.co.jp/KYORIN/tabid/344/Default.aspx">トップページ</a></li>
+</ul>
+</div>
+<!-- End_Module_1002 -->
+</div></div>
+  </div>
+</section>
+
+</aside>
+            <p class="hMenuBtn spArea">MENU</p>
+            <nav id="dnn_NavSStempPane" class="NavSStempPane">
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1003_ContentPane"><!-- Start_Module_1003 --><div id="dnn_ctr1003_ModuleContent">
+	<div class="btmuNav noParent">
+<ul>
+<li class="Tab348"><a id="dnn_ctr1003_SEOMenuV2_Tab348"  href="https://www.mst-is.co.jp/KYORIN/tabid/348/Default.aspx" >MSTを利用するメリット</a></li>
+<li class="Tab349"><a id="dnn_ctr1003_SEOMenuV2_Tab349"  href="https://www.mst-is.co.jp/KYORIN/tabid/349/Default.aspx" >保険商品を選ぶ</a><ul>
+<li class="Tab351"><a id="dnn_ctr1003_SEOMenuV2_Tab351"  href="https://www.mst-is.co.jp/KYORIN/tabid/351/Default.aspx" >Webでお手続き</a></li>
+</ul>
+</li>
+<li class="Tab352"><a id="dnn_ctr1003_SEOMenuV2_Tab352"  href="https://www.mst-is.co.jp/KYORIN/tabid/352/Default.aspx" >Webでのお問合せ</a></li>
+<li class="Tab353"><a id="dnn_ctr1003_SEOMenuV2_Tab353"  href="https://www.mst-is.co.jp/KYORIN/tabid/353/Default.aspx" >契約変更・解約手続き受付</a></li>
+<li class="Tab354 currentItem"><a id="dnn_ctr1003_SEOMenuV2_Tab354"  class="currentLink" href="https://www.mst-is.co.jp/KYORIN/tabid/354/Default.aspx" >事故時の連絡先・保険金請求の流れ</a></li>
+<li class="Tab355"><a id="dnn_ctr1003_SEOMenuV2_Tab355"  href="https://www.mst-is.co.jp/KYORIN/tabid/355/Default.aspx" >お知らせ一覧</a></li>
+</ul>
+
+</div>
+<!-- End_Module_1003 -->
+</div></div>
+  </div>
+</section>
+
+</nav>
+            <aside id="dnn_SideSStempPane" class="SideSStempPane">
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1004_ContentPane"><!-- Start_Module_1004 --><div id="dnn_ctr1004_ModuleContent">
+	<div id="dnn_ctr1004_HtmlModule_HtmlModule_lblContent">
+	<div class="contactBox pcArea">
+<h2 class="ttl">保険に関するお問い合わせ</h2>
+<div class="txtWrap" style="width: 243px; height: 146px;">
+<p><span style="font-size: 10px;">　＜募集代理店＞エムエスティ保険サービス</span></p>
+<p>　東京職域保険相談部</p>
+<p>　<span style="font-size: 12.636px; font-family: monospace;">渡部・鈴木</span></p>
+<p>　ＴＥＬ　：<span class="telLink">03-3340-3357</span><br />
+　受付時間：平日9時～17時</p>
+<p class="notes" style="text-align: left;">　　　　　　　※年末年始を除く</p>
+</div>
+</div>
+</div>
+<!-- End_Module_1004 -->
+</div></div>
+  </div>
+</section>
+
+</aside>
+            <aside id="dnn_SideBottomSStempPane" class="SideBottomSStempPane">
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1005_ContentPane"><!-- Start_Module_1005 --><div id="dnn_ctr1005_ModuleContent">
+	<div id="dnn_ctr1005_HtmlModule_HtmlModule_lblContent">
+	<ul class="subNav pcArea">
+    <li class="external"><a href="/" target="_blank">MSTコーポレートサイト</a></li>
+    <li class="external"><a href="/privacy/tabid/244/Default.aspx" target="_blank">個人情報保護に関する基本方針</a></li>
+    <li class="external"><a href="/canvass/tabid/243/Default.aspx" target="_blank">勧誘方針</a></li>
+</ul>
+</div>
+<!-- End_Module_1005 -->
+</div></div>
+  </div>
+</section>
+
+</aside>
+        </header>
+        <main id="mainBody">
+            <div id="contentWrap">
+                <header id="dnn_PagetitlePane" class="PagetitlePane">
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1116_ContentPane"><!-- Start_Module_1116 --><div id="dnn_ctr1116_ModuleContent">
+	<h1>キョーリン製薬-事故時の連絡先・保険金（給付金）請求の流れ</h1><!-- End_Module_1116 -->
+</div></div>
+  </div>
+</section>
+
+</header>
+                <div id="dnn_ContentPane" class="ContentPane">
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1117_ContentPane"><!-- Start_Module_1117 --><div id="dnn_ctr1117_ModuleContent">
+	<div id="dnn_ctr1117_HtmlModule_HtmlModule_lblContent">
+	<ul class="anchorLinkList">
+    <li class="down"><a href="#cont01">自動車・火災の事故の場合</a></li>
+    <li class="down"><a href="#cont03">医療／がん保険の場合</a></li>
+</ul>
+</div>
+<!-- End_Module_1117 -->
+</div></div>
+  </div>
+</section>
+
+
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1118_ContentPane"><!-- Start_Module_1118 --><div id="dnn_ctr1118_ModuleContent">
+	<div id="dnn_ctr1118_HtmlModule_HtmlModule_lblContent">
+	<h2 id="cont01">自動車・火災の事故の場合</h2>
+<h3>主な取扱保険会社事故受付連絡先</h3>
+<div class="contBoxWrap">
+<div class="contBox">
+<div class="contBoxInner">
+<div class="txtArea">
+<h5>損害保険ジャパン株式会社</h5>
+<p>TEL：<span class="telLink">（自動車）0120-256-110</span></p>
+<p>TEL：<span class="telLink">（その他）0120-727-110</span></p>
+</div>
+</div>
+</div>
+<div class="contBox">
+<div class="contBoxInner">
+<div class="txtArea">
+<h5>東京海上日動火災保険株式会社</h5>
+<p>TEL：<span class="telLink">（自動車）0120-119-110</span></p>
+<p>TEL：<span class="telLink">（その他）0120-119-110</span></p>
+</div>
+</div>
+</div>
+<div class="contBox">
+<div class="contBoxInner">
+<div class="txtArea">
+<h5>三井住友海上火災保険株式会社</h5>
+<p>TEL：<span class="telLink">（自動車）0120-258-365</span></p>
+<p>TEL：<span class="telLink">（その他）0120-258-189</span></p>
+</div>
+</div>
+</div>
+</div>
+<h3>当社の連絡先</h3>
+<div class="contBoxWrap">
+<div class="contBox boxRed">
+<div class="txtArea">
+<h5>エムエスティ保険サービス株式会社</h5>
+<p>安心サービス部</p>
+<p>TEL：<span class="telLink">03-3340-3325</span></p>
+<p>安心サービス部は、損害保険（自動車保険・火災保険）の事故・保険金請求のご相談に対応させていただきます。</p>
+<p>（月～金曜 除祝日年末年始　9：00～17：00）</p>
+</div>
+</div>
+</div>
+<h3>事故対応マニュアル</h3>
+<p>相手方との示談は絶対にせず、必ずご相談ください。</p>
+<table class="accidentTable">
+    <tbody>
+        <tr>
+            <td>
+            <p class="stepIco"><img alt="STEP01" src="/Portals/0/images/btmu/accident/ico_step01.png" /></p>
+            <h4>ケガ人の救護</h4>
+            <img alt="アイコン" src="/Portals/0/images/btmu/accident/ico_manual01.png" />
+            <p>ケガ人がいる場合は、まず救急車を呼びましょう。</p>
+            <p class="arrowIco"><img alt="矢印アイコン" src="/Portals/0/images/btmu/accident/arrow_gold_right.png" /></p>
+            </td>
+            <td>
+            <p class="stepIco"><img alt="STEP02" src="/Portals/0/images/btmu/accident/ico_step02.png" /></p>
+            <h4>路上の危険防止</h4>
+            <img alt="アイコン" src="/Portals/0/images/btmu/accident/ico_manual02.png" />
+            <p>継続事故を防止しましょう。</p>
+            <p class="arrowIco"><img alt="矢印アイコン" src="/Portals/0/images/btmu/accident/arrow_gold_right.png" /></p>
+            </td>
+            <td>
+            <p class="stepIco"><img alt="STEP03" src="/Portals/0/images/btmu/accident/ico_step03.png" /></p>
+            <h4>相手の確認</h4>
+            <img alt="アイコン" src="/Portals/0/images/btmu/accident/ico_manual03.png" />
+            <p>住所、電話、名前、会社名、免許証番号、車両ナンバー、保険会社・証券番号など、事故の相手の情報を聞き取りましょう。</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <p class="stepIco"><img alt="STEP04" src="/Portals/0/images/btmu/accident/ico_step04.png" /></p>
+            <h4>警察への通報</h4>
+            <img alt="アイコン" src="/Portals/0/images/btmu/accident/ico_manual04.png" />
+            <p>落ち着いて現場状況を通報しましょう。</p>
+            <p class="arrowIco"><img alt="矢印アイコン" src="/Portals/0/images/btmu/accident/arrow_gold_right.png" /></p>
+            </td>
+            <td>
+            <p class="stepIco"><img alt="STEP05" src="/Portals/0/images/btmu/accident/ico_step05.png" /></p>
+            <h4>目撃者の確認</h4>
+            <img alt="アイコン" src="/Portals/0/images/btmu/accident/ico_manual05.png" />
+            <p>目撃者がいたら証言をメモし、証人になってもらえるか確認しましょう。</p>
+            <p class="arrowIco"><img alt="矢印アイコン" src="/Portals/0/images/btmu/accident/arrow_gold_right.png" /></p>
+            </td>
+            <td>
+            <p class="stepIco"><img alt="STEP06" src="/Portals/0/images/btmu/accident/ico_step06.png" /></p>
+            <h4>保険会社へ連絡</h4>
+            <a href="#cont01" class="arrowLink">ご連絡先</a>
+            <img alt="アイコン" src="/Portals/0/images/btmu/accident/ico_manual06.png" />
+            <p>保険証券に記載の事故相談窓口あるいは、<a href="#cont01">上記窓口</a>にお問い合わせください。</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<!-- End_Module_1118 -->
+</div></div>
+  </div>
+</section>
+
+
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1120_ContentPane"><!-- Start_Module_1120 --><div id="dnn_ctr1120_ModuleContent">
+	<div id="dnn_ctr1120_HtmlModule_HtmlModule_lblContent">
+	<h2 id="cont03">医療／がん保険　の場合</h2>
+<p>お手続きの流れは下記をご覧ください。以下、保険金などの請求手続きの一般例で記したものです。引受保険会社によっては、一部異なる場合もあります。</p>
+<div class="stepContentsWrap">
+<div class="stepTitle">
+<h2 class="step01">当社にご連絡ください</h2>
+</div>
+<div class="stepContents">
+<h3>ご連絡先</h3>
+<div class="contBoxWrap">
+<div class="contBox">
+<div class="contBoxInner">
+<div class="txtArea">
+<h5>医療/がん保険</h5>
+<p>TEL：<span class="telLink">03-3340-3903<br />
+<p>※職域保険相談部（アフラック専用）<br />
+<p>TEL：<span class="telLink">0120-332-431　ガイダンス”3”<br />
+<p>（月～金曜 除祝日年末年始 9：00～17：00）<br />
+</span></p>
+</div>
+</div>
+</div>
+</div>
+<h4 class="mb0">ご連絡内容</h4>
+<ol>
+    <li>ご連絡いただいた方のお名前</li>
+    <li>ご加入者のお名前</li>
+    <li>お亡くなりになられた方のお名前、入院・手術等された方のお名前</li>
+    <li>原因となった病気や事故</li>
+    <li>請求に必要な書類の送付先</li>
+</ol>
+</div>
+<p class="alignCenter"><img alt="矢印アイコン" src="/Portals/0/images/btmu/accident/arrow_gold_bottom.png" /></p>
+<div class="stepTitle">
+<h2 class="step02">ご請求に必要な書類をお届けします</h2>
+</div>
+<div class="stepContents">
+<p>ご連絡いただいた契約内容などを確認させていただきます。<br />
+そのうえで、ご請求手続きに必要な書類を郵送等によりお届けします。</p>
+</div>
+<p class="alignCenter"><img alt="矢印アイコン" src="/Portals/0/images/btmu/accident/arrow_gold_bottom.png" /></p>
+<div class="stepTitle">
+<h2 class="step03">ご請求に必要な書類をご提出ください</h2>
+</div>
+<div class="stepContents">
+<p>「ご請求手続きに必要な書類」と「お手続きについてのご案内」をお届けさせていただきますので、必要書類をお取揃えのうえ郵送等によりご提出ください。 </p>
+<h4>ご提出いただく書類の費用について</h4>
+<p>ご提出いただく書類（医師の診断書や戸籍謄本・印鑑証明書などの公的書類）にかかる費用は、お客さまのご負担となりますのであらかじめご了承ください。</p>
+<h4>ご本人様が請求できない事情がある場合</h4>
+<p>保険金・給付金等のご請求は、ご契約の際に指定された受取人様ご本人しかできません。しかし、ご家族のご意向によりご本人様に病名が告げられない場合や高度障害・認知症などのためご本人様が意思表示をできない場合があります。このような場合、被保険者ご本人様が保険金・給付金等の受取人であっても、ご本人からは、請求することができない場合があります。そこで、一定の条件を満たす方が被保険者の代理人となって、保険金・給付金などを請求できる仕組みを設けています。</p>
+<h4>代理人になることができる例</h4>
+<p>ご請求時において、被保険者と同居または生計を一にしている被保険者の戸籍上の配偶者、または、3親等以内の親族。<br />
+代理人による請求ができる条件は保険種類等により異なります。詳しい内容は、ご確認ください。</p>
+</div>
+<p class="alignCenter"><img alt="矢印アイコン" src="/Portals/0/images/btmu/accident/arrow_gold_bottom.png" /></p>
+<div class="stepTitle">
+<h2 class="step04">ご提出いただいたご請求書類の受付と内容の確認をさせていただきます</h2>
+</div>
+<div class="stepContents">
+<ul>
+    <li>お客さまからご提出いただいたご請求書類は、記入漏れ、捺印・訂正印漏れ等がないか確認させていただきます。</li>
+    <li>確認の結果、記入漏れや書類に不足がある場合には、お客さまへご連絡を差し上げることがあります。</li>
+    <li>確認後、引受保険会社へご請求書類を提出させていただきます。</li>
+</ul>
+</div>
+<p class="alignCenter"><img alt="矢印アイコン" src="/Portals/0/images/btmu/accident/arrow_gold_bottom.png" /></p>
+<div class="stepTitle">
+<h2 class="step05">保険金・給付金のお支払</h2>
+</div>
+<div class="stepContents">
+<ul>
+    <li>ご提出いただいたご請求書類は、さらに引受保険会社で確認を行います。</li>
+    <li>確認の結果、記入漏れや書類に不足がある場合には、引受保険会社から、お客さまへご連絡を差し上げることがあります。</li>
+    <li>保険金・給付金のお支払が決まりましたら、引受保険会社からご指定の口座へ振込まれます。</li>
+    <li>その後、引受保険会社から「保険金・給付金お振込みのお知らせ」などが郵送されます。</li>
+</ul>
+<p>※なお、ご契約の保険約款の内容により保険金・給付金などをお支払いできない場合もございます。<br />
+その場合、引受保険会社からご連絡させていただきます。</p>
+</div>
+</div>
+</div>
+<!-- End_Module_1120 -->
+</div></div>
+  </div>
+</section>
+
+</div>
+                <div id="dnn_NavSmtSStempPane" class="NavSmtSStempPane"><div id="dnn_ctr1006_ContentPane"><!-- Start_Module_1006 --><div id="dnn_ctr1006_ModuleContent">
+	
+<!-- End_Module_1006 -->
+</div></div>
+</div>
+                <div id="dnn_FootSmtSStempPane" class="FootSmtSStempPane DNNEmptyPane"></div>
+            </div>
+        </main>
+    </div>
+    <footer id="footBody">
+        <p class="pagetop"><a href="#headBody">ページトップへ</a>
+</p>
+        <div id="dnn_FootSStempPane" class="FootSStempPane">
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1008_ContentPane"><!-- Start_Module_1008 --><div id="dnn_ctr1008_ModuleContent">
+	<div id="dnn_ctr1008_HtmlModule_HtmlModule_lblContent">
+	<div class="fContents">
+＜募集代理店＞_＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿<br />
+<p class="logo"><img alt="MSTエムエスティ保険サービス株式会社" src="/Portals/0/images/common/logo.png" /></p>
+<address><span>〒163-1537</span>東京都新宿区西新宿1丁目6番1号 新宿エルタワー </address>
+</div>
+</div>
+<!-- End_Module_1008 -->
+</div></div>
+  </div>
+</section>
+
+</div>
+        <p class="copyright"><span id="dnn_dnnCOPYRIGHT_lblCopyright" class="copyrightCss">Copyright© 2015 MST Insurance Service Co., Ltd. All Rights Reserved.</span>
+</p>
+    </footer>
+</div>
+
+
+        <input name="ScrollTop" type="hidden" id="ScrollTop" />
+        <input name="__dnnVariable" type="hidden" id="__dnnVariable" />
+    </form>
+<!-- 345646102B6E121D6EA7DB5DFE92AF20D69A0EBD9AC49BE4AF273AC623D53C89 -->
+</body>
+</html>

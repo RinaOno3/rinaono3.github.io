@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+@import "/Portals/0/css/contents.css";
+
+/* ===========================================================
+ common
+=========================================================== */
+body,
+img{margin:0;padding:0;border:none;}
+
+.clearfix:before,
+.clearfix:after{content:"";display:table;}
+.clearfix:after{clear:both;}
+
+html{height:100%;font-size:14px;}
+body{min-width:1000px;height:100%;font-size:100%;font-family:'Meiryo','Verdana','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','Osaka','ＭＳ Ｐゴシック','sans-serif';color:#333;line-height:1.6;}
+
+a,
+a:link,
+a:visited{color:#cc141d;text-decoration:none;}
+a:hover,
+a:active{color:#cc141d;text-decoration:underline;}
+
+.pcArea{display:block !important;}
+.spArea{display:none !important;}
+
+
+/* ===========================================================
+ skin
+=========================================================== */
+.skinWrapper{color:#333;overflow:hidden;}
+
+
+/* ===========================================================
+ headBody
+=========================================================== */
+#headBody{margin:0 auto;padding:10px 0 5px;width:1000px;text-align:left;}
+#headBody:before,
+#headBody:after{content:"";display:table;}
+#headBody:after{clear:both;}
+
+/* Logo */
+#headBody .headLogo{margin:4px 0 6px;padding:0;width:512px;float:left;}
+#headBody .logo{margin:0;padding:0;line-height:1;background:none;border:none;}
+#headBody .logo a{margin:0;padding:0;display:block;}
+
+/* headWrap */
+.headWrap{width:400px;margin:0;padding:0;float:right;}
+.headWrap:before,
+.headWrap:after{content:"";display:table;}
+.headWrap:after{clear:both;}
+
+
+/* ===========================================================
+ gNav
+=========================================================== */
+.NavPane{margin:0 auto;padding:0;text-align:left;clear:both;border-top:3px solid #e32929 !important;border-bottom:1px solid #ccc !important;}
+.NavPane:before,
+.NavPane:after{content:"";display:table;}
+.NavPane:after{clear:both;}
+
+.NavPane ul{margin:0;padding:0;}
+.NavPane li{margin:0;padding:0;list-style-type:none;}
+
+
+/* ===========================================================
+ content
+=========================================================== */
+#mainBody{margin:30px auto 0;padding:0 0 70px 0;text-align:left;clear:both;display:block;}
+#mainBody:before,
+#mainBody:after{content:"";display:table;}
+#mainBody:after{clear:both;}
+
+.TopPane{margin:0 auto;text-align:left;clear:both;}
+
+#breadcrumbBody{margin:0;padding:5px 0;width:100%;background:#f3eeee;text-align:left;}
+#breadcrumbBody .breadcrumb{margin:0 auto;padding:0;width:1000px;font-size:84%;line-height:1.4;}
+#breadcrumbBody .breadcrumb a{color:#666;text-decoration:underline;}
+#breadcrumbBody .breadcrumb a:hover{text-decoration:none;}
+#breadcrumbBody .breadcrumb span{color:#666;}
+.en #breadcrumbBody .breadcrumb{overflow:hidden;}
+.en #breadcrumbBody .breadcrumb > span > a:first-child{display:none;}
+.en #breadcrumbBody .breadcrumb > span {margin:0 0 0 -200px;}
+.en #breadcrumbBody .breadcrumb > span > a + a {margin:0 0 0 190px;}
+.en #breadcrumbBody .breadcrumb > span > a + a + a {margin:0;}
+
+.pagetop{width:1000px;margin:0 auto;padding:0;position:relative;z-index:1;}
+.pagetop a{margin-left:1050px;padding:0;display:block;width:45px;height:43px;white-space:nowrap;text-indent:100%;overflow:hidden;background:url(images/btn_pagetop.png) no-repeat 0 0;position:fixed;bottom:50px;}
+.pagetop a:hover{filter:alpha(opacity=80);-moz-opacity:0.8;opacity:0.8;}
+
+
+/* ===========================================================
+ footBody
+=========================================================== */
+#footBody{margin:0;padding:0;clear:both;border-top:2px solid #cc141d;}
+
+.FootEnPane{margin:0 auto;padding:0;width:1000px;}
+
+.copyright{margin:0 auto;padding:10px 0;font-size:76%;color:#fff;text-align:center;clear:both;background:#4a4949;}
+
+
+/* ===========================================================
+ css for each skin
+=========================================================== */
+#skinIndex #mainBody{margin:auto 0;}
+
+#skinIndex #contentWrap{margin:0 auto;padding:0;width:1000px;}
+#skinIndex #contentWrap .ContentPane{}
+#skinIndex #contentWrap .ContentBottomPane{}
+
+#contentBody{margin:0 auto 100px;padding:0;width:1000px;}
+#contentBody:before,
+#contentBody:after{content: " ";display: table;}
+#contentBody:after{clear: both;}
+#skin2Columns #sideWrap{width:250px;float:right;}
+#skin2Columns #contentWrap{width:720px;float:left;}
+
+
+/* ===========================================================
+ css for admin
+=========================================================== */
+/* css-for-adminModules */
+.FileManager_LeftBox{width:200px  !important;}
+.FileManager_LeftBox img{height:13px  !important;}
+#dnn_ctr362_ModuleContent table{width:100%  !important;}
+#dnn_ctr362_ModuleContent table td{text-align:left  !important;}
+
+#IconBar\.ascx_divControlPanel{font-size:12px;}
+.ModuleTitle_MenuItem{font-size:12px;}
+ 
+
+/* ===========================================================
+ css for print
+=========================================================== */
+@media print{
+body{font-family:"ヒラギノ角ゴ Pro W3","HiraginoKaku Gothic Pro", "Osaka", "ＭＳ Ｐゴシック", "sans-serif";}
+}
+
+

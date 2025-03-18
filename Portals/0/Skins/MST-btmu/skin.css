@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+@import "/Portals/0/css/contents_btmu.css";
+
+/* ===========================================================
+ common
+=========================================================== */
+body,
+img{margin:0;padding:0;border:none;}
+
+.clearfix:before,
+.clearfix:after{content:"";display:table;}
+.clearfix:after{clear:both;}
+
+html{height:100%;font-size:14px;}
+body{min-width:1150px;height:100%;font-size:100%;font-family:'Meiryo','Verdana','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','Osaka','ＭＳ Ｐゴシック','sans-serif';color:#000;line-height:1.6;}
+
+a,
+a:link,
+a:visited{color:#000;text-decoration:underline;}
+a:hover,
+a:active{color:#000;text-decoration:none;}
+
+.pcArea{display:block!important;}
+.spArea{display:none!important;}
+
+
+/* ===========================================================
+ skin
+=========================================================== */
+.skinWrapper{background:#eff0f2;border-top:7px solid #e32929;color:#000;overflow:hidden;}
+
+#skinWrapBody{margin:0 auto;padding:0;width:1150px;background:url(/Portals/0/images/btmu/common/bg_line_vertical_pink.png) 297px 0 repeat-y #fff;}
+#skinWrapBody:before,
+#skinWrapBody:after{content:"";display:table;}
+#skinWrapBody:after{clear:both;}
+
+
+/* ===========================================================
+ headBody
+=========================================================== */
+#headBody{box-sizing:border-box;margin:0;padding:40px 0 0;width:300px;float:left;text-align:left;}
+
+#headBody .logo{margin:0 0 15px;padding:0 30px 0 25px;background:none;border:none;font-size:1px;line-height:1;}
+#headBody .logo:after{display:none;}
+#headBody .logo a{display:block;}
+
+#headBody .symbolPane{margin:0 30px 15px 25px;padding:0;}
+
+#headBody .NavBtmuPane{margin:0;padding:0 30px 0 25px;}
+#headBody .SideBtmuPane{margin:0;padding:0 30px 0 25px;}
+#headBody .SideBottomBtmuPane{margin:0;padding:0 4px 0 1px;}
+
+
+/* ===========================================================
+ mainBody
+=========================================================== */
+#mainBody{margin:0;padding:40px 0 80px;width:850px;float:right;text-align:left;}
+
+#contentTopWrap{margin:0 0 30px;padding:0 5px;}
+#contentTopWrap:before,
+#contentTopWrap:after{content:"";display:table;}
+#contentTopWrap:after{clear:both;}
+#contentTopWrap .TopLeftPane {margin:0;padding:0;width:536px;float:left;}
+#contentTopWrap .TopRightPane{margin:0;padding:0;width:300px;float:right;}
+#contentTopWrap .TopBottomPane{margin:0;padding:0;clear:both;}
+
+#contentWrap{margin:0;padding:0 20px;}
+
+
+/* ===========================================================
+ footBody
+=========================================================== */
+#footBody{margin:0;padding:0;width:100%;background:#fff;border-top:8px solid #e32929;text-align:left;}
+
+#footBody .pagetop{margin:0 auto;padding:0;width:1000px;position:relative;z-index:1;}
+#footBody .pagetop a{display:block;margin-left:1000px;padding:0;width:36px;height:36px;background:url(images/btn_pagetop.png) no-repeat 0 0;text-indent:100%;white-space:nowrap;overflow:hidden;position:fixed;bottom:20px;}
+#footBody .pagetop a:hover{filter:alpha(opacity=80);-moz-opacity:0.8;opacity:0.8;}
+
+#footBody .FootBtmuPane{margin:0;padding:20px 0;}
+
+#footBody .copyright{margin:0;padding:0;width:100%;height:38px;line-height:38px;font-size:10px;background:#e32929;color:#fff;text-align:center;}
+
+
+/* ===========================================================
+ css for admin
+=========================================================== */
+/* css-for-adminModules */
+.FileManager_LeftBox{width:200px !important;}
+.FileManager_LeftBox img{height:13px !important;}
+#dnn_ctr362_ModuleContent table{width:100% !important;}
+#dnn_ctr362_ModuleContent table td{text-align:left !important;}
+
+#IconBar\.ascx_divControlPanel{font-size:12px;}
+.ModuleTitle_MenuItem{font-size:12px;}
+
+
+/* ===========================================================
+ css for print
+=========================================================== */
+@media print{
+body{font-family:"ヒラギノ角ゴ Pro W3","HiraginoKaku Gothic Pro", "Osaka", "ＭＳ Ｐゴシック", "sans-serif";}
+}
+
+
+

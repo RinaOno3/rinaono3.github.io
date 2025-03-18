@@ -1,0 +1,43 @@
+﻿<script>jQuery.noConflict();</script>
+<script type="text/javascript" src="/Portals/0/js/to-top/to-top_btmu.js"></script>
+<script type="text/javascript" src="/Portals/0/js/smoothScroll/smoothScroll.js"></script>
+<script type="text/javascript" src="/Portals/0/js/matchHeight/jquery.matchHeight.js"></script>
+<script type="text/javascript" src="/Portals/0/js/matchHeight/matchHeight_common.js"></script>
+<script type="text/javascript" src="/Portals/0/js/common/accordion.js"></script>
+<script type="text/javascript"><!--
+(function($){
+	$(document).ready( function(){
+		$(".hMenuBtn").click(function(event){
+			event.stopPropagation();
+			$(".NavBtmuPane").slideToggle(150);
+			$(".hMenuBtn").toggleClass("menuOpen");
+		});
+	});
+})(jQuery)
+//--></script>
+
+<div id="skin1Column" class="skinWrapper">
+    <div id="skinWrapBody">
+        <header id="headBody">
+            <p class="logo"><img src="/Portals/0/Skins/MST-btmu/images/logo.png" alt="エムエスティ保険サービス株式会社 損害保険・生命保険代理店" /></p>
+            <div class="symbolPane" id="symbolPane" runat="server"></div>
+            <p class="hMenuBtn spArea">MENU</p>
+            <nav class="NavBtmuPane" id="NavBtmuPane" runat="server"></nav>
+            <aside class="SideBtmuPane" id="SideBtmuPane" runat="server"></aside>
+            <aside class="SideBottomBtmuPane" id="SideBottomBtmuPane" runat="server"></aside>
+        </header>
+        <main id="mainBody">
+            <div id="contentWrap">
+                <header class="PagetitlePane" id="PagetitlePane" runat="server"></header>
+                <div class="ContentPane" id="ContentPane" runat="server"></div>
+                <div class="NavSmtBtmuPane" id="NavSmtBtmuPane" runat="server"></div>
+                <div class="FootSmtBtmuPane" id="FootSmtBtmuPane" runat="server"></div>
+            </div>
+        </main>
+    </div>
+    <footer id="footBody">
+        <p class="pagetop">[PAGETOP]</p>
+        <div class="FootBtmuPane" id="FootBtmuPane" runat="server"></div>
+        <p class="copyright">[COPYRIGHT]</p>
+    </footer>
+</div>

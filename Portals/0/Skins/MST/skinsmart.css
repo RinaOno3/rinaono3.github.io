@@ -1,0 +1,639 @@
+@charset "utf-8";
+
+@import "/Portals/0/css/contentssmart.css";
+
+/* ===========================================================
+ Non-display area of the smartphone
+=========================================================== */
+.pcArea{display:none !important;}
+.spArea{display:block !important;}
+
+img{max-width:100%;height:auto !important;}
+
+
+/* ===========================================================
+ common
+=========================================================== */
+body{min-width:100%;background:none;font-family:"Hiragino Kaku Gothic ProN","ヒラギノ角ゴ ProN W3","Roboto","Droid Sans",メイリオ,"sans-serif";-webkit-text-size-adjust:none;}
+
+
+/* ===========================================================
+ headBody
+=========================================================== */
+#headBody{width:auto;height:51px;margin:0;padding:0;border-bottom:2px solid #c9151e;text-align:left;}
+
+/* Logo */
+#headBody .headLogo{float:none;width:auto;margin:10px 0 0 10px;padding:0;}
+#headBody .logo a{display:block;width:233px;height:32px;background:url(/Portals/0/images/smartphone/common/logo.png) 0 0 no-repeat;background-size:233px 32px;}
+#headBody .logo img{display:none;}
+
+/* headWrap */
+.headWrap{float:none;width:auto;margin:0;padding:0;}
+
+/* headTopArea */
+.headTopArea{display:none;}
+
+/* headArea */
+.headArea .HeadPane{display:none;}
+
+/* hMenuBtn */
+.hMenuBtn{position:absolute;top:0;right:0;}
+.hMenuBtn{overflow:hidden;width:51px;height:51px;margin:0;padding:0;background:url(/Portals/0/images/smartphone/common/btn_menu.png) -51px 0 no-repeat;background-size:102px 51px;white-space:nowrap;text-indent:100%;}
+.hMenuBtn.menuOpen{background:url(/Portals/0/images/smartphone/common/btn_menu.png) 0 0 no-repeat;background-size:102px 51px;}
+
+
+/* ===========================================================
+ spNav
+=========================================================== */
+.HeadSmtNavPane{display:none;position:absolute;top:51px;right:0;z-index:50;width:100%;background:#fff;}
+
+.sp_Nav{margin:0;padding:0;}
+.sp_Nav > ul{list-style:none;margin:0;padding:0;}
+.sp_Nav > ul > li{margin:0 0 1px 0;padding:0;}
+.sp_Nav > ul > li > a{display:block;position:relative;margin:0;padding:15px 40px 15px 35px;background:#818181;color:#fff;text-decoration:none;}
+.sp_Nav > ul > li > a:after{content:"";position:absolute;top:18px;right:20px;width:8px;height:14px;background-size:8px 14px;background-image:url(/Portals/0/images/smartphone/common/arrow_whiteL.png);background-repeat:no-repeat;}
+.sp_Nav > ul > li > a.toggleSwitch:after{content:"＋";position:absolute;top:15px;left:12px;background-image:none;}
+.sp_Nav > ul > li > a.toggleSwitch.active:after{content:"－";position:absolute;top:15px;left:12px;}
+.sp_Nav > ul > li > ul{display:none;/* アコーディオン閉用 */list-style:none;margin:1px 0 0 0;padding:0;}
+.sp_Nav > ul > li > ul > li{margin:0 0 1px 0;padding:0;}
+.sp_Nav > ul > li > ul > li > a{display:block;position:relative;margin:0;padding:15px 40px 15px 35px;background:#f3eded;color:#333;text-decoration:none;}
+.sp_Nav > ul > li > ul > li > a:after{content:"";position:absolute;top:18px;right:20px;width:8px;height:14px;background-size:8px 14px;background-image:url(/Portals/0/images/smartphone/common/arrow_redL.png);background-repeat:no-repeat;}
+.sp_Nav > ul > li > ul > li > a.toggleSwitch:after{content:"＋";position:absolute;top:15px;left:12px;background-image:none;}
+.sp_Nav > ul > li > ul > li > a.toggleSwitch.active:after{content:"－";position:absolute;top:15px;left:12px;}
+.sp_Nav > ul > li > ul > li > ul{display:none;list-style:none;margin:1px 0 0 0;padding:0;}
+.sp_Nav > ul > li > ul > li > ul > li{margin:0 0 1px 0;padding:0;}
+.sp_Nav > ul > li > ul > li > ul > li > a{display:block;position:relative;margin:0;padding:15px 10px 15px 35px;background:#eaeaea;color:#333;text-decoration:none;}
+.sp_Nav > ul > li > ul > li > ul > li > a:after{content:"";position:absolute;top:20px;right:20px;width:6px;height:10px;background-size:6px 10px;background-image:url(/Portals/0/images/smartphone/common/arrow_grayM.png);background-repeat:no-repeat;}
+/* 1階層目display:none; */
+.sp_Nav > ul > li.Tab200,
+/* ホーム */
+.sp_Nav > ul > li.Tab243,
+/* 勧誘方針 */
+.sp_Nav > ul > li.Tab244,
+/* 個人情報保護に関する基本方針 */
+.sp_Nav > ul > li.Tab246,
+/* 英語サイト */
+.sp_Nav > ul > li.Tab255,
+/* 行員向けサイト：基本認証ログインページ */
+.sp_Nav > ul > li.Tab256,
+/* 行員向けサイト：事故時の連絡先・保険金（給付金）の請求流れ */
+.sp_Nav > ul > li.Tab257{display:none;}/* 行員向けサイト */
+/* 2階層目display:none; */
+.sp_Nav > ul > li > ul > li.Tab290,
+/* 法人のお客様へ */
+.sp_Nav > ul > li > ul > li.Tab291{display:none;}/* 個人のお客様へ */
+
+
+/* ===========================================================
+ gNav
+=========================================================== */
+#gNav{display:none;}
+
+
+/* ===========================================================
+ footBody
+=========================================================== */
+#footBody{border:none;}
+
+.FootTopPane{display:none;}
+
+.footWrap{background:none;}
+.footWrap .FootPane{width:auto;}
+
+.FootBottomPane{width:auto;margin:0;padding:0 10px;border-top:3px solid #cc1319;}
+
+.copyright{padding:10px;background:#333;}
+
+
+/* ===========================================================
+ css for each skin
+=========================================================== */
+#skinIndex #contentWrap{width:100%;padding:0 10px;-webkit-box-sizing:border-box;box-sizing:border-box;}
+
+#contentBody{width:100%;margin:0 auto 50px;padding:0 10px;-webkit-box-sizing:border-box;box-sizing:border-box;}
+#skin2Columns #contentWrap{float:none;width:auto;}
+#skin2Columns #sideWrap{float:none;width:auto;}
+
+.BottomPane{width:auto;margin:0;padding:0;}
+
+/* 248～_個人顧客向け無料相談 */
+#skin1ColumnSoudan #headBody{width:auto;margin:0;padding:0 0 10px;border:none;}
+#skin1ColumnSoudan #contentBody{width:100%;margin:0 auto 50px;padding:0 10px;}
+
+
+/* ========================================================
+ link
+======================================================== */
+/* relatedArea */
+.relatedArea{margin:0 0 25px;padding:0;}
+.relatedArea h2{float:none;margin:0 0 15px 10px;border:none;}
+.relatedArea ul{list-style:none;float:none;width:auto;margin:0 10px;padding:0;}
+.relatedArea li{margin:0 10px 8px 0;}
+@media only screen and (orientation : portrait){.relatedArea li{float:none;text-align:center;}}
+
+/* fLink */
+.fLink{margin:0 0 25px 0;padding:0;}
+.fLink li{margin:0;}
+.fLink li a{display:block;position:relative;margin:0 0 1px 0;padding:15px;background:#f3eded;}
+.fLink li a:after{content:"";position:absolute;top:20px;right:20px;width:6px;height:11px;background:url(/Portals/0/images/smartphone/common/arrow_redL.png) 0 0 no-repeat;background-size:6px 11px;}
+
+/* fContents */
+.fContents{float:none;padding:15px 0 18px;text-align:left;}
+.fContents address{margin:0 0 10px 0;}
+.fContents address span{display:block;}
+.fContents p{margin:0;}
+@media only screen and (orientation : landscape){.fContents address,
+.fContents p{display:block;}}
+
+
+/* ===========================================================
+ contents
+=========================================================== */
+#mainBody{margin:20px 0 0;padding:0;}
+
+/* breadcrumb */
+#breadcrumbBody{display:none;}
+
+.pagetop{width:100%;}
+.pagetop a{margin-left:0;}
+
+
+/* ===========================================================
+ default
+=========================================================== */
+/* 見出し */
+h1{letter-spacing:0;}
+h2{margin:15px 0 15px 0;padding:0 0 5px 10px;letter-spacing:0;}
+h3{margin:14px 0 14px 0;letter-spacing:0;}
+h4{margin:12px 0 12px 0;padding:0 0 4px 10px;letter-spacing:0;}
+h5{margin:10px 0 12px 0;padding:0 0 0 10px;letter-spacing:0;}
+.lineTitle .title{margin:0 0 15px 0;}
+.lineTitle .title h2{padding:0 0 5px 10px;}
+
+/* リスト（2列） */
+.list_2line li{float:none;width:auto;margin:0;}
+#skin1Column .list_2line li{width:auto;}
+
+/* リスト（3列） */
+.list_3line li{float:none;width:auto;margin:0;}
+#skin1Column .list_3line li{width:auto;}
+
+/* エリア（2列） */
+.box_2line > div{float:none;width:auto;margin:0;}
+#skin1Column .box_2line > div{width:auto;}
+
+/* スマホ用テーブル */
+.smtTable th,
+.smtTable td{display:block;}
+.listTable_side.smtTable th,
+.listTable_side.smtTable td{width:auto;border-top:none;}
+
+/* 画像回り込み */
+@media only screen and (orientation : portrait){img.imgRight,
+img.imgLeft{display:block;float:none;margin:0 auto 15px;}}
+
+
+/* ========================================================
+ index
+========================================================*/
+/* KV */
+.kvArea .bx-wrapper{margin:1px auto 10px;}
+.kvArea .bx-wrapper .bx-viewport{left:0;width:100% !important;margin:0;}
+.kvArea .bx-wrapper img{width:100% !important;}
+/* controls */
+.kvArea .bx-wrapper .bx-controls{position:static;left:auto;width:100%;margin-left:0 !important;}
+/* pager */
+.kvArea .bx-wrapper .bx-pager{right:10px;bottom:25px;left:auto;width:100%;margin:0;text-align:right;}
+.kvArea .bx-wrapper .bx-pager.bx-default-pager a{width:25px;height:3px;}
+.kvArea .bx-wrapper .bx-controls-direction{position:absolute;top:50%;width:100%;}
+.kvArea .bx-wrapper .bx-controls-direction a{width:20px;height:30px;}
+.kvArea .bx-wrapper .bx-controls-direction a.bx-prev{top:auto;left:5px;background:url(/Portals/0/images/smartphone/index/arrowL_kv.png) 0 0 no-repeat;background-size:20px 30px;}
+.kvArea .bx-wrapper .bx-controls-direction a.bx-next{top:auto;right:5px;background:url(/Portals/0/images/smartphone/index/arrowR_kv.png) 0 0 no-repeat;background-size:20px 30px;}
+
+/* mainBnrArea */
+.mainBnrArea{margin:0 0 10px;text-align:center;}
+.mainBnrArea li{width:50%;margin:0;padding:0 0 4px 0;border-left:2px solid #fff;box-sizing:border-box;}
+.mainBnrArea li:nth-child(odd){border-right:2px solid #fff;border-left:none;}
+.mainBnrArea a{width:100%;height:76px;border:2px solid #cc141d;box-sizing:border-box;background-size:134px 56px !important;}
+.mainBnrArea li.bnr01 a{background:url(/Portals/0/images/smartphone/index/bnr_main01.png) center center no-repeat;}
+.mainBnrArea li.bnr02 a{background:url(/Portals/0/images/smartphone/index/bnr_main02.png) center center no-repeat;}
+.mainBnrArea li.bnr03 a{background:url(/Portals/0/images/smartphone/index/bnr_main03.png) center center no-repeat;}
+.mainBnrArea li.bnr04 a{background:url(/Portals/0/images/smartphone/index/bnr_main04.png) center center no-repeat;}
+
+/* mainContentsArea */
+.mainContentsArea{margin:0 0 15px 0;}
+.mainContentsArea > ul > li.contets01,
+.mainContentsArea > ul > li.contets02{float:none;width:auto;margin:0 0 10px 0;}
+.mainContentsArea > ul > li.contets01 > a{border:2px solid #ccc;}
+.mainContentsArea > ul > li.contets01 > a span.ttl{position:relative;width:100%;height:auto;padding:6px 0;border-bottom:3px solid #cc1420;background:url(/Portals/0/images/smartphone/index/bnr_mainCon01_ttl.png) 3px 9px no-repeat;background-size:82px 14px;}
+.mainContentsArea > ul > li.contets01 > a span.ttl:before{content:"";position:absolute;top:11px;right:10px;width:5px;height:9px;background:url(/Portals/0/images/smartphone/common/arrow_redM.png) 0 0 no-repeat;background-size:5px 9px;}
+.mainContentsArea > ul > li.contets01 > a span.img{width:100%;height:100%;padding-top:41%;background:url(/Portals/0/images/smartphone/index/bnr_mainCon01_link01.png) center center no-repeat;background-size:100% auto;}
+
+.mainContentsArea > ul > li.contets02{border:2px solid #ccc;}
+.mainContentsArea > ul > li.contets02 > span.mainContTitle{width:100%;height:auto;padding:6px 0;border-bottom:3px solid #cc1420;background:url(/Portals/0/images/smartphone/index/bnr_mainCon02_ttl.png) 3px 9px no-repeat;background-size:107px 14px;}
+.mainContentsArea > ul > li.contets02 > ul{width:100%;padding:10px;border:none;-webkit-box-sizing:border-box;box-sizing:border-box;}
+.mainContentsArea > ul > li.contets02 > ul > li.link01,
+.mainContentsArea > ul > li.contets02 > ul > li.link02{float:none;width:100%;}
+.mainContentsArea > ul > li.contets02 > ul > li.link01{margin:0 0 15px 0;}
+.mainContentsArea > ul > li.contets02 > ul > li.link01 > a{width:100%;height:100%;padding-top:30%;background:url(/Portals/0/images/smartphone/index/bnr_mainCon02_link01.png) center center no-repeat;background-size:100% auto;}
+.mainContentsArea > ul > li.contets02 > ul > li.link02 > a{width:100%;height:100%;padding-top:30%;background:url(/Portals/0/images/smartphone/index/bnr_mainCon02_link02.png) center center no-repeat;background-size:100% auto;}
+
+/* mainBusinessArea, mainCompanyArea */
+.mainBusinessArea .headingArea,
+.mainCompanyArea .headingArea{padding:50px 0 110px;}
+.mainBusinessArea .heading .en,
+.mainCompanyArea .heading .en{font-weight:300;font-size:34px;}
+.mainBusinessArea .heading .jp,
+.mainCompanyArea .heading .jp{margin-top:16px;font-weight:600;font-size:18px;}
+.mainBusinessArea .textArea,
+.mainCompanyArea .textArea{width:90%;margin-top:-70px;padding:30px 20px 50px;}
+.mainBusinessArea .subHeading,
+.mainCompanyArea .subHeading{min-width:100%;margin:0 auto 20px;padding:0 0 16px;font-size:18px;}
+.mainBusinessArea .cont,
+.mainCompanyArea .cont{font-size:14px;}
+.mainBusinessArea .inner,
+.mainCompanyArea .inner{max-width:auto;padding:0;}
+.mainBusinessArea .linkArea .txt,
+.mainCompanyArea .linkArea .txt{margin-top:10px;font-weight:600;font-size:16px;}
+
+/* mainBusinessArea */
+.mainBusinessArea{margin:0 0 100px;}
+.mainBusinessArea .contact{margin:40px 0;}
+.mainBusinessArea .contact .contactBtn{width:clamp(1px,88%,335px);height:70px;margin:auto;padding:0 0 0 15px;box-sizing:border-box;background-size:contain;background-image:url("/Portals/0/images/smartphone/index/bg_business_contact.png");font-weight:600;font-size:114.29%;}
+
+/* mainCompanyArea */
+.mainCompanyArea{margin:0 0 110px;}
+.mainCompanyArea .linkArea{display:block;}
+.mainCompanyArea .linkArea .item{width:100%;}
+.mainCompanyArea .bottom{display:block;}
+.mainCompanyArea .left,
+.mainCompanyArea .right{width:88%;margin:auto;}
+.mainCompanyArea .right{margin-top:50px;}
+.mainCompanyArea .right .item:not(:first-child){margin-top:20px;}
+.mainCompanyArea .right .cont{font-weight:600;}
+.mainCompanyArea .right .cont span.small{display:block;color:#cc141d;font-size:12px;}
+.mainCompanyArea .right .cont span.name{margin-left:4px;}
+
+
+/* ========================================================
+ news-list-for-Index_WHATS NEW
+======================================================== */
+.newsListIndex.newsHead h2{float:none;width:100%;height:20px;margin:0 0 10px 0;padding:0;background:#e0e0e0;line-height:20px;text-align:left;}
+.newsListIndex.newsHead h2:before,
+.newsListIndex.newsHead h2:after{content:" ";display:table;}
+.newsListIndex.newsHead h2:after{clear:both;}
+.newsListIndex.newsHead h2 span{float:left;width:35%;height:auto;margin:0;padding:0;background-color:#cc141d;background-position:center center;text-align:center;}
+.newsListIndex.newsHead h2 a{float:right;margin:0 10px 0 0;padding:0 15px 0 0;background:url(/Portals/0/images/common/arrow_red_h.png) right center no-repeat;color:#333 !important;font-size:11px;}
+.newsListIndex.newsHead .newsListIndex_contents{float:none;width:auto;padding:0;background:none;}
+.newsListIndex.newsHead .newsListIndex_contents ul{float:none;width:auto;}
+.newsListIndex.newsHead .newsListIndex_contents ul li .newsDate{float:none;width:auto;margin-bottom:0;}
+.newsListIndex.newsHead .newsListIndex_contents ul li .newsTitle{float:none;width:auto;}
+
+
+/* ========================================================
+ news-list-for-Index
+======================================================== */
+.newsListIndex{margin:0 0 30px 0;padding:0;}
+.newsListIndex_header{margin:0;padding:0 0 5px 0;}
+.newsListIndex ul{margin:0 0 20px 0;}
+.newsListIndex li{padding:10px 0;border-bottom:2px solid #ccc;}
+.newsListIndex .newsDate{float:none;width:100%;margin:0 0 10px 0;}
+.newsListIndex .newsDate:before,
+.newsListIndex .newsDate:after{content:" ";display:table;}
+.newsListIndex .newsDate:after{clear:both;}
+.newsListIndex .newsDate img{float:right;margin:-4px 0 0 0;}
+.newsListIndex .newsTitle{float:none;width:auto;padding:0;}
+
+
+/* ========================================================
+ news-list
+========================================================*/
+.newsList{margin:0 0 30px 0;padding:0;}
+.newsList ul{margin:0 0 20px 0;}
+.newsList li{padding:10px 0;border-bottom:2px solid #ccc;}
+.newsList .newsDate{float:none;width:auto;margin:0 0 10px 0;}
+.newsList .newsDate:before,
+.newsList .newsDate:after{content:" ";display:table;}
+.newsList .newsDate:after{clear:both;}
+.newsList .newsDate img{float:right;margin:-4px 0 0 0;}
+.newsList .newsTitle{float:none;width:auto;padding:0;}
+
+
+/* ========================================================
+ news-detail
+========================================================*/
+.newsDetail .newsDate{float:none;width:auto;margin:0 0 10px 0;}
+.newsDetail .newsDate:before,
+.newsDetail .newsDate:after{content:" ";display:table;}
+.newsDetail .newsDate:after{clear:both;}
+.newsDetail .newsDate img{float:right;margin:-4px 0 0 0;}
+.newsDetail .newsBackLink{border:none;text-align:center;}
+.newsDetail .newsBackLink a{display:block;position:relative;width:100%;padding:15px 0;background-color:#e0e0e0;background-image:none;color:#333 !important;font-size:100%;}
+.newsDetail .newsBackLink a:after{content:"";position:absolute;top:20px;right:10px;width:6px;height:11px;background:url(/Portals/0/images/smartphone/common/arrow_redL.png) 0 0 no-repeat;background-size:6px 11px;}
+
+/* 2011年03月14日_このたびの大規模地震により被害を受けられたお客さまへ */
+@media only screen and (orientation : portrait){.newsTellTitle ul.anchorLinkList{position:static;margin:0 0 20px;}
+.newsTellTitle ul.anchorLinkList:before,
+.newsTellTitle ul.anchorLinkList:after{content:" ";display:table;}
+.newsTellTitle ul.anchorLinkList:after{clear:both;}
+.newsTellTitle ul.anchorLinkList li{float:none;width:80%;margin:0 auto;}}
+.newsTellTable + .newsTellTitle{margin-top:70px;}
+
+
+/* ========================================================
+ common
+========================================================*/
+/* Webで申し込み可能な保険（下部スライドバナー） */
+.webRequestWrap .bx-inner{margin:0 0 25px;padding:15px 0;}
+.webRequestWrap .bx-inner h2{width:448px;margin:0 0 15px 10px;}
+.webRequestWrap .bx-box{position:static;width:auto;height:60px;margin:0;}
+.webRequestWrap .bx-box .bx-wrapper{width:100%;}
+.webRequestWrap .bx-box .bx-viewport{overflow:hidden !important;width:160px !important;margin:0 auto;}
+.webRequestWrap .bx-box li{width:160px !important;height:60px !important;margin:0;}
+.webRequestWrap .bx-box li a{width:160px;height:60px;}
+.webRequestWrap .bx-box li a img{max-width:160px;max-height:60px;}
+.webRequestWrap .bx-box .bx-controls-direction a{top:15px;}
+.webRequestWrap .bx-box .bx-prev{left:10px;}
+.webRequestWrap .bx-box .bx-next{right:10px;}
+/* アイコン付与 */
+.webRequestWrap .bx-box{height:80px;}
+.webRequestWrap .bx-box .bx-viewport{width:200px !important;}
+.webRequestWrap .bx-box li{width:200px !important;height:80px !important;}
+.webRequestWrap .bx-box li a{display:block;width:200px;height:80px;padding:5px 40px 10px 5px;}
+.webRequestWrap .bx-box li a img{max-width:155px;max-height:65px;vertical-align:top;}
+
+/* アコーディオン */
+@media only screen and (orientation : portrait){.acoContentsWrap .acoTitle:after{top:15px;right:10px;}
+.acoContentsWrap .acoTitle h2{padding:8px 40px 8px 10px;}
+.acoContentsWrap .acoContents{padding:10px;}}
+
+/* コンテンツボタン */
+ul.contFootBtn{width:532px;}
+ul.contFootBtn li{margin:0 10px;}
+@media only screen and (orientation : portrait){ul.contFootBtn{width:auto;}
+ul.contFootBtn li{float:none;margin:0 0 10px;text-align:center;}}
+
+
+/* ========================================================
+ next - 202_MST VALUE
+======================================================== */
+.valueMainImage{min-height:auto;background-size:auto 200px;background-position:top center;}
+.valueMainImage .heading{padding:108px 10px 30px 10px;}
+.valueMainImage h1{padding:0 0 0 26px;background-size:17px 3px;font-size:135.7%;}
+.valueMainImage .textWrap{margin:0 10px;padding:26px 30px 0;}
+.valueMainImage .textWrap .textWrapInner{display:block;}
+.valueMainImage p{font-weight:700;}
+.valueMainImage .linkArea{margin:36px 0 0;text-align:center;}
+.valueMainImage .linkArea a{display:inline-block;padding:12px 40px 12px 55px;background:url(/Portals/0/images/common/arrow_red_h.png) 25px center no-repeat #fff;font-size:100%;}
+.valueContents{margin:0 0 82px;padding:0 10px 36px 10px;}
+.valueContents .heading{margin:102px 0 0;}
+.valueContents .heading:before{top:-46px;width:315px;height:355px;}
+.valueContents .heading .large{font-size:357.14%;}
+.valueContents .heading .small{font-size:221.43%;}
+.valueContents .list{margin:40px 0 0 0;}
+.valueContents .item{width:100%;margin-top:18px;margin-right:0;padding:0 15px 54px 15px;}
+.valueContents .icon{width:90px;margin-top:-25px;}
+.valueContents .en{margin-top:8px;font-size:85.71%;}
+.valueContents .subHeading{margin:6px 0 24px;font-size:142.86%;}
+.valueContents .subHeading .small{font-size:80%;}
+
+
+/* ========================================================
+ 204_リスク・ニーズから選ぶ
+======================================================== */
+ul.riskTab{display:flex;align-items:flex-end;}
+ul.riskTab li a,
+ul.riskTab li.here a{display:flex;height:auto;min-height:50px;padding:10px 4px;line-height:1.5;align-items:center;justify-content:center;}
+.riskList .heading{margin:0;margin:0 0 30px;padding:0;border:0;font-weight:bold;font-size:100%;line-height:1;text-align:center;letter-spacing:0;}
+.riskList .heading .jp{font-size:171.43%;}
+.riskList .heading .en{margin:12px 0 0;color:#cc141d;font-size:71.43%;letter-spacing:0.3em;}
+.riskList .list{list-style:none;margin:0 0 80px;padding:0;}
+.riskList .item{margin:28px 0 0;padding:0;}
+.riskList .item.property .ico{content:url(/Portals/0/images/corporate/ico_property.png);}
+.riskList .item.property .headingWrap,
+.riskList .item.property .riskBtn{background-color:#c7454f;}
+.riskList .item.property .contentWrap{background-image:url(/Portals/0/images/corporate/bg_property.png);}
+.riskList .item.property .acoContents{border-color:#c7454f;}
+.riskList .item.car .ico{content:url(/Portals/0/images/corporate/ico_car.png);}
+.riskList .item.car .headingWrap,
+.riskList .item.car .riskBtn{background-color:#674a9c;}
+.riskList .item.car .contentWrap{background-image:url(/Portals/0/images/corporate/bg_car.png);}
+.riskList .item.car .acoContents{border-color:#674a9c;}
+.riskList .item.reparations .ico{content:url(/Portals/0/images/corporate/ico_reparations.png);}
+.riskList .item.reparations .headingWrap,
+.riskList .item.reparations .riskBtn{background-color:#446783;}
+.riskList .item.reparations .contentWrap{background-image:url(/Portals/0/images/corporate/bg_reparations.png);}
+.riskList .item.reparations .acoContents{border-color:#446783;}
+.riskList .item.holiday .ico{content:url(/Portals/0/images/corporate/ico_holiday.png);}
+.riskList .item.holiday .headingWrap,
+.riskList .item.holiday .riskBtn{background-color:#5a8047;}
+.riskList .item.holiday .contentWrap{background-image:url(/Portals/0/images/corporate/bg_holiday.png);}
+.riskList .item.holiday .acoContents{border-color:#5a8047;}
+.riskList .item.transactional .ico{content:url(/Portals/0/images/corporate/ico_transactional.png);}
+.riskList .item.transactional .headingWrap,
+.riskList .item.transactional .riskBtn{background-color:#e6b13d;}
+.riskList .item.transactional .contentWrap{background-image:url(/Portals/0/images/corporate/bg_transactional.png);}
+.riskList .item.transactional .acoContents{border-color:#e6b13d;}
+.riskList .item.management .ico{content:url(/Portals/0/images/corporate/ico_management.png);}
+.riskList .item.management .headingWrap,
+.riskList .item.management .riskBtn{background-color:#e27f3c;}
+.riskList .item.management .contentWrap{background-image:url(/Portals/0/images/corporate/bg_management.png);}
+.riskList .item.management .acoContents{border-color:#e27f3c;}
+.riskList .item.disaster .ico{content:url(/Portals/0/images/corporate/ico_disaster.png);}
+.riskList .item.disaster .headingWrap,
+.riskList .item.disaster .riskBtn{background-color:#e04193;}
+.riskList .item.disaster .contentWrap{background-image:url(/Portals/0/images/corporate/bg_disaster.png);}
+.riskList .item.disaster .acoContents{border-color:#e04193;}
+.riskList .headingWrap{display:flex;padding:15px 20px;align-items:center;}
+.riskList .ico{margin-right:20px;}
+.riskList .subHeading{margin:0;padding:0;background:0;color:#fff;font-size:142.86%;}
+.riskList .contentWrap{padding:10px;background-repeat:repeat;}
+.riskList .cont{padding:0;font-weight:700;font-size:100%;}
+.riskList .accWrap{position:relative;}
+.riskList .riskBtn{display:flex;position:relative;width:195px;margin:12px auto 0;padding:8px 18px;box-sizing:border-box;box-shadow:2px 2px #888;color:#fff;line-height:1;align-items:center;justify-content:space-between;}
+.riskList .riskBtn:after{content:"";transform:rotate(45deg);width:10px;height:10px;margin:0 0 6px;border-right:1px solid #fff;border-bottom:1px solid #fff;}
+.riskList .riskBtn.active:after{transform:rotate(-135deg);margin:6px 0 0;}
+.riskList .acoContents{display:none;top:100%;right:0;left:0;z-index:1;margin:auto;padding:8px 0 8px 12px;border:3px solid #000;box-sizing:border-box;box-shadow:2px 2px #888;background:#fff;}
+.riskList ul.spCol2{display:flex;list-style-type:disc;margin:0;padding:0 0 0 10px;box-sizing:border-box;align-items:flex-start;flex-wrap:wrap;}
+.riskList ul.spCol2 li{width:47%;margin-right:6%;box-sizing:border-box;}
+.riskList ul.spCol2 li:nth-child(even){margin-right:0;}
+
+
+/* ========================================================
+ next - 個人のお客様へ
+======================================================== */
+/* 209_Webでお手続き */
+@media only screen and (orientation : portrait){.acoContentsWrap .acoTitle h2.travel-92day{padding-left:60px;background-position:10px 5px;}
+.acoContentsWrap .acoTitle h2.travel{padding-left:60px;background-position:15px 14px;}
+.acoContentsWrap .acoTitle h2.car{padding-left:60px;background-position:13px 12px;}
+.acoContentsWrap .acoTitle h2.car-1day{padding-left:60px;background-position:13px 5px;}
+.acoContentsWrap .acoTitle h2.bicycle{padding-left:60px;background-position:13px 8px;}
+.acoContentsWrap .acoTitle h2.golf{padding-left:60px;background-position:13px 5px;}
+.acoContentsWrap .acoTitle h2.bike{padding-left:60px;background-position:12px 6px;}
+.acoContentsWrap .acoTitle h2.furniture{padding-left:60px;background-position:14px 8px;}
+.acoContentsWrap .acoTitle h2.pet{padding-left:60px;background-position:14px 6px;}
+.acoContentsWrap .acoContents table.processTable th{width:50%;padding:5px;}
+.acoContentsWrap .acoContents table.processTable td{padding:5px;font-size:90%;}
+.acoContentsWrap .acoContents table.processTable td strong{font-size:108%;}
+.acoContentsWrap .acoContents .requestLink{padding:2px 0;}}
+
+
+/* ========================================================
+ next - 会社案内
+======================================================== */
+/* 219_会社案内 */
+.presidentWrap .presidentImg{margin:0 0 20px 20px;}
+.presidentWrap .presidentTxt{margin-right:0;}
+@media only screen and (orientation : portrait){.presidentWrap .presidentImg{float:none;margin:0 auto 10px;}}
+ul.contMenuList{max-width:341px;margin:0 auto;}
+ul.contMenuList li{width:auto;padding:0;}
+ul.contMenuList li:nth-child(odd){margin-right:0;}
+
+/* 220_会社概要 */
+.companyList .listTable_side th{width:30%;}
+.companyList .listTable_side td{width:70%;}
+
+/* 223_営業拠点 */
+.mapList{margin-bottom:40px;}
+.mapList .spContent{display:none;}
+.mapList .spContent table th{width:30%;}
+.mapList .spContent table td{width:70%;}
+.mapList .spContent .mapContent{display:block;}
+.mapList h3{position:relative;padding-right:80px;}
+.mapList h3 span{display:block;overflow:hidden;position:absolute;top:-4px;right:0;width:72px;height:26px;margin:0;padding:0;background:url(/Portals/0/images/index/btn_news_accordion.png) 0 0 no-repeat;background-size:72px 52px;white-space:nowrap;text-indent:100%;cursor:pointer;}
+.mapList h3 span.active{background:url(/Portals/0/images/index/btn_news_accordion.png) 0 -26px no-repeat;background-size:72px 52px;}
+
+/* 225_MSTの経営ビジョン・中期経営計画 */
+.missionKvWrap{height:auto;min-height:180px;margin:0 0 30px;padding:25px 20px 25px 180px;background-size:auto 180px;}
+.missionKvWrap h2{margin:0 0 5px;font-size:139%;}
+.missionKvWrap p{line-height:150%;}
+@media only screen and (orientation : portrait){.missionKvWrap{padding:190px 15px 15px;border-bottom:1px solid #bfbabb;background-color:#eeefe8;}}
+
+/* 227_MSTグループがカバーする機能 */
+ul.icoList{margin:0;padding:0;}
+ul.icoList li{display:inline-block;list-style:none;margin:0 5px 5px 0;padding:2px 5px;border-radius:5px;font-size:10px;}
+ul.icoList li.icoRed{background:#cf232b;color:#fff;}
+ul.icoList li.icoGray{background:#777;color:#fff;}
+@media only screen and (orientation : portrait){.grayBox{padding:15px;}}
+
+
+/* ========================================================
+ next - 採用情報
+======================================================== */
+/* 228_採用情報 */
+.recruitMessageWrap .txtArea{float:none;width:auto;}
+.recruitMessageWrap .imgArea{float:none;width:auto;text-align:center;}
+
+/* 231_先輩社員からのメッセージ */
+ul.staffListBtn li{margin:0 0 10px;}
+ul.staffListBtn li a .txtArea{width:100%;padding:0 40px 0 10px;}
+@media only screen and (orientation : portrait){ul.staffListBtn li:after{right:10px;}
+ul.staffListBtn li a .imgArea{width:110px;height:65px;background:#fff;}
+ul.staffListBtn li a .imgArea img{width:110px;}
+ul.staffListBtn li a .txtArea{padding:0 30px 0 10px;font-size:11px;line-height:1.4;}
+ul.staffListBtn li a .txtArea .text strong.name{font-size:15px;}}
+/* 230_職種と仕事 */
+ul.staffListBtn.small li{float:none;width:auto;margin-left:0;}
+ul.staffListBtn.small li a{padding:10px;}
+ul.staffListBtn.small li a .txtArea{width:100%;}
+@media only screen and (orientation : landscape){ul.staffListBtn.small li{float:left;width:50%;padding-right:5px;padding-left:5px;box-sizing:border-box;}
+ul.staffListBtn.small li:nth-child(odd){padding-left:0;}
+ul.staffListBtn.small li:nth-child(2n){padding-right:0;}}
+/* 232_【参】先輩社員からのメッセージ　Links */
+@media only screen and (orientation : portrait){ul.staffListBtn.middle li a .imgArea{width:110px;height:65px;background:#fff;}
+ul.staffListBtn.middle li a .imgArea img{width:110px;}
+ul.staffListBtn.middle li a .txtArea{width:100%;}}
+/* 232～_先輩社員からのメッセージ（下層すべて） */
+.staffMessageWrap{margin-bottom:25px;}
+.staffMessageWrap .staffMessage .imgArea{float:none;width:auto;height:180px;max-height:232px;background:#fff;text-align:center;}
+.staffMessageWrap .staffMessage .imgArea img{height:180px !important;}
+.staffMessageWrap .staffMessage .txtArea{float:none;width:auto;padding:10px;}
+.staffMessageWrap .staffMessage .txtArea span.message{padding-top:0;}
+.staffMessageWrap .staffMessage .txtArea h2.title{margin:0 0 15px;padding:5px 0 10px;font-size:18px;}
+.staffMessageWrap .staffMessage .txtArea p.text{font-size:12px;}
+.staffMessageWrap .staffMessage .txtArea p.text strong.name{font-size:16px;}
+.listTable_side.scheduleTable th{width:70px;}
+
+/* 237_MSTを詳しく知る */
+@media only screen and (orientation : portrait){ul.wantList{margin:0;}
+ul.wantList li{width:100%;margin:0 0 10px;padding:5px 0;font-size:13px;}
+ul.wantList li:first-child{margin:0 0 10px;}
+ul.wantList li strong{font-size:20px;}}
+ul.strongList li{margin-bottom:10px !important;}
+ul.strongList li strong.ttlArea{padding:8px 5px 2px;font-size:12px;}
+ul.strongList li strong .bigText{font-size:18px;}
+@media only screen and (orientation : portrait){ul.strongList li{width:100%;margin:0;}}
+
+
+/* ========================================================
+ next - 242_事故時の連絡先
+======================================================== */
+ul.telNumberList{margin:0 0 30px;padding:10px 5px;}
+ul.telNumberList li{padding:10px;}
+ul.telNumberList li strong{display:block;}
+@media only screen and (orientation : portrait){ul.telNumberList{padding:0 10px;}
+ul.telNumberList li{float:none;width:100%;margin:10px 0;border:none;}
+ul.telNumberList li strong{display:inline;}}
+
+.freedialWrap{width:auto;margin:0 auto 30px;}
+.freedialWrap .freedialBox{width:100%;margin:0 0 10px;border:1px solid #ccc;box-sizing:border-box;}
+.freedialWrap .freedialBox table{margin:0 auto;}
+
+
+/* ========================================================
+ next - 244_個人情報保護に関する基本方針
+======================================================== */
+.telBtnList{text-align:center;}
+
+
+/* ========================================================
+ 206_Webからのお問い合わせ（法人用）
+ 210_Webからのお問い合わせ（個人用）
+======================================================== */
+.stepBox{padding:6px;}
+.stepBox ul.stepList{font-size:11px;}
+@media only screen and (orientation : portrait){.stepBox{padding:6px 2px;}
+.stepBox ul.stepList{float:none;font-size:11px;}
+.stepBox ul.stepList li{width:33.33%;height:auto;margin:0;padding:0 0 5px;border-right:2px solid #c5666d;border-left:2px solid #c5666d;box-sizing:border-box;line-height:1;}
+.stepBox ul.stepList li span{display:block;width:100%;margin-right:0;padding:4px 0;border-bottom:4px solid #fff;}}
+
+.contactFormWrap > table th.contactHead{display:block;width:auto;border-right:1px solid #ccc;}
+.contactFormWrap > table td.contactInner{display:block;width:auto;border-top:none;}
+.contactFormWrap > table tr:last-child th.contactHead{border-bottom:none;}
+.contactFormWrap > table th.contactHead .NormalRed{display:block;float:right;padding:2px 8px;background:#cf232b;color:#fff;font-weight:normal;font-size:90%;}
+
+.contactFormWrap > table td.contactInner textarea{width:100%;box-sizing:border-box;}
+.contactFormWrap > table td.contactInner input[type="text"]{width:100% !important;box-sizing:border-box;}
+.contactFormWrap input[value="住所検索"]{display:block;width:100%;max-width:350px;margin:10px auto;}
+
+@media only screen and (orientation : portrait){.contactBtnWrap .confirmBtn input,
+.contactBtnWrap .sendBtn input{width:100%;}}
+
+
+/* ========================================================
+ next - 248～_個人顧客向け無料相談
+======================================================== */
+/* 無料ご相談アンケート */
+.soudanFormBox:nth-of-type(1):before{padding:15px 10px;font-size:15px;}
+.soudanFormBox:nth-of-type(1) .soudanFormBoxInner{margin:0;padding:0 10px 10px;}
+.soudanFormBox:nth-of-type(1) .soudanFormBoxInner h2{font-size:18px;letter-spacing:5px;}
+.soudanFormBox:nth-of-type(1) .soudanFormBoxInner h2:after{width:100%;}
+.soudanFormBox:nth-of-type(1) .soudanFormBoxInner > table th.contactHead{display:block;width:auto;padding:0 15px 5px;}
+.soudanFormBox:nth-of-type(1) .soudanFormBoxInner > table td.contactInner{display:block;width:auto;padding:0 15px 20px;}
+.soudanFormBox:nth-of-type(1) .soudanFormBoxInner > table th.contactHead br{display:none;}
+
+/* フォーム */
+.soudanFormBox:nth-of-type(2) .soudanFormBoxInner > table th.contactHead{display:block;width:auto;border-right:1px solid #ccc;}
+.soudanFormBox:nth-of-type(2) .soudanFormBoxInner > table td.contactInner{display:block;width:auto;border-top:none;}
+.soudanFormBox:nth-of-type(2) .soudanFormBoxInner > table tr:last-child th.contactHead{border-bottom:none;}
+.soudanFormBox:nth-of-type(2) .soudanFormBoxInner > table th.contactHead br{display:none;}
+
+.soudanFormBox:nth-of-type(2) .soudanFormBoxInner > table td.contactInner textarea{width:100%;box-sizing:border-box;}
+.soudanFormBox:nth-of-type(2) .soudanFormBoxInner > table td.contactInner input[type="text"]{width:100% !important;box-sizing:border-box;}
+
+/* common */
+.soudanFormBox .privacyWrap{margin:0 0 10px;font-size:100%;}
+.soudanFormBox .privacyWrap ul{margin-left:15px;}
+
+@media only screen and (orientation : portrait){.soudanBtnWrap .confirmBtn input,
+.soudanBtnWrap .sendBtn input{width:100%;}}

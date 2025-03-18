@@ -1,0 +1,567 @@
+@charset "utf-8";
+
+/* ===========================================================
+ Non-display area of the smartphone
+=========================================================== */
+.pcArea{display:none !important;}
+.spArea{display:block !important;}
+
+img{max-width:100%;height:auto !important;}
+
+/* ログイン時のコンパネ */
+.controlPanel.minimum{display:none;}
+
+
+/* ===========================================================
+ common
+=========================================================== */
+body{min-width:320px;-webkit-text-size-adjust:none;font-family:'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','Roboto','Droid Sans',メイリオ,'sans-serif';}
+
+
+/* ===========================================================
+ skin
+=========================================================== */
+.skinWrapper{background:none;border-top:5px solid #e32929;}
+
+#skinWrapBody{margin:0;padding:0;width:auto;background:none;}
+
+
+/* ===========================================================
+ headBody
+=========================================================== */
+#headBody{margin:0 0 15px;padding:0;width:auto;float:none;}
+
+#headBody .logo{margin:0;padding:8px 51px 0 0;height:51px;background:none;border:none;text-align:center;box-sizing:border-box;}
+@media only screen and (orientation : landscape) {
+	#headBody .logo{padding-right:0;}
+}
+/*
+#headBody .logo a{margin:10px 10px 5px;width:230px;height:36px !important;}
+@media screen and (orientation: portrait) {
+	#headBody .logo a{background:url(/Portals/0/Skins/MST/images/logo.png) no-repeat 0 0;background-size:230px auto;}
+	#headBody .logo img{display:none;}
+}
+@media only screen and (orientation : landscape) {
+	#headBody .logo{text-align:center;}
+	#headBody .logo a{width:auto;}
+}
+*/
+
+#headBody .symbolPane{margin:0;padding:0;}
+
+#headBody .NavBtmuPane{margin:0;padding:0;display:none;}
+#headBody .NavBtmuPane .btmuNav{margin:0;width:100%;background:#fff;border-top:none;border-bottom:5px solid #e32929;box-shadow:4px 4px 4px 0 rgba(0,0,0,0.2);position:absolute;top:56px;left:0;z-index:9999;}
+#headBody .NavBtmuPane .btmuNav:before{display:none;}
+#headBody .NavBtmuPane .btmuNav > ul{padding-bottom:40px;position:relative;}
+#headBody .NavBtmuPane .btmuNav > ul > li > ul > li{display:block;}
+#headBody .NavBtmuPane .btmuNav > ul > li > ul > li.Tab258{width:100%;height:40px;border-bottom:none;position:absolute;left:0;bottom:0;}
+#headBody .NavBtmuPane .btmuNav > ul > li > ul > li.Tab258 a{padding:0;width:100%;height:100%;font-size:0;background-color:transparent;position:relative;z-index:9999;}
+#headBody .NavBtmuPane .btmuNav > ul > li > ul > li.Tab258:after{box-sizing:border-box;content:"ニュース＆トピックス一覧へ";padding:0 30px 0 10px;width:100%;height:40px;line-height:40px;background-color:#f0f0f0;position:absolute;left:0;bottom:0;}
+#headBody .NavBtmuPane .btmuNav > ul > li > ul > li > ul{display:none;}
+
+#headBody .hMenuBtn{position:absolute;top:5px;right:0;}
+#headBody .hMenuBtn{margin:0;padding:0;width:51px;height:51px;background:url(/Portals/0/images/smartphone/common/btn_menu.png) -51px 0 no-repeat;background-size:102px 51px;text-indent:100%;white-space:nowrap;overflow:hidden;}
+#headBody .hMenuBtn.menuOpen{background:url(/Portals/0/images/smartphone/common/btn_menu.png) 0 0 no-repeat;background-size:102px 51px;}
+
+#headBody .SideBtmuPane,
+#headBody .SideBottomBtmuPane{margin:0;padding:0;}
+
+
+/* ===========================================================
+ mainBody
+=========================================================== */
+#mainBody{margin:0;padding:0;width:auto;float:none;}
+
+#contentTopWrap{margin:0 0 30px;padding:0 10px;}
+#contentTopWrap .TopLeftPane {margin:0;padding:0;width:auto;float:none;}
+#contentTopWrap .TopRightPane{margin:0;padding:0;width:auto;float:none;}
+#contentTopWrap .TopBottomPane{margin:0;padding:0;clear:both;}
+
+#contentWrap{margin:0 0 80px;padding:0 10px;}
+#contentWrap .ContentPane{padding-bottom:50px;}
+
+
+/* ===========================================================
+ footBody
+=========================================================== */
+#footBody{margin:0;padding:0;width:100%;background:#fff;border-top:5px solid #e32929;text-align:left;}
+
+#footBody .pagetop{width:auto;}
+#footBody .pagetop a{margin-left:0;right:10px;}
+#footBody .pagetop a[style*="fixed"]{bottom:10px !important;}
+#footBody .pagetop a[style*="absolute"]{bottom:20px !important;}
+
+#footBody .FootBtmuPane{margin:0;padding:15px 10px;}
+
+#footBody .copyright{height:30px;line-height:30px;}
+
+
+/* ===========================================================
+ default
+=========================================================== */
+/* 見出し */
+h1{padding:10px 0 10px 15px;font-size:18px;}
+
+/* スマホ用テーブル */
+.smtTable th,
+.smtTable td{display:block;}
+.listTable_side.smtTable th,
+.listTable_side.smtTable td{border-top:none;width:auto;}
+
+/* 画像回り込み */
+@media only screen and (orientation : portrait){
+img.imgRight,
+img.imgLeft{display:block;margin:0 auto 15px;float:none;}
+}
+
+/* 矢印付きアンカーリンク */
+@media only screen and (orientation : portrait){
+ul.anchorLinkList li{margin-right:0;float:none;}
+}
+
+
+/*========================================================
+ common
+========================================================*/
+/* ナビゲーション */
+.btmuNav{margin:0 0 20px;}
+.btmuNav:before{display:block;content:"MENU";padding:8px 10px 4px;background:#808080;color:#fff;font-size:15px;letter-spacing:6px;text-align:center;border-radius:4px 4px 0 0;}
+.btmuNav > ul > li > a,
+.btmuNav > ul > li > ul > li > a{padding:10px 35px 10px 10px;background-image:none;background-color:#f0f0f0;position:relative;}
+.btmuNav > ul > li > a:after,
+.btmuNav > ul > li > ul > li > a:after{content:"";width:14px;height:14px;background:url(/Portals/0/images/common/arrow_circle_red.png) no-repeat 0 0;position:absolute;top:14px;right:10px;}
+.btmuNav > ul > li > ul > li.currentItem > ul,
+.btmuNav > ul > li > ul > li.parentItem > ul{margin-left:0;background:#fff;}
+.btmuNav > ul > li > ul > li > ul > li > a{padding:8px 30px 8px 10px;background-image:none;position:relative;}
+.btmuNav > ul > li > ul > li > ul > li > a:after{content:"";width:10px;height:10px;background:url(/Portals/0/images/common/arrow_circle_black.png) no-repeat 0 0;background-size:10px auto;position:absolute;top:13px;right:12px;}
+
+/* 170919_追加 */
+.btmuNav.noParent > ul > li.currentItem > ul,
+.btmuNav.noParent > ul > li.parentItem > ul{margin-left:0;background:#fff;}
+.btmuNav.noParent > ul > li > ul > li > a{padding:8px 30px 8px 10px;background-image:none;position:relative;}
+.btmuNav.noParent > ul > li > ul > li > a:after{content:"";width:10px;height:10px;background:url(/Portals/0/images/common/arrow_circle_black.png) no-repeat 0 0;background-size:10px auto;position:absolute;top:13px;right:12px;}
+
+/* 保険に関するお問い合わせ */
+.contactBox{margin:0 0 20px;}
+.contactBox .ttl{padding:7px 0 5px;}
+.contactBox .txtWrap{padding:5px 0;width:180px;}
+
+/* サブナビゲーション */
+ul.subNav{margin:0 0 20px;}
+
+/* フッタコンテンツ */
+.fContents .logo img{width:246px;}
+@media only screen and (orientation : portrait) {
+	.fContents{text-align:left;}
+	.fContents address span{display:block;}
+}
+
+
+/*========================================================
+ index
+========================================================*/
+/* キービジュアル */
+.bxsliderWrap{margin:0 auto 20px;width:auto;height:auto;max-width:536px;min-height:auto;}
+.bxsliderWrap ul.txtList li{padding:6px 0 6px 20px;background-position:0 8px;}
+.bxsliderWrap .bx-wrapper{width:auto;height:auto;}
+.bxsliderWrap .bx-wrapper .bx-controls a{width:25px;height:25px;top:25%;}
+.bxsliderWrap .bx-wrapper .bx-controls a.bx-prev,
+.bxsliderWrap .bx-wrapper .bx-controls a.bx-next{background-size:25px auto;}
+
+/* コンテンツボタン */
+ul.btnBox.mainBtn01 li{box-sizing:border-box;width:50%;height:120px;}
+ul.btnBox.mainBtn01 li:nth-of-type(1){width:100%;height:206px;}
+ul.btnBox.mainBtn01 li:nth-of-type(3),
+ul.btnBox.mainBtn01 li:nth-of-type(5){margin-left:0;border-left:5px solid #fff;}
+@media only screen and (orientation : landscape) {
+	ul.btnBox.mainBtn01 li{width:25%;}
+	ul.btnBox.mainBtn01 li:nth-of-type(1){width:50%;height:245px;border-right:5px solid #fff;}
+	ul.btnBox.mainBtn01 li:nth-of-type(1) a{background-position:12px 15px;background-size:230px auto;}
+	ul.btnBox.mainBtn01 li:nth-of-type(2) a{background-position:10px 12px;background-size:110px auto;}
+	ul.btnBox.mainBtn01 li:nth-of-type(3) a{background-position:10px 12px;background-size:92px auto;}
+	ul.btnBox.mainBtn01 li:nth-of-type(4) a{background-position:10px 12px;background-size:116px auto;}
+	ul.btnBox.mainBtn01 li:nth-of-type(5) a{background-position:10px 12px;background-size:107px auto;}
+}
+
+ul.btnBox.mainBtn02 li{box-sizing:border-box;width:100%;height:70px;}
+ul.btnBox.mainBtn02 li:nth-of-type(1){background-size:85px auto;}
+ul.btnBox.mainBtn02 li:nth-of-type(2){background-size:85px auto;margin-left:0;}
+@media only screen and (orientation : portrait) {
+ul.btnBox.mainBtn02 li:nth-of-type(1):before,
+ul.btnBox.mainBtn02 li:nth-of-type(2):before{right:-10px;bottom:-5px;width:auto;height:auto;-webkit-transform:scale(0.7);-moz-transform:scale(0.7);}
+ul.btnBox.mainBtn02 li:nth-of-type(2):before{bottom:0;}
+}
+@media only screen and (orientation : landscape) {
+	ul.btnBox.mainBtn02 li:nth-of-type(1),
+	ul.btnBox.mainBtn02 li:nth-of-type(2){background-size:100px auto;}
+}
+
+.othersBtn .othersBtnBox{margin:0 0 15px;width:100%;float:none;}
+.othersBtn .othersBtnBox:nth-of-type(2),
+.othersBtn .othersBtnBox:nth-of-type(3){margin-left:0;}
+.othersBtn .othersBtnBox .imgArea{height:50px;}
+.othersBtn .othersBtnBox:nth-of-type(1) .imgArea:before{top:auto;left:auto;right:18px;bottom:-20px;-webkit-transform:scale(0.7);-moz-transform:scale(0.7);}
+.othersBtn .othersBtnBox:nth-of-type(2) .imgArea:before{top:-4px;left:auto;right:12px;-webkit-transform:scale(0.65);-moz-transform:scale(0.65);}
+.othersBtn .othersBtnBox:nth-of-type(3) .imgArea:before{top:-3px;left:auto;right:0;-webkit-transform:scale(0.6);-moz-transform:scale(0.6);}
+.othersBtn .othersBtnBox:nth-of-type(1) .imgArea:after,
+.othersBtn .othersBtnBox:nth-of-type(2) .imgArea:after,
+.othersBtn .othersBtnBox:nth-of-type(3) .imgArea:after{left:14px;bottom:18px;}
+.othersBtn .othersBtnBox:nth-of-type(1) .imgArea a,
+.othersBtn .othersBtnBox:nth-of-type(2) .imgArea a,
+.othersBtn .othersBtnBox:nth-of-type(3) .imgArea a{background-position:40px 16px;}
+.othersBtn .othersBtnBox .txtArea{padding:10px 12px;border:3px solid #bf6464;border-top:none;}
+
+/* コンテンツタイトル */
+h2.newsTitle{margin-bottom:0;}
+h2.newsTitle .ttl,
+h2.othersTitle .ttl{font-size:17px;text-indent:0;background:none;}
+h2.newsTitle .ttlSub,
+h2.othersTitle .ttlSub{margin-left:10px;font-size:11px;font-weight:normal;vertical-align:middle;}
+
+
+/*========================================================
+ news-list-for-Index
+========================================================*/
+.newsListIndex .newsDate{width:auto;float:none;}
+.newsListIndex .newsDate img{margin:0 0 0 5px;vertical-align:bottom;}
+.newsListIndex .newsTitle{margin-top:2px;width:auto;float:none;}
+.newsListIndex .newsTitle img{margin:0 0 0 5px;}
+@media screen and (orientation: portrait) {
+	.newsWrap{padding-bottom:25px;}
+	.newsWrap .newsListLink{top:auto;bottom:0;}
+}
+
+.newsListIndex.noIcon .newsDate,
+.newsListIndex.noIcon .newsTitle{width:auto;}
+
+
+/* ========================================================
+ news - list
+======================================================== */
+.newsList .newsDate{width:auto;float:none;}
+.newsList .newsDate img{margin:0 0 0 5px;vertical-align:bottom;}
+.newsList .newsTitle{margin-top:2px;width:auto;float:none;}
+.newsList .newsTitle img{margin:0 0 0 5px;}
+
+.newsList.noIcon .newsDate,
+.newsList.noIcon .newsTitle{width:auto;}
+
+
+/* ========================================================
+ news - detail
+======================================================== */
+.newsDetail .newsTitle{margin-bottom:15px;}
+.newsDetail .newsDate{width:auto;}
+.newsDetail .newsDescription{margin:10px 0;}
+
+
+/* ========================================================
+ common
+======================================================== */
+/* コンテンツボックス */
+.contBoxWrap .contBox{width:auto;float:none;}
+.contBoxWrap .contBox .contBoxInner{padding:10px;}
+.contBoxWrap .contBox .ttlArea{margin:5px 0 10px;}
+.contBoxWrap .contBox .txtArea{padding:10px 15px;}
+.contBoxWrap .contBox:first-child{margin-right:0;margin-bottom:15px;}
+
+/* アコーディオン（初期で１つ目のコンテンツを開かない） */
+@media only screen and (orientation : portrait){
+.acoContentsWrap .acoTitle:after{top:15px;right:10px;}
+.acoContentsWrap .acoTitle h2{padding:8px 40px 8px 10px;}
+.acoContentsWrap .acoContents{padding:10px;}
+}
+
+
+/* ========================================================
+ next - 260_保険商品の詳細
+=========================================================== */
+.acoContentsWrap .acoTitle h2.chartTitle1{padding-left:55px;background:url(/Portals/0/images/btmu/detail/ico_piechart01.png) no-repeat 16px center;background-size:auto 30px;}
+.acoContentsWrap .acoTitle h2.chartTitle2{padding-left:55px;background:url(/Portals/0/images/btmu/detail/ico_piechart02.png) no-repeat 10px center;background-size:auto 25px;}
+.acoContentsWrap .acoTitle h2.chartTitle3{padding-left:55px;background:url(/Portals/0/images/btmu/detail/ico_piechart03.png) no-repeat 12px center;background-size:auto 25px;}
+.acoContentsWrap .acoTitle h2.chartTitle4{padding-left:55px;background:url(/Portals/0/images/btmu/detail/ico_piechart04.png) no-repeat 10px center;background-size:auto 30px;}
+.acoContentsWrap .acoTitle h2.chartTitle5,
+.acoContentsWrap .acoTitle h2.chartTitle6,
+.acoContentsWrap .acoTitle h2.chartTitle7{padding-left:55px;background:url(/Portals/0/images/btmu/detail/ico_piechart05.png) no-repeat 8px center;background-size:auto 26px;}
+.acoContentsWrap .acoTitle h2.chartTitle8,
+.acoContentsWrap .acoTitle h2.chartTitle9,
+.acoContentsWrap .acoTitle h2.chartTitle10,
+.acoContentsWrap .acoTitle h2.chartTitle11,
+.acoContentsWrap .acoTitle h2.chartTitle12,
+.acoContentsWrap .acoTitle h2.chartTitle13,
+.acoContentsWrap .acoTitle h2.chartTitle14{padding-left:55px;background:url(/Portals/0/images/btmu/detail/ico_piechart06.png) no-repeat 9px center;background-size:auto 28px;}
+.acoContentsWrap .acoTitle h2.chartTitle15{padding-left:55px;background:url(/Portals/0/images/btmu/detail/ico_piechart07.png) no-repeat 10px center;background-size:auto 25px;}
+.acoContentsWrap .acoTitle h2.chartTitle16{padding-left:55px;background:url(/Portals/0/images/btmu/detail/ico_piechart08.png) no-repeat 5px center;background-size:auto 28px;}
+.acoContentsWrap .acoTitle h2.chartTitle17{padding-left:55px;background:url(/Portals/0/images/btmu/detail/ico_piechart09.png) no-repeat 10px center;background-size:auto 23px;}
+
+.acoContentsWrap.chartSmtWrap .acoTitle h2{padding-top:7px;padding-bottom:7px;}
+.acoContentsWrap.chartSmtWrap .acoTitle h2 .chartSubTitle{display:block;margin-bottom:3px;padding:2px 6px;width:110px;border:1px solid #c5666d;color:#c5666d;font-size:10px;line-height:1;border-radius:3px;}
+.acoContentsWrap.chartSmtWrap .acoContents .chartIco{display:inline-block;margin:0 0 10px;padding:2px 10px;background:#cd8b8b;color:#fff;font-size:12px;border-radius:5px;}
+.acoContentsWrap.chartSmtWrap .acoContents .alignRight{padding:0;}
+.acoContentsWrap.chartSmtWrap .acoContents .arrowLink{text-decoration:none;padding:5px 10px 5px 22px;background-position:10px center;background-color:#ddd;}
+
+
+/* ========================================================
+ next - 265_保険相談の予約
+======================================================== */
+@media screen and (orientation: portrait) {
+.reserveLinkWrap .reserveLinkBox{padding-right:0;margin-bottom:10px;}
+.reserveLinkWrap .reserveLinkBox,
+.reserveLinkWrap .reserveCancelLink{width:100%;}
+}
+@media screen and (orientation: landscape) {
+.reserveLinkWrap .reserveLinkBox{padding-right:10px;margin-bottom:10px;}
+.reserveLinkWrap .reserveLinkBox:nth-of-type(2){padding-right:0;}
+.reserveLinkWrap .reserveLinkBox,
+.reserveLinkWrap .reserveCancelLink{width:50%;}
+.reserveLinkWrap .reserveCancelLink a{padding-left:30px;background-position:10px center;}
+}
+/* 267、270、272_フォーム（お申込みエラー画面） */
+.contactFormWrap .reserveLinkWrap{margin:0 auto 15px;width:auto;}
+.contactFormWrap .reserveLinkWrap .reserveLinkBox{padding:0;width:100%;}
+@media screen and (orientation: landscape) {
+.contactFormWrap .reserveLinkWrap .reserveLinkBox{padding:0 5px;width:33.33%;}
+}
+
+/* STEP */
+.stepBox{padding:6px;}
+.stepBox ul.stepList{font-size:11px;}
+@media only screen and (orientation : portrait){
+.stepBox{padding:6px 2px;}
+.stepBox ul.stepList{font-size:11px;float:none;}
+.stepBox ul.stepList li{box-sizing:border-box;margin:0;padding:0 0 5px;width:33.33%;height:auto;line-height:1;border-left:2px solid #bf9a64;border-right:2px solid #bf9a64;}
+.stepBox ul.stepList li span{display:block;margin-right:0;padding:4px 0;width:100%;border-bottom:4px solid #fff;}
+/* 289_ご意見・ご要望の入力 */
+.stepBox ul.stepList li:first-child{letter-spacing:-2px;}
+.stepBox ul.stepList li:first-child span{letter-spacing:0;}
+}
+/* STEP（タイトルあり） */
+.stepBox h2.stepTitle + ul.stepList{width:420px;}
+.stepBox h2.stepTitle + ul.stepList li{box-sizing:border-box;margin:0 0 5px;width:50%;border-left:5px solid #bf9a64;}
+.stepBox h2.stepTitle + ul.stepList li + li + li{margin-bottom:0;}
+.stepBox h2.stepTitle + ul.stepList li span{float:left;}
+@media only screen and (orientation : portrait){
+.stepBox h2.stepTitle{padding:0 0 5px;width:100%;text-align:center;}
+.stepBox h2.stepTitle + ul.stepList{width:auto;font-size:11px;float:none;}
+.stepBox h2.stepTitle + ul.stepList li{padding:0 0 5px;height:auto;line-height:1;border-left:2px solid #bf9a64;border-right:2px solid #bf9a64;letter-spacing:0 !important;}
+.stepBox h2.stepTitle + ul.stepList li span{float:none;display:block;margin-right:0;padding:4px 0;width:100%;border-bottom:4px solid #fff;}
+}
+
+/* カレンダーNAV */
+@media only screen and (orientation : portrait){
+.calendarZaikoNav .lastMonth a,
+.calendarZaikoNav .nextMonth a{padding:2px 5px;font-size:11px;}
+.calendarZaikoNav .description{padding:2px 10px;font-size:12px;letter-spacing:-2px;}
+}
+
+/* カレンダー */
+.calendarZaikoWrap{margin:0 0 10px;width:100%;}
+.calendarZaikoWrap .calendarLeft {box-sizing:border-box;width:40%;}
+.calendarZaikoWrap .calendarRight{box-sizing:border-box;width:60%;}
+@media only screen and (orientation : landscape) {
+.calendarZaikoWrap .calendarLeft {width:25%;}
+.calendarZaikoWrap .calendarRight{width:75%;}
+}
+.calendarZaikoWrap .calendarZaiko{margin:0;width:100%;table-layout:fixed;}
+.calendarZaikoWrap .calendarZaiko th.ProductHeader{width:20px;}
+.calendarZaikoWrap .calendarZaiko td.ProductName span{display:inline;margin:0;width:auto;height:auto;line-height:1.4;background:none;border:none;}
+.calendarZaikoWrap .mCSB_horizontal.mCSB_inside > .mCSB_container{margin-top:0;margin-bottom:22px;}
+.calendarZaikoWrap .mCSB_horizontal.mCSB_inside > .mCSB_container.mCS_no_scrollbar_x{margin-top:0;}/* スクロールが出ない時 */
+.calendarZaikoWrap .mCSB_scrollTools.mCSB_scrollTools_horizontal{top:inherit;bottom:0;}
+.categoryMap > div{width:auto !important;height:200px !important;}
+
+/* 267、270、272_フォーム（入力・確認・完了画面） */
+.contactFormWrap > table th.contactHead {display:block;width:auto;border-right:1px solid #ccc;}
+.contactFormWrap > table td.contactInner{display:block;width:auto;border-top:none;}
+.contactFormWrap > table tr:last-child th.contactHead{border-bottom:none;}
+.contactFormWrap > table th.contactHead .NormalRed{display:block;padding:2px 8px;background:#cf232b;color:#fff;font-weight:normal;font-size:90%;float:right;}
+
+.contactFormWrap > table td.contactInner textarea{box-sizing:border-box;width:100%;}
+.contactFormWrap > table td.contactInner input[type="text"]{box-sizing:border-box;width:100% !important;}
+.contactFormWrap input[value="住所検索"]{display:block;margin:10px auto;width:100%;max-width:350px;}
+
+@media only screen and (orientation : portrait) {
+.contactFormWrap .closeBtn a,
+.contactFormWrap .reserveBtn a,
+.contactBtnWrap .confirmBtn input,
+.contactBtnWrap .sendBtn input{width:100%;}
+}
+
+/* 273_お申込みキャンセル */
+.reserveCancelInput table.tableSettings th.SubHead{display:block;width:auto;border-bottom:none;}
+.reserveCancelInput table.tableSettings td{display:block;width:auto;}
+.reserveCancelInput table.tableSettings td input{box-sizing:border-box;width:100% !important;}
+@media only screen and (orientation : portrait) {
+#dnn_ctr697_ViewReserveCancel_btnSearch{width:100%;background:#cf232b;}
+}
+
+
+/* ========================================================
+ next - 275_契約の変更・解約手続き受付
+=========================================================== */
+table.receptionTable{margin:0;}
+table.receptionTable td{display:block;box-sizing:border-box;width:100%;height:auto;padding:20px;border-left:none;border-right:none;border-bottom:20px solid #fff;}
+table.receptionTable tr:first-child td{border-bottom:20px solid #fff;}
+table.receptionTable td p.stepIco{width:auto;height:auto;}
+table.receptionTable td p.arrowIco{top:auto;bottom:-30px;right:auto;left:50%;margin-left:-16px;width:32px;height:39px;background:url(/Portals/0/images/btmu/accident/arrow_gold_bottom.png) 0 0 no-repeat;text-indent:100%;white-space:nowrap;overflow:hidden;}
+table.receptionTable td p.subText{position:static;}
+
+
+/* ========================================================
+ next - 276_事故時の連絡先・保険金（給付金）の請求流れ
+=========================================================== */
+table.accidentTable:before{margin:-18px 0 0 -16px;width:32px;height:39px;background:url(/Portals/0/images/btmu/accident/arrow_gold_bottom.png) 0 0 no-repeat;}
+table.accidentTable td{display:block;box-sizing:border-box;width:100%;border-left:none;border-right:none;border-bottom:20px solid #fff;}
+table.accidentTable tr:first-child td{border-bottom:20px solid #fff;}
+table.accidentTable td p.arrowIco{top:auto;bottom:-30px;right:auto;left:50%;margin-left:-16px;width:32px;height:39px;background:url(/Portals/0/images/btmu/accident/arrow_gold_bottom.png) 0 0 no-repeat;text-indent:100%;white-space:nowrap;overflow:hidden;}
+
+.stepContentsWrap .stepTitle:after{top:22px;right:15px;}
+.stepContentsWrap .stepTitle h2{margin-top:0;padding:8px 40px 10px 60px;}
+
+
+/* ========================================================
+ next - 277_Webで自動車保険の契約手続き
+=========================================================== */
+table.requestTable{border-collapse:separate;border-spacing:0;margin:0 auto;max-width:320px;}
+table.requestTable td{display:block;margin-bottom:15px;}
+table.requestTable td .requestLink{background-position:220px center;}
+
+
+/* ========================================================
+ next - 261～264_保険商品の詳細
+ next - 278～286_保険商品を探す
+=========================================================== */
+@media only screen and (orientation : portrait) {
+.ribbonTextWrap{margin-bottom:60px;}
+.ribbonTextWrap .ribbonText{left:0;top:auto;bottom:-40px;}
+
+/* 278～286_保険商品を探す */
+ul.txtLinkBoxList li{margin-right:0;float:none;}
+.productTableWrap ul.txtLinkBoxList li a{padding-left:30px;background-position:10px center;}
+}
+
+/* 261_保険詳細のご案内 - 1 */
+.feeTableWrap table.feeTable{width:100%;float:none;}
+@media only screen and (orientation : portrait) {
+.feeTableWrap table.feeTable th{padding:5px;font-size:12px;}
+.feeTableWrap table.feeTable td{padding:5px;}
+}
+
+/* 286_ペット保険 */
+/* 264_保険詳細のご案内 - 4 */
+@media only screen and (orientation : portrait){
+table.processTable th{padding:5px;width:50%;}
+table.processTable td{padding:5px;font-size:90%;}
+table.processTable td strong{font-size:108%;}
+table.processTable .requestLink{padding:2px 0;}
+}
+
+
+/* ========================================================
+ next - 278～286_保険商品を探す
+=========================================================== */
+ul.tabMain{padding:0 2px;}
+ul.tabMain li{padding:15px 0 0 1px;font-size:13px;letter-spacing:-1px;}
+ul.tabMain li:first-child{padding-left:0;padding-right:1px;}
+ul.tabMain li a{height:35px;line-height:35px;}
+ul.tabMain li.here a{height:50px;line-height:50px;}
+
+ul.tabSub{width:auto;}
+ul.tabSub li{padding:0 2px 4px 2px;width:33.33%;font-size:14px;}
+ul.tabSub li:after{left:15px;bottom:20px;}
+ul.tabSub li a{height:90px;line-height:40px;}
+@media only screen and (orientation : portrait) {
+ul.tabSub li{width:50%;}
+}
+
+/* ライフステージから選ぶ */
+ul.tabSub.life li:nth-of-type(1) a{background-position:center 38px;}
+ul.tabSub.life li:nth-of-type(2) a{background-position:center 35px;}
+ul.tabSub.life li:nth-of-type(3) a{background-position:center 40px;}
+ul.tabSub.life li:nth-of-type(4) a{background-position:center 40px;}
+ul.tabSub.life li:nth-of-type(5) a{background-position:center 40px;}
+ul.tabSub.life li:nth-of-type(6) a{background-position:center 32px;}
+ul.tabSub.life li:nth-of-type(7) a{background-position:center 42px;}
+
+/* ニーズから選ぶ */
+ul.tabSub.needs{width:auto;}
+@media only screen and (orientation : portrait) {
+ul.tabSub.needs li{width:50%;}
+}
+ul.tabSub.needs li:nth-of-type(1) a{background-position:center 48px;}
+ul.tabSub.needs li:nth-of-type(2) a{background-position:center 35px;}
+ul.tabSub.needs li:nth-of-type(3) a{background-position:center 38px;}
+ul.tabSub.needs li:nth-of-type(4) a{background-position:center 42px;}
+ul.tabSub.needs li:nth-of-type(5) a{background-position:center 50px;}
+ul.tabSub.needs li:nth-of-type(6) a{background-position:center 45px;}
+
+/* Contents - common */
+@media only screen and (orientation : portrait) {
+h2.icoTitle img{display:block;margin:0 auto 10px;}
+}
+.productTableWrap > table.productTable > tbody > tr > td{box-sizing:border-box;display:block;padding:10px;width:100%;border:10px solid #efeae7;}
+.productTableWrap > table.productTable > tbody > tr > td:first-child[colspan="2"]{border-right:10px solid #efeae7;}/* 1Column */
+
+@media only screen and (orientation : portrait) {
+.productTableWrap table.discountTable td{padding:5px;}
+.productTableWrap table.discountTable td:first-child{width:50%;}
+.productTableWrap table.discountTable td + td{font-size:13px;}
+}
+
+/* Contents - 278_入社したとき */
+.compensationWrap{margin:0 auto;max-width:350px;}
+.compensationWrap table{padding:10px;}
+.compensationWrap table th{width:32%;letter-spacing:-1px;}
+.compensationWrap table td{padding:0 0 0 15px;}
+
+/* Contents - 286_海外保険 */
+table.formulaTable td{padding:2px 0;}
+@media only screen and (orientation : portrait) {
+table.formulaTable td:first-child{width:120px;}
+}
+
+
+/* ========================================================
+ next - 262_保険詳細のご案内 - 2
+=========================================================== */
+.compensationWrap.insuranceDetail .contBoxWrap .contBox{width:auto;}
+.compensationWrap.insuranceDetail .contBoxWrap .contBox .ttlArea{margin:0;padding-left:120px;height:45px;line-height:50px;font-size:20px;position:relative;}
+.compensationWrap.insuranceDetail .contBoxWrap .contBox .ttlArea:after{content:"";background:url(/Portals/0/images/common/arrow_red_down.png) 0 0 no-repeat;width:11px;height:6px;position:absolute;top:22px;right:20px;}
+.compensationWrap.insuranceDetail .contBoxWrap .contBox .ttlArea.active:after,
+.compensationWrap.insuranceDetail .contBoxWrap .contBox .ttlArea:first-child:after{background-image:url(/Portals/0/images/common/arrow_red_down.png);}
+.compensationWrap.insuranceDetail .contBoxWrap .contBox .ttlArea:first-child.active:after{background-image:url(/Portals/0/images/common/arrow_red_up.png);}
+.compensationWrap.insuranceDetail .contBoxWrap .contBox .contBoxInner{display:none;}/* 初期非表示 */
+.compensationWrap.insuranceDetail .contBoxWrap .contBox .ttlArea span.icon{top:-6px;left:6px;width:90px;height:51px;background-size:90px auto !important;}
+.compensationWrap.insuranceDetail .plusMark{margin:15px auto;float:none;}
+
+
+/* ========================================================
+ next - 288_FAQ
+=========================================================== */
+.qaSearch{padding:15px 20px;}
+.qaSearch dl.dlList_vertical{margin:0;padding:0;background:none;border:none;width:100%;float:none;}
+.qaSearch dl.dlList_vertical dd select{width:100%;}
+.qaSearch .submitArea{margin:10px 0 0;text-align:center;float:none;}
+
+.qaListArea dl.qaList dt.qaTitle{padding:10px 10px 10px 35px;background-position:5px 10px;}
+.qaListArea dl.qaList dd.qaText{margin:0 0 15px;padding:10px 10px 10px 35px;background-position:5px 10px;}
+
+
+/* ========================================================
+ next - 255_基本認証ログインページ
+=========================================================== */
+.loginFormWrap .listTable_side td input[type="text"],
+.loginFormWrap .listTable_side td input[type="password"]{box-sizing:border-box;width:100%;}
+@media only screen and (orientation : landscape) {
+.loginFormWrap .listTable_side td input[type="text"],
+.loginFormWrap .listTable_side td input[type="password"]{display:block;margin:0 auto;width:80%;}
+}
+.loginBtnWrap a{padding:8px 0;width:50%;}
+
+
+/* ========================================================
+ 305~行員ページ用
+======================================================== */
+.productIntroductionTable th,
+.productIntroductionTable td{display:block;width:auto;}
+

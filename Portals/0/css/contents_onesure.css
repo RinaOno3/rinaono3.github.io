@@ -1,0 +1,234 @@
+﻿@charset "utf-8";
+
+/*===========================================================
+ default
+===========================================================*/
+p{margin:0;padding:0 0 15px 0;}
+a{color:#7690cc;text-decoration:underline;}
+a,
+a:link,
+a:visited,
+a:hover{outline:0;}
+a:hover{color:#7690cc;text-decoration:none;}
+a img{transition:ease-in-out 0.25s;}
+a img:hover{opacity:0.75;}
+
+h1{padding:40px 0;font-size:228.58%;text-align:center;}
+h2{margin:2em 0 1em;font-size:142.86%;}
+h3{margin:2em 0 1em;font-size:128.58%;}
+h4{}
+h5{}
+h6{}
+.ContentPane h2:first-of-type{margin-top:0;}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="password"]{cursor:pointer;}
+button[disabled],
+input[disabled]{cursor:default;}
+input[type="submit"],
+input[type="button"],
+input[type="text"],
+input[type="password"],
+button,
+textarea{outline:none;-webkit-appearance:none;border-radius:0;font-family:"Noto Sans JP","Meiryo","Verdana","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","Osaka","ＭＳ Ｐゴシック","sans-serif";}
+
+/*========================================================
+ base.css
+========================================================*/
+/* align
+------------------------------ */
+.alignRight{text-align:right;}
+.alignLeft{text-align:left;}
+.alignCenter{text-align:center;}
+
+/* cell
+------------------------------ */
+/* fixed */
+th.fixed,
+td.fixed{width:8em;}
+/* color */
+th.colored{background-color:#f6f6f6;}
+td.colored{background-color:rgba(0,0,0,0.05);}
+/* empty */
+th.emptyCell,
+td.emptyCell{border:none !important;background:none !important;}
+/* nowrap */
+th.nowrap,
+td.nowrap{white-space:nowrap;}
+
+/* --------------------------------------------------
+	txt
+-------------------------------------------------- */
+/* font-size
+------------------------------ */
+.txtSmall{font-size:80%;}
+.txtLarge{font-size:120%;}
+
+/* font-weight
+------------------------------ */
+.txtBold{font-weight:bold;}
+
+/* font-color
+------------------------------ */
+.colorRed{color:#c00;}
+.colorGray{color:#777;}
+
+/* 外部リンクアイコン */
+a.externalLink:after{content:url(/Portals/0/images/onesure/common/ico_external.png);padding-left:5px;}
+
+/*========================================================
+ common
+========================================================*/
+/* breadcrumb
+------------------------- */
+.breadcrumbList{padding:10px 0;font-size:92.86%;}
+.breadcrumbList > span{margin:0 0.7em;}
+.breadcrumbList > span img{width:7px;height:10px;}
+
+/*========================================================
+ module
+ ========================================================*/
+/* inquiryform
+------------------------- */
+.questionnaire-form{width:100%;margin:0 0 2em;padding:0;border:none;max-width:100%;border-spacing:0;border-collapse:collapse;}
+.questionnaire-form td.SubHead{font-weight:bold;font-size:128%;}
+.questionnaire-form table{width:100%;margin:1em 0 0;padding:0;border:none;max-width:100%;border-spacing:0;border-collapse:collapse;}
+.questionnaire-form td tr{border-bottom:1px solid #d6d6d6;}
+.questionnaire-form td tr table{margin:0;}
+.questionnaire-form td tr tr{border-bottom:none;}
+.questionnaire-form td td{width:70%;padding:0.5em 0 0.5em 2em;}
+.questionnaire-form td td.SubHead{width:30%;padding:1em 2em 1em 0;font-size:107.15%;}
+.questionnaire-form td td.SubHead label{display:inline-block;}
+.questionnaire-form td td.SubHead .NormalRed{display:block;float:right;padding:4px 0.7em;margin:2px 0 0 1em;font-weight:400;color:#fff;font-size:78.58%;background:#c52a21;text-align:left;line-height:1.2;border-radius:3px;}
+.questionnaire-form .FieldValue{padding:10px 15px 10px 15px;border-top:none;border-bottom:#dbdbdb dotted 1px;border-left:none;color:#000;}
+.questionnaire-form .FieldTitle .NormalBold{color:#000;font-weight:normal;}
+.questionnaire-form .btnSearchZipCode{margin:0 0 0 10px;padding:3px 20px;border:none;color:#c52a21;font-weight:bold;border:1px solid #c52a21;border-radius:3px;background:#fff;transition:ease-in-out 0.25s;}
+.questionnaire-form .btnSearchZipCode:hover,
+.questionnaire-form .btnSearchZipCode:focus{color:#fff;background:#c52a21;}
+.questionnaire-form input[type='text'],
+.questionnaire-form textarea,
+.questionnaire-form select{margin:0.5em 0;padding:3px 3px 3px 3px;border:1px solid #d6d6d6;border-radius:3px;outline:none;box-sizing:border-box;}
+.questionnaire-form textarea{display:inline-block;width:100%;min-height:27px;vertical-align:bottom;resize:vertical;}
+.questionnaire-form select{padding-right:20px;}
+.questionnaire-form input[type='text']:focus,
+.questionnaire-form textarea:focus,
+.questionnaire-form select:focus{border:1px solid #707070;}
+.submitArea{padding:1em 0;}
+.submitArea input[type="submit"]{margin:0 10px;padding:1em 4em;color:#fff;font-size:114.29%;font-weight:bold;border:1px solid #6a625f;border-radius:3px;background:#6a625f;transition:ease-in-out 0.25s;}
+.submitArea input[type="submit"]:hover,
+.submitArea input[type="submit"]:hover{color:#6a625f;background:#fff;}
+.submitArea input[id$="_btnConfirmSend"],
+.submitArea input[id$="_btnInputConfirm"]{color:#fff;font-weight:bold;border:1px solid #c52a21;background:#c52a21;}
+.submitArea input[id$="_btnConfirmSend"]:hover,
+.submitArea input[id$="_btnInputConfirm"]:hover,
+.submitArea input[id$="_btnConfirmSend"]:focus,
+.submitArea input[id$="_btnInputConfirm"]:focus{color:#c52a21;background:#fff;}
+.NormalRed {color:#c52a21;}
+.description{display:block;font-size:85.72%;}
+
+/* faq
+------------------------- */
+.faqCategorykeywordArea{padding:2em;margin:0 0 3em;background:#fff;border:1px solid #d6d6d6;border-radius:15px;box-sizing:border-box;}
+.faqCategorykeywordArea .dlList_vertical{margin:0;border:none;background:none;}
+.faqCategorykeywordArea .dlList_vertical{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;max-width:750px;margin:0 auto 1.5em;}
+.faqCategorykeywordArea .dlList_vertical dt,
+.faqCategorykeywordArea .dlList_vertical dd{padding:0.5em 1em;font-size:114.29%;border:none;background:none;}
+.faqCategorykeywordArea .dlList_vertical dt{flex-shrink:0;width:20%;float:none;box-sizing:border-box;}
+.faqCategorykeywordArea .dlList_vertical dd{width:80%;margin:0;box-sizing:border-box;}
+.faqCategorykeywordArea .dlList_vertical dd select,
+.faqCategorykeywordArea .dlList_vertical dd input[type="text"]{width:100%;padding:5px 1em;box-sizing:border-box;border:2px solid #d6d6d6;border-radius:3px;}
+.faqCategorykeywordArea .submitArea{padding:0;}
+
+
+/* searchBtn */
+.faqCategorykeywordArea .submitArea input[type="submit"]{margin:0 10px;padding:0.5em 2em;min-width:7em;color:#fff;font-size:114.29%;font-weight:bold;border:1px solid #6a625f;border-radius:3px;background:#6a625f;transition:ease-in-out 0.25s;}
+.faqCategorykeywordArea .submitArea input[type="submit"]:hover,
+.faqCategorykeywordArea .submitArea input[type="submit"]:hover{color:#6a625f;background:#fff;}
+.faqCategorykeywordArea .submitArea input[id$="_lbtnSearch"].cmdSearch{color:#fff;font-weight:bold;border:1px solid #c52a21;background:#c52a21;}
+.faqCategorykeywordArea .submitArea input[id$="_lbtnSearch"].cmdSearch:hover,
+.faqCategorykeywordArea .submitArea input[id$="_lbtnSearch"].cmdSearch:focus{color:#c52a21;background:#fff;}
+
+.qaListArea{margin:0 0 5em;}
+.qaListArea div[id$="_divAllBtnArea"]{margin:0 0 1em;text-align:right;}
+.qaListArea div[id$="_divAllBtnArea"] a{display:inline-block;padding:0.3em 2em 0.3em 0.5em;margin:0 0.5em;color:#6a625f;text-decoration:none;border:1px solid #d6d6d6;border-radius:3px;position:relative;transition:ease-in-out 0.25s;}
+.qaListArea div[id$="_divAllBtnArea"] a:hover{border-color:#6a625f;}
+.qaListArea div[id$="_divAllBtnArea"] a.lnkAllOpen:after{content:"＋";}
+.qaListArea div[id$="_divAllBtnArea"] a.lnkAllClose:after{content:"－";}
+.qaListArea div[id$="_divAllBtnArea"] a.lnkAllOpen:after,
+.qaListArea div[id$="_divAllBtnArea"] a.lnkAllClose:after{display:block;color:#6a625f;font-weight:bold;position:absolute;top:4px;right:0.5em;}
+
+.qaListArea h2{margin:3em 0 0;text-align:center;pointer-events:none;}
+.qaListArea a.lnkOpen,
+.qaListArea a.lnkClose{display:inline-block;padding:0.3em 2em 0.3em 0.5em;margin:0 0.5em;color:#6a625f;text-decoration:none;border:1px solid #d6d6d6;border-radius:3px;position:relative;transition:ease-in-out 0.25s;}
+.qaListArea a.lnkOpen:hover,
+.qaListArea a.lnkClose:hover{border-color:#6a625f;}
+.qaListArea a.lnkOpen:after{content:"＋";}
+.qaListArea a.lnkClose:after{content:"－";}
+.qaListArea a.lnkOpen:after,
+.qaListArea a.lnkClose:after{display:block;color:#6a625f;font-weight:bold;position:absolute;top:4px;right:0.5em;}
+
+.qaListArea dl{margin:0 0 1em;text-align:left;}
+.qaListArea dl dt{padding:1em 0.5em 1em 5em;font-size:114.29%;font-weight:bold;transition:ease-in-out 0.25s;cursor:pointer;border-bottom:1px solid #d6d6d6;position:relative;}
+.qaListArea dl dt span{display:block;min-width:60px;color:#c52a21;font-size:125%;text-align:right;position:absolute;top:12px;left:0;}
+.qaListArea dl dt span:before{content:"Q.";display:inline-block;}
+.qaListArea dl dt:hover{color:#c52a21;}
+.qaListArea dl dd{padding:1em 0.5em 1.5em 5.6em;margin:0;background:#f4f4f4;position:relative;}
+.qaListArea dl dd:before{content:"A";display:block;color:#f87444;font-size:142.86%;font-weight:bold;position:absolute;top:8px;left:2.3em;}
+
+
+@media screen and (max-width:767px){/**/
+
+input,
+textarea{font-size:100%;}
+
+/*===========================================================
+ default
+===========================================================*/
+h1{padding:1em 0;font-size:142.86%;}
+
+
+/*========================================================
+ common
+========================================================*/
+/* breadcrumb
+------------------------- */
+.breadcrumbList{padding:0.5em 0;font-size:85.72%;}
+
+/*========================================================
+ module
+ ========================================================*/
+/* inquiryform
+------------------------- */
+.questionnaire-form table,
+.questionnaire-form table > tbody,
+.questionnaire-form table > tbody > tr{display:block;width:100%;}
+.questionnaire-form td td.SubHead,
+.questionnaire-form td td{display:block;padding:0 0.5em 1em;width:auto;box-sizing:border-box;}
+.questionnaire-form td td.SubHead{padding:1em 0.5em 0.3em;}
+.questionnaire-form td td input{width:100% !important;}
+.questionnaire-form input[type='text'].zipCode{width:45% !important;max-width:300px;}
+.questionnaire-form .btnSearchZipCode{width:auto !important;}
+.questionnaire-form td td input[type="checkbox"]{width:auto !important;}
+.faqCategorykeywordArea .dlList_vertical dd select,
+.faqCategorykeywordArea .dlList_vertical dd input[type="text"]{font-size:100%;}
+.submitArea{padding:1em 0;}
+.submitArea input[type="submit"]{width:90%;max-width:310px;padding:1em;margin:0.5em 0;}
+.NormalRed{display:inline-block;float:none;padding:3px 0.5em;margin:0 0 0 1em;font-size:68.75%;}
+
+/* faq
+------------------------- */
+.faqCategorykeywordArea{padding:1em 1.5em;margin:0 0 3em;}
+.faqCategorykeywordArea .dlList_vertical{display:block;margin:0 0 0.5em;}
+.faqCategorykeywordArea .dlList_vertical dt{width:auto;padding:0 0 0.25em;}
+.faqCategorykeywordArea .dlList_vertical dd{width:auto;padding:0 0 0.5em;}
+.faqCategorykeywordArea .submitArea input[type="submit"]{padding:0.5em 1em;margin:0.25em 0.5em;width:40%;min-width:auto;max-width:6em;font-size:100%;}
+.qaListArea h2{margin:2em 0 0.5em;}
+.qaListArea dl dt{padding:0.5em 0.5em 0.5em 4.6em;font-size:100%;}
+.qaListArea dl dt span{min-width:50px;font-size:100%;top:8px;}
+.qaListArea dl dd{min-width:50px;padding:8px 0.5em 1.5em 4.6em;}
+.qaListArea dl dd:before{font-size:114.29%;top:5px;}
+
+}

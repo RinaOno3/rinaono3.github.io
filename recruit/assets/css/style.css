@@ -113,6 +113,7 @@ picture img {
     width: 80%;
     height: auto;
     display: block;
+    margin:auto;
 }
 
 /* タブレット用 */
@@ -152,14 +153,14 @@ picture img {
 
   #unmuteButton {
     position: absolute;
-    bottom: 10px;
+    bottom: 2px;
     left: 50%;
     transform: translateX(-50%);
     background-color: #000;
     opacity: 0.6;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 5px 10px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
@@ -168,7 +169,6 @@ picture img {
   #unmuteButton:hover {
     background-color: #ff4500;
   }
-
 
 /* セクション全体 */
 .section--group-dynamics {
@@ -1000,24 +1000,6 @@ body {
     margin-bottom: 7rem;
 }
 
-.main_ttl h1::before {
-    content: "";
-    border: 1px solid #707070;
-    /* 線のスタイル */
-    position: absolute;
-    bottom: -30px;
-    /* h1 の下に配置 */
-    left: 50%;
-    /* 親要素の幅の50% */
-    transform: translateX(-50%);
-    /* 自身の幅の50%分左に移動して中央揃え */
-    width: 88px;
-    /* 線の幅 */
-    text-align: center;
-}
-
-
-
 .main_ttl p {
     font-size: 1.8rem;
     text-align: center;
@@ -1604,7 +1586,7 @@ body {
     width: 100%;
     margin: 20px auto;
     padding: 0 20px;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     line-height: 1.8;
 }
 
@@ -1738,7 +1720,6 @@ dd span {
 /* お問い合わせ */
 .contact-info {
     text-align: center;
-    font-size: 1.4rem;
     color: #333;
     line-height: 1.6;
 }
@@ -1967,6 +1948,10 @@ dd span {
     padding: 20px 10px 10px;
     border-radius: 20px;
     border: 5px solid #E5E5E5;
+}
+
+.benefits-item-img-area.w180 {
+    width:180px;
 }
 
 .benefits-item-img-area.bg_w {
@@ -3358,7 +3343,56 @@ dd span {
     margin-inline: auto;
 }
 
+.companyname-ceo_wrp {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
 
+.companyname-ceo {
+    font-size: 2.8rem;
+    font-weight: bold;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 要素全体を右に寄せる */
+}
+
+.companyname-ceo__text,
+.companyname-ceo__name {
+    display: block;
+    text-align: center;
+    /* テキストを中央揃え */
+    width: 100%;
+    /* 親要素いっぱいに広げる */
+}
+
+
+.companyname-ceo__text {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.companyname-ceo__name {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+@media (max-width: 768px) {
+    .companyname-ceo__text {
+        font-size: 1.2rem;
+    }
+
+    .companyname-ceo__name {
+        font-size: 2.4rem;
+
+    }
+}
 @media (max-width: 768px) {
 
     .page_message__content p {
@@ -3543,6 +3577,11 @@ dd span {
     font-size: 1.8rem;
 }
 
+@media (max-width: 1500px) {
+    .page_introduction__title-heading {
+        font-size: 4.5rem;
+    }
+}
 @media (max-width: 1380px) {
     .page_introduction__title-heading {
         font-size: 4rem;
@@ -3551,6 +3590,9 @@ dd span {
 }
 
 @media (max-width: 1260px) {
+    .page_introduction__title-heading {
+        font-size: 3.5rem;
+    }
     .page_introduction__title picture img {
         max-width: 800px;
     }

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head id="Head">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style id="StylePlaceholder" type="text/css"></style>
+    <link id="_Portals__default_" rel="stylesheet" type="text/css" href="/Portals/0/_default/default.css" />
+    <link id="_Portals_0_Skins_MST_sstemp_" rel="stylesheet" type="text/css" href="/Portals/0/Skins/MST-sstemp/skin.css" />
+    <link id="_Portals_0_Containers_MST_sstemp_" rel="stylesheet" type="text/css" href="/Portals/0/Containers/MST-sstemp/container.css" />
+    <link id="_Portals_0_" rel="stylesheet" type="text/css" href="/Portals/0/portal.css" />
+    <script src="/Portals/0/js/tools/jquery-1.11.2.min.js" type="text/javascript"></script>
+    <script src="/Portals/0/js/tools/jquery.cookie.js" type="text/javascript"></script>
+    <link rel="SHORTCUT ICON" href="/Portals/0/favicon.ico" />
+    <title>キョーリン製薬専用ページ</title>
+    <meta name="robots" content="noindex"><meta name="format-detection" content="telephone=no">
+    <script type="text/javascript">
+    (function($) {
+        $(function() {
+            function getTerminalType() {
+                var result_value = "0";
+                $.ajax({
+                    url: 'https://sp.infocms.jp/?v=2&ua=' + navigator.userAgent,
+                    type: "GET",
+                    async: false
+                }).done(function(data) {
+                    result_value = data;
+                });
+                return result_value;
+            }
+         
+            // 0:PC、1:スマホ、2:タブレット
+            var UAType = getTerminalType();
+            if (UAType == 1) {
+                // 以下処理
+                $('.telLink').each(function(){
+                var str = $(this).text();
+                    $(this).html($('<a>').attr('href', 'tel:' + str.replace(/-/g, '')).append(str + '</a>'));
+                });
+                // ここまで
+            }
+        });
+    })(jQuery);
+    </script>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-NM9CT26');</script>
+	<!-- End Google Tag Manager -->
+    <script>
+        function isMobile() {
+            return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        }
+        window.addEventListener("DOMContentLoaded", function() {
+            if (isMobile()) { // モバイルデバイスのとき
+                var spCssFiles = [
+                    "/Portals/0/_default/defaultsmart.css",
+                    "/Portals/0/Skins/MST-sstemp/skinsmart.css",
+                    "/Portals/0/Containers/MST-sstemp/containersmart.css",
+                    "/Portals/0/portalsmart.css"
+                ];
+                spCssFiles.forEach(function(href) {
+                    var link = document.createElement("link");
+                    link.rel = "stylesheet";
+                    link.type = "text/css";
+                    link.href = href;
+                    document.head.appendChild(link);
+                });
+
+                var script = document.createElement("script");
+                script.src = "/Portals/0/js/tools/smartphone.js";
+                document.head.appendChild(script);
+
+                var viewportMeta = document.createElement("meta");
+                viewportMeta.name = "viewport";
+                viewportMeta.content = "width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1";
+                document.getElementsByTagName("head")[0].appendChild(viewportMeta);
+            }
+        });
+    </script>
+</head>
+<body id="Body">
+    <noscript><div class="lblNoScript"><span id="lblNoScript" class="NormalRed">本システムでは、JavaScriptを利用しています。JavaScriptを有効に設定してからご利用ください。</span></div></noscript>
+    <p class="skip"><a href="#dnn_ContentPane"><span id="lblSkipContentPane">本文へスキップします。</span></a></p> 
+    <form name="Form" method="post" action="/Default.aspx?TabId=344" id="Form" enctype="multipart/form-data" style="height: 100%;" class="pcMode">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form'];
+if (!theForm) {
+    theForm = document.Form;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+<script src="/Portals/0/js/dnncore.js" type="text/javascript"></script>
+<script src="/Portals/0/js/infocms.js" type="text/javascript"></script>
+<script src="/Portals/0/js/MicrosoftAjax.ja.js" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+        
+        
+<script>jQuery.noConflict();</script>
+<script type="text/javascript" src="/Portals/0/js/to-top/to-top_btmu.js"></script>
+<script type="text/javascript" src="/Portals/0/js/smoothScroll/smoothScroll.js"></script>
+<script type="text/javascript" src="/Portals/0/js/matchHeight/jquery.matchHeight.js"></script>
+<script type="text/javascript" src="/Portals/0/js/common/accordion.js"></script>
+<script type="text/javascript">
+(function($){
+	$(document).ready( function(){
+		$(".hMenuBtn").click(function(event){
+			event.stopPropagation();
+			$(".NavSStempPane").slideToggle(150);
+			$(".hMenuBtn").toggleClass("menuOpen");
+		});
+	});
+})(jQuery)
+</script>
+
+<div id="skinIndex" class="skinWrapper">
+    <div id="skinWrapBody">
+        <header id="headBody">
+            <h1 class="logo"><img src="/Portals/0/Skins/MST-btmu/images/logo.png" alt="エムエスティ保険サービス株式会社 損害保険・生命保険代理店" /></h1>
+            <div id="dnn_symbolSStempPane" class="symbolSStempPane">
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1001_ContentPane"><!-- Start_Module_1001 --><div id="dnn_ctr1001_ModuleContent">
+	<div id="dnn_ctr1001_HtmlModule_HtmlModule_lblContent">
+				<p class="symbolText">キョーリン製薬様専用</p>
+		
+</div>
+<!-- End_Module_1001 -->
+</div></div>
+  </div>
+</section>
+
+</div>
+            <aside id="dnn_SideTopSStempPane" class="SideTopSStempPane">
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1002_ContentPane"><!-- Start_Module_1002 --><div id="dnn_ctr1002_ModuleContent">
+	<div id="dnn_ctr1002_HtmlModule_HtmlModule_lblContent">
+	<ul class="subNav pcArea">
+    <li class="external"><a href="https://www.mst-is.co.jp/KYORIN/tabid/344/Default.aspx">トップページ</a></li>
+</ul>
+</div>
+<!-- End_Module_1002 -->
+</div></div>
+  </div>
+</section>
+
+</aside>
+            <p class="hMenuBtn spArea">MENU</p>
+            <nav id="dnn_NavSStempPane" class="NavSStempPane">
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1003_ContentPane"><!-- Start_Module_1003 --><div id="dnn_ctr1003_ModuleContent">
+	<div class="btmuNav noParent">
+<ul>
+<li class="Tab348"><a id="dnn_ctr1003_SEOMenuV2_Tab348"  href="https://www.mst-is.co.jp/KYORIN/tabid/348/Default.aspx" >MSTを利用するメリット</a></li>
+<li class="Tab349"><a id="dnn_ctr1003_SEOMenuV2_Tab349"  href="https://www.mst-is.co.jp/KYORIN/tabid/349/Default.aspx" >保険商品を選ぶ</a><ul>
+<li class="Tab351"><a id="dnn_ctr1003_SEOMenuV2_Tab351"  href="https://www.mst-is.co.jp/KYORIN/tabid/351/Default.aspx" >Webでお手続き</a></li>
+</ul>
+</li>
+<li class="Tab352"><a id="dnn_ctr1003_SEOMenuV2_Tab352"  href="https://www.mst-is.co.jp/KYORIN/tabid/352/Default.aspx" >Webでのお問合せ</a></li>
+<li class="Tab353"><a id="dnn_ctr1003_SEOMenuV2_Tab353"  href="https://www.mst-is.co.jp/KYORIN/tabid/353/Default.aspx" >契約変更・解約手続き受付</a></li>
+<li class="Tab354"><a id="dnn_ctr1003_SEOMenuV2_Tab354"  href="https://www.mst-is.co.jp/KYORIN/tabid/354/Default.aspx" >事故時の連絡先・保険金請求の流れ</a></li>
+<li class="Tab355"><a id="dnn_ctr1003_SEOMenuV2_Tab355"  href="https://www.mst-is.co.jp/KYORIN/tabid/355/Default.aspx" >お知らせ一覧</a></li>
+</ul>
+
+</div>
+<!-- End_Module_1003 -->
+</div></div>
+  </div>
+</section>
+
+</nav>
+            <aside id="dnn_SideSStempPane" class="SideSStempPane">
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1004_ContentPane"><!-- Start_Module_1004 --><div id="dnn_ctr1004_ModuleContent">
+	<div id="dnn_ctr1004_HtmlModule_HtmlModule_lblContent">
+	<div class="contactBox pcArea">
+<h2 class="ttl">保険に関するお問い合わせ</h2>
+<div class="txtWrap" style="width: 243px; height: 146px;">
+<p><span style="font-size: 10px;">　＜募集代理店＞エムエスティ保険サービス</span></p>
+<p>　東京職域保険相談部</p>
+<p>　<span style="font-size: 12.636px; font-family: monospace;">渡部・鈴木</span></p>
+<p>　ＴＥＬ　：<span class="telLink">03-3340-3357</span><br />
+　受付時間：平日9時～17時</p>
+<p class="notes" style="text-align: left;">　　　　　　　※年末年始を除く</p>
+</div>
+</div>
+</div>
+<!-- End_Module_1004 -->
+</div></div>
+  </div>
+</section>
+
+</aside>
+            <aside id="dnn_SideBottomSStempPane" class="SideBottomSStempPane">
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1005_ContentPane"><!-- Start_Module_1005 --><div id="dnn_ctr1005_ModuleContent">
+	<div id="dnn_ctr1005_HtmlModule_HtmlModule_lblContent">
+	<ul class="subNav pcArea">
+    <li class="external"><a href="/" target="_blank">MSTコーポレートサイト</a></li>
+    <li class="external"><a href="/privacy/tabid/244/Default.aspx" target="_blank">個人情報保護に関する基本方針</a></li>
+    <li class="external"><a href="/canvass/tabid/243/Default.aspx" target="_blank">勧誘方針</a></li>
+</ul>
+</div>
+<!-- End_Module_1005 -->
+</div></div>
+  </div>
+</section>
+
+</aside>
+        </header>
+        <main id="mainBody">
+            <div id="contentTopWrap">
+                <div id="dnn_TopLeftPane" class="TopLeftPane">
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1062_ContentPane"><!-- Start_Module_1062 --><script type="text/javascript" src="/Portals/0/js/bxslider/jquery.bxslider.min.js"></script>
+<script type="text/javascript">
+jQuery(function($) {
+$(document).ready(function(){
+	$('.sliderWrap').bxSlider({
+		auto: true,
+		pager: false,
+		controls: true,
+		infiniteLoop: true,
+		speed: 1000,
+		pause: 10000, 
+		moveSlides: 1
+	});
+});
+});
+</script><div id="dnn_ctr1062_ModuleContent">
+	<div id="dnn_ctr1062_HtmlModule_HtmlModule_lblContent">
+	<div class="bxsliderWrap">
+<ul class="sliderWrap">
+    <li><img alt="キービジュアル1 " src="/Portals/0/images/sstemp/index/img_kv01.jpg" />
+    <ul class="txtList">
+        <li>自動車保険、火災保険、医療・がん保険等幅広くご相談対応いたします。</li>
+        <li>保険のお問い合わせはWebまたはお電話で！</li>
+    </ul>
+    </li>
+    <li><img alt="キービジュアル2" src="/Portals/0/images/sstemp/index/img_kv02.jpg" />
+    <ul class="txtList">
+        <li>地震保険は地震・噴火またはこれらによる津波を原因とする損害を補償します。</li>
+        <li>地震保険は火災保険とセットでなければ加入いただけません。</li>
+        <li>家財の補償は十分ですか？</li>
+    </ul>
+    </li>
+</ul>
+</div>
+</div>
+<!-- End_Module_1062 -->
+</div></div>
+  </div>
+</section>
+
+</div>
+                <div id="dnn_TopRightPane" class="TopRightPane">
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1063_ContentPane"><!-- Start_Module_1063 --><div id="dnn_ctr1063_ModuleContent">
+	<div id="dnn_ctr1063_HtmlModule_HtmlModule_lblContent">
+	<table class="noTable gridTable">
+    <tbody>
+        <tr>
+            <td class="redCellmul" colspan="2"><a href="https://www.mst-is.co.jp/KYORIN/tabid/349/Default.aspx"><strong>保険商品をえらぶ</strong>キョーリン製薬グループ社員の皆さまに福利厚生の一環として割安な保険やWebで手続きが完了する保険商品をご案内します。</a></td>
+        </tr>
+        <tr>
+            <td class="greenCell"><a href="https://www.mst-is.co.jp/KYORIN/tabid/348/Default.aspx"><strong>MSTを利用するメリット</strong></a></td>
+            <td class="orangeCell"><a href="https://www.mst-is.co.jp/KYORIN/tabid/352/Default.aspx"><strong>Webで保険のお問い合わせ</strong></a></td>
+        </tr>
+        <tr>
+            <td class="pinkCell"><a href="https://www.mst-is.co.jp/KYORIN/tabid/353/Default.aspx"><strong>契約の変更・解約手続き受付</strong></a></td>
+            <td class="blueCell"><a href="https://www.mst-is.co.jp/KYORIN/tabid/354/Default.aspx"><strong>事故時の連絡先・保険金<span style="font-size: 84%;">(給付金)</span>請求の流れ</strong></a></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<!-- End_Module_1063 -->
+</div></div>
+  </div>
+</section>
+
+</div>
+                <div id="dnn_TopBottomPane" class="TopBottomPane DNNEmptyPane"></div>
+            </div>
+            <div id="contentWrap">
+                <div id="dnn_ContentPane" class="ContentPane">
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1061_ContentPane"><!-- Start_Module_1061 --><div id="dnn_ctr1061_ModuleContent">
+	<div id="dnn_ctr1061_ViewAnnouncements_pnlAllArea" class="ViewAnnouncements">
+		
+    <div class="newsWrap">
+<h2 class="newsTitle"><span class="ttl">News&amp;Topics<span class="ttlSub">ニュース&amp;トピックス</span></span></h2>
+<p class="newsListLink"><a href="https://www.mst-is.co.jp/KYORIN/KYORIN/tabid/355/Default.aspx">ニュース&トピックス一覧へ</a></p>
+<div class="newsListIndex noIcon">
+<ul>
+    
+            <li>
+<p class="newsDate">2018年04月01日</p>
+<p class="newsTitle"><a href="https://www.mst-is.co.jp/KYORIN/tabid/344/Default.aspx?itemid=83&dispmid=1061">キョーリン製薬グループ様専用ページオープンしました</a></p>
+</li>
+	    
+    
+    </ul>
+</div>
+</div>
+    
+
+	</div>
+<!-- End_Module_1061 -->
+</div></div>
+  </div>
+</section>
+
+</div>
+                <div id="dnn_NavSmtSStempPane" class="NavSmtSStempPane"><div id="dnn_ctr1006_ContentPane"><!-- Start_Module_1006 --><div id="dnn_ctr1006_ModuleContent">
+	
+<!-- End_Module_1006 -->
+</div></div>
+</div>
+                <div id="dnn_FootSmtSStempPane" class="FootSmtSStempPane">
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1430_ContentPane"><!-- Start_Module_1430 --><div id="dnn_ctr1430_ModuleContent">
+	<div id="dnn_ctr1430_HtmlModule_HtmlModule_lblContent">
+	<div class="contactBox spArea">
+<h2 class="ttl">保険に関するお問い合わせ</h2>
+<div class="txtWrap" style="width: 281px; height: 192px;">
+<p><span style="font-size: 10px;">　＜募集代理店＞エムエスティ保険サービス</span></p>
+<p>　東京職域保険相談部</p>
+<p>　<span style="font-family: monospace; font-size: 12.636px;">安藤・鈴木</span></p>
+<p>　ＴＥＬ　：<span class="telLink">03-3340-3357</span></p>
+<p>　　　受付時間：平日9時～17時</p>
+<p class="notes" style="text-align: left;">　　　　　　　※年末年始を除く</p>
+<br />
+<br />
+</div>
+</div>
+<ul class="subNav spArea">
+    <li class="external"><a href="KYORIN/tabid/344/Default.aspx" target="_blank">トップページ</a></li>
+    <li class="external"><a href="/" target="_blank">MSTコーポレートサイト</a></li>
+    <li class="external"><a href="/privacy/tabid/244/Default.aspx" target="_blank">個人情報保護に関する基本方針</a></li>
+    <li class="external"><a href="/canvass/tabid/243/Default.aspx" target="_blank">勧誘方針</a></li>
+</ul>
+</div>
+<!-- End_Module_1430 -->
+</div></div>
+  </div>
+</section>
+
+</div>
+            </div>
+        </main>
+    </div>
+    <footer id="footBody">
+        <p class="pagetop"><a href="#headBody">ページトップへ</a>
+</p>
+        <div id="dnn_FootSStempPane" class="FootSStempPane">
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1008_ContentPane"><!-- Start_Module_1008 --><div id="dnn_ctr1008_ModuleContent">
+	<div id="dnn_ctr1008_HtmlModule_HtmlModule_lblContent">
+	<div class="fContents">
+＜募集代理店＞_＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿<br />
+<p class="logo"><img alt="MSTエムエスティ保険サービス株式会社" src="/Portals/0/images/common/logo.png" /></p>
+<address><span>〒163-1537</span>東京都新宿区西新宿1丁目6番1号 新宿エルタワー </address>
+</div>
+</div>
+<!-- End_Module_1008 -->
+</div></div>
+  </div>
+</section>
+
+</div>
+        <p class="copyright"><span id="dnn_dnnCOPYRIGHT_lblCopyright" class="copyrightCss">Copyright© 2015 MST Insurance Service Co., Ltd. All Rights Reserved.</span>
+</p>
+    </footer>
+</div>
+
+
+        <input name="ScrollTop" type="hidden" id="ScrollTop" />
+        <input name="__dnnVariable" type="hidden" id="__dnnVariable" />
+    </form>
+<!-- 345646102B6E121D6EA7DB5DFE92AF20D69A0EBD9AC49BE4AF273AC623D53C89 -->
+</body>
+</html>

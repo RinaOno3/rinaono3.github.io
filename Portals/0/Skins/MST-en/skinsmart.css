@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+/* ===========================================================
+ Non-display area of the smartphone
+=========================================================== */
+.pcArea{display:none !important;}
+.spArea{display:block !important;}
+
+img{max-width:100%;height:auto !important;}
+
+
+/* ===========================================================
+ common
+=========================================================== */
+body{min-width:100%;-webkit-text-size-adjust:none;font-family:'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','Roboto','Droid Sans',メイリオ,'sans-serif';background:none;}
+
+
+/* ===========================================================
+ headBody
+=========================================================== */
+#headBody{margin:0;padding:0;width:auto;height:51px;text-align:left;border-bottom:2px solid #c9151e;}
+
+/* Logo */
+#headBody .headLogo{margin:16px 0 0 10px;padding:0;width:auto;float:none;}
+#headBody .logo a{display:block;width:250px;}
+
+/* headWrap */
+.headWrap{margin:0;padding:0;width:auto;float:none;}
+.headWrap .HeadPane{display:none;}
+
+/* hMenuBtn */
+.hMenuBtn{position:absolute;top:0;right:0;}
+.hMenuBtn{margin:0;padding:0;width:51px;height:51px;background:url(/Portals/0/images/smartphone/common/btn_menu.png) -51px 0 no-repeat;background-size:102px 51px;text-indent:100%;white-space:nowrap;overflow:hidden;}
+.hMenuBtn.menuOpen{background:url(/Portals/0/images/smartphone/common/btn_menu.png) 0 0 no-repeat;background-size:102px 51px;}
+
+
+/* ===========================================================
+ spNav
+=========================================================== */
+.HeadSmtNavEnPane{display:none;width:100%;background:#fff;position:absolute;top:51px;right:0;z-index:50;}
+
+.sp_Nav{margin:0;padding:0;}
+.sp_Nav > ul{margin:0;padding:0;list-style:none;}
+.sp_Nav > ul > li{margin:0 0 1px 0;padding:0;}
+.sp_Nav > ul > li > a{margin:0;padding:15px 40px 15px 35px;background:#818181;color:#fff;text-decoration:none;display:block;position:relative;}
+.sp_Nav > ul > li > a:after{content:"";position:absolute;right:20px;top:18px;background-image:url(/Portals/0/images/smartphone/common/arrow_whiteL.png);background-size:8px 14px;width:8px;height:14px;background-repeat:no-repeat;}
+.sp_Nav > ul > li > a.toggleSwitch:after{content:"＋";position:absolute;left:12px;top:15px;background-image:none;}
+.sp_Nav > ul > li > a.toggleSwitch.active:after{content:"－";position:absolute;left:12px;top:15px;}
+.sp_Nav > ul > li > ul{margin:1px 0 0 0;padding:0;list-style:none;display:none;/* アコーディオン閉用 */}
+.sp_Nav > ul > li > ul > li{margin:0 0 1px 0;padding:0;}
+.sp_Nav > ul > li > ul > li > a{margin:0;padding:15px 40px 15px 35px;background:#f3eded;color:#333;text-decoration:none;display:block;position:relative;}
+.sp_Nav > ul > li > ul > li > a:after{content:"";position:absolute;right:20px;top:18px;background-image:url(/Portals/0/images/smartphone/common/arrow_redL.png);background-size:8px 14px;width:8px;height:14px;background-repeat:no-repeat;}
+.sp_Nav > ul > li  > ul > li > a.toggleSwitch:after{content:"＋";position:absolute;left:12px;top:15px;background-image:none;}
+.sp_Nav > ul > li  > ul > li > a.toggleSwitch.active:after{content:"－";position:absolute;left:12px;top:15px;}
+.sp_Nav > ul > li > ul > li > ul{margin:1px 0 0 0;padding:0;list-style:none;display:none;}
+.sp_Nav > ul > li > ul > li > ul > li{margin:0 0 1px 0;padding:0;}
+.sp_Nav > ul > li > ul > li > ul > li > a{margin:0;padding:15px 10px 15px 35px;background:#eaeaea;color:#333;text-decoration:none;display:block;position:relative;}
+.sp_Nav > ul > li > ul > li > ul > li > a:after{content:"";position:absolute;right:20px;top:20px;background-image:url(/Portals/0/images/smartphone/common/arrow_grayM.png);background-size:6px 10px;width:6px;height:10px;background-repeat:no-repeat;}
+
+
+/* ===========================================================
+ gNav
+=========================================================== */
+.NavPane{display:none;}
+
+
+/* ===========================================================
+ footBody
+=========================================================== */
+.FootEnPane{width:auto;}
+
+.copyright{padding:10px;background:#333;}
+
+
+/* ===========================================================
+ css for each skin
+=========================================================== */
+#skinIndex #contentWrap{padding:0 10px;width:100%;box-sizing:border-box;-webkit-box-sizing:border-box;}
+
+#contentBody{margin:0 auto 50px;padding:0 10px;width:100%;box-sizing:border-box;-webkit-box-sizing:border-box;}
+#skin2Columns #contentWrap{width:auto;float:none;}
+#skin2Columns #sideWrap{width:auto;float:none;}
+
+
+/*========================================================
+ link
+ ========================================================*/
+ /* fLink_en */
+.fLink_en{margin:0;text-align:left;}
+.fLink_en li{padding:0;border:none;display:block;}
+.fLink_en a{margin:0 0 1px 0;padding:8px 15px;background:#f3eded;display:block;position:relative;}
+.fLink_en a:after{content:"";background:url(/Portals/0/images/smartphone/common/arrow_redL.png) 0 0 no-repeat;background-size:6px 11px;width:6px;height:11px;position:absolute;top:12px;right:20px;}
+
+ 
+/* ===========================================================
+ contents
+=========================================================== */
+#mainBody{margin:20px 0 0;padding:0;}
+
+/* breadcrumb */
+#breadcrumbBody{display:none;}
+
+
+/* ===========================================================
+ default
+=========================================================== */
+/* 見出し */
+h1{letter-spacing:0;}
+h2{margin:15px 0 15px 0;padding:0 0 5px 10px;}
+h3{margin:14px 0 14px 0;}
+h4{margin:12px 0 12px 0;padding:0 0 4px 10px;}
+h5{margin:10px 0 12px 0;padding:0 0 0 10px;}
+.lineTitle .title	{margin:0 0 15px 0;}
+.lineTitle .title h2{padding:0 0 5px 10px;}
+
+/* リスト（2列） */
+.list_2line li{margin:0;float:none;width:auto;}
+#skin1Column .list_2line li{width:auto;}
+
+/* リスト（3列） */
+.list_3line li{margin:0;float:none;width:auto;}
+#skin1Column .list_3line li{width:auto;}
+
+/* エリア（2列） */
+.box_2line > div{margin:0;float:none;width:auto;}
+#skin1Column .box_2line > div{width:auto;}
+
+/* スマホ用テーブル */
+.smtTable th,
+.smtTable td{display:block;}
+.listTable_side.smtTable th,
+.listTable_side.smtTable td{border-top:none;width:auto;}
+
+/* 画像回り込み */
+@media only screen and (orientation : portrait){
+img.imgRight,
+img.imgLeft{display:block;margin:0 auto 15px;float:none;}
+}
+
+
+/* ========================================================
+ index
+======================================================== */
+/* KV */
+.kvAreaEn{height:auto;background:none;position:static;}
+.kvAreaEn img{margin-left:0;width:auto;height:auto;position:static;}
+
+/* About MST Group */
+.indexFigWrapEn{position:static;}
+.indexFigWrapEn img{margin-bottom:10px;}
+.indexFigWrapEn .txtArea{width:auto;position:static;}
+
+
+/* ========================================================
+ common
+========================================================*/
+/* アコーディオン */
+@media only screen and (orientation : portrait){
+.acoContentsWrap .acoTitle:after{top:15px;right:10px;}
+.acoContentsWrap .acoTitle h2{padding:8px 40px 8px 10px;}
+.acoContentsWrap .acoContents{padding:10px;}
+}
+
+
+/* ========================================================
+ next
+======================================================== */
+/* 247_MST Group Companies */
+.companyList .listTable_side th{width:30%;}
+.companyList .listTable_side td{width:70%;}
+
+/* 247_MST Group Service */
+ul.icoList{margin:0;padding:0;}
+ul.icoList li{display:inline-block;margin:0 5px 5px 0;padding:2px 5px;list-style:none;border-radius:5px;font-size:10px;}
+ul.icoList li.icoRed     {background:#cf232b;color:#fff;}
+ul.icoList li.icoGray    {background:#777;color:#fff;}
+@media only screen and (orientation : portrait) {
+.grayBox{padding:15px;}
+}
