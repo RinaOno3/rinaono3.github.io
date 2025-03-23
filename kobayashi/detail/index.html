@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head id="Head">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style id="StylePlaceholder" type="text/css"></style>
+	<link id="_Portals__default_" rel="stylesheet" type="text/css" href="/Portals/0/_default/default.css" />
+	<link id="_Portals_0_Skins_MST_sstemp_" rel="stylesheet" type="text/css" href="/Portals/0/Skins/MST-sstemp/skin.css" />
+	<link id="_Portals_0_Containers_MST_sstemp_" rel="stylesheet" type="text/css" href="/Portals/0/Containers/MST-sstemp/container.css" />
+	<link id="_Portals_0_" rel="stylesheet" type="text/css" href="/Portals/0/portal.css" />
+	<script src="/js/tools/jquery-1.11.2.min.js" type="text/javascript"></script>
+	<script src="/js/tools/jquery.cookie.js" type="text/javascript"></script>
+	<link rel="SHORTCUT ICON" href="/Portals/0/favicon.ico" />
+	<title>保険商品を選ぶ（Web手続き）</title>
+	<meta name="robots" content="noindex">
+	<meta name="format-detection" content="telephone=no">
+	<script type="text/javascript">
+	(function($) {
+	    $(function() {
+	        function getTerminalType() {
+	            var result_value = "0";
+	            $.ajax({
+	                url: 'https://sp.infocms.jp/?v=2&ua=' + navigator.userAgent,
+	                type: "GET",
+	                async: false
+	            }).done(function(data) {
+	                result_value = data;
+	            });
+	            return result_value;
+	        }
+	     
+	        // 0:PC、1:スマホ、2:タブレット
+	        var UAType = getTerminalType();
+	        if (UAType == 1) {
+	            // 以下処理
+	            $('.telLink').each(function(){
+	            var str = $(this).text();
+	                $(this).html($('<a>').attr('href', 'tel:' + str.replace(/-/g, '')).append(str + '</a>'));
+	            });
+	            // ここまで
+	        }
+	    });
+	})(jQuery);
+	</script>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-NM9CT26');
+	</script>
+	<!-- End Google Tag Manager -->
+    <script>
+        function isMobile() {
+            return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        }
+        window.addEventListener("DOMContentLoaded", function() {
+            if (isMobile()) { // モバイルデバイスのとき
+                var spCssFiles = [
+                    "/Portals/0/_default/defaultsmart.css",
+                    "/Portals/0/Skins/MST-sstemp/skinsmart.css",
+                    "/Portals/0/Containers/MST-sstemp/containersmart.css",
+                    "/Portals/0/portalsmart.css"
+                ];
+                spCssFiles.forEach(function(href) {
+                    var link = document.createElement("link");
+                    link.rel = "stylesheet";
+                    link.type = "text/css";
+                    link.href = href;
+                    document.head.appendChild(link);
+                });
+
+                var script = document.createElement("script");
+                script.src = "/Portals/0/js/tools/smartphone.js";
+                document.head.appendChild(script);
+
+                var viewportMeta = document.createElement("meta");
+                viewportMeta.name = "viewport";
+                viewportMeta.content = "width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1";
+                document.getElementsByTagName("head")[0].appendChild(viewportMeta);
+            }
+        });
+    </script>
+</head>
+<body id="Body">
+    <noscript><div class="lblNoScript"><span id="lblNoScript" class="NormalRed">本システムでは、JavaScriptを利用しています。JavaScriptを有効に設定してからご利用ください。</span></div></noscript>
+    <p class="skip"><a href="#dnn_ContentPane"><span id="lblSkipContentPane">本文へスキップします。</span></a></p> 
+    <form name="Form" method="post" action="/Default.aspx?TabId=371" id="Form" enctype="multipart/form-data" style="height: 100%;" class="pcMode">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNDEzMjU5MzIxD2QWBmYPFgIeBFRleHQFDzwhRE9DVFlQRSBodG1sPmQCAQ9kFggCAQ8WAh4HVmlzaWJsZWhkAgIPFgQeB2NvbnRlbnRkHwFoZAIDDxYEHwJkHwFoZAIEDxYEHwJkHwFoZAICD2QWAgIFDxYCHgVjbGFzcwUGcGNNb2RlFgICBA9kFgJmD2QWFgIBD2QWAmYPZBYGZg8PFgIfAWhkZAICDw8WAh8BaGRkAgQPZBYCAgEPZBYCAgEPZBYCZg9kFgICAg8WAh8BaGQCAw9kFgJmD2QWBmYPDxYCHwFoZGQCAg8PFgIfAWhkZAIED2QWAgIBD2QWAgIBD2QWAmYPZBYCAgIPFgIfAWhkAgUPZBYCZg9kFgZmDw8WAh8BaGRkAgIPDxYCHwFoZGQCBA9kFgICAQ9kFgICAQ9kFgJmDxYCHwAFjhA8ZGl2IGNsYXNzPSJidG11TmF2IG5vUGFyZW50Ij4NCjx1bD4NCjxsaSBjbGFzcz0iVGFiMzY5Ij48YSBpZD0iZG5uX2N0cjEyMjlfU0VPTWVudVYyX1RhYjM2OSIgIGhyZWY9Imh0dHBzOi8vd3d3Lm1zdC1pcy5jby5qcC9rb2JheWFzaGkvdGFiaWQvMzY5L0RlZmF1bHQuYXNweCIgPk1TVOOCkuWIqeeUqOOBmeOCi+ODoeODquODg+ODiDwvYT48L2xpPg0KPGxpIGNsYXNzPSJUYWIzODEiPjxhIGlkPSJkbm5fY3RyMTIyOV9TRU9NZW51VjJfVGFiMzgxIiAgaHJlZj0iaHR0cHM6Ly93d3cubXN0LWlzLmNvLmpwL2tvYmF5YXNoaS90YWJpZC8zODEvRGVmYXVsdC5hc3B4IiA+5rK76aiTUEzkv53pmbrliqDlhaXnlLPoq4s8L2E+PC9saT4NCjxsaSBjbGFzcz0iVGFiMzc5Ij48YSBpZD0iZG5uX2N0cjEyMjlfU0VPTWVudVYyX1RhYjM3OSIgIGhyZWY9Imh0dHBzOi8vd3d3Lm1zdC1pcy5jby5qcC9rb2JheWFzaGkvdGFiaWQvMzc5L0RlZmF1bHQuYXNweCIgPuayu+mok1BM44O7UEzkv53pmbrjga7jgYrllY/lkIjjgZvjgYrjgojjgbPku5jkv53oqLzmmI7mm7jnmbrooYw8L2E+PC9saT4NCjxsaSBjbGFzcz0iVGFiMzc4Ij48YSBpZD0iZG5uX2N0cjEyMjlfU0VPTWVudVYyX1RhYjM3OCIgIGhyZWY9Imh0dHBzOi8vd3d3Lm1zdC1pcy5jby5qcC9rb2JheWFzaGkvdGFiaWQvMzc4L0RlZmF1bHQuYXNweCIgPuadseS6rOa1t+S4iuaXpeWLlSDosqHlvaLjgavplqLjgZfjgaY8L2E+PC9saT4NCjxsaSBjbGFzcz0iVGFiMzgwIj48YSBpZD0iZG5uX2N0cjEyMjlfU0VPTWVudVYyX1RhYjM4MCIgIGhyZWY9Imh0dHBzOi8vd3d3Lm1zdC1pcy5jby5qcC9rb2JheWFzaGkvdGFiaWQvMzgwL0RlZmF1bHQuYXNweCIgPuWwj+ael+ijveiWrOOCsOODq+ODvOODl+S/nemZuu+8iOWbo+S9k+Wumuacn+S/nemZuu+8iTwvYT48L2xpPg0KPGxpIGNsYXNzPSJUYWIzNzAgcGFyZW50SXRlbSI+PGEgaWQ9ImRubl9jdHIxMjI5X1NFT01lbnVWMl9UYWIzNzAiICBjbGFzcz0icGFyZW50TGluayIgaHJlZj0iaHR0cHM6Ly93d3cubXN0LWlzLmNvLmpwL2tvYmF5YXNoaS90YWJpZC8zNzAvRGVmYXVsdC5hc3B4IiA+5L+d6Zm65ZWG5ZOB44KS6YG444G2PC9hPjx1bD4NCjxsaSBjbGFzcz0iVGFiMzcxIGN1cnJlbnRJdGVtIj48YSBpZD0iZG5uX2N0cjEyMjlfU0VPTWVudVYyX1RhYjM3MSIgIGNsYXNzPSJjdXJyZW50TGluayIgaHJlZj0iaHR0cHM6Ly93d3cubXN0LWlzLmNvLmpwL2tvYmF5YXNoaS90YWJpZC8zNzEvRGVmYXVsdC5hc3B4IiA+5L+d6Zm65ZWG5ZOB44KS6YG444G277yIV2Vi5omL57aa44GN77yJPC9hPjwvbGk+DQo8L3VsPg0KPC9saT4NCjxsaSBjbGFzcz0iVGFiMzcyIj48YSBpZD0iZG5uX2N0cjEyMjlfU0VPTWVudVYyX1RhYjM3MiIgIGhyZWY9Imh0dHBzOi8vd3d3Lm1zdC1pcy5jby5qcC9rb2JheWFzaGkvdGFiaWQvMzcyL0RlZmF1bHQuYXNweCIgPldlYuOBp+OBruS/nemZuuOBruOBiuWVj+WQiOOBm+ODu+OBiuimi+epjTwvYT48L2xpPg0KPGxpIGNsYXNzPSJUYWIzNzMiPjxhIGlkPSJkbm5fY3RyMTIyOV9TRU9NZW51VjJfVGFiMzczIiAgaHJlZj0iaHR0cHM6Ly93d3cubXN0LWlzLmNvLmpwL2tvYmF5YXNoaS90YWJpZC8zNzMvRGVmYXVsdC5hc3B4IiA+5aWR57SE44Gu5aSJ5pu044O76Kej57SE5omL57aa44GN5Y+X5LuYPC9hPjwvbGk+DQo8bGkgY2xhc3M9IlRhYjM3NCI+PGEgaWQ9ImRubl9jdHIxMjI5X1NFT01lbnVWMl9UYWIzNzQiICBocmVmPSJodHRwczovL3d3dy5tc3QtaXMuY28uanAva29iYXlhc2hpL3RhYmlkLzM3NC9EZWZhdWx0LmFzcHgiID7kuovmlYXmmYLjga7pgKPntaHlhYjjg7vkv53pmbrph5HvvIjntabku5jph5HvvInoq4vmsYLjga7mtYHjgow8L2E+PC9saT4NCjxsaSBjbGFzcz0iVGFiMzc1Ij48YSBpZD0iZG5uX2N0cjEyMjlfU0VPTWVudVYyX1RhYjM3NSIgIGhyZWY9Imh0dHBzOi8vd3d3Lm1zdC1pcy5jby5qcC9rb2JheWFzaGkvdGFiaWQvMzc1L0RlZmF1bHQuYXNweCIgPuOBiuefpeOCieOBm+S4gOimp+ODu+ips+e0sO+8iOODi+ODpeODvOOCue+8iTwvYT48L2xpPg0KPC91bD4NCg0KPC9kaXY+ZAIHD2QWAmYPZBYGZg8PFgIfAWhkZAICDw8WAh8BaGRkAgQPZBYCAgEPZBYCAgEPZBYCZg9kFgICAg8WAh8BaGQCCQ9kFgJmD2QWBmYPDxYCHwFoZGQCAg8PFgIfAWhkZAIED2QWAgIBD2QWAgIBD2QWAmYPZBYCAgIPFgIfAWhkAgsPZBYCZg9kFgZmDw8WAh8BaGRkAgIPDxYCHwFoZGQCBA9kFgICAQ9kFgICAQ9kFgJmDxYCHwAFMDxoMT7kv53pmbrllYblk4HjgpLpgbjjgbbvvIhXZWLmiYvntprjgY3vvIk8L2gxPmQCDQ9kFg5mD2QWBmYPDxYCHwFoZGQCAg8PFgIfAWhkZAIED2QWAgIBD2QWAgIBD2QWAmYPZBYCAgIPFgIfAWhkAgEPZBYGZg8PFgIfAWhkZAICDw8WAh8BaGRkAgQPZBYCAgEPZBYCAgEPZBYCZg9kFgICAg8WAh8BaGQCAg9kFgZmDw8WAh8BaGRkAgIPDxYCHwFoZGQCBA9kFgICAQ9kFgICAQ9kFgJmD2QWAgICDxYCHwFoZAIDD2QWBmYPDxYCHwFoZGQCAg8PFgIfAWhkZAIED2QWAgIBD2QWAgIBD2QWAmYPZBYCAgIPFgIfAWhkAgQPZBYGZg8PFgIfAWhkZAICDw8WAh8BaGRkAgQPZBYCAgEPZBYCAgEPZBYCZg9kFgICAg8WAh8BaGQCBQ9kFgZmDw8WAh8BaGRkAgIPDxYCHwFoZGQCBA9kFgICAQ9kFgICAQ9kFgJmD2QWAgICDxYCHwFoZAIGD2QWBmYPDxYCHwFoZGQCAg8PFgIfAWhkZAIED2QWAgIBD2QWAgIBD2QWAmYPZBYCAgIPFgIfAWhkAg8PZBYCZg9kFgJmD2QWAgIBD2QWAgIBD2QWAmYPFgIfAGVkAhEPZBYCZg9kFghmDw8WAh8BaGRkAgIPZBYCAgIPFgIfAWhkAgQPDxYCHwFoZGQCBg9kFgICAQ9kFgICAQ9kFgJmD2QWAgICDxYCHwFoZAITD2QWAmYPFgIfAAUtPGEgaHJlZj0iI2hlYWRCb2R5Ij7jg5rjg7zjgrjjg4jjg4Pjg5fjgbg8L2E+ZAIVD2QWAmYPZBYGZg8PFgIfAWhkZAICDw8WAh8BaGRkAgQPZBYCAgEPZBYCAgEPZBYCZg9kFgICAg8WAh8BaGRkZFwWDegG5B0PiZPybMn1tT7v5nI=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form'];
+if (!theForm) {
+    theForm = document.Form;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=HACbP2ms3mURq8yQahZ94NftDxGkrTrEso8YhCnpCghR5jOkYRpEVMaG-D1thcxQFKdga4NLhpsbdCG30&amp;t=638314226908353130" type="text/javascript"></script>
+
+
+<script src="/js/dnncore.js" type="text/javascript"></script>
+<script src="/js/infocms.js" type="text/javascript"></script>
+<script src="/js/MicrosoftAjax.ja.js" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=c9xf5qidu0VyX331ceqXXZZ78urvSuRoTTtYVH4pe7tsHxu3VUIxe02cgNXxXX0_3KRyyqOnTjXP0uG44JGf4VAkk9AGQcjVb3Z9CZ8W4kdHEhspcuoNIzatJXev4WPVXVtOl9mIgjAdRH-3i0o5JcAhu2K5ZqYTz77p9Q2&amp;t=559a934d" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+        
+        
+<script>jQuery.noConflict();</script>
+<script type="text/javascript" src="/Portals/0/js/to-top/to-top_btmu.js"></script>
+<script type="text/javascript" src="/Portals/0/js/smoothScroll/smoothScroll.js"></script>
+<script type="text/javascript" src="/Portals/0/js/matchHeight/jquery.matchHeight.js"></script>
+<script type="text/javascript" src="/Portals/0/js/matchHeight/matchHeight_common.js"></script>
+<script type="text/javascript" src="/Portals/0/js/common/accordion.js"></script>
+<script type="text/javascript"><!--
+(function($){
+	$(document).ready( function(){
+		$(".hMenuBtn").click(function(event){
+			event.stopPropagation();
+			$(".NavSStempPane").slideToggle(150);
+			$(".hMenuBtn").toggleClass("menuOpen");
+		});
+	});
+})(jQuery)
+//--></script>
+
+<div id="skin1Column" class="skinWrapper">
+    <div id="skinWrapBody">
+        <header id="headBody">
+            <p class="logo"><img src="/Portals/0/Skins/MST-btmu/images/logo.png" alt="エムエスティ保険サービス株式会社 損害保険・生命保険代理店" /></p>
+            <div id="dnn_symbolSStempPane" class="symbolSStempPane">
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1193_ContentPane"><!-- Start_Module_1193 --><div id="dnn_ctr1193_ModuleContent">
+	<div id="dnn_ctr1193_HtmlModule_HtmlModule_lblContent">
+	<p class="symbolText">小林製薬グループ様専用</p>
+</div>
+<!-- End_Module_1193 -->
+</div></div>
+  </div>
+</section>
+
+</div>
+            <aside id="dnn_SideTopSStempPane" class="SideTopSStempPane">
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1194_ContentPane"><!-- Start_Module_1194 --><div id="dnn_ctr1194_ModuleContent">
+	<div id="dnn_ctr1194_HtmlModule_HtmlModule_lblContent">
+	<ul class="subNav pcArea">
+    <li class="external"><a href="/kobayashi/">トップページ</a></li>
+</ul>
+</div>
+<!-- End_Module_1194 -->
+</div></div>
+  </div>
+</section>
+
+</aside>
+            <p class="hMenuBtn spArea">MENU</p>
+            <nav id="dnn_NavSStempPane" class="NavSStempPane">
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1229_ContentPane"><!-- Start_Module_1229 --><div id="dnn_ctr1229_ModuleContent">
+	<div class="btmuNav noParent">
+<ul>
+<li class="Tab369"><a id="dnn_ctr1229_SEOMenuV2_Tab369"  href="/kobayashi/merit" >MSTを利用するメリット</a></li>
+<li class="Tab381"><a id="dnn_ctr1229_SEOMenuV2_Tab381"  href="#" >治験PL保険加入申請</a></li>
+<li class="Tab379"><a id="dnn_ctr1229_SEOMenuV2_Tab379"  href="#" >治験PL・PL保険のお問合せおよび付保証明書発行</a></li>
+<li class="Tab378"><a id="dnn_ctr1229_SEOMenuV2_Tab378"  href="/kobayashi/zaikei" >東京海上日動 財形に関して</a></li>
+<li class="Tab380"><a id="dnn_ctr1229_SEOMenuV2_Tab380"  class="currentLink" href="/kobayashi/koteiteiki" >小林製薬グループ保険（団体定期保険）</a></li>
+<li class="Tab370 parentItem"><a id="dnn_ctr1229_SEOMenuV2_Tab370"  href="/kobayashi/product" >保険商品を選ぶ</a><ul>
+<li class="Tab371 currentItem"><a id="dnn_ctr1229_SEOMenuV2_Tab371"  href="/kobayashi/detail" >保険商品を選ぶ（Web手続き）</a></li>
+</ul>
+</li>
+<li class="Tab372"><a id="dnn_ctr1229_SEOMenuV2_Tab372"  href="#" >Webでの保険のお問合せ・お見積</a></li>
+<li class="Tab373"><a id="dnn_ctr1229_SEOMenuV2_Tab373"  href="#" >契約の変更・解約手続き受付</a></li>
+<li class="Tab374"><a id="dnn_ctr1229_SEOMenuV2_Tab374"  href="/kobayashi/contactflow" >事故時の連絡先・保険金（給付金）請求の流れ</a></li>
+<li class="Tab375"><a id="dnn_ctr1229_SEOMenuV2_Tab375"  href="#" >お知らせ一覧・詳細（ニュース）</a></li>
+</ul>
+
+</div>
+<!-- End_Module_1229 -->
+</div></div>
+  </div>
+</section>
+
+</nav>
+            <aside id="dnn_SideSStempPane" class="SideSStempPane">
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1195_ContentPane"><!-- Start_Module_1195 --><div id="dnn_ctr1195_ModuleContent">
+	<div id="dnn_ctr1195_HtmlModule_HtmlModule_lblContent">
+	<div class="contactBox pcArea">
+<h2 class="ttl">保険に関するお問い合わせ</h2>
+<div class="txtWrap" style="width: 243px; height: 298px;">
+<p><span style="font-size: 10px;">　＜募集代理店＞エムエスティ保険サービス</span></p>
+<p>　大阪職域保険相談部</p>
+<p>　　■損保［自動車・火災保険等］<br />
+　　　担当 ：小林製薬グループ担当</p>
+<p>　　　ＴＥＬ：<span class="telLink">06-6258-1033</span></p>
+<p>　　■生保［医療・がん保険等］<br />
+　　　担当 ：生保チーム</p>
+<p>　　　ＴＥＬ：<span class="telLink">06-6258-1034</span><br />
+<br />
+&nbsp;&nbsp; e-mail:ks-syokuiki@mst-is.co.jp<br />
+<br />
+　　受付時間：平日9時～17時</p>
+<p class="notes" style="text-align: left;">　　　　　　　※年末年始を除く</p>
+</div>
+</div>
+</div>
+<!-- End_Module_1195 -->
+</div></div>
+  </div>
+</section>
+
+</aside>
+            <aside id="dnn_SideBottomSStempPane" class="SideBottomSStempPane">
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1005_ContentPane"><!-- Start_Module_1005 --><div id="dnn_ctr1005_ModuleContent">
+	<div id="dnn_ctr1005_HtmlModule_HtmlModule_lblContent">
+	<ul class="subNav pcArea">
+    <li class="external"><a href="/" target="_blank">MSTコーポレートサイト</a></li>
+    <li class="external"><a href="/privacy-policy.html" target="_blank">個人情報保護に関する基本方針</a></li>
+    <li class="external"><a href="/solicitation-policy.html" target="_blank">勧誘方針</a></li>
+</ul>
+</div>
+<!-- End_Module_1005 -->
+</div></div>
+  </div>
+</section>
+
+</aside>
+        </header>
+        <main id="mainBody">
+            <div id="contentWrap">
+                <header id="dnn_PagetitlePane" class="PagetitlePane">
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1230_ContentPane"><!-- Start_Module_1230 --><div id="dnn_ctr1230_ModuleContent">
+	<h1>保険商品を選ぶ（Web手続き）</h1><!-- End_Module_1230 -->
+</div></div>
+  </div>
+</section>
+
+</header>
+                <div id="dnn_ContentPane" class="ContentPane">
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1234_ContentPane"><!-- Start_Module_1234 --><div id="dnn_ctr1234_ModuleContent">
+	<div id="dnn_ctr1234_HtmlModule_HtmlModule_lblContent">
+	<ul class="anchorLinkList">
+    <li class="down"><a href="#cont01">海外旅行保険</a></li>
+    <li class="down"><a href="#cont03">短期型自動車保険</a></li>
+    <li class="down"><a href="#cont04">バイク保険</a></li>
+    <li class="down"><a href="#cont05">ペット保険</a></li>
+    <li class="down"><a href="#cont06">自転車保険</a></li>
+    <li class="down"><a href="#cont07">家財保険（賃貸入居者用）</a></li>
+</ul>
+<p>※本ページで掲載している商品は、お客さまの利便性の観点から、インターネット上で契約手続きが完結し、当社が推奨する商品をご案内しております。 </p>
+</div>
+<!-- End_Module_1234 -->
+</div></div>
+  </div>
+</section>
+
+
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1235_ContentPane"><!-- Start_Module_1235 --><div id="dnn_ctr1235_ModuleContent">
+	<div id="dnn_ctr1235_HtmlModule_HtmlModule_lblContent">
+	<h2 class="ribbonTextWrap" id="cont01">海外旅行保険<strong class="ribbonText"><span class="textArea">Ｗｅｂで手続き完了</span></strong></h2>
+<h3>海外旅行保険(旅行期間が92日以内)</h3>
+<p>海外旅行保険なら、海外での事故、疾病のときにあなたをお守りします。ご出発当日でもご加入いただけます。 </p>
+<table class="listTable_lengthwise processTable">
+    <tbody>
+        <tr>
+            <th>保険会社</th>
+            <th>お問い合わせ先</th>
+        </tr>
+        <tr>
+            <td><a href="/Portals/0/html/individual/R0011_tenso.html" target="_blank"><img alt="あいおいニッセイ同和損保" src="/Portals/0/images/individual/bnr_msnadad.png" /></a>
+            <a href="/Portals/0/html/individual/R0011_tenso.html" class="requestLink" target="_blank">お申込みはこちら</a></td>
+            <td><strong>あいおいニッセイ同和</strong><br />
+            あいおいニッセイ同和損害保険株式会社<br />
+            TEL：<span class="telLink">0120-203-284</span><br />
+            受付：平日9:00～17：00（土日祝日および年末年始を除く）</td>
+        </tr>
+        <tr>
+            <td><a href="/Portals/0/html/online/travel01.htm" target="_blank"><img alt="損害保険ジャパン" src="/Portals/0/images/individual/logo_sj_234_221220.png" /></a>
+            <a href="/Portals/0/html/online/travel01.htm" class="requestLink" target="_blank">お申込みはこちら</a></td>
+            <td><strong>損害保険ジャパン</strong><br />
+            損害保険ジャパン株式会社<br />
+            TEL：<span class="telLink">0120-666-756</span><br />
+            受付：平日 9:00-20:00　土日祝 9:00-17:00</td>
+        </tr>
+        <tr>
+            <td><a href="https://tabiho.jp/tb/?BranchCode=HX&amp;ProducerCode=108&amp;KashoCode=0001&amp;EntranceType=01&amp;CardAddFlg=1" target="_blank"><img alt="たびほ" src="/Portals/0/images/individual/bnr_tabiho.png" /></a>
+            <a href="https://tabiho.jp/tb/?BranchCode=HX&amp;ProducerCode=108&amp;KashoCode=0001&amp;EntranceType=01&amp;CardAddFlg=1" class="requestLink" target="_blank">お申込みはこちら</a></td>
+            <td><strong>ジェイアイ傷害火災（JTBグループ）</strong><br />
+            ジェイアイ傷害火災保険株式会社<br />
+            E-mail：webmaster@tabiho.jp<br> 
+            &#9632;契約可能な保険期間<br> 
+            &nbsp; &nbsp;観光・その他、商用/31日まで<br> 
+            &nbsp; &nbsp;（延長は通算最長2か月まで）<br />
+            &nbsp; &nbsp;T22A-8
+            </td>
+        </tr>
+        <tr>
+            <td><a href="/Portals/0/html/online/netabroad.html" target="_blank"><img alt="三井住友海上" src="/Portals/0/images/individual/bnr_mitsui.png" /></a>
+            <a href="/Portals/0/html/online/netabroad.html" class="requestLink" target="_blank">お申込みはこちら</a></td>
+            <td><strong>三井住友海上</strong><br />
+            三井住友海上火災保険株式会社<br />
+            TEL：<span class="telLink">0120-988-181</span><br />
+            受付：9:00～17:00（除く年末年始）</td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
+<!-- End_Module_1235 -->
+</div></div>
+  </div>
+</section>
+
+
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1237_ContentPane"><!-- Start_Module_1237 --><div id="dnn_ctr1237_ModuleContent">
+	<div id="dnn_ctr1237_HtmlModule_HtmlModule_lblContent">
+	<h2 class="ribbonTextWrap" id="cont03">短期型自動車保険<strong class="ribbonText"><span class="textArea">Ｗｅｂで手続き完了</span></strong></h2>
+<p>親や知人・友人から借りた車を運転するときにおすすめ。</p>
+<table class="listTable_lengthwise processTable">
+    <tbody>
+        <tr>
+            <th>保険会社</th>
+            <th>ご案内</th>
+        </tr>
+        <tr>
+            <td><a href="/Portals/0/html/individual/tyoinori/" target="_blank"><img alt="" src="/Portals/0/images/individual/cyoinori_banner_207x71_200814-01.jpg " /></a>
+            <a href="/Portals/0/html/individual/tyoinori/" class="requestLink" target="_blank">お申込みはこちら</a></td>
+            <td>親や友人・知人の車を借りて運転するときは、「ちょいのり保険（1日自動車保険)」をおすすめします。必要な分だけ、スマートフォン等からいつでも加入。まずはスマートフォン等で運転者情報の事前登録を！</td>
+        </tr>
+        <tr>
+            <td><a href="/Portals/0/html/individual/onesupo/onesupo.html" target="_blank"><img alt="あいおいニッセイ同和損保" src="/Portals/0/images/individual/bnr_onedaysup.png" /></a>
+            <a href="/Portals/0/html/individual/onesupo/onesupo.html" class="requestLink" target="_blank">お申込みはこちら</a></td>
+            <td>「ワンデーサポーター（24時間単位型自動車運転者保険）」友人や親の車を借りる際に手軽に入れる「24時間単位型」の自動車保険です。スマートフォンから事前登録（お客さま情報登録）をお願いいたします。</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<!-- End_Module_1237 -->
+</div></div>
+  </div>
+</section>
+
+
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1238_ContentPane"><!-- Start_Module_1238 --><div id="dnn_ctr1238_ModuleContent">
+	<div id="dnn_ctr1238_HtmlModule_HtmlModule_lblContent">
+	<h2 class="ribbonTextWrap" id="cont04">バイク保険<strong class="ribbonText"><span class="textArea">Ｗｅｂで手続き完了</span></strong></h2>
+<p>バイク保険のオンラインでの申し込みはこちらから。</p>
+<table class="listTable_lengthwise processTable">
+    <tbody>
+        <tr>
+            <th>保険会社</th>
+            <th>ご案内</th>
+        </tr>
+        <tr>
+            <td><a href="http://www.axa-direct.co.jp/ag/mstt2" target="_blank"><img alt="アクサダイレクト" src="/Portals/0/images/individual/bnr_axacar.png?11802151237398" /></a>
+            <a href="http://www.axa-direct.co.jp/ag/mstt2" class="requestLink" target="_blank">お申込みはこちら</a></td>
+            <td>アクサダイレクトのバイク保険はゴールド免許や年間走行距離など、お客さまの条件やライフスタイルに合わせた納得の保険料をご提案いたします。またご契約者にはレッカーサービスをはじめ、ガス欠やバッテリー上がりなどの応急作業、宿泊・帰宅費用サービスなど、AXAプレミアムロードサービスをご提供いたします。さらにインターネットでお申込みなら、最大10,000円割引！（自動車保険は割引内容が異なります。割引額は年間保険料などにより異なります。詳しくはアクサダイレクトのウェブサイトをご確認ください。）</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<!-- End_Module_1238 -->
+</div></div>
+  </div>
+</section>
+
+
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1239_ContentPane"><!-- Start_Module_1239 --><div id="dnn_ctr1239_ModuleContent">
+	<div id="dnn_ctr1239_HtmlModule_HtmlModule_lblContent">
+	<h2 class="ribbonTextWrap" id="cont05">ペット保険<strong class="ribbonText"><span class="textArea">Ｗｅｂで手続き完了</span></strong></h2>
+<p>ペット保険のオンラインでの申し込みはこちらから。</p>
+<table class="listTable_lengthwise processTable">
+    <tbody>
+        <tr>
+            <th>保険会社</th>
+            <th>ご案内</th>
+        </tr>
+ 
+        <tr>
+            <td><a href="http://www.au-sonpo.co.jp/pc/pet/index.html?CAMP_CD=M08B000001" target="_blank"><img alt="ペットの保険 au損保" src="/Portals/0/images/individual/mst_pet_210x80.png" /></a>
+            <a href="http://www.au-sonpo.co.jp/pc/pet/index.html?CAMP_CD=M08B000001" class="requestLink" target="_blank">お申込みはこちら</a></td>
+            <td>
+            <p style="text-indent: 0in; margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; vertical-align: baseline;">ちょっとした通院から、もしもの入院・手術までしっかり補償する「通院ありタイプ」と、保険料を抑えつつ入院・手術に備える「通院なしタイプ」の２つのタイプをご用意しました！<br />
+            お支払い限度額までなら、保険期間中の保険金支払いは回数無制限！！<br />
+            ペット専門の獣医師が24時間365日、皆様のお悩みにお答えする「かかりつけ獣医師ダイヤル※（利用料無料）」 もご利用いただけます。<br />
+            ご継続契約での年齢制限はありません！<br />
+            ※通話料はお客様負担となります。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B16C310240(1608)</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<!-- End_Module_1239 -->
+</div></div>
+  </div>
+</section>
+
+
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1240_ContentPane"><!-- Start_Module_1240 --><div id="dnn_ctr1240_ModuleContent">
+	<div id="dnn_ctr1240_HtmlModule_HtmlModule_lblContent">
+	<h2 id="cont06" class="ribbonTextWrap">自転車保険<strong class="ribbonText"><span class="textArea">Ｗｅｂで手続き完了</span></strong></h2>
+<p>自転車保険のオンラインでの申し込みはこちらから。</p>
+<table class="listTable_lengthwise processTable">
+    <tbody>
+        <tr>
+            <th>保険会社</th>
+            <th>お問い合わせ先</th>
+        </tr>
+        <tr>
+            <td><a href="http://www.au-sonpo.co.jp/pc/bycle/index.html?CAMP_CD=M08B000001" target="_blank"><img src="/Portals/0/images/individual/mst_bicycle_210x80.png" alt="自転車向け保険 au損保" /></a>
+            <a href="http://www.au-sonpo.co.jp/pc/bycle/index.html?CAMP_CD=M08B000001" target="_blank" class="requestLink">お申込みはこちら</a></td>
+            <td><strong>ａｕ損害保険株式会社</strong><br />
+            カスタマーセンター<br />
+            TEL：<span class="telLink">0800-700-0600</span>（通話料無料）<br />
+            受付：9：00～18：00（除く年末年始）</td>
+        </tr>
+        <tr>
+            <td><a href="/Portals/0/html/individual/tenso.html" target="_blank"><img src="/Portals/0/images/individual/bnr_mitsui.png" alt="三井住友海上" /></a>
+            <a href="/Portals/0/html/individual/tenso.html" target="_blank" class="requestLink">お申込みはこちら</a></td>
+            <td><strong>三井住友海上火災保険株式会社</strong><br />
+            インターネットデスク<br />
+            TEL：<span class="telLink">0120-933-504</span><br />
+            受付：月～金曜日　9:00～17:00（除く祝日・年末年始）</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<!-- End_Module_1240 -->
+</div></div>
+  </div>
+</section>
+
+
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1241_ContentPane"><!-- Start_Module_1241 --><div id="dnn_ctr1241_ModuleContent">
+	<div id="dnn_ctr1241_HtmlModule_HtmlModule_lblContent">
+	<h2 id="cont07" class="ribbonTextWrap">家財保険（賃貸入居者用）<strong class="ribbonText"><span class="textArea">Ｗｅｂで手続き完了</span></strong></h2>
+<p>家財保険と借りたお部屋の損害も補償。</p>
+<table class="listTable_lengthwise processTable">
+    <tbody>
+        <tr>
+            <th>保険会社</th>
+            <th>ご案内・お問い合わせ先</th>
+        </tr>
+        <tr>
+            <td><a href="http://direct.nisshinfire.co.jp/oheya/?a1=016333&amp;a2=HP1" target="_blank"><img src="/Portals/0/images/individual/bnr_oheya.png" alt="日新火災　お部屋を借りるときの保険" /></a>
+            <a href="http://direct.nisshinfire.co.jp/oheya/?a1=016333&amp;a2=HP1" target="_blank" class="requestLink">お申込みはこちら</a></td>
+            <td><strong>日新火災海上保険株式会社</strong><br />
+            借りたお部屋の損害も補償（お申込みはインターネットで完結）<br />
+            日新火災　お部屋を借りるときの保険（簡単見積はこちらから）<br />
+            『事故受付・事故のご相談』<br />
+            TEL：<span class="telLink">0120-25-7474</span><br />
+            『お部屋のサポートデスク』<br />
+            TEL：<span class="telLink">0120-125-271</span></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<!-- End_Module_1241 -->
+</div></div>
+  </div>
+</section>
+
+</div>
+                <div id="dnn_NavSmtSStempPane" class="NavSmtSStempPane"><div id="dnn_ctr1006_ContentPane"><!-- Start_Module_1006 --><div id="dnn_ctr1006_ModuleContent">
+	
+<!-- End_Module_1006 -->
+</div></div>
+</div>
+                <div id="dnn_FootSmtSStempPane" class="FootSmtSStempPane">
+<section class="lineTitle">
+  <div class="title">
+    <h2><span id="dnn_ctr1429_dnnTITLE_lblTitle" class="Head">【小林製薬G】保険関するお問い合わせ、Sナビ</span>
+
+
+</h2>
+    </div>
+  <div class="contents">
+      <div class="actionBtn"></div>
+    <div id="dnn_ctr1429_ContentPane"><!-- Start_Module_1429 --><div id="dnn_ctr1429_ModuleContent">
+	<div id="dnn_ctr1429_HtmlModule_HtmlModule_lblContent">
+	<div class="contactBox spArea">
+<h2 class="ttl">保険に関するお問い合わせ</h2>
+<div class="txtWrap" style="width: 243px; height: 298px;">
+<p><span style="font-size: 10px;">　＜募集代理店＞エムエスティ保険サービス</span></p>
+<p>　大阪職域保険相談部</p>
+<p>　　■損保［自動車・火災保険等］<br />
+　　　担当：小林製薬グループ担当</p>
+<p>　　　ＴＥＬ：<span class="telLink">06-6258-1033</span></p>
+<p>　　■生保［医療・がん保険等］<br />
+　　　担当：生保チーム</p>
+<p>　　　ＴＥＬ：<span class="telLink">06-6258-1034</span><br />
+<br />
+<p>　e-mail:ks-syokuiki@mst-is.co.jp</p>
+<p>　　受付時間：平日9時～17時</p>
+<p class="notes" style="text-align: left;">　　　　　　　※年末年始を除く</p>
+</div>
+</div>
+
+<ul class="subNav spArea">
+    <li class="external"><a href="/kobayashi/" target="_blank">トップページ</a></li>
+    <li class="external"><a href="/" target="_blank">MSTコーポレートサイト</a></li>
+    <li class="external"><a href="/privacy-policy.html" target="_blank">個人情報保護に関する基本方針</a></li>
+    <li class="external"><a href="/solicitation-policy.html" target="_blank">勧誘方針</a></li>
+</ul>
+</div>
+<!-- End_Module_1429 -->
+</div></div>
+  </div>
+</section>
+
+</div>
+            </div>
+        </main>
+    </div>
+    <footer id="footBody">
+        <p class="pagetop"><a href="#headBody">ページトップへ</a>
+</p>
+        <div id="dnn_FootSStempPane" class="FootSStempPane">
+<section class="zero">
+  <div class="contents">
+    <div class="actionBtn"></div>
+    <div id="dnn_ctr1008_ContentPane"><!-- Start_Module_1008 --><div id="dnn_ctr1008_ModuleContent">
+	<div id="dnn_ctr1008_HtmlModule_HtmlModule_lblContent">
+	<div class="fContents">
+＜募集代理店＞_＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿<br />
+<p class="logo"><img alt="MSTエムエスティ保険サービス株式会社" src="/Portals/0/images/common/logo.png" /></p>
+<address><span>〒163-1537</span>東京都新宿区西新宿1丁目6番1号 新宿エルタワー </address>
+</div>
+</div>
+<!-- End_Module_1008 -->
+</div></div>
+  </div>
+</section>
+
+</div>
+        <p class="copyright"><span id="dnn_dnnCOPYRIGHT_lblCopyright" class="copyrightCss">Copyright© 2015 MST Insurance Service Co., Ltd. All Rights Reserved.</span>
+</p>
+    </footer>
+</div>
+
+
+        <input name="ScrollTop" type="hidden" id="ScrollTop" />
+        <input name="__dnnVariable" type="hidden" id="__dnnVariable" />
+    </form>
+<!-- 345646102B6E121D6EA7DB5DFE92AF20D69A0EBD9AC49BE4AF273AC623D53C89 -->
+</body>
+</html>
