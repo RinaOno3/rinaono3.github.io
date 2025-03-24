@@ -80,6 +80,10 @@
   .policy .page-btn-wrapper {
     margin: 100px auto 80px;
   }
+
+  .bl_pickupTop_note {
+    font-size: 1.6rem;
+  }
   @media screen and (768px <= width) {
     .bl_pickupTop {
       gap: 2.6rem;
@@ -105,6 +109,8 @@
       }
     }
   }
+
+
   @media (any-hover: hover) {
     :where(:any-link, :enabled, summary):hover {
       --default: ;
