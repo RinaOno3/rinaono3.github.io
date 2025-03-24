@@ -194,7 +194,7 @@ section {
   border: 1px solid #333333;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 1.8rem;
   color: #333333;
   display: flex;
   justify-content: center;
@@ -227,18 +227,25 @@ section {
 
 .column-subtitle {
   font-family: "Noto Sans JP", sans-serif;
-  font-weight: medium;
-  font-size: 22px;
+  font-weight: bold;
+  font-size: 2.4rem;
   color: #333333;
 }
 
 .column-text {
   font-family: "Noto Sans JP", sans-serif;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 18px;
   color: #333333;
   line-height: 1.6;
   margin: 0;
+}
+
+.column-text li {
+  list-style: none;               /* デフォルトの・を消す */
+  position: relative;
+  padding-left: 2.5em;            /* ・の分だけ左に余白 */
+  text-indent: -1em; 
 }
 
 
@@ -252,8 +259,23 @@ section {
   cursor: pointer;
 }
 
+.sdgs .page-btn-wrapper {
+  padding-bottom: 50px;
+}
+
 
 @media (max-width: 767px) {
+
+  .sdgs .page-btn--next::before {
+    left: 19rem;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
+
+  }
 
   /* SDGsへの取り組み */
   .container {
@@ -263,6 +285,7 @@ section {
   }
 
   .text {
+    font-size: 1.6rem;
     width: 100%;
     margin-bottom: 30px;
   }
@@ -271,14 +294,14 @@ section {
   .innercontainer1,
   .innercontainer2 {
     width: 100%;
-    padding: 20px;
     box-sizing: border-box;
+    padding: 0;
   }
 
   .circle {
     width: 60px;
     height: 60px;
-    margin-bottom: -30px;
+    margin-bottom: 0px;
   }
 
   .number {
@@ -288,6 +311,7 @@ section {
 
   .box-a,
   .box-a-2 {
+    display: contents;
     width: 76%;
     height: auto;
     padding: 20px;
@@ -297,7 +321,7 @@ section {
   }
 
   .box-a-title {
-    font-size: 25px;
+    font-size: 2rem;
     margin-top: 20px;
     margin-bottom: 10px;
     line-height: 1.2em;
@@ -306,8 +330,9 @@ section {
 
   .box-b,
   .box-b-2 {
+    background: none;
     width: 90%;
-    padding: 30px;
+    padding: 0px;
     border-radius: 10px;
   }
 
@@ -318,7 +343,7 @@ section {
   .box-b-subtitle {
     width: 180px;
     height: 40px;
-    font-size: 20px;
+    font-size: 1.8rem;
     border-radius: 20px;
     margin: -20px auto;
   }
@@ -351,11 +376,35 @@ section {
   }
 
   .column-text {
-    font-size: 16px;
+    line-height: 2;
+    font-weight: normal;
+    font-size: 1.5rem;
+  }
+
+  .column-text li {
+    padding-left: 1em;            /* ・の分だけ左に余白 */
+
   }
 
   /* サスティナビリティに戻るボタン */
   .backsus_button {
     padding-bottom: 50px;
   }
+
+  .content {
+    padding: 0;
+  }
+
+  .sec1 {
+    padding: 50px 20px 100px;
+  }
+
+  .sec2 {
+    padding: 75px 20px 60px;
+  }
+
+  .sec3 {
+    padding: 90px 20px 60px;
+  }
 }
+
