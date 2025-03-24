@@ -36,7 +36,7 @@ section {
 
 /* Sustainability */
 .container1 {
-  width: 1280px;
+  max-width: 1100px;
   margin: 0 auto;
   display: flex;
 }
@@ -78,14 +78,14 @@ section {
   margin-bottom: 10px;
 }
 
-.text,
-.text2 {
+.text {
+  width: 80%;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: normal;
   font-size: 18px;
   color: #333333;
   line-height: 1.6;
-  margin-left: 55px;
+  margin-inline: auto;
   margin-bottom: 50px;
 }
 
@@ -97,7 +97,8 @@ section {
 }
 
 .container2 {
-  width: 1280px;
+  max-width:  1100px;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
 }
@@ -199,7 +200,7 @@ section {
 
 .container3 {
   display: flex;
-  width: 1280px;
+  max-width: 1100px;
   margin: 0px auto;
   padding: 0px;
   gap: 50px;
@@ -309,8 +310,7 @@ section {
   .heading2,
   .text,
   .text2 {
-    margin-left: 0;
-    /* 左マージン削除 */
+
     text-align: justify;
   }
 
@@ -372,7 +372,7 @@ section {
   .container3 {
     /* position: relative; */
     width: 100%;
-  flex-direction: column;
+    flex-direction: column;
   }
 
   .text-area {
@@ -450,6 +450,8 @@ section {
 }
 
 .bl_pickupTop {
+  max-width: 1280px;
+  width: 100%;
   display: grid;
   gap: 3.3rem;
 }
