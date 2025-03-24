@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+.nowrap {
+    white-space: nowrap;
+  }
+  
 .flow_link {
     display: block;
     font-size: 1.6rem;
@@ -65,7 +69,7 @@
     font-size: 1.6rem;
     color: #fff;
     margin-inline: auto;
-justify-content: space-between;
+    justify-content: space-between;
 }
 
 .link_area_wrp {
@@ -142,11 +146,13 @@ justify-content: space-between;
     font-weight: bold;
     color: #4B4B4B;
     padding-left: 8rem;
+    text-indent: -1em; 
 }
 
 .tx_area_box {
     padding: 10px 0 45px 70px;
     background-color: #E6E6E6;
+    overflow-wrap: break-word;
 }
 
 .group_list_discription {
@@ -176,7 +182,7 @@ justify-content: space-between;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* 中央配置 */
+    padding-right: 40px;
     align-items: center;
     margin-top: 40px;
     align-items: flex-end;
@@ -186,7 +192,7 @@ justify-content: space-between;
     display: flex;
     align-items: center;
     position: relative;
-    padding: 0 35px;
+    padding: 0 20px;
     background: black;
     color: white;
     font-size: 1.8rem;
@@ -196,7 +202,7 @@ justify-content: space-between;
     z-index: 10;
     transition: all 0.3s ease;
     justify-content: flex-start;
-    max-width: 240px;
+    max-width: 180px;
     width: 100%;
     min-height: 36px;
 }
@@ -208,14 +214,14 @@ justify-content: space-between;
     transform: translateY(-50%);
     font-size: 2.0rem;
     right: auto;
-    left: 18rem;
+    left: 15rem;
     font-weight: bold;
     transition: left 0.3s ease;
 }
 
 .company-link_area:hover::before {
     left: calc(18rem + 5px);
-  }
+}
 
 .company-link_area::after {
     content: '';
@@ -236,7 +242,7 @@ justify-content: space-between;
 /* ロゴ画像 */
 .company-logo {
     width: auto;
-    height: 80px;
+    height: 70px;
 }
 
 /* テキスト */
@@ -391,12 +397,12 @@ justify-content: space-between;
     .group_list_mane h3 {
         font-size: 1.2rem;
         padding: 10px;
-        min-height: 58px ;
+        min-height: 58px;
         display: flex;
-       align-items: center;
+        align-items: center;
     }
 
-  
+
 
     .tx_area_box {
         padding: 10px 18px;

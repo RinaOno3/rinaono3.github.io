@@ -20,6 +20,12 @@ html {
     }
 }
 
+.value  .content-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1200px;
+}
+
 
 .tree-section {
     display: flex;
@@ -31,7 +37,8 @@ html {
 
 .svg-container {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
+    min-width: 1000px;
     display: flex;
     justify-content: center;
 }
@@ -48,11 +55,11 @@ svg {
     margin: 0 auto;
     padding: 20px;
     position: absolute;
-    top: 20%;
+    top: 17%;
 }
 
 .section-content h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: bold;
     letter-spacing: 5px;
     margin-bottom: 20px;
@@ -61,9 +68,9 @@ svg {
 
 .section-content p {
     text-align: center;
-    font-size: 1.6rem;
-    line-height: 1.5;
-    margin-bottom: 15px;
+    font-size: 1.8rem;
+    margin-top: 60px;
+    margin-bottom: 40px;
     color: #333;
 }
 
@@ -148,24 +155,24 @@ svg {
 
 .info-item1-1 {
     position: absolute;
-    top: 120%;
-    left: -12px;
+    top: 125%;
+    left: -70px;
 }
 
 .info-item1-2 {
     position: absolute;
-    right: -15px;
-    top: 144%;
+    right: -110px;
+    top: 150%;
 }
 
 .info-item1-3 {
     position: absolute;
-    top: 214%;
-    right: 48px;
+    top: 218%;
+    right: 80px;
 }
 
 .info-item img {
-    max-height: 60px;
+    max-height: 70px;
     /* 画像サイズの上限 */
     height: auto;
 }
@@ -175,7 +182,7 @@ svg {
     text-align: center;
     position: absolute;
     width: 100%;
-    top: 250%;
+    top: 255%;
 
 }
 
@@ -195,11 +202,12 @@ svg {
 }
 
 .global-network img {
-    left: -25px;
     position: absolute;
-    top: 80%;
-    margin: auto;
+    top: 38%;
+    left: 0;
     z-index: -2;
+    transform: scale(1.5);
+    transform-origin: center top;
 }
 
 .info-item .info_ttl {
@@ -238,53 +246,54 @@ svg {
 /* コンテンツブロック */
 .content-block {
     position: absolute;
-    padding: 20px;
+    padding: 0px;
     text-align: left;
     width: 52%;
     margin-bottom: 50px;
 }
 
 .content-block img {
-    height: 35px;
+    height: 40px;
     width: auto;
 }
 
 /* 🔹 それぞれのブロックの位置（SVGの曲線に沿うよう調整） */
 .block1 {
     top: 5%;
-    right: 12%;
+    right: 0%;
 }
 
 .block2 {
     top: 24%;
-    right: 35%;
+    left: 0;
 }
 
 .block3 {
     top: 46%;
-    left: 40%;
+    right: 0;
 }
 
 .block4 {
     top: 66%;
-    right: 33%;
+    left: 0;
 }
 
 .block5 {
     top: 82%;
-    right: 27%;
+    right: 25%;
 }
 
 /* 各ブロックのスタイル */
 .content-block h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #000;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .content-block p {
     margin-top: 0;
-    font-size: 2rem;
+    font-size: 2.4rem;
     color: #000;
     font-weight: bold;
     margin-bottom: 10px;
