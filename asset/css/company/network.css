@@ -117,13 +117,15 @@
         align-items: center;
         text-align: center;
         padding: 0 20px;
+        border-left: 1px solid #707070;
     }
     
     .address_box {
         width: 70%;
         padding: 1.8rem;
-        border-right: 1px solid #707070;
+        /* border-right: 1px solid #707070; */
         position: relative;
+        align-self: center;
     }
 
     .network_tx_area {
@@ -142,8 +144,13 @@
 .fixed-height-row th,
 .fixed-height-row td {
     max-height: 160px;
-    height: 160px; /* 好きな高さを指定 */
+    height: 110px; /* 好きな高さを指定 */
     vertical-align: middle; /* 縦方向の中央揃え */
+    position: relative;
+}
+
+.fixed-height-row .address_box a {
+    margin-top: 25px;
 }
 
 
@@ -175,6 +182,11 @@
     .fixed-height-row th, .fixed-height-row td {
         height: auto;
     }
+
+    .fixed-height-row .address_box a {
+        margin-top: auto;
+    }
+    
 
     .details-table td {
         display: block;

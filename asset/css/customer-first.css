@@ -241,6 +241,15 @@
     padding: 20px 45px;
 }
 
+.bg_gray2 {
+    width: 95%;
+    background-color: #F6F6F6;
+    padding: 15px;
+    margin-bottom: 3rem;
+    padding: 5px;
+    margin-inline-start: auto;
+}
+
 .bg_gray .accordion-list li {
     position: relative;
     padding-left: 1em;
@@ -257,8 +266,26 @@
 
 }
 
+.bg_gray2 .accordion-list li {
+    position: relative;
+    padding-left: 1em;
+    /* 1文字分右に押し出す */
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    text-indent: -1em;
+    /* 1行目だけ左にずらす */
+    font-weight: bold;
+}
+
+.bg_gray2 .accordion-list {
+    margin-bottom: 20px;
+
+}
+
+.bg_gray2 h3 {
+    padding-left: 0;
+}
 .table_wrp {
-    margin-bottom: 1rem
     width: 100%;
     max-width: 669px;
     margin-inline: auto;
@@ -279,6 +306,16 @@
 .mb_30 {
     margin-bottom: 30px;
 }
+
+.mb_0 {
+    margin-bottom: 0;
+}
+
+.bg_gray .mt_0 {
+    margin-top: 0;
+}
+
+
 
 .indent_list li .pl_0 {
     padding-left: 0;
@@ -301,6 +338,14 @@
     text-indent: -1em;
     /* 「＊」を左にずらす */
     padding-left: 1em;
+    /* 2行目の頭を揃える */
+}
+
+.accordion-item .img_note2 {
+    font-size: 1.1rem;
+        text-indent: -3em;
+    /* 「＊」を左にずらす */
+    padding-left: 3em;
     /* 2行目の頭を揃える */
 }
 
@@ -700,7 +745,7 @@ h3+ul li p {
         background-color: #fff;
         padding: 2rem;
         border: 1px solid #ccc;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         margin: auto;
     }
 

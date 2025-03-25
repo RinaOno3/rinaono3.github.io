@@ -70,6 +70,7 @@
 .details-table td .sub_contents{
     text-align: right;
     font-size: 1.2rem;
+    vertical-align: text-top;
 }
 
 
