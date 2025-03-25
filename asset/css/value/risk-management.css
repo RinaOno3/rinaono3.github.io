@@ -6,6 +6,22 @@
     display: none;
 }
 
+.tx_center {
+    text-align: center;
+}
+
+.tx_b {
+    font-weight: bold;
+}
+
+.risk-table .boder_b {
+    border-bottom: 3px solid #D70C18;;
+}
+
+.risk-table .boder_r {
+    border-right: 3px solid #D70C18;;
+}
+
 @media screen and (max-width: 768px) {
     .risk .pc-only {
         display: none;
@@ -132,10 +148,6 @@ picture img {
     gap: 60px;
 }
 
-.sec3 .sec3_tx_box {
-    width: 60%;
-    margin-inline: auto;
-}
 
 .item_box {
     max-width: 260px;
@@ -356,11 +368,11 @@ picture img {
 
 /* カラーバリエーション */
 .risk-chart__box--red {
-    background-color: #d60000;
+    background-color: #D70C18;
 }
 
 .risk-chart__box--darkred {
-    background-color: #530000;
+    background-color: #60050A;
 }
 
 .risk-chart__box--black {
@@ -368,7 +380,7 @@ picture img {
 }
 
 .risk-chart__box--gray {
-    background-color: #999;
+    background-color: #959090;
 }
 
 .risk-chart__label--horizontal {
@@ -385,33 +397,48 @@ picture img {
     width: 100%;
     border-collapse: collapse;
     font-family: sans-serif;
-    font-size: 14px;
+    font-size: 1.6rem;
     margin: 0 auto;
     table-layout: fixed;
+    border: 3px solid #D70C18;
 }
 
 .risk-table th,
 .risk-table td {
-    border: 3px solid #c00;
-    padding: 10px;
+    border: 1px solid #D70C18;
+    padding: 10px 5px;
+    background-color: #fff;
+}
+
+.risk-table td {
+    padding: 10px 5px;
+    background-color: #fff;
+}
+
+.risk-table th{
+    border: 3px solid #D70C18;
+    padding: 10px 5px;
     background-color: #fff;
 }
 
 .sec4 .risk-table thead th {
     border-right: 3px solid #fff;
-    background-color: #c00;
+    background-color: #D70C18;
     color: #fff;
+    font-weight: bold;
     font-weight: bold;
 }
 
 .risk-table thead th:nth-child(3) {
-    border-right: 3px solid #c00;
+    /* border-right: 3px solid #D70C18; */
+    border-bottom: 1px solid #D70C18;
 }
 
 .sec4 .risk-table__group {
     text-align: center;
     background-color: #F3E3E4;
     font-weight: bold;
+    border: 3px solid #D70C18;
 }
 
 .risk-table__group-inner {
@@ -436,18 +463,22 @@ picture img {
 /* 2列目（手段）を20%に */
 .risk-table td:nth-child(2),
 .risk-table th:nth-child(2) {
-    width: 10%;
+    width: 12%;
 }
 
 /* 3列目（内容）を60%に */
 .risk-table td:nth-child(3),
 .risk-table th:nth-child(3) {
-    width: 75%;
+    width: 73%;
 }
 
 .risk .content-wrapper {
     padding-bottom: 0;
 }
+
+.sec4 .risk-table thead th:nth-child(3) {
+    border-right: none;
+  }
 
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
@@ -525,6 +556,8 @@ picture img {
         bottom: -1.25rem;
     }
 
+  
+
     .flow_area {
         display: flex;
         position: relative;
@@ -538,7 +571,7 @@ picture img {
     .img_arrow .sp_point {
         position: relative;
         background-color: #fff;
-        border: 2px solid #c00;
+        border: 2px solid #D70C18;
         font-size: 1.2rem;
         border-radius: 6px;
         padding: 15px 5px;
@@ -550,7 +583,7 @@ picture img {
         position: absolute;
         width: 100%;
         top: 30px;
-       
+
     }
 
     .sec3 .item_area {
@@ -604,8 +637,9 @@ picture img {
     }
 
     .risk-chart__box {
-        min-width: auto;
-        max-width: 140px;
+        width: 100%;
+        min-width: 150px;
+        max-width: 150px;
         height: auto;
         min-height: 87px;
         max-height: 87px;
@@ -630,7 +664,7 @@ picture img {
     }
 
     .risk-chart__label--vertical {
-        left: -3-px;
+        left: -30px;
     }
 
     .sec2 .item_area {
@@ -639,10 +673,6 @@ picture img {
 
     .bg_map {
         height: auto;
-    }
-
-    .sec3 .sec3_tx_box {
-        width: 100%;
     }
 
     .sec2 {
@@ -665,12 +695,29 @@ picture img {
         padding-bottom: 45px;
     }
 
-    .risk-table th, .risk-table td {
+    .sec4 .risk-table__group {
+        border: 2px solid #D70C18;
+    }
+
+    .risk-table {
+        border: 2px solid #D70C18;
+    }
+
+    .risk-table th,
+    .risk-table td {
         border: 1px solid #c00;
     }
 
+    .risk-table .boder_b {
+        border-bottom: 2px solid #D70C18;;
+    }
+    
+    .risk-table .boder_r {
+        border-right: 2px solid #D70C18;;
+    }
+
     .sec4 .risk-table thead th {
-        border-right: 1px solid #fff;
+        border-right: 2px solid #fff;
     }
 
     .bg_inner {

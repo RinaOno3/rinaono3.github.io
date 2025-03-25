@@ -315,6 +315,10 @@
     margin-top: 0;
 }
 
+.bg_gray2 .mt_0 {
+    margin-top: 0;
+}
+
 
 
 .indent_list li .pl_0 {
@@ -322,6 +326,11 @@
 }
 
 .bg_gray p {
+    font-size: 1.4rem;
+    padding: 0;
+}
+
+.bg_gray2 p {
     font-size: 1.4rem;
     padding: 0;
 }

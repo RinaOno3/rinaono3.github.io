@@ -165,7 +165,7 @@ button {
 }
 
 .nav ul li a.link_recruit_w {
-    padding-right: 20px;
+    padding-right: 38px;
 }   
 
 .submenu_ttl_wrp {
@@ -479,8 +479,8 @@ button {
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    right: 42px;
-    top: 60%;
+    right: -20px;
+    top: 50%;
     transform: translateY(-50%);
 }
 
@@ -497,8 +497,8 @@ button {
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    right: 0px;
-    top: 60%;
+    right: 18px;
+    top: 50%;
     transform: translateY(-50%);
     filter: brightness(0) invert(1);
 }

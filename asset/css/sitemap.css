@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* === 大項目（赤枠） === */
 .section-title {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #D80C18;
     border: 2px solid #D80C18;
@@ -33,7 +33,7 @@
 .content-box ul li {
     position: relative;
     padding-left: 15px;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin-bottom: 5px;
 }
 
@@ -60,3 +60,23 @@
 .sitemap_list {
     margin-bottom: 25px;
 }
+
+a.external-link {
+    position: relative;
+    padding-right: 25px; /* アイコン分の余白 */
+    display: inline-block;
+  }
+  
+  a.external-link::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 18px;   /* アイコンのサイズに応じて調整 */
+    height: 18px;
+    transform: translateY(-50%);
+    background-image: url(/asset/img/icon_link_box.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
