@@ -2845,6 +2845,7 @@ dd span {
     max-width: 690px;
     margin-inline: auto;
     line-height: 2.8rem;
+
 }
 
 .about-mst picture {
@@ -2852,6 +2853,7 @@ dd span {
 }
 
 .training-map {
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2864,7 +2866,7 @@ dd span {
 }
 
 .training-map img {
-    max-width: 90%;
+    max-width: 55%;
 }
 
 .training-table {

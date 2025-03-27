@@ -304,6 +304,10 @@ section {
     padding: 30px;
   }
 
+  .text {
+    width: 100%;
+  }
+
   .subtitle_1,
   .title_1,
   .heading,
