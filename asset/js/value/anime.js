@@ -11,7 +11,7 @@ if (isSP) {
     const treePath = document.querySelector("#sp-tree-Path");
     const diamonds = document.querySelectorAll("#sp-tree-svg polygon");
     const sec1Paths = [
-        document.querySelector("#sp-sec1Path1"),
+        document.querySelector("#sp-tree-Path"),
         document.querySelector("#sp-sec1Path2"),
         document.querySelector("#sp-sec1Path3"),
         document.querySelector("#sp-sec1Path4"),
@@ -43,8 +43,46 @@ if (isSP) {
         sec1Timeline.to(path, { strokeDashoffset: 0, ease: "none", duration: 2 });
     });
 
+    // === 🌟 Sec2（SP専用） ===
+    const spSection2 = document.querySelector("#sec2 .sp-only svg");
+    const spSec2Paths = [
+        document.querySelector("#sp-sec2Path1"),
+        document.querySelector("#sp-sec2Path2"),
+        document.querySelector("#sp-sec2Path3"),
+        document.querySelector("#sp-sec2Path4"),
+        document.querySelector("#sp-sec2Path5"),
+        document.querySelector("#sp-sec2Path6"),
+    ];
+
+    spSec2Paths.forEach(path => {
+        if (!path) return;
+        const length = path.getTotalLength();
+        gsap.set(path, {
+            strokeDasharray: length,
+            strokeDashoffset: length,
+        });
+    });
+
+    const spSec2Timeline = gsap.timeline({
+        scrollTrigger: {
+            trigger: spSection2,
+            start: "top top",
+            end: "+=50%",
+            scrub: 8,
+        }
+    });
+
+    spSec2Paths.forEach(path => {
+        if (!path) return;
+        spSec2Timeline.to(path, {
+            strokeDashoffset: 0,
+            ease: "none",
+            duration: 2,
+        });
+    });
+
 } else {
-    // 🌳 PC用の要素
+    // 🌳 PC用の Sec1
     const treePath = document.querySelector("#tree-Path");
     const diamonds = document.querySelectorAll("#tree-svg polygon");
     const sec1Paths = [
@@ -79,36 +117,42 @@ if (isSP) {
         if (!path) return;
         sec1Timeline.to(path, { strokeDashoffset: 0, ease: "none", duration: 2 });
     });
-}
-// ** ✨ Sec2（SP用 パス描画）**
-const spSection2 = document.querySelector("#sec2 .sp-only svg");
-const spSec2Paths = [
-    document.querySelector("#sp-sec2Path1"),
-    document.querySelector("#sp-sec2Path2"),
-    document.querySelector("#sp-sec2Path3"),
-    document.querySelector("#sp-sec2Path4"),
-    document.querySelector("#sp-sec2Path5"),
-    document.querySelector("#sp-sec2Path6"),
-];
 
-if (window.innerWidth <= 768) {
-    spSec2Paths.forEach(path => {
+    // === 🌲 Sec2（PC専用） ===
+    const pcSection2 = document.querySelector("#sec2 .pc-only svg");
+    const pcSec2Paths = [
+        document.querySelector("#sec2Path1"),
+        document.querySelector("#sec2Path2"),
+        document.querySelector("#sec2Path3"),
+        document.querySelector("#sec2Path4"),
+        document.querySelector("#sec2Path5"),
+        document.querySelector("#sec2Path6"),
+    ];
+
+    pcSec2Paths.forEach(path => {
         if (!path) return;
         const length = path.getTotalLength();
-        gsap.set(path, { strokeDasharray: length, strokeDashoffset: length });
+        gsap.set(path, {
+            strokeDasharray: length,
+            strokeDashoffset: length,
+        });
     });
 
-    let spSec2Timeline = gsap.timeline({
+    const pcSec2Timeline = gsap.timeline({
         scrollTrigger: {
-            trigger: spSection2,
+            trigger: pcSection2,
             start: "top top",
             end: "+=50%",
             scrub: 8,
         }
     });
 
-    spSec2Paths.forEach(path => {
+    pcSec2Paths.forEach(path => {
         if (!path) return;
-        spSec2Timeline.to(path, { strokeDashoffset: 0, ease: "none", duration: 2 });
+        pcSec2Timeline.to(path, {
+            strokeDashoffset: 0,
+            ease: "none",
+            duration: 2,
+        });
     });
 }

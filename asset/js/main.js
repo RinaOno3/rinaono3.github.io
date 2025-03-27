@@ -163,3 +163,66 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+// MST SVGアニメーション
+document.addEventListener("DOMContentLoaded", () => {
+    const isSP = window.innerWidth <= 768;
+  
+    // パスID一覧（SP or PC）
+    const pathIds = isSP
+      ? ["Path-Mst-1-sp", "Path-Mst-2-sp", "Path-Mst-3-sp", "Path-Mst-4-sp"]
+      : ["Path-Mst-1", "Path-Mst-2", "Path-Mst-3", "Path-Mst-4", "Path-Mst-5", "Path-Mst-6"];
+  
+    // トリガーとなるSVG要素
+    const triggerId = isSP ? "svg-sp" : "svg-pc";
+    const triggerElement = document.getElementById(triggerId);
+  
+    if (!triggerElement) return;
+  
+    // GSAPプラグイン登録
+    gsap.registerPlugin(ScrollTrigger);
+  
+    // タイムライン作成
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: triggerElement,
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    });
+  
+    // 各パスにアニメーション追加
+    pathIds.forEach((id, index) => {
+      const path = document.getElementById(id);
+      if (!path) return;
+  
+      const length = path.getTotalLength();
+  
+      // 初期状態をセット
+      gsap.set(path, {
+        strokeDasharray: length,
+        strokeDashoffset: length
+      });
+  
+      // 順番にアニメーション追加
+      tl.to(path, {
+        strokeDashoffset: 0,
+        duration: 1.4,
+        ease: "power2.out"
+      }, index * 0.2);
+    });
+  
+    // ✅ ボタンをふわっと出現させるアニメ
+    gsap.from(".mst-button", {
+      scrollTrigger: {
+        trigger: ".mst-button",
+        start: "top 90%",
+        toggleActions: "play none none none"
+      },
+      opacity: 0,
+      y: 20,
+      duration: 1.8,
+      ease: "power2.out"
+    });
+  });
+  
