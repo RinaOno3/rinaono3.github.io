@@ -11,6 +11,10 @@ section {
   padding: 0;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 /* SDGsへの取り組み */
 
 .heading {
@@ -210,7 +214,7 @@ section {
 .innercolumn {
   display: grid;
   width: 100%;
-  padding: 0 20px;
+  padding: 0 88px 0 20px;
   align-items: center;
 }
 

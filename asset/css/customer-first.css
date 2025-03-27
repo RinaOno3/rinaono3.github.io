@@ -227,6 +227,7 @@
 
 
 .accordion-content p {
+    font-size: 1.6rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
     position: relative;
@@ -394,7 +395,13 @@
     max-width: 700px;
     width: 100%;
     margin-inline: auto;
-}
+    list-style-position: outside; /* ← デフォルトならそのままでもOK */
+  }
+  
+  .last_section ul li {
+    text-indent: -2em; /* ← 1行目を左に戻す */
+    padding-left: 2em;  /* ← 2行目以降のインデント分 */
+  }
 
 .last_section_ttl {
     font-size: 1.6rem;
@@ -558,6 +565,10 @@
 .sp-only::-webkit-scrollbar-thumb:hover {
     background: #b30000;
 }
+
+.nowrap {
+    white-space: nowrap;
+  }
 
 .accordion-btn {
     display: flex;
