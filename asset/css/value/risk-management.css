@@ -269,6 +269,10 @@ picture img {
     box-shadow: 0 4px 10px rgba(5, 5, 10, 0.5);
 }
 
+.white_box p {
+    font-size: 1.6rem;
+}
+
 .img_arrow {
     display: flex;
     flex-direction: column;
@@ -727,5 +731,10 @@ picture img {
     .white_box {
         padding: 30px;
     }
+
+
+.white_box p {
+    font-size: 1.5rem;
+}
 
 }

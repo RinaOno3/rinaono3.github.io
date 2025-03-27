@@ -220,7 +220,7 @@
 }
 
 .company-link_area:hover::before {
-    left: calc(18rem + 5px);
+    left: calc(15rem + 5px);
 }
 
 .company-link_area::after {
