@@ -4,14 +4,14 @@
 background-color: #F8F8F8;
 }
 
-ol {
+.solictitation_wrp ol {
     list-style: decimal ;
     list-style-type: decimal ;
     font-size: 1.6rem;
    
 }
 
-li {
+.solictitation_wrp li {
     margin-bottom: 40px;
     padding-left: 20px;
     line-height: 1.5;
@@ -32,7 +32,7 @@ li {
 
 @media screen and (max-width: 768px)  {
 
-    ol {
+    .solictitation_wrp ol {
      
         font-size: 1.6rem;
        
@@ -46,7 +46,7 @@ li {
         padding: 30px 20px 50px 40px;
     }
 
-    li {
+    .solictitation_wrp li {
         padding-left: 15px
         ;
     }

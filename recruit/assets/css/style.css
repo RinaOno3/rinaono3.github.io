@@ -2048,6 +2048,10 @@ dd span {
     text-align: left;
 }
 
+.benefits-item-tx_area .benefits-item-link {
+    font-size: 1.6rem;
+    text-align:left;
+}
 /* 説明文 */
 .benefits-item-content2 p {
     font-size: 1.8rem;
@@ -2060,8 +2064,9 @@ dd span {
 
 /* 説明文 */
 .benefits-pdf-image {
-    width:25px;
-    margin-left:10px;
+    width: 18px;
+    margin-left: 3px;
+    margin-top: 5px;
 }
 
 /* SP用メディアクエリ */
