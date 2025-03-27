@@ -859,7 +859,7 @@
 .footer-links {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 8px;
     list-style: none;
     padding: 0;
     margin-bottom: 10px;
@@ -879,7 +879,7 @@
 
 .footer-links li:not(:last-child)::after {
     content: "｜"; /* 区切り線 */
-    margin-left: 15px; /* 縦線と文字の間隔 */
+    margin-left: 8px; /* 縦線と文字の間隔 */
 }
 /* 著作権表示 */
 .copyright {

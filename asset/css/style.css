@@ -473,19 +473,20 @@ button {
 }
 
 .link_recruit {
+    width: 90px;
     position: relative;
 }
 
 .link_recruit::before {
     content: "";
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     background-image: url(/asset/img/icon_link_box.svg);
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    right: -20px;
+    right: 16px;
     top: 50%;
     transform: translateY(-50%);
 }
