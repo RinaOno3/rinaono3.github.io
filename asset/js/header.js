@@ -6,9 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const submenuWrapper = item.querySelector('.submenu-wrapper');
 
         item.addEventListener('mouseover', () => {
-            if (submenuWrapper) {
-                submenuWrapper.classList.add('active');
-            }
+            if (submenuWrapper) submenuWrapper.classList.add('active');
         });
 
         item.addEventListener('mouseout', (event) => {
@@ -18,73 +16,65 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // ✅ PCヘッダーのスクロール時の背景色変更処理
+    // ✅ PCヘッダーのスクロールで背景色変更
     window.addEventListener("scroll", function () {
-        const pcHeader = document.querySelector(".header-top"); // ヘッダーを取得
+        const pcHeader = document.querySelector(".header-top");
         if (pcHeader) {
-            if (window.scrollY > 50) { 
-                pcHeader.classList.add("scrolled"); // スクロールしたら色を濃くする
-            } else {
-                pcHeader.classList.remove("scrolled"); // 上に戻ったら元の色に戻す
-            }
+            pcHeader.classList.toggle("scrolled", window.scrollY > 50);
         } else {
-            console.error("⚠️ ヘッダーが見つかりません！クラス名を確認してください！");
+            console.error("⚠️ ヘッダーが見つかりません！");
         }
     });
 
-    // 🔹 SPメニュー（ハンバーガーメニュー＋アコーディオン）
+    // 🔹 SPメニュー処理
     function loadHeaderJS() {
         console.log("✅ SPメニュー処理を開始");
 
-        // SP専用の要素を取得
         const hamburger = document.getElementById("hamburger");
         const nav = document.getElementById("sp-nav");
         const header = document.getElementById("header-top-sp") || document.getElementById("header-sub-sp");
-        const headerContainer = header ? header.querySelector(".header-container") : null;
-        const spMenuItems = document.querySelectorAll(".sp-menu-item");
+        const headerContainer = header?.querySelector(".header-container");
 
         if (!hamburger || !nav || !header) {
-            console.error("⚠️ SPメニューの要素が見つかりません！HTMLのIDやクラスを確認してください！");
+            console.error("⚠️ SPメニュー要素が見つかりません！");
             return;
         }
 
-        // 🔹 SPハンバーガーメニューの開閉処理
-        function toggleMenu(open) {
-            nav.classList.toggle("open", open);
-            document.body.style.overflow = open ? "hidden" : "";
-            hamburger.classList.toggle("open", open);
-            header.classList.toggle("open", open);
-            if (headerContainer) headerContainer.classList.toggle("open", open);
-        }
-
-        // ハンバーガーメニュークリックで開閉
+        // ハンバーガー開閉
         hamburger.addEventListener("click", () => {
             const isOpen = nav.classList.contains("open");
-            toggleMenu(!isOpen);
+            nav.classList.toggle("open", !isOpen);
+            hamburger.classList.toggle("open", !isOpen);
+            header.classList.toggle("open", !isOpen);
+            if (headerContainer) headerContainer.classList.toggle("open", !isOpen);
+            document.body.style.overflow = !isOpen ? "hidden" : "";
         });
 
-        // 🔹 SPメニューのアコーディオン開閉
-        spMenuItems.forEach((item) => {
-            const menuLink = item.querySelector(".menu-link");
-            if (menuLink) {
-                menuLink.addEventListener("click", (e) => {
-                    e.preventDefault();
-                    item.classList.toggle("open");
+        // ▶ のみで開閉（.accordion-toggle を対象）
+        document.querySelectorAll(".accordion-toggle").forEach(toggle => {
+            toggle.addEventListener("click", (e) => {
+                e.preventDefault();
+                e.stopPropagation();
 
-                    // 他のメニューを閉じる（単一開閉仕様）
-                    spMenuItems.forEach((otherItem) => {
-                        if (otherItem !== item) {
-                            otherItem.classList.remove("open");
-                        }
-                    });
+                const item = toggle.closest(".sp-menu-item");
+                item.classList.toggle("open");
+
+                // 他を閉じる
+                document.querySelectorAll(".sp-menu-item").forEach(other => {
+                    if (other !== item) {
+                        other.classList.remove("open");
+                        const otherToggle = other.querySelector(".accordion-toggle");
+                        if (otherToggle) otherToggle.textContent = "▶";
+                    }
                 });
-            }
+
+                toggle.textContent = item.classList.contains("open") ? "▼" : "▶";
+            });
         });
 
         console.log("✅ SPメニューの設定が完了しました！");
     }
 
-    // ✅ `fetch` のヘッダー読み込み後に実行
+    // ヘッダー読み込み後にJS実行
     setTimeout(loadHeaderJS, 300);
 });
-

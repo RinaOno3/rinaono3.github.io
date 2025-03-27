@@ -180,11 +180,17 @@ button {
 
 .submenu_ttl {
     font-weight: bold;
-    display: block;
+    display: inline-block;
     color: #fff;
     margin: 0;
-}
-
+    transition: transform 0.3s ease;
+    transform-origin: center；
+  }
+  
+  .submenu_ttl:hover {
+    transform: scale(1.05);
+  }
+  
 /* 矢印（`>`）を `.submenu li a` に適用 */
 .submenu li a::before {
     content: "＞";
@@ -677,27 +683,10 @@ button {
         cursor: pointer;
     }
 
-    /* 矢印を左側に配置 */
-    .menu-link::before {
-        content: "▶";
-        /* 矢印 */
-        font-size: 14px;
-        color: white;
-        /* 必要なら色を変更 */
-        margin-right: 8px;
-        /* 文字との間隔 */
-        position: absolute;
-        left: 3%;
-    }
 
     .menu-link:last-child::before {
         display: none;
         /* 最後の要素の::beforeを非表示にする */
-    }
-
-    /* アコーディオン開いたときに矢印を回転 */
-    .menu-item.open .menu-link::before {
-        transform: rotate(90deg);
     }
 
     /* サブメニュー */
@@ -710,7 +699,7 @@ button {
 
     .submenu li {
         padding: 8px 0;
-        padding-left: 15px;
+        padding-left: 65px;
         width: 100%;
 
     }
@@ -729,6 +718,67 @@ button {
     .submenu li a {
         padding: 0;
     }
+
+    .menu-link-wrp {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+      }
+      
+      .menu-link {
+        flex: 1;
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: block;
+      }
+      
+      /* アコーディオンの矢印ボタン */
+      .accordion-toggle {
+        font-size: 18px;
+        color: white;
+        background: none;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        min-width: 44px;
+        min-height: 44px;
+      }
+
+      /* 矢印左ver */
+      
+      .accordion-toggle {
+        font-size: 18px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        min-width: 44px;
+        min-height: 44px;
+      }
+
+      .menu-link-wrp {
+        display: flex;
+        align-items: center;
+        min-height: 44px;
+      }
+      
+      .menu-link {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }   
+      
+      .menu-link-wrp.no-toggle::before {
+        content: ""; /* 擬似要素で空の表示 */
+        display: inline-block;
+        width: 44px; /* ▶ボタンと同じ幅 */
+        height: 1px;  /* 高さは不要 */
+      }
+      
 
 }
 
