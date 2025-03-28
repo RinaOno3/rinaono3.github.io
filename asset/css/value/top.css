@@ -58,6 +58,7 @@ svg {
     top: 17%;
 }
 
+
 .section-content h2 {
     font-size: 4rem;
     font-weight: bold;
@@ -72,6 +73,18 @@ svg {
     margin-top: 60px;
     margin-bottom: 40px;
     color: #333;
+}
+
+
+.section-content .top_tx_box {
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.section-content .top_tx_box2 {
+    margin-top: 1rem;
+    text-align: left;
+    margin-bottom: 40px;
 }
 
 .section-content .btn {
@@ -257,6 +270,11 @@ svg {
     width: auto;
 }
 
+.block2  img {
+    height: 70px;
+    width: auto;
+}
+
 /* 🔹 それぞれのブロックの位置（SVGの曲線に沿うよう調整） */
 .block1 {
     top: 5%;
@@ -375,6 +393,14 @@ svg {
         margin-bottom: 50px;
     }
 
+
+    .content-block {
+        position: absolute;
+        padding: 0px;
+        text-align: left;
+        width: 50%;
+        margin-bottom: 50px;
+    }
     .block1 {
         top: 5%;
         right: 3%;
@@ -396,11 +422,16 @@ svg {
 @media screen and (max-width: 768px) {
 
     .section-content .top_tx_box {
-        margin-top: 80px;
+        margin-top: 90px;
+        margin-bottom: 0;
+    }
+
+    .section-content .top_tx_box2 {
+        margin-top: 1rem;
         margin-bottom: 80px;
     }
     .section-content {
-        top: 17%;
+        top: 19%;
     }
     .info-item .info_ttl {
         font-size: 1.5rem;
@@ -434,7 +465,7 @@ svg {
 
     .global-network {
         width: 90%;
-        top: 237%;
+        top: 240%;
     }
 
     .global-network img {
@@ -456,23 +487,28 @@ svg {
         padding: 1px 5px;
     }
 
+    .block1 {
+        top: 18%;
+        right: 3%;
+    }
+
     .block2 {
-        top: 14%;
+        top: 32%;
         left: 5%;
     }
 
     .block3 {
-        top: 29%;
+        top: 53%;
         right: 25px;
     }
 
     .block4 {
-        top: 43%;
+        top: 69%;
         left: 5%;
     }
 
     .block5 {
-        top: 53%;
+        top: 85%;
         right: 25%;
     }
 
@@ -484,11 +520,15 @@ svg {
     #sec2 {
         min-height: auto;
         max-height :fit-content;
+        padding-bottom: 40px;
     }
 
     svg {
-    max-height: fit-content;
-    }
+        width: 100%;
+        height: auto;
+      
+      }
+      
 
 }
 
@@ -508,10 +548,6 @@ svg {
 
     .global-network {
         top: 230%;
-    }
-
-    .block1 {
-        top: 2%;
     }
 
     .info-item1-2 {
@@ -543,6 +579,10 @@ svg {
     .info-item1-1 {
         top: 133%;
         left: 50px;
+    }
+
+    .global-network {
+        top: 209%;
     }
 
 
@@ -577,6 +617,10 @@ svg {
     .section-content .top_tx_box {
         font-size: 1.5rem;
         margin-top: 100px;
+    }
+
+    .section-content .top_tx_box2 {
+        font-size: 1.5rem;
     }
 
     .info-item .info_ttl {
@@ -629,9 +673,8 @@ svg {
         height: 25px;
     }
 
-    .content-block .last_message {
-        font-size: 2rem;
-        font-weight: normal;
+    .block2 img {
+        height: 50px;
     }
 
     .tags span {
@@ -639,11 +682,99 @@ svg {
         font-weight: normal;
     }
 
+    .content-block .last_message {
+        font-size: 1.5rem;
+        font-weight: normal;
+    }
+
 }
+
+@media screen and (max-width: 600px) {
+    .info-item1-1 {
+        top: 132%;
+        left: -3%;
+    }
+
+    .info-item1-2 {
+        top: 145%;
+        right: 0%;
+    }
+
+    .info-item1-3 {
+        top: 180%;
+        right: 10%;
+    }
+
+    .global-network {
+        top: 198%;
+    }
+
+
+
+
+
+
+}
+
+@media screen and (max-width: 550px) {
+
+    .info-item1-1 {
+        top: 121%;
+        left: 0%;
+    }
+
+    .info-item1-2 {
+        top: 130%;
+        right: 0%;
+    }
+
+    .info-item1-3 {
+        top: 169%;
+        right: 10%;
+    }
+
+    .global-network {
+        top: 187%;
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 520px) {
+
+    .info-item1-1 {
+        top: 114%;
+        left: 2%;
+    }
+
+    .info-item1-2 {
+        top: 121%;
+        right: 4%;
+    }
+
+    .info-item1-3 {
+        top: 156%;
+        right: 10%;
+    }
+
+    .global-network {
+        top: 176%;
+    }
+}
+
+
 
 @media screen and (max-width: 450px) {
 
-   
+    .section-content .top_tx_box {
+        margin-top: 50px;
+    }
+
+    .section-content .top_tx_box2 {
+        margin-bottom: 15px;
+    }
 
     .value .content-wrapper {
         padding: 0px 10px;
@@ -684,27 +815,29 @@ svg {
 
     .content-block h3 {
         font-size: 1rem;
+        margin-bottom: 0;
     }
 
     .content-block p {
         font-size: 0.9rem;
+        font-weight: normal;
     }
 
     .tags span {
         font-size: 0.5rem;
-        width: 80%;
-        padding: 3px;
+        width: 48%;
+        padding: 1px;
         gap: 3px;
 
     }
 
-    .top_btn_wrp .btn {
-        font-size: 1.5rem;
+    .block5 {
+        top: 80%;
+        right: 25%;
     }
 
-    .section-content {
-        top: clamp(325px, 18vw, 140px);
-        padding: 5px 0 0;
+    .top_btn_wrp .btn {
+        font-size: 1.5rem;
     }
 
 
@@ -716,19 +849,18 @@ svg {
 
     .info-item1-1 {
         position: absolute;
-        top: clamp(122%, 120%, 140%);
-        left: 24px;
-      }
-      
+        top: 107%;
+        left: 55px;
+    }
 
     .info-item1-2 {
-        right: 34px;
-        top: 135%;
+        right: 53px;
+        top: 115%;
     }
 
     .info-item1-3 {
-        top: 173%;
-        right: 15px;
+        top: 148%;
+        right: 56px;
     }
 
     .global-network h3 {
@@ -737,7 +869,7 @@ svg {
 
     .global-network {
         text-align: left;
-        top: 199%;
+        top: 165%;
     }
 
     .global-network p {
@@ -751,9 +883,70 @@ svg {
         z-index: -2;
     }
 
-    #sec1,
-    #sec2 {
-        min-height: 150vh;
+
+}
+
+@media screen and (max-width: 400px) {
+    .section-content h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
     }
 
+    .section-content .top_tx_box {
+        margin-top: 30px;
+
+    }
+
+    .section-content .top_tx_box {
+        font-size: 1.2rem;
+    }
+
+    .section-content .top_tx_box2 {
+        font-size: 1.2rem;
+    }
+
+    .info-item .info_ttl {
+        font-size: 1rem;
+
+
+    }
+
+    .info-item1-2 {
+        right: 53px;
+        top: 124%;
+    }
+
+    .info-item1-3 {
+        top: 158%;
+        right: 56px;
+    }
+
+    .global-network h3 {
+        font-size: 1.2rem;
+
+    }
+
+    .global-network p {
+        font-size: 1rem;
+    }
+
+    .global-network {
+        top: 178%;
+    }
+
+    .content-block img {
+        height: 18px;
+    }
+
+    .content-block h3 {
+        margin-top: 5px;
+    }
+
+    .block2 img {
+        height: 30px;
+    }
+
+    .block5 {
+        right: 40%;
+    }
 }

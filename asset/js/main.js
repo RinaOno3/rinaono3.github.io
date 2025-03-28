@@ -165,6 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // MST SVGアニメーション
+// MST SVGアニメーション
 document.addEventListener("DOMContentLoaded", () => {
     const isSP = window.innerWidth <= 768;
   
@@ -182,12 +183,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // GSAPプラグイン登録
     gsap.registerPlugin(ScrollTrigger);
   
-    // タイムライン作成
+    // タイムライン作成（スクロールに連動して進行）
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: triggerElement,
         start: "top 80%",
-        toggleActions: "play none none none"
+        end: "bottom 20%",
+        scrub: true, // ← スクロールに合わせて進行
       }
     });
   
@@ -204,15 +206,15 @@ document.addEventListener("DOMContentLoaded", () => {
         strokeDashoffset: length
       });
   
-      // 順番にアニメーション追加
+      // 順番にアニメーション追加（ゆったりと）
       tl.to(path, {
         strokeDashoffset: 0,
-        duration: 1.4,
-        ease: "power2.out"
-      }, index * 0.2);
+        duration: 2.5, // ゆっくり描画
+        ease: "power1.inOut" // なめらか
+      }, index * 1.8); // パスごとの間隔を少し広めに
     });
   
-    // ✅ ボタンをふわっと出現させるアニメ
+    // ✅ ボタンをふわっと出現させるアニメ（こっちはトリガー式でOK）
     gsap.from(".mst-button", {
       scrollTrigger: {
         trigger: ".mst-button",
