@@ -1,8 +1,0 @@
-order: 1
-sets:
-  - name: Movable Type 7/8 Mont-Blancテーマ用
-    dir: mont-blanc
-  - name: Movable Type 7/8 Mont-Blancテーマ用（Ajax）
-    dir: mont-blanc_ajax
-  - name: Movable Type 7/8 Mont-Blancテーマ用（各種機能使用）
-    dir: mont-blanc_full
