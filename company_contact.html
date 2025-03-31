@@ -20,7 +20,7 @@
     <section class="content-wrapper">
     <div class="info-text">
 		<div style="display: flex; align-items: flex-start;">
-			<span>お問い合わせいただきました内容については、後日、弊社の担当から直接ご回答申し上げます。</span>
+			<span>お問い合わせいただきました内容については、後日、当社の担当から直接ご回答申し上げます。</span>
 	    </div>
     	<br>
 		<div style="display: flex; align-items: flex-start;">
@@ -67,8 +67,7 @@
 	<div class="form-group -short">
         <label>郵便番号<span class="required">【必須】</span></label>
   	    <span class="introduce-text">※ハイフンなし</span>
-  	    <input type="text" id="mail_postcode" name="mail_postcode" value="" />
-        <button type="button" class="address-search">住所検索</button>
+  	    <input type="text" id="mail_postcode" name="mail_postcode" onKeyUp="AjaxZip3.zip2addr(this,'','mail_todoufuken','mail_address');" value="" />
 	</div>
 	<div class="red-line"></div>
 	<div class="form-group -todouhuken">
@@ -211,12 +210,12 @@
 	<div class="form-group wb">
     	<label>個人情報利用について<span class="required">【必須】</span></label>
 		<div class="consent-group">
-			<a href="#" class="policy-link">個人情報保護に関する基本方針</a>
+        <a href="/privacy-policy.html" class="policy-link">個人情報保護に関する基本方針</a>
 			<div class="checkbox-group">
         		<input type="checkbox" name="mail_agree" value="1" />
         		<label for="mail_agree">同意する</label>
 		   	</div>
-        	<p class="checkbox-note">※当フォームをご利用の際には、ご同意いただくことが必要となります</p>
+        	<p class="checkbox-note">※当フォームをご利用の際には、ご同意いただくことが必要となります。</p>
     	</div>
    	</div>
 	<div class="red-line"></div>
@@ -240,6 +239,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/asset/js/header.js"></script>
     <script src="/asset/js/main.js"></script>
-  <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+    <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
   </body>
 </html>

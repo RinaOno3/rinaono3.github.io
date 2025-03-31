@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // `#sec_5` へのリンクをクリック時にアコーディオンを開く
     const sec5Link = document.querySelector('a[href="#sec_5"]');
-    
+
     if (sec5Link) {
         sec5Link.addEventListener("click", function (event) {
             event.preventDefault(); // 通常のリンク動作を防ぐ
@@ -168,63 +168,69 @@ document.addEventListener("DOMContentLoaded", function () {
 // MST SVGアニメーション
 document.addEventListener("DOMContentLoaded", () => {
     const isSP = window.innerWidth <= 768;
-  
+
     // パスID一覧（SP or PC）
     const pathIds = isSP
-      ? ["Path-Mst-1-sp", "Path-Mst-2-sp", "Path-Mst-3-sp", "Path-Mst-4-sp"]
-      : ["Path-Mst-1", "Path-Mst-2", "Path-Mst-3", "Path-Mst-4", "Path-Mst-5", "Path-Mst-6"];
-  
+        ? ["Path-Mst-1-sp", "Path-Mst-2-sp", "Path-Mst-3-sp", "Path-Mst-4-sp"]
+        : ["Path-Mst-1", "Path-Mst-2", "Path-Mst-3", "Path-Mst-4", "Path-Mst-5", "Path-Mst-6"];
+
     // トリガーとなるSVG要素
     const triggerId = isSP ? "svg-sp" : "svg-pc";
     const triggerElement = document.getElementById(triggerId);
-  
+
     if (!triggerElement) return;
-  
+
     // GSAPプラグイン登録
     gsap.registerPlugin(ScrollTrigger);
-  
-    // タイムライン作成（スクロールに連動して進行）
+
+    // タイムライン作成（時間ベースで進むアニメーション）
     const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: triggerElement,
-        start: "top 80%",
-        end: "bottom 20%",
-        scrub: true, // ← スクロールに合わせて進行
-      }
+        scrollTrigger: {
+            trigger: triggerElement,
+            start: "top 80%", // トリガー位置
+            toggleActions: "play none none none", // 一度だけ再生
+        }
     });
-  
-    // 各パスにアニメーション追加
+
+    // 各パスに初期状態をセットし、アニメーションを追加
     pathIds.forEach((id, index) => {
-      const path = document.getElementById(id);
-      if (!path) return;
-  
-      const length = path.getTotalLength();
-  
-      // 初期状態をセット
-      gsap.set(path, {
-        strokeDasharray: length,
-        strokeDashoffset: length
-      });
-  
-      // 順番にアニメーション追加（ゆったりと）
-      tl.to(path, {
-        strokeDashoffset: 0,
-        duration: 2.5, // ゆっくり描画
-        ease: "power1.inOut" // なめらか
-      }, index * 1.8); // パスごとの間隔を少し広めに
+        const path = document.getElementById(id);
+        if (!path) return;
+
+        const length = path.getTotalLength();
+
+        gsap.set(path, {
+            strokeDasharray: length,
+            strokeDashoffset: length
+        });
+
+        tl.to(path, {
+            strokeDashoffset: 0,
+            duration: 2., // 各線の描画時間
+            ease: "power1.inOut"
+        }, index * 1); // アニメーションの間隔
     });
-  
-    // ✅ ボタンをふわっと出現させるアニメ（こっちはトリガー式でOK）
-    gsap.from(".mst-button", {
-      scrollTrigger: {
-        trigger: ".mst-button",
-        start: "top 90%",
-        toggleActions: "play none none none"
-      },
-      opacity: 0,
-      y: 20,
-      duration: 1.8,
-      ease: "power2.out"
-    });
+
+    // ボタンをふわっと出現（SVGの1本目と同時に）
+    tl.from(".mst-button", {
+        opacity: 0,
+        y: 20,
+        duration: 2,
+        ease: "power2.out"
+    }, 0); // ← タイムラインの先頭（0秒）に出現させる
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".fv-container", {
+    scrollTrigger: {
+      trigger: ".fv",         // トリガーはfvセクション
+      start: "top center",    // .fvの上端が画面の中央にきたら発火
+      toggleActions: "play none none none"
+    },
+    opacity: 0,
+    y: 30,
+    duration: 1.5,
+    ease: "power2.out"
   });
   

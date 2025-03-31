@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head id="Head"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style id="StylePlaceholder" type="text/css"></style>
+	<link id="_Portals__default_" rel="stylesheet" type="text/css" href="/Portals/0/_default/default.css" />
+	<link id="_Portals_0_Skins_MST_sstemp_" rel="stylesheet" type="text/css" href="/Portals/0/Skins/MST-sstemp/skin.css" />
+	<link id="_Portals_0_Containers_MST_sstemp_" rel="stylesheet" type="text/css" href="/Portals/0/Containers/MST-sstemp/container.css" />
+	<link id="_Portals_0_" rel="stylesheet" type="text/css" href="/Portals/0/portal.css" />
+	<script src="/Portals/0/js/tools/jquery-1.11.2.min.js" type="text/javascript"></script>
+	<script src="/Portals/0/js/tools/jquery.cookie.js" type="text/javascript"></script>
+	<link rel="SHORTCUT ICON" href="/Portals/0/favicon.ico" />
+	<title>Webでの保険のお問い合わせ</title>
+	<meta name="robots" content="noindex">
+	<meta name="format-detection" content="telephone=no">
+	<script type="text/javascript">
+	(function($) {
+	    $(function() {
+	        function getTerminalType() {
+	            var result_value = "0";
+	            $.ajax({
+	                url: 'https://sp.infocms.jp/?v=2&ua=' + navigator.userAgent,
+	                type: "GET",
+	                async: false
+	            }).done(function(data) {
+	                result_value = data;
+	            });
+	            return result_value;
+	        }
+	     
+	        // 0:PC、1:スマホ、2:タブレット
+	        var UAType = getTerminalType();
+	        if (UAType == 1) {
+	            // 以下処理
+	            $('.telLink').each(function(){
+	            var str = $(this).text();
+	                $(this).html($('<a>').attr('href', 'tel:' + str.replace(/-/g, '')).append(str + '</a>'));
+	            });
+	            // ここまで
+	        }
+	    });
+	})(jQuery);
+	</script>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-NM9CT26');
+	</script>
+	<!-- End Google Tag Manager -->
+    <script>
+        function isMobile() {
+            return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        }
+        window.addEventListener("DOMContentLoaded", function() {
+            if (isMobile()) { // モバイルデバイスのとき
+                var spCssFiles = [
+                    "/Portals/0/_default/defaultsmart.css",
+                    "/Portals/0/Skins/MST-sstemp/skinsmart.css",
+                    "/Portals/0/Containers/MST-sstemp/containersmart.css",
+                    "/Portals/0/portalsmart.css"
+                ];
+                spCssFiles.forEach(function(href) {
+                    var link = document.createElement("link");
+                    link.rel = "stylesheet";
+                    link.type = "text/css";
+                    link.href = href;
+                    document.head.appendChild(link);
+                });
+
+                var script = document.createElement("script");
+                script.src = "/Portals/0/js/tools/smartphone.js";
+                document.head.appendChild(script);
+
+                var viewportMeta = document.createElement("meta");
+                viewportMeta.name = "viewport";
+                viewportMeta.content = "width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1";
+                document.getElementsByTagName("head")[0].appendChild(viewportMeta);
+            }
+        });
+    </script>
+</head>
+<body id="Body">
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form'];
+if (!theForm) {
+    theForm = document.Form;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+<script src="/Portals/0/js/dnncore.js" type="text/javascript"></script>
+<script src="/Portals/0/js/infocms.js" type="text/javascript"></script>
+<script src="/Portals/0/js/MicrosoftAjax.ja.js" type="text/javascript"></script>
+        
+        
+<script>jQuery.noConflict();</script>
+<script type="text/javascript" src="/Portals/0/js/to-top/to-top_btmu.js"></script>
+<script type="text/javascript" src="/Portals/0/js/smoothScroll/smoothScroll.js"></script>
+<script type="text/javascript" src="/Portals/0/js/matchHeight/jquery.matchHeight.js"></script>
+<script type="text/javascript" src="/Portals/0/js/matchHeight/matchHeight_common.js"></script>
+<script type="text/javascript" src="/Portals/0/js/common/accordion.js"></script>
+<script type="text/javascript">
+(function($){
+	$(document).ready( function(){
+		$(".hMenuBtn").click(function(event){
+			event.stopPropagation();
+			$(".NavSStempPane").slideToggle(150);
+			$(".hMenuBtn").toggleClass("menuOpen");
+		});
+	});
+})(jQuery)
+</script>
+   <div class="skinWrapper" id="skin1Column">
+    <div id="skinWrapBody">
+     <header id="headBody">
+      <p class="logo">
+       <img alt="エムエスティ保険サービス株式会社 損害保険・生命保険代理店" src="/Portals/0/Skins/MST-btmu/images/logo.png"/>
+      </p>
+      <div class="symbolSStempPane" id="dnn_symbolSStempPane">
+       <section class="zero">
+        <div class="contents">
+         <div class="actionBtn">
+         </div>
+         <div id="dnn_ctr1342_ContentPane">
+          <!-- Start_Module_1342 -->
+          <div id="dnn_ctr1342_ModuleContent">
+           <div id="dnn_ctr1342_HtmlModule_HtmlModule_lblContent">
+            <p class="symbolText">
+             関西ペイントグループ様専用
+            </p>
+           </div>
+           <!-- End_Module_1342 -->
+          </div>
+         </div>
+        </div>
+       </section>
+      </div>
+      <aside class="SideTopSStempPane" id="dnn_SideTopSStempPane">
+       <section class="zero">
+        <div class="contents">
+         <div class="actionBtn">
+         </div>
+         <div id="dnn_ctr1343_ContentPane">
+          <!-- Start_Module_1343 -->
+          <div id="dnn_ctr1343_ModuleContent">
+           <div id="dnn_ctr1343_HtmlModule_HtmlModule_lblContent">
+            <ul class="subNav pcArea">
+             <li class="external">
+              <a href="/kansaipaint/">
+               トップページ
+              </a>
+             </li>
+            </ul>
+           </div>
+           <!-- End_Module_1343 -->
+          </div>
+         </div>
+        </div>
+       </section>
+      </aside>
+      <p class="hMenuBtn spArea">
+       MENU
+      </p>
+      <nav class="NavSStempPane" id="dnn_NavSStempPane">
+       <section class="zero">
+        <div class="contents">
+         <div class="actionBtn">
+         </div>
+         <div id="dnn_ctr1347_ContentPane">
+          <!-- Start_Module_1347 -->
+          <div id="dnn_ctr1347_ModuleContent">
+           <div class="btmuNav noParent">
+            <ul>
+             <li class="Tab387">
+              <a href="/kansaipaint/merit" id="dnn_ctr1347_SEOMenuV2_Tab387">
+               MSTを利用するメリット
+              </a>
+             </li>
+             <li class="Tab388">
+              <a href="/kansaipaint/product" id="dnn_ctr1347_SEOMenuV2_Tab388">
+               保険商品を選ぶ
+              </a>
+             </li>
+             <li class="Tab390 currentItem">
+              <a class="currentLink" href="/kansaipaint_contact.html" id="dnn_ctr1347_SEOMenuV2_Tab390">
+               Webでの保険のお問い合わせ
+              </a>
+             </li>
+             <li class="Tab391">
+              <a href="/kansaipaint_contract_request.html" id="dnn_ctr1347_SEOMenuV2_Tab391">
+               契約の変更・解約手続き受付
+              </a>
+             </li>
+             <li class="Tab392">
+              <a href="/kansaipaint/contactflow" id="dnn_ctr1347_SEOMenuV2_Tab392">
+               事故時の連絡先・保険金（給付金）請求の流れ
+              </a>
+             </li>
+             <li class="Tab393">
+              <a href="/" id="dnn_ctr1347_SEOMenuV2_Tab393">
+               お知らせ一覧・詳細（ニュース）
+              </a>
+             </li>
+            </ul>
+           </div>
+           <!-- End_Module_1347 -->
+          </div>
+         </div>
+        </div>
+       </section>
+      </nav>
+      <aside class="SideSStempPane" id="dnn_SideSStempPane">
+       <section class="zero">
+        <div class="contents">
+         <div class="actionBtn">
+         </div>
+         <div id="dnn_ctr1344_ContentPane">
+          <!-- Start_Module_1344 -->
+          <div id="dnn_ctr1344_ModuleContent">
+           <div id="dnn_ctr1344_HtmlModule_HtmlModule_lblContent">
+            <div class="contactBox pcArea">
+             <h2 class="ttl">
+              保険に関するお問い合わせ
+             </h2>
+             <div class="txtWrap" style="width: 243px; height: 250px;">
+              <p>
+               <span style="font-size: 10px;">
+               ＜募集代理店＞
+                <br/>
+               　エムエスティ保険サービス株式会社
+               </span>
+              </p>
+              <p>
+              </p>
+              <p>
+              　大阪職域保険相談部
+              </p>
+              <p>
+              　関西ペイントグループ担当
+              </p>
+              <p>
+              　TEL　：
+               <span class="telLink">
+                0120-862-326
+               </span>
+              </p>
+              <p>
+              　FAX　：
+               <span class="telLink">
+                06-6258-1045
+               </span>
+              </p>
+              <p>
+               <br>
+              　受付時間：平日9時～17時
+              </p>
+              <p class="notes" style="text-align: left;">
+              　　　　　　　※年末年始を除く
+              </p>
+             </div>
+            </div>
+           </div>
+           <!-- End_Module_1344 -->
+          </div>
+         </div>
+        </div>
+       </section>
+      </aside>
+      <aside class="SideBottomSStempPane" id="dnn_SideBottomSStempPane">
+       <section class="zero">
+        <div class="contents">
+         <div class="actionBtn">
+         </div>
+         <div id="dnn_ctr1005_ContentPane">
+          <!-- Start_Module_1005 -->
+          <div id="dnn_ctr1005_ModuleContent">
+           <div id="dnn_ctr1005_HtmlModule_HtmlModule_lblContent">
+            <ul class="subNav pcArea">
+             <li class="external"><a href="/" target="_blank">MSTコーポレートサイト</a></li>
+             <li class="external"><a href="/privacy-policy.html" target="_blank">個人情報保護に関する基本方針</a></li>
+             <li class="external"><a href="/solicitation-policy.html" target="_blank">勧誘方針</a></li>
+            </ul>
+           </div>
+           <!-- End_Module_1005 -->
+          </div>
+         </div>
+        </div>
+       </section>
+      </aside>
+     </header>
+     <main id="mainBody">
+      <div id="contentWrap">
+       <header class="PagetitlePane" id="dnn_PagetitlePane">
+        <section class="zero">
+         <div class="contents">
+          <div class="actionBtn">
+          </div>
+          <div id="dnn_ctr1399_ContentPane">
+           <!-- Start_Module_1399 -->
+           <div id="dnn_ctr1399_ModuleContent">
+            <h1>
+             Webでの保険のお問い合わせ
+            </h1>
+            <!-- End_Module_1399 -->
+           </div>
+          </div>
+         </div>
+        </section>
+       </header>
+       <div class="ContentPane" id="dnn_ContentPane">
+        <section class="zero">
+         <div class="contents">
+          <div class="actionBtn">
+          </div>
+          <div id="dnn_ctr1400_ContentPane">
+           <!-- Start_Module_1400 -->
+           <div id="dnn_ctr1400_ModuleContent">
+            <div id="dnn_ctr1400_ViewMailForm_pnlEditForm">
+            </div>
+            <div id="dnn_ctr1400_ViewMailForm_pnlInput">
+             <p>
+              お問い合わせいただきました内容については、後日、当社の担当から直接ご回答申し上げます。
+              <br/>
+              ※フォームは、SSLによる暗号化により安全に個人情報を安全に送受信いたします。
+             </p>
+             <h3>
+              以下については専用フォームまたはご連絡先一覧ページがございますのでご確認をお願い致します。
+             </h3>
+             <ul class="arrowLinkListFloat mb20">
+              <li>
+               <a href="/kansaipaint_contract_request.html">
+                契約の変更・解約手続き受付
+               </a>
+              </li>
+              <li>
+               <a href="/kansaipaint/contactflow">
+                事故時の連絡先・保険金（給付金）請求の流れ
+               </a>
+              </li>
+             </ul>
+             <div class="stepBox">
+              <ul class="stepList">
+               <li class="here">
+                <span>
+                 STEP1
+                </span>
+                お客さま情報の入力
+               </li>
+               <li>
+                <span>
+                 STEP2
+                </span>
+                内容の確認
+               </li>
+               <li>
+                <span>
+                 STEP3
+                </span>
+                お問い合わせ完了
+               </li>
+              </ul>
+             </div>
+  <form method="post" class="h-adr" action="http://13.230.115.232/mt/plugins/MailForm/mt-mail-form.cgi" name="mail_form" id="mail_form">
+             <div class="contactFormWrap">
+              <table>
+               <tr>
+                <th class="contactHead">
+                 <label for="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID328_fldValue_txtSingleTextBox" id="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID328_lblTitle">
+                  お名前
+                 </label>
+                 <span class="NormalRed">
+                  必須
+                 </span>
+                </th>
+                <td class="contactInner">
+                 <div id="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID328_fldValue_divAboveDescription">
+                  例）保険 太郎
+                 </div>
+                 <input type="text" id="mail_author" name="mail_author" style="width:300px;ime-mode:Active;" value="" />
+                </td>
+               </tr>
+               <tr>
+                <th class="contactHead">
+                 <label for="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID329_fldValue_txtSingleTextBox" id="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID329_lblTitle">
+                  フリガナ
+                 </label>
+                 <span class="NormalRed">
+                  必須
+                 </span>
+                </th>
+                <td class="contactInner">
+                 <div id="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID329_fldValue_divAboveDescription">
+                  例）ホケン タロウ
+                 </div>
+                 <input type="text" id="mail_kana" name="mail_kana"  style="width:300px;ime-mode:Active;" value="" />
+                </td>
+               </tr>
+               <tr>
+                <th class="contactHead">
+                 <label for="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID332_fldValue_txtSingleTextBox" id="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID332_lblTitle">
+                  部署名
+                 </label>
+                 <span class="NormalRed">
+                  必須
+                 </span>
+                </th>
+                <td class="contactInner">
+                 <div id="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID332_fldValue_divAboveDescription">
+                  例）〇〇部
+                 </div>
+                 <input type="text" id="mail_department" name="mail_department" style="width:300px;ime-mode:Active;" value="" />
+                </td>
+               </tr>
+               <tr>
+                <th class="contactHead">
+                 <label for="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID333_fldValue_txtSingleTextBox" id="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID333_lblTitle">
+                  社員番号 
+                 </label>
+                 <span class="NormalRed">
+                  必須
+                 </span>
+                </th>
+                <td class="contactInner">
+                 <input type="text" id="mail_employeeno" name="mail_employeeno" style="width:300px;ime-mode:inactive;" value="" />
+                </td>
+               </tr>
+               <tr>
+                <th class="contactHead">
+                 <label for="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID334_fldValue_txtSingleTextBox" id="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID334_lblTitle">
+                  郵便番号
+                 </label>
+                 <span class="NormalRed">
+                  必須
+                 </span>
+                </th>
+                <td class="contactInner">
+                 <div id="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID334_fldValue_divAboveDescription">
+                  ハイフンなし
+                 </div>
+                 <input type="text" id="mail_postcode" name="mail_postcode" style="width:100px;ime-mode:disabled;" value="" />
+                </td>
+               </tr>
+               <tr>
+                <th class="contactHead">
+                 <label for="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID335_fldValue_ddlDropDownList" id="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID335_lblTitle">
+                  都道府県
+                 </label>
+                 <span class="NormalRed">
+                  必須
+                 </span>
+                </th>
+                <td class="contactInner">
+
+        <select name="mail_todoufuken" id="mail_todoufuken" class="p-region">
+            <option value="">選択してください</option>
+      		
+        		<option value="北海道">北海道</option>
+	    	
+        		<option value="青森県">青森県</option>
+	    	
+        		<option value="岩手県">岩手県</option>
+	    	
+        		<option value="宮城県">宮城県</option>
+	    	
+        		<option value="秋田県">秋田県</option>
+	    	
+        		<option value="山形県">山形県</option>
+	    	
+        		<option value="福島県">福島県</option>
+	    	
+        		<option value="茨城県">茨城県</option>
+	    	
+        		<option value="栃木県">栃木県</option>
+	    	
+        		<option value="群馬県">群馬県</option>
+	    	
+        		<option value="埼玉県">埼玉県</option>
+	    	
+        		<option value="千葉県">千葉県</option>
+	    	
+        		<option value="東京都">東京都</option>
+	    	
+        		<option value="神奈川県">神奈川県</option>
+	    	
+        		<option value="新潟県">新潟県</option>
+	    	
+        		<option value="富山県">富山県</option>
+	    	
+        		<option value="石川県">石川県</option>
+	    	
+        		<option value="福井県">福井県</option>
+	    	
+        		<option value="山梨県">山梨県</option>
+	    	
+        		<option value="長野県">長野県</option>
+	    	
+        		<option value="岐阜県">岐阜県</option>
+	    	
+        		<option value="静岡県">静岡県</option>
+	    	
+        		<option value="愛知県">愛知県</option>
+	    	
+        		<option value="三重県">三重県</option>
+	    	
+        		<option value="滋賀県">滋賀県</option>
+	    	
+        		<option value="京都府">京都府</option>
+	    	
+        		<option value="大阪府">大阪府</option>
+	    	
+        		<option value="兵庫県">兵庫県</option>
+	    	
+        		<option value="奈良県">奈良県</option>
+	    	
+        		<option value="和歌山県">和歌山県</option>
+	    	
+        		<option value="鳥取県">鳥取県</option>
+	    	
+        		<option value="島根県">島根県</option>
+	    	
+        		<option value="岡山県">岡山県</option>
+	    	
+        		<option value="広島県">広島県</option>
+	    	
+        		<option value="山口県">山口県</option>
+	    	
+        		<option value="徳島県">徳島県</option>
+	    	
+        		<option value="香川県">香川県</option>
+	    	
+        		<option value="愛媛県">愛媛県</option>
+	    	
+        		<option value="高知県">高知県</option>
+	    	
+        		<option value="福岡県">福岡県</option>
+	    	
+        		<option value="佐賀県">佐賀県</option>
+	    	
+        		<option value="長崎県">長崎県</option>
+	    	
+        		<option value="熊本県">熊本県</option>
+	    	
+        		<option value="大分県">大分県</option>
+	    	
+        		<option value="宮崎県">宮崎県</option>
+	    	
+        		<option value="鹿児島県">鹿児島県</option>
+	    	
+        		<option value="沖縄県">沖縄県</option>
+	    	
+        </select>
+                </td>
+               </tr>
+               <tr>
+                <th class="contactHead">
+                 <label for="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID336_fldValue_txtSingleTextBox" id="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID336_lblTitle">
+                  住所
+                 </label>
+                 <span class="NormalRed">
+                  必須
+                 </span>
+                </th>
+                <td class="contactInner">
+                 <div id="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID336_fldValue_divAboveDescription">
+                  例）新宿区西新宿1丁目6番1号 新宿エルタワー9階
+                 </div>
+                 <input type="text" id="mail_address" name="mail_address"  style="width:400px;ime-mode:Active;" value="" />
+                </td>
+               </tr>
+               <tr>
+                <th class="contactHead">
+                 <label for="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID330_fldValue_txtSingleTextBox" id="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID330_lblTitle">
+                  Email
+                 </label>
+                 <span class="NormalRed">
+                  必須
+                 </span>
+                </th>
+                <td class="contactInner">
+                 <div id="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID330_fldValue_divAboveDescription">
+                  例）taro@hoken.co.jp
+                 </div>
+                 <input type="text" id="mail_email" name="mail_email" style="width:300px;ime-mode:disabled;" value="" />
+                </td>
+               </tr>
+               <tr>
+                <th class="contactHead">
+                 <label for="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID331_fldValue_txtSingleTextBox" id="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID331_lblTitle">
+                  TEL
+                 </label>
+                 <span class="NormalRed">
+                  必須
+                 </span>
+                </th>
+                <td class="contactInner">
+                 <div id="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID331_fldValue_divAboveDescription">
+                  ハイフンあり
+                 </div>
+                 <input type="text" id="mail_tel" name="mail_tel" style="width:200px;ime-mode:disabled;" value="" />
+                 <div id="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID331_fldValue_divDescription">
+                  ※携帯、勤務先等日中ご連絡がとれる番号をご記入ください。
+                 </div>
+                </td>
+               </tr>
+               <tr>
+                <th class="contactHead">
+                 <label id="dnn_ctr1115_ViewMailForm_grdMain_PageID29_repCategory_ctl01_repField_ItemID339_lblTitle">
+                  お問い合わせ内容
+                 </label>
+                 <span class="NormalRed">
+                  必須
+                 </span>
+                </th>
+                <td class="contactInner">
+                 <table border="0" id="dnn_ctr1115_ViewMailForm_grdMain_PageID29_repCategory_ctl01_repField_ItemID339_fldValue_cblCheckBoxList">
+                  <tr>
+                   <td>
+                    <input type="checkbox" name="mail_subject[]" id="subject_1" value="ご契約内容のお問い合わせ" /> ご契約内容のお問い合わせ
+                   </td>
+                  </tr>
+                  <tr>
+                   <td>
+                    <input type="checkbox" name="mail_subject[]" id="subject_2" value="新規契約のご相談" /> 新規契約のご相談
+                   </td>
+                  </tr>
+                  <tr>
+                   <td>
+                    <input type="checkbox" name="mail_subject[]" id="subject_3" value="その他" /> その他
+                   </td>
+                  </tr>
+                  <tr>
+                   <td>
+                    <textarea name="mail_text" rows="5" cols="200" style="ime-mode:Active;"></textarea>
+                   </td>
+                  </tr>
+                 </table>
+                </td>
+               </tr>
+               <tr>
+                <th class="contactHead">
+                 <label id="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID338_lblTitle">
+                  個人情報の利用について
+                 </label>
+                 <span class="NormalRed">
+                  必須
+                 </span>
+                </th>
+                <td class="contactInner">
+                 <div id="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID338_fldValue_divAboveDescription">
+                  <a class="arrowLink externalLink" href="/privacy-policy.html" target="_blank">
+                   個人情報保護に関する基本方針
+                  </a>
+                 </div>
+                 <span id="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID338_fldValue_cblCheckBoxList">
+                  <input type="checkbox" name="mail_agree" value="1" />
+                  <label for="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID338_fldValue_cblCheckBoxList_0">
+                   同意する
+                  </label>
+                 </span>
+                 <div id="dnn_ctr1113_ViewMailForm_grdMain_PageID28_repCategory_ctl01_repField_ItemID338_fldValue_divDescription">
+                  ※当フォームをご利用の際には、ご同意いただくことが必要となります。
+                 </div>
+                </td>
+               </tr>
+              </table>
+             </div>
+             <div class="contactBtnWrap">
+              <span class="confirmBtn">
+               <input type="hidden" name="mail_blog_id" value="1" />
+               <input type="hidden" name="mail_setting" value="関西ペインWEBでの保険のお問合せ" />
+               <input type="submit" accesskey="v" name="mail_preview" id="mail_preview" value="上記の内容で確認画面へ"  class="confirm-btn" />
+              </span>
+             </div>
+  </form> 
+             <h2>
+              保険に関するお問い合わせ
+             </h2>
+             <p>
+              お急ぎの方はお電話でも受け付けております。
+              <br/>
+              大阪職域保険相談部　関西ペイントグループ担当
+              <br/>
+              <span class="telLink">
+               0120-862-326
+              </span>
+              <br/>
+              受付時間：平日9時～17時
+              <br/>
+              ※年末年始を除く
+             </p>
+            </div>
+            <!-- End_Module_1400 -->
+           </div>
+          </div>
+         </div>
+        </section>
+       </div>
+       <div class="NavSmtSStempPane" id="dnn_NavSmtSStempPane">
+        <div id="dnn_ctr1006_ContentPane">
+         <!-- Start_Module_1006 -->
+         <div id="dnn_ctr1006_ModuleContent">
+          <!-- End_Module_1006 -->
+         </div>
+        </div>
+       </div>
+       <div class="FootSmtSStempPane DNNEmptyPane" id="dnn_FootSmtSStempPane">
+       </div>
+      </div>
+     </main>
+    </div>
+    <footer id="footBody">
+     <p class="pagetop">
+      <a href="#headBody">
+       ページトップへ
+      </a>
+     </p>
+     <div class="FootSStempPane" id="dnn_FootSStempPane">
+      <section class="zero">
+       <div class="contents">
+        <div class="actionBtn">
+        </div>
+        <div id="dnn_ctr1008_ContentPane">
+         <!-- Start_Module_1008 -->
+         <div id="dnn_ctr1008_ModuleContent">
+          <div id="dnn_ctr1008_HtmlModule_HtmlModule_lblContent">
+           <div class="fContents">
+            ＜募集代理店＞_＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
+            <br/>
+            <p class="logo">
+             <img alt="MSTエムエスティ保険サービス株式会社" src="/Portals/0/images/common/logo.png"/>
+            </p>
+            <address>
+             <span>
+              〒163-1537
+             </span>
+             東京都新宿区西新宿1丁目6番1号 新宿エルタワー
+            </address>
+           </div>
+          </div>
+          <!-- End_Module_1008 -->
+         </div>
+        </div>
+       </div>
+      </section>
+     </div>
+     <p class="copyright">
+      <span class="copyrightCss" id="dnn_dnnCOPYRIGHT_lblCopyright">
+       Copyright© 2015 MST Insurance Service Co., Ltd. All Rights Reserved.
+      </span>
+     </p>
+    </footer>
+ </body>
+</html>

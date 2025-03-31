@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News｜エムエスティ保険サービス株式会社</title>
+    <meta name="description" content="損害保険・生命保険代理店、エムエスティ保険サービスのNewsのページです。">
+    <link rel="stylesheet" href="/asset/css/style.css">
+    <link rel="stylesheet" href="/asset/css/top.css">
+    <link rel="stylesheet" href="/asset/css/news.css"> <!-- サブページ専用のCSS -->
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <div id="header-sub" class="header-sub header"></div>
+
+    <!-- メインコンテンツ -->
+    <main class="page-sub page-news">
+        <!-- ページタイトル -->
+        <section class="page-title">
+            <h1>News</h1>
+        </section>
+        <!-- コンテンツエリア -->
+        <section class="content-wrapper">
+            <div class="container">
+                <div id="contentWrap">
+                <section class="news-release">
+                    <div class="tab-container">
+                        <div class="tab-content active" id="tab-2025">
+                            <div class="news-age"><mt:ArchiveDate format="%Y年"></div>
+                        <mt:Entries sort_by="authored_on" sort_order="desc">
+                            <article class="news-item" data-date="<mt:EntryDate format="%Y-%m-%d">">
+                                <div class="news-info">
+                                    <div class="news-date"><mt:EntryDate format="%Y/%m/%d" /></div>
+                                    <span class="news-tag cat-<mt:CategoryID>"><mt:CategoryLabel></span>
+                                </div>
+                              　<mt:If tag="DirectLink">
+                                    <p>
+                                        <a href="<mt:DirectLink>" class="news-content">                        
+	                                        <mt:EntryTitle>
+                                        </a>
+                                    </p>
+                                <mt:Else>
+                                  　<mt:If tag="EntryDataPdf">
+                                        <p>
+                                            <a href="<mt:EntryDataPdf>" target="_blank" class="news-content">                        
+	                                            <mt:EntryTitle>
+                                            </a>
+                                            <img src="/asset/img/ico_link-pdf.png" alt="PDFアイコン">
+                                        </p>
+                                    <mt:Else>
+                                        <a href="<mt:EntryPermalink>"  class="news-content"><mt:EntryTitle /></a>
+                                    </mt:If>
+                                </mt:If>
+                            </article>
+                        </mt:Entries>
+                        </div>
+                    </div>
+                </section>
+</mt:PaginationFooter>
+</mt:Pagination>
+            </div>
+<div id="sideWrap">
+<div class="news-title"><a href="/news.html">ニュースリリース</a></div>
+                    <ul class="news-list">
+        <mt:ArchiveList archive_type="Yearly">
+            <li>
+                <a href="<mt:ArchiveLink>"><mt:ArchiveDate format="%Y年"></a>
+            </li>
+        </mt:ArchiveList>
+</ul>
+                </div>
+        </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <div id="footer-sub" class="footer-sub footer"></div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll(".news-item");
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // 時間をクリア
+
+    items.forEach(item => {
+      const dateStr = item.getAttribute("data-date"); // 例: "2025-03-30"
+      if (!dateStr) return;
+
+      const postDate = new Date(dateStr);
+      const diffTime = today - postDate;
+      const diffDays = diffTime / (1000 * 60 * 60 * 24);
+
+        const newMark = document.createElement("span");
+        newMark.className = "news-new";
+        newMark.style.color = "red";
+        newMark.style.fontWeight = "bold";
+        newMark.style.marginLeft = "10px";
+      if (diffDays <= 7 && diffDays >= 0) {
+        newMark.textContent = "New";
+    } else {
+        newMark.textContent = "";
+      }
+    
+        const infoDiv = item.querySelector(".news-info");
+        infoDiv?.appendChild(newMark);
+    });
+  });
+</script>
+    <!-- スクリプト -->
+    <script src="/asset/js/header.js"></script>
+    <script src="/asset/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会社概要</title>
+    <link rel="stylesheet" href="https://mst-is.check-demo.site/asset/css/style.css">
+    <link rel="stylesheet" href="https://mst-is.check-demo.site/asset/css/top.css">
+</head>
+<style>
+  .info-text {
+    margin-bottom: 20px;
+    padding:0 50px;
+    font-size: 14px;
+    color: #333;
+  }
+        .step-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .step .step-num {
+            padding: 10px 15px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .step .step-text {
+            padding: 10px 20px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            min-width: 200px;
+        }
+
+        /* STEP 1（選択中のステップ） */
+        .step.active .step-num {
+            background-color: #d32f2f; /* 赤 */
+        }
+
+        .step.active .step-text {
+            background-color: #e57373; /* 薄赤 */
+        }
+
+        /* STEP 2, 3（未選択のステップ） */
+        .step.inactive .step-num {
+            background-color: #333; /* 黒 */
+        }
+
+        .step.inactive .step-text {
+            background-color: #999; /* グレー */
+        }
+
+        .arrow {
+            color: #666;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 8px;
+        }
+</style>
+<html lang="ja">
+  <body>
+    <div id="header-sub" class="header-sub header"></div>
+    <main class="page-sub">
+      <!-- ページタイトル -->
+      <section class="page-title">
+        <h1>個人のお客さまお問い合わせ</h1>
+      </section>
+      <section class="content-wrapper">
+        <div class="info-text">
+          お問い合わせいただきました内容については、後日、当社の担当から直接ご回答申し上げます。<br><br>
+          ※このフォームは、SSLによる暗号化により個人情報を安全に送受信いたします。<br><br>
+          ※お問い合わせいただいた方と、当社でご加入中の保険の契約者が異なる場合、お問い合わせにお答えできないケースがあります。契約者ご本人からお問合せいただきますようお願いいたします。
+        </div>
+        <div class="step-container">
+    　　  <div class="step active">
+            <div class="step-num">STEP 1</div>
+            <div class="step-text">お客様情報の入力</div>
+          </div>
+          <div class="arrow">></div>
+          <div class="step inactive">
+            <div class="step-num">STEP 2</div>
+            <div class="step-text">内容の確認</div>
+          </div>
+          <div class="arrow">></div>
+          <div class="step inactive">
+            <div class="step-num">STEP 3</div>
+            <div class="step-text">お問い合わせ完了</div>
+          </div>
+        </div>
+        <form method="post" action="/mt/plugins/MailForm/mt-mail-form.cgi" name="mail_form" id="mail_form">
+      <p id="mail-form-author">
+          <label for="mail_author">名前</label><br />
+          <input id="mail_author" name="mail_author" size="30" value="" style="width : 90%;" />
+      </p>
+      <p id="mail-form-email">
+          <label for="mail_email">メールアドレス</label><br />
+          <input id="mail_email" name="mail_email" size="30" value="" style="width : 90%;" />
+      </p>
+      <p id="mail-form-subject">
+          <label for="mail_subject">タイトル</label><br />
+          <input id="mail_subject" name="mail_subject" size="30" value="" style="width : 90%;" />
+      </p>
+      <p id="mail-form-text">
+          <label for="mail_text">本文</label><br />
+          <textarea id="mail_text" name="mail_text" rows="15" cols="50" style="width : 90%;"></textarea>
+      </p>
+      <div id="comments-open-footer">
+        <p id="mail-form-footer">
+            <input type="hidden" name="mail_blog_id" value="1" />
+            <input type="hidden" name="mail_setting" value="個人のお客さまお問い合わせ" />
+            <input type="submit" accesskey="v" name="mail_preview" id="mail_preview" value="確認" class="primary button" />
+            <input type="submit" accesskey="s" name="mail_post" id="mail_post" value="送信" class="button" />
+        </p>
+      </div>
+  </form>
+      </section>
+    </main>
+
+    <!-- フッター -->
+    <div id="footer-sub" class="footer-sub footer"></div>
+  
+    <!-- スクリプト -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://mst-is.check-demo.site/asset/js/header.js"></script>
+    <script src="https://mst-is.check-demo.site/asset/js/main.js"></script>
+  
+  </body>
+</html>

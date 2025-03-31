@@ -657,14 +657,6 @@ h4+p+p {
     font-size: 1.6rem;
 }
 
-h3+ul li {
-    font-size: 1.4rem;
-    padding-left: 1em;
-    /* 1文字分のスペースを確保 */
-    line-height: 1.4;
-    /* 行間の調整（適宜変更してください） */
-}
-
 h3+ul li p {
     padding-left: 2em;
     /* 1文字分のスペースを確保 */

@@ -161,6 +161,14 @@
     display: inline-block;
 }
 
+.cat-5{
+    background: #B9141E;
+    padding: 0 15px;
+    color: white;
+    font-size: 14px;
+    display: inline-block;
+}
+
 .tag-pdf {
     background: #d01e28;
     color: white;
@@ -400,7 +408,7 @@
     display: flex;
     width: auto;
     display: flex;
-    gap: 20px;
+    gap: 40px;
     place-items: center;
     text-align: center;
     font-size: 1.6rem;

@@ -1093,6 +1093,8 @@ ul.telNumberList li strong{padding-right:10px;}
 .contactBtnWrap .sendBtn input{display:block;width:50%;margin:10px auto 0;padding:10px 0;background:#cf232b;color:#fff;font-size:18px;text-align:center;}
 .contactBtnWrap .confirmBtn input:hover,
 .contactBtnWrap .sendBtn input:hover{opacity:0.8;filter:alpha(opacity=80);-moz-opacity:0.8;}
+.contactBtnWrap .backBtn a{display:inline-block;margin:0;padding-left:12px;background:url(/Portals/0/images/common/arrow_red_h.png) 0 3px no-repeat;color:#000;}
+.contactBtnWrap .backBtn a:hover{text-decoration:underline;cursor:pointer;}
 
 
 /* ========================================================

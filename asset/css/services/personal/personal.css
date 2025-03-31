@@ -95,6 +95,7 @@ html {
     grid-template-columns: repeat(4, 1fr);
     margin-block-start: 4rem;
     margin-block-end: 4rem;
+    margin-left: 31px;
   }
   .el_lv2Heading {
     border-inline-start-width: 31px;

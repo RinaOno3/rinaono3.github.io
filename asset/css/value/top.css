@@ -884,6 +884,47 @@ svg {
     }
 
 
+
+}
+
+@media screen and (max-width: 420px) {
+
+    .section-content .top_tx_box {
+        font-size: 1.2rem;
+    }
+
+    .section-content .top_tx_box2 {
+        font-size: 1.2rem;
+    }
+
+    .info-item1-1 {
+        position: absolute;
+        top: 120%;
+        left: 55px;
+    }
+
+    .info-item1-2 {
+        right: 53px;
+        top: 128%;
+    }
+
+    .info-item1-3 {
+        top: 165%;
+        right: 56px;
+    }
+
+    .global-network {
+        text-align: left;
+        top: 185%;
+    }
+
+    .block5 {
+        top: 80%;
+        right: 32%;
+    }
+
+
+
 }
 
 @media screen and (max-width: 400px) {
@@ -897,9 +938,6 @@ svg {
 
     }
 
-    .section-content .top_tx_box {
-        font-size: 1.2rem;
-    }
 
     .section-content .top_tx_box2 {
         font-size: 1.2rem;
@@ -949,4 +987,23 @@ svg {
     .block5 {
         right: 40%;
     }
+
+
+}
+
+@media screen and (max-width: 375px)  {
+
+    .info-item1-1 {
+        top: 115%;
+        left: 37px;
+    }
+
+    .content-block img {
+        height: 15px;
+    }
+
+    .block2 img {
+        height: 27px;
+    }
+
 }

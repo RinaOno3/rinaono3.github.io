@@ -1,0 +1,18 @@
+<mt:SetVarBlock name="this_link"><$mt:CGIPath$>plugins/MailForm/mt-mail-form.cgi</mt:SetVarBlock>
+
+<!DOCTYPE html>
+<html lang="<$mt:BlogLanguage$>">
+  <head>
+    <meta charset="<$mt:PublishCharset$>">
+    <title>送信エラー - <$mt:BlogName encode_html="1"$></title>
+  </head>
+  <body>
+    <h2 class="comments-open-header">メール送信エラー</h2>
+    <div class="comments-open-content">
+      <p>以下のエラーが発生しました。<br />メールを修正して再度送信してください。</p>
+      <blockquote><p><$MTErrorMessage$></p></blockquote>
+    </div>
+    <h2 class="comments-open-header">メールの送信</h2>
+    <$MTIncludeMailFormCommon$>
+  </body>
+</html>

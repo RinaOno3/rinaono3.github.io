@@ -632,6 +632,8 @@ body > .chartWrap .chartContent .chartTextArea{margin:0;padding:250px 160px 20px
 .contactBtnWrap .sendBtn input:hover{filter:alpha(opacity=80);-moz-opacity:0.8;opacity:0.8;}
 .contactBtnWrap input.notClick{background:#ccc;color:#999;}
 .contactBtnWrap input.notClick:hover{filter:alpha(opacity=100);-moz-opacity:1.0;opacity:1.0;cursor:default;}
+.contactBtnWrap .backBtn a{display:inline-block;margin:0;padding-left:12px;background:url(/Portals/0/images/common/arrow_red_h.png) 0 3px no-repeat;color:#000;}
+.contactBtnWrap .backBtn a:hover{text-decoration:underline;}
 
 /* 273_お申込みキャンセル */
 .reserveCancelInput{margin:0 0 30px;padding:0;width:100%;}

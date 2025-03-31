@@ -71,11 +71,10 @@ p {
 .news-list {
     list-style: none;
     padding: 0;
-    border: 1px solid #ccc;
     margin-top:10px;
 }
 
-.cat-1,.cat-2,.cat-3,.cat-4 {
+.cat-1,.cat-2,.cat-3,.cat-4,.cat-5 {
     display: inline-block;
     color: white;
     padding: 2px 20px;
@@ -96,6 +95,8 @@ p {
 }
 .news-list li {
     padding: 10px;
+    border: 1px solid #ccc;
+    margin-top:10px;
 }
 
 .news-list li::before {

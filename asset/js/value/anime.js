@@ -41,14 +41,14 @@ if (isSP) {
       trigger: pageTitle,
       start: "top top",
       end: "+=150%",
-      scrub: 2,
+      scrub: 1.5,
     },
   });
 
   sec1Timeline.to(treePath, {
     strokeDashoffset: 0,
     ease: "none",
-    duration: 3.5,
+    duration: 3,
   });
 
   sec1Timeline.to(diamonds, {
@@ -97,8 +97,8 @@ if (isSP) {
     scrollTrigger: {
       trigger: spSection2,
       start: "top top",
-      end: "+=40%",
-      scrub: 4,
+      end: "+=50%",
+      scrub: 5,
     },
   });
 
@@ -107,7 +107,7 @@ if (isSP) {
     spSec2Timeline.to(path, {
       strokeDashoffset: 0,
       ease: "none",
-      duration: 3,
+      duration: 3.2,
     }, index * 3.2);
   });
 
@@ -202,9 +202,9 @@ if (isSP) {
   const pcSec2Timeline = gsap.timeline({
     scrollTrigger: {
       trigger: pcSection2,
-      start: "top top",
+      start: "top 15%",
       end: "+=150%",
-      scrub: 2,
+      scrub: true,
     },
   });
 
@@ -213,7 +213,7 @@ if (isSP) {
     pcSec2Timeline.to(path, {
       strokeDashoffset: 0,
       ease: "none",
-      duration: 3.5,
-    }, index * 3.6);
+      duration: 4,
+    }, index * 4.0);
   });
 }

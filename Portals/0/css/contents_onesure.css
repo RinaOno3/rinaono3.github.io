@@ -117,7 +117,7 @@ a.externalLink:after{content:url(/Portals/0/images/onesure/common/ico_external.p
 .questionnaire-form textarea:focus,
 .questionnaire-form select:focus{border:1px solid #707070;}
 .submitArea{padding:1em 0;}
-.submitArea input[type="submit"]{margin:0 10px;padding:1em 4em;color:#fff;font-size:114.29%;font-weight:bold;border:1px solid #6a625f;border-radius:3px;background:#6a625f;transition:ease-in-out 0.25s;}
+.submitArea input[type="submit"]{margin:0 10px;padding:1em 4em;color:#fff;font-size:114.29%;font-weight:bold;border:1px solid #c52a21;border-radius:3px;background:#c52a21;transition:ease-in-out 0.25s;}
 .submitArea input[type="submit"]:hover,
 .submitArea input[type="submit"]:hover{color:#6a625f;background:#fff;}
 .submitArea input[id$="_btnConfirmSend"],
@@ -126,6 +126,8 @@ a.externalLink:after{content:url(/Portals/0/images/onesure/common/ico_external.p
 .submitArea input[id$="_btnInputConfirm"]:hover,
 .submitArea input[id$="_btnConfirmSend"]:focus,
 .submitArea input[id$="_btnInputConfirm"]:focus{color:#c52a21;background:#fff;}
+.submitArea input[type="submit"].back{margin:0 10px;padding:1em 4em;color:#fff;font-size:114.29%;font-weight:bold;border:1px solid #6a625f;border-radius:3px;background:#6a625f;transition:ease-in-out 0.25s;}
+.submitArea input[type="submit"].back:hover{color:#6a625f;background:#fff;}
 .NormalRed {color:#c52a21;}
 .description{display:block;font-size:85.72%;}
 

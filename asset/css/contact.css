@@ -1,4 +1,11 @@
 @charset "UTF-8";
+.contactBtnWrap .backBtn a {
+    display: inline-block;
+    margin: 0;
+    padding-left: 12px;
+    background: url(/Portals/0/images/common/arrow_red_h.png) 0 3px no-repeat;
+    color: #000;
+}
 .info-text {
   margin-bottom: 20px;
   padding:0;
@@ -21,6 +28,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
+  height:45px;
 }
 
 .step .step-num {
@@ -170,7 +178,7 @@ min-width: auto;
 
 /* 注意書き */
 .checkbox-note {
-  font-size: 12px;
+  font-size: 14px;
   color: #666;
   margin-top: 5px;
 }
@@ -439,4 +447,12 @@ font-size: 16px;
   .introduce-text {
     width: 100%;
   }
+}
+
+.contactBtnWrap .backBtn a {
+    display: inline-block;
+    margin: 0;
+    padding-left: 12px;
+    background: url(/Portals/0/images/common/arrow_red_h.png) 0 3px no-repeat;
+    color: #000;
 }

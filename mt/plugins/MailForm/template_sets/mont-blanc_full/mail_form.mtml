@@ -1,0 +1,15 @@
+<mt:SetVar name="mail_setting" value="">
+<mt:SetVarBlock name="this_link"><$mt:BlogURL$>mailform.html</mt:SetVarBlock>
+
+<!DOCTYPE html>
+<html lang="<$mt:BlogLanguage$>">
+  <head>
+    <meta charset="<$mt:PublishCharset$>">
+    <title>メールフォーム - <$mt:BlogName encode_html="1"$></title>
+  </head>
+  <body>
+    <h2 class="comments-open-header">メールの送信</h2>
+    <p>こちらでメールを送信していただくことができます。<br />「●」がついている項目は入力必須です。</p>
+    <$MTIncludeMailFormCommon$>
+  </body>
+</html>
