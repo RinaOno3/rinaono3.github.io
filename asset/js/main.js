@@ -165,72 +165,83 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // MST SVGアニメーション
-// MST SVGアニメーション
 document.addEventListener("DOMContentLoaded", () => {
     const isSP = window.innerWidth <= 768;
 
-    // パスID一覧（SP or PC）
     const pathIds = isSP
         ? ["Path-Mst-1-sp", "Path-Mst-2-sp", "Path-Mst-3-sp", "Path-Mst-4-sp"]
-        : ["Path-Mst-1", "Path-Mst-2", "Path-Mst-3", "Path-Mst-4", "Path-Mst-5", "Path-Mst-6"];
+        : ["Path-Mst-1", "Path-Mst-2", "Path-Mst-3", "Path-Mst-4", "Path-Mst-5"];
 
-    // トリガーとなるSVG要素
     const triggerId = isSP ? "svg-sp" : "svg-pc";
     const triggerElement = document.getElementById(triggerId);
-
     if (!triggerElement) return;
 
-    // GSAPプラグイン登録
     gsap.registerPlugin(ScrollTrigger);
 
-    // タイムライン作成（時間ベースで進むアニメーション）
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: triggerElement,
-            start: "top 80%", // トリガー位置
-            toggleActions: "play none none none", // 一度だけ再生
+            start: "top 80%",
+            toggleActions: "play none none none",
         }
     });
 
-    // 各パスに初期状態をセットし、アニメーションを追加
+    const baseSpeed = 500;
+    const maxDuration = 3;
+    const delayStep = 0.5; // ← 各アニメを〜秒ずつ被せていく
+
+    let startTime = 0;
+
     pathIds.forEach((id, index) => {
         const path = document.getElementById(id);
         if (!path) return;
 
         const length = path.getTotalLength();
+        let duration = length / baseSpeed;
+        if (duration > maxDuration) duration = maxDuration;
 
         gsap.set(path, {
             strokeDasharray: length,
-            strokeDashoffset: length
+            strokeDashoffset: length,
         });
 
         tl.to(path, {
             strokeDashoffset: 0,
-            duration: 2., // 各線の描画時間
-            ease: "power1.inOut"
-        }, index * 1); // アニメーションの間隔
+            duration: duration,
+            ease: "none"
+        }, startTime);
+
+        startTime += delayStep; // ← 少しずつ被せていく
     });
 
-    // ボタンをふわっと出現（SVGの1本目と同時に）
+    // ボタンをふわっと出現（最初のパスと同時）
     tl.from(".mst-button", {
         opacity: 0,
         y: 20,
-        duration: 2,
-        ease: "power2.out"
-    }, 0); // ← タイムラインの先頭（0秒）に出現させる
-});
-
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.from(".fv-container", {
-    scrollTrigger: {
-      trigger: ".fv",         // トリガーはfvセクション
-      start: "top center",    // .fvの上端が画面の中央にきたら発火
-      toggleActions: "play none none none"
-    },
+        duration: 1.5,
+        ease: "power2.out",
+        onStart: () => { // ★ 出現と同時に点滅スタート！
+          const button = document.querySelector(".mst-button");
+          if (button) {
+            button.classList.add("glow-on");
+          }
+        }
+      }, startTime + 0.6);
+      
+  // FV画像をふわっと
+  gsap.from(".fv-img", {
     opacity: 0,
-    y: 30,
-    duration: 1.5,
+    scale: 1.05,
+    duration: 1.3,
     ease: "power2.out"
   });
-  
+
+  // タイトル画像をちょっと遅れてふわっと
+  gsap.from(".fv-content h1", {
+    opacity: 0,
+    y: 20,
+    duration: 1,
+    ease: "power2.out",
+    delay: 0.4
+  });
+});

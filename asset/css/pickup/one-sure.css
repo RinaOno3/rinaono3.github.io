@@ -100,7 +100,7 @@ p {
 .issue-icon {
     max-width: 150px;
     width: 100%;
-    height: auto;
+    height: 150px;
 }
 
 .issue-content h3 {
@@ -239,11 +239,11 @@ p {
 .issue-content li::before {
     content: "";
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 25px;
+    left: 4px;
+    top: 2px;
+    width: 16px;
     /* 画像の幅 */
-    height: 25px;
+    height: 16px;
     /* 画像の高さ */
     background-image: url("/asset/img/pickup/one-sure/icon_cross.png");
     /* 画像のパス */

@@ -27,40 +27,50 @@
 
 
 /* ファーストビューのスタイル */
-.fv {
+
+.fv-wrap {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .fv {
+    flex-shrink: 0;
+  }
+  
+  .fv-content {
     position: relative;
     width: 100%;
-    max-height: 750px;
-    height: 750px;
-    overflow: hidden;
-}
-
-.fv-container {
-    position: relative;
+    height: auto;
+  }
+  
+  .fv-img {
+    display: block;
     width: 100%;
-    height: 100%;
-    background-image: url(/asset/img/fv.jpg);
-    background-position: top;
-    background-repeat: no-repeat;
-
-}
-
-.fv-content {
+    height: auto;
+    max-height: calc(100vh - 175px); /* ← 下のボタン部分の高さぶん引く */
+    object-fit: cover;
+  }
+  
+  /* タイトル画像が画像上に重なるなら調整 */
+  .fv-content h1 {
     position: absolute;
-    top: 60%;
-    left: 30%;
+    width: 30%;
+    top: 38%;
+    left: 20%;
     transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
+  }
 
+  .sec_value_btn {
+    height: auto;
 }
 
-.fv-content h1 {
-    font-size: 3rem;
-    font-weight: bold;
+.btn-image {
+    width: 300px;
+    height: auto;
+    display: block;
 }
 
-/* NEWS セクションのスタイル */
 /* NEWS セクションのスタイル */
 .news {
     background: white;
@@ -129,7 +139,7 @@
     color: #333;
 }
 
-.cat-1{
+.cat-1 {
     background: #333333;
     padding: 0 15px;
     color: white;
@@ -137,7 +147,7 @@
     display: inline-block;
 }
 
-.cat-2{
+.cat-2 {
     background: #D55513;
     padding: 0 15px;
     color: white;
@@ -145,7 +155,7 @@
     display: inline-block;
 }
 
-.cat-3{
+.cat-3 {
     background: #22720E;
     padding: 0 15px;
     color: white;
@@ -153,7 +163,7 @@
     display: inline-block;
 }
 
-.cat-4{
+.cat-4 {
     background: #136195;
     padding: 0 15px;
     color: white;
@@ -161,7 +171,7 @@
     display: inline-block;
 }
 
-.cat-5{
+.cat-5 {
     background: #B9141E;
     padding: 0 15px;
     color: white;
@@ -398,23 +408,24 @@
     /* 縦横比を保持 */
     display: block;
     /* 余白をなくす */
-    
+
 }
 
 .link_area_wrp {
     margin-inline: auto;
+    padding-bottom: 20px;
 }
+
 .map_link_btn {
     display: flex;
     width: auto;
     display: flex;
-    gap: 40px;
     place-items: center;
     text-align: center;
     font-size: 1.6rem;
     color: #fff;
     margin-inline: auto;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .map_link_btn a img {
@@ -489,9 +500,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2); /* 透明度50%の黒 */
+    background: rgba(0, 0, 0, 0.2);
+    /* 透明度50%の黒 */
     z-index: 1;
 }
+
 /* テキスト部分 */
 .recruit-content {
     padding: 20px;
@@ -528,8 +541,8 @@
 
 .sec_Sustainability {
     width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
-                url(/asset/img/bg_sec_5.jpg) no-repeat center center / cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+        url(/asset/img/bg_sec_5.jpg) no-repeat center center / cover;
     height: 680px;
     display: flex;
     align-items: center;
@@ -703,12 +716,13 @@
 }
 
 .group-links .group-item:nth-child(4) .group-link {
-   padding: 5px 30px 5px 2px;
+    padding: 5px 30px 5px 2px;
 }
 
 .group-links .group-item:nth-child(4) .group-content img {
     max-height: 52px;
 }
+
 /* 個別のリンクアイテム */
 .group-item {
     display: flex;
@@ -870,7 +884,6 @@
     gap: 8px;
     list-style: none;
     padding: 0;
-    margin-bottom: 10px;
     font-size: 1.7rem;
     align-items: center;
 }
@@ -886,9 +899,12 @@
 }
 
 .footer-links li:not(:last-child)::after {
-    content: "｜"; /* 区切り線 */
-    margin-left: 8px; /* 縦線と文字の間隔 */
+    content: "｜";
+    /* 区切り線 */
+    margin-left: 8px;
+    /* 縦線と文字の間隔 */
 }
+
 /* 著作権表示 */
 .copyright {
     color: #333;
@@ -948,6 +964,13 @@
     gap: 100px;
 }
 
+.news-content {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+
+}
+
 @media (max-width: 1800px) {
     .sec_slider {
         max-width: 1500px;
@@ -992,6 +1015,15 @@
 
 
 @media (max-width: 1700px) {
+    .btn-image {
+        width: 215px;
+    }
+
+    .sec_value_btn {
+        max-height: 175px;
+        height: 175px;
+        /* 適宜調整！仮の高さ */
+    }
 
     .header-buttons {
         margin-bottom: 0;
@@ -1029,14 +1061,8 @@
         margin: 20px auto;
     }
 
-    .fv-content {
-        width: 41%;
-        top: 61%;
-        left: 26%;
-    }
-
     .news {
-        padding-top: 25px;
+        padding-top: 40px;
     }
 
     .news h2 {
@@ -1168,7 +1194,7 @@
         justify-content: flex-start;
         margin-left: 30px;
     }
- 
+
     .recruit-info .sec_content {
         padding: 0;
         gap: 215px;
@@ -1322,6 +1348,24 @@
 
 @media (max-width: 960px) {
 
+    .fv-content h1 {
+        position: absolute;
+        width: 78%;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+      .fv-img {
+        max-height: 100vh;
+        object-fit: cover;
+    }
+
+    .sec_value_btn {
+        height: 300px;
+    }
+
+
     .company-link,
     .group-link {
         max-width: 260px;
@@ -1426,7 +1470,7 @@
     }
 
     .news {
-        padding: 10px 0 30px 0;
+        padding: 100px 0 30px 0;
         border-bottom: 1px solid #D70C18;
     }
 
@@ -1480,14 +1524,6 @@
         right: 20px;
     }
 
-    .fv-container {
-        background-image: url(/asset/img/fv_sp.jpg);
-        background-size: cover;
-        background-position: top;
-        background-repeat: no-repeat;
-        min-height: 680px;
-    }
-
     .risk-management {
         background-image: url(/asset/img/bg_sec_3_sp.jpg);
         background-size: cover;
@@ -1503,8 +1539,8 @@
 
     .sec_Sustainability {
         justify-content: center;
-        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
-                    url(/asset/img/bg_sec_5_sp.jpg) no-repeat center center / cover;
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+            url(/asset/img/bg_sec_5_sp.jpg) no-repeat center center / cover;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -1532,14 +1568,8 @@
         color: #fff;
     }
 
-    .company-info .sec_content p{
+    .company-info .sec_content p {
         margin-bottom: 6rem;
-    }
-
-    .fv-content {
-        left: 50%;
-        width: 85%;
-        top: 38%;
     }
 
     .company-link {
@@ -1561,7 +1591,7 @@
 
     .group-item p {
         width: 260px;
-        font-size: 0.8rem;
+        font-size: 1.2rem;
         font-weight: normal;
     }
 
@@ -1627,7 +1657,7 @@
     }
 
     .sec_ttl h3 {
-        margin-bottom: 0;       
+        margin-bottom: 0;
         font-weight: normal;
     }
 
@@ -1678,7 +1708,7 @@
         margin-bottom: 2rem;
         font-weight: normal;
     }
-    
+
     .sec_Sustainability .sec_content {
         padding: 0;
         margin: 0;
@@ -1694,7 +1724,7 @@
     }
 
     .recruit-info .sec_content p {
-       margin-bottom: 0;
+        margin-bottom: 0;
     }
 
     .recruit-info .tx_wrp {
@@ -1710,6 +1740,7 @@
 }
 
 @media (max-width: 760px) {
+
 
     .group-item {
         display: flex;
@@ -1730,11 +1761,6 @@
         gap: 10px;
     }
 
-    .map_link_btn a {
-     
-    
-    }
-
     .map_link_btn a img {
         margin: auto;
         min-height: 60px;
@@ -1743,6 +1769,177 @@
 
 }
 
-.pointer-none{
-  pointer-events: none;
+.pointer-none {
+    pointer-events: none;
+}
+
+/* MST SVGアニメーション */
+/* ========================
+  RESET & BASE
+======================== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #fff;
+}
+
+.mst-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    padding: 25px 10px 40px 30px;
+    overflow-x: auto;
+}
+
+/* ========================
+    SVG LINE AREA
+  ======================== */
+.mst-line {
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* PC/SP切り替え */
+.pc {
+    display: block;
+}
+
+.sp {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .pc {
+        display: none;
+    }
+
+    .sp {
+        display: block;
+    }
+
+    .mst-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-right: 0;
+        gap: 20px;
+        padding: 30px 0;
+    }
+
+    .mst-line {
+        width: 100%;
+    }
+}
+
+/* ========================
+    MST BUTTON
+  ======================== */
+.mst-button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 1;
+}
+
+@keyframes glowBlink {
+    0%, 100% {
+      opacity: 0.6; /* 少し明るく */
+      transform: scale(1); /* 拡大させたいならこれを使う */
+    }
+    50% {
+      opacity: 1; /* 最大光 */
+      transform: scale(1.1); /* ちょっとだけ大きく光らせる */
+    }
+  }
+  
+  .mst-button::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -8px;
+    right: 0;
+    bottom: -4px;
+    background: rgba(215, 12, 24, 0.4); /* 少し濃く */
+  filter: blur(16px); /* 光のボワッと感強めに */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+    border-radius: 0 80px 80px 0;
+  /* 点滅アニメーション（速く・拡大付き） */
+  animation: glowBlink 1s ease-in-out infinite;
+  animation-play-state: paused;
+  }
+
+  .glow-on::before {
+    animation-play-state: running; 
+    transform: scale(1.1);
+  }
+
+  
+  .mst-button:hover::before {
+    opacity: 1;
+    animation: none; /* ← 点滅停止 */
+  }
+  
+  
+
+
+.mst-button:hover::before {
+    opacity: 1;
+}
+
+
+
+.btn-arrow {
+    position: absolute;
+    bottom: 6px;
+    right: 75px;
+    width: 20px;
+    transition: transform 0.3s ease;
+}
+
+.mst-button:hover .btn-arrow {
+    transform: translateX(6px);
+}
+
+/* SP用のサイズ調整 */
+@media screen and (max-width: 768px) {
+    .btn-image {
+        width: 140px;
+    }
+
+    .btn-arrow {
+        bottom: 10px;
+        right: 110px;
+    }
+
+    .btn-image {
+        width: 90%;
+        margin-inline: auto;
+    }
+
+    .mst-button::before {
+        opacity: 1;
+      }
+
+      .mst-button::before {
+        content: "";
+        position: absolute;
+        top: -4px;
+        left: -5px;
+        /* ← 左にズラす */
+        right: 0;
+        bottom: -4px;
+        background: rgba(215, 12, 24, 0.3);
+        filter: blur(10px);
+        transition: opacity 0.4s ease;
+        z-index: -1;
+        border-radius: 0 80px 80px 0;
+    }
 }
