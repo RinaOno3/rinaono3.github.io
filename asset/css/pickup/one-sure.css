@@ -41,6 +41,10 @@ p {
 /*---------------------- 
     OneSureとは 
 ----------------------*/
+.what-is p {
+    padding: 0 60px;
+}
+
 .what-is img {
     display: block;
     width: 300px;

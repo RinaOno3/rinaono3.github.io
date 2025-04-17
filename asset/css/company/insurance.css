@@ -100,10 +100,6 @@
    
 }
 
-.sec_1 {
-    margin-bottom: 100px;
-}
-
 .sec_1 h2,
 .sec_2 h2 {
     font-size: 3.2rem;
@@ -215,6 +211,12 @@
        margin-top: 0;
         margin-bottom: 5px;
     }
+    .pc_only{
+       display:block;
+    }
+    .sp_only{
+       display:none;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -278,10 +280,6 @@
         text-align: left;
     }
 
-    .sec_1 {
-        margin-bottom: 80px;
-    }
-    
     .contact-header {
         padding-top: 2rem;
     }
@@ -325,6 +323,13 @@
         padding: 20px;
         max-width: 100%;
         width: 100%;
+    }
+    
+    .pc_only{
+       display:none;
+    }
+    .sp_only{
+       display:block;
     }
 }
 

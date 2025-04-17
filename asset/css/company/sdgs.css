@@ -29,7 +29,7 @@ section {
 }
 
 .text {
-  width: 75%;
+  width: 80%;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: normal;
   font-size: 18px;
@@ -38,6 +38,7 @@ section {
   margin-bottom: 50px;
   margin-inline: auto;
   text-align: justify;
+  padding-left: 6em;
 }
 
 

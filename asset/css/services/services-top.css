@@ -214,9 +214,6 @@
 }
 
 @media screen and (max-width: 1024px) {
-    .page-title p {
-        font-size: 1.6rem;
-    }
 
     .content-wrapper {
         font-size: 1.6rem;

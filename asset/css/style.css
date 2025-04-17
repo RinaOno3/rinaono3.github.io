@@ -19,6 +19,7 @@ body {
 html {
     font-size: 62.5%;
     /* 16px × 62.5% = 10px */
+    scroll-behavior: smooth;
 }
 
 /* 全要素のボックスモデルを統一 */
@@ -101,7 +102,12 @@ button {
 }
 
 
-
+/* ヘッダーが読み込み中のときはハンバーガー無効＋半透明 */
+body.loading #hamburger {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  
 
 /* ヘッダーの基本スタイル */
 .header {
@@ -575,6 +581,8 @@ button {
         transition: right 0.3s ease, top 0.3s ease;
         /* 右からスライドイン & 上下の移動 */
         z-index: 999;
+        /* スクロール可能にするための追加 */
+        overflow-y: auto;
     }
 
     /* メニューを開いたとき */
@@ -1027,3 +1035,39 @@ button {
 
 }
 
+.button_top {
+    background-color: #D70C18;
+    color: white;
+    font-size: 16px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: .3s;
+    margin: 0 60px 30px auto;
+    border: 2px solid #D70C18;
+}
+
+.button_top:hover {
+    background-color: white;
+    color: #D70C18;
+}
+
+.button_top::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(-45deg);
+    transition: .3s;
+}
+
+.button_top:hover::before {
+    border-top: 2px solid #D70C18;
+    border-right: 2px solid #D70C18;
+} 

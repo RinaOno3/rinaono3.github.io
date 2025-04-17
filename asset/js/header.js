@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // 🔹 SPメニュー処理
-    function loadHeaderJS() {
+    // 🔹 SPメニュー処理（グローバル公開）
+    window.loadHeaderJS = function () {
         console.log("✅ SPメニュー処理を開始");
 
         const hamburger = document.getElementById("hamburger");
@@ -73,8 +73,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         console.log("✅ SPメニューの設定が完了しました！");
-    }
 
-    // ヘッダー読み込み後にJS実行
-    setTimeout(loadHeaderJS, 300);
+        // ✅ SPメニューの初期化が完了したので有効化
+        document.body.classList.remove("loading");
+    };
+
+    // ❌ これは main.js 側で呼ぶので削除してOK
+    // setTimeout(loadHeaderJS, 300);
 });

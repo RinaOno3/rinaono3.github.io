@@ -64,6 +64,7 @@
 
     .details-table th {
         width: 25%;
+        height:115px;
         background-color: #e6e6e6;
         font-size: 1.2rem;
         font-weight: bold;
@@ -75,6 +76,7 @@
 
     .details-table td {
         width: 75%;
+        height:115px;
         font-size: 1.2rem;
     }
 

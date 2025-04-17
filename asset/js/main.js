@@ -8,16 +8,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const headerContainer = document.getElementById(headerContainerId);
 
     if (headerContainer) {
+        document.body.classList.add("loading"); // ✅ 追加：ハンバーガー操作無効化
+
         fetch(`/includes/${isTopPage ? "header-top.html" : "header-sub.html"}?v=${Date.now()}`)
             .then(response => response.text())
             .then(data => {
                 headerContainer.innerHTML = data;
                 console.log(`✅ ${headerContainerId} のヘッダーを読み込みました！`);
-                setTimeout(loadHeaderJS, 300); // ヘッダー適用後に `header.js` を実行
+
+                // ✅ 2重 rAFで初期化後に有効化
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        loadHeaderJS();
+                        document.body.classList.remove("loading"); // ✅ 追加：有効化
+                    });
+                });
             })
             .catch(error => console.error(`❌ ${headerContainerId} のヘッダー読み込みエラー:`, error));
-    } else {
-        console.error(`❌ ${headerContainerId} の挿入先が見つかりません！`);
     }
 
     // ✅ フッターの読み込み
@@ -25,19 +32,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const footerContainer = document.getElementById(footerContainerId);
 
     if (footerContainer) {
+        const topScrollDiv = document.createElement("div");
+        topScrollDiv.className = "top_scroll";
+        topScrollDiv.innerHTML = `<a href="#" class="button_top">TOP</a>`;
+        footerContainer.parentNode.insertBefore(topScrollDiv, footerContainer);
+
         fetch(`/includes/${isTopPage ? "footer-top.html" : "footer-sub.html"}?v=${Date.now()}`)
             .then(response => response.text())
             .then(data => {
                 footerContainer.innerHTML = data;
                 console.log(`✅ ${footerContainerId} のフッターを読み込みました！`);
-                toggleFooterVisibility(); // フッター読み込み後に適用
+                toggleFooterVisibility();
             })
             .catch(error => console.error(`❌ ${footerContainerId} のフッター読み込みエラー:`, error));
     } else {
         console.error(`❌ ${footerContainerId} の挿入先が見つかりません！`);
     }
 
-    // 🔹 `scrollTop` の処理
     const scrollTopBtn = document.getElementById("scroll-top");
 
     if (scrollTopBtn) {
@@ -55,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // ✅ SP時に `footer-top` を非表示にする処理
     function toggleFooterVisibility() {
         const footerTop = document.querySelector('.footer-top');
         if (!footerTop) return;
@@ -64,17 +74,13 @@ document.addEventListener("DOMContentLoaded", function () {
             footerTop.style.display = "none";
             console.log("✅ SP時に footer-top を非表示にしました");
         } else {
-            footerTop.style.display = ""; // PC時はデフォルトの表示
+            footerTop.style.display = "";
         }
     }
 
-    // 初回実行
     toggleFooterVisibility();
-
-    // ウィンドウリサイズ時にも適用
     window.addEventListener("resize", toggleFooterVisibility);
 
-    // 画像拡大モーダル
     const expandButtons = document.querySelectorAll(".expand-button");
     const closeButtons = document.querySelectorAll(".close-modal");
 
@@ -99,26 +105,24 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // MAPリンクを新しいタブで開く
     document.querySelectorAll(".map-link").forEach(link => {
         link.setAttribute("target", "_blank");
     });
 
-    // アコーディオン
     const buttons = document.querySelectorAll(".accordion-btn");
 
     buttons.forEach(button => {
         button.addEventListener("click", function () {
-            this.classList.toggle("active"); // 「＋」→「−」を切り替え
+            this.classList.toggle("active");
 
             const content = this.nextElementSibling;
 
             if (content.style.maxHeight) {
-                content.style.maxHeight = null; // 閉じる
+                content.style.maxHeight = null;
             } else {
-                content.style.maxHeight = content.scrollHeight + "px"; // 開く
+                content.style.maxHeight = content.scrollHeight + "px";
                 setTimeout(() => {
-                    content.style.maxHeight = "none"; // 高さ制限を解除
+                    content.style.maxHeight = "none";
                 }, 300);
             }
         });
@@ -126,37 +130,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-// リンククリック時にセクション五を開く
+// `#sec_5` をクリックして開く処理
 document.addEventListener("DOMContentLoaded", function () {
     console.log("✅ `main.js` の実行開始");
 
-    // `#sec_5` へのリンクをクリック時にアコーディオンを開く
     const sec5Link = document.querySelector('a[href="#sec_5"]');
 
     if (sec5Link) {
         sec5Link.addEventListener("click", function (event) {
-            event.preventDefault(); // 通常のリンク動作を防ぐ
+            event.preventDefault();
 
-            const target = document.getElementById("sec_5"); // ターゲットのアコーディオン要素を取得
+            const target = document.getElementById("sec_5");
 
             if (target) {
-                // スムーズスクロール
                 window.scrollTo({
-                    top: target.offsetTop - 100, // ヘッダー分調整
+                    top: target.offsetTop - 100,
                     behavior: "smooth"
                 });
 
-                // アコーディオンのコンテンツを取得
                 const content = target.querySelector(".accordion-content");
                 const button = target.querySelector(".accordion-btn");
 
-                // アコーディオンが閉じている場合は開く
                 if (content && button && !content.style.maxHeight) {
-                    button.classList.add("active"); // 「＋」→「−」に切り替え
+                    button.classList.add("active");
                     content.style.maxHeight = content.scrollHeight + "px";
 
                     setTimeout(() => {
-                        content.style.maxHeight = "none"; // 高さ制限を解除
+                        content.style.maxHeight = "none";
                     }, 300);
                 }
             }
@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const baseSpeed = 500;
     const maxDuration = 3;
-    const delayStep = 0.5; // ← 各アニメを〜秒ずつ被せていく
+    const delayStep = 0.5;
 
     let startTime = 0;
 
@@ -211,37 +211,34 @@ document.addEventListener("DOMContentLoaded", () => {
             ease: "none"
         }, startTime);
 
-        startTime += delayStep; // ← 少しずつ被せていく
+        startTime += delayStep;
     });
 
-    // ボタンをふわっと出現（最初のパスと同時）
     tl.from(".mst-button", {
         opacity: 0,
         y: 20,
         duration: 1.5,
         ease: "power2.out",
-        onStart: () => { // ★ 出現と同時に点滅スタート！
-          const button = document.querySelector(".mst-button");
-          if (button) {
-            button.classList.add("glow-on");
-          }
+        onStart: () => {
+            const button = document.querySelector(".mst-button");
+            if (button) {
+                button.classList.add("glow-on");
+            }
         }
-      }, startTime + 0.6);
-      
-  // FV画像をふわっと
-  gsap.from(".fv-img", {
-    opacity: 0,
-    scale: 1.05,
-    duration: 1.3,
-    ease: "power2.out"
-  });
+    }, startTime + 0.6);
 
-  // タイトル画像をちょっと遅れてふわっと
-  gsap.from(".fv-content h1", {
-    opacity: 0,
-    y: 20,
-    duration: 1,
-    ease: "power2.out",
-    delay: 0.4
-  });
+    gsap.from(".fv-img", {
+        opacity: 0,
+        scale: 1.05,
+        duration: 1.3,
+        ease: "power2.out"
+    });
+
+    gsap.from(".fv-content h1", {
+        opacity: 0,
+        y: 20,
+        duration: 1,
+        ease: "power2.out",
+        delay: 0.4
+    });
 });
