@@ -1,0 +1,124 @@
+@charset "UTF-8";
+/* だしわけ */
+
+.pc-only,
+.sp-only {
+    display: none;
+}
+
+/* SP（スマホ版）のスタイル */
+@media (max-width: 768px) {
+    .sp-only {
+        display: block;
+        /* スマホ版で表示 */
+    }
+}
+
+/* PC（デスクトップ版）のスタイル */
+@media (min-width: 769px) {
+    .pc-only {
+        display: block;
+        /* PC版で表示 */
+    }
+}
+.governance .content-wrapper {
+padding-bottom: 80px;
+}
+
+.governance {
+    background-color:#F8F8F8 ;
+
+}
+/* コンテンツ全体 */
+.business-policy {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ボックス枠（白背景・枠線） */
+.policy-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+/* 赤い見出し部分 */
+.policy-highlight {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #D80C18;
+    margin: 30px 0;
+    line-height: 1.6;
+}
+
+/* 通常テキスト */
+.policy-text {
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+/* PCでは通常表示 */
+.img_governance {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  
+}
+
+/* SP（スマホ）時は横スクロール可能にする */
+@media screen and (max-width: 768px) {
+    .img_governance {
+        overflow-x: auto;
+        white-space: nowrap;
+        display: flex;
+        justify-content: start;
+        scroll-snap-type: x mandatory; /* 横スクロールをスムーズにする */
+    }
+
+    .img_governance img {
+        min-width: 130%;
+        max-width: none;
+        height: auto;
+        margin-bottom: 30px;
+    }
+    .img_governance::-webkit-scrollbar {
+        height: 8px; /* スクロールバーの高さ（横スクロール用） */
+    }
+    
+    .img_governance::-webkit-scrollbar-track {
+        background: #f8f8f8; /* スクロールバーの背景 */
+    }
+    
+    .img_governance::-webkit-scrollbar-thumb {
+        background: #D80C18; /* スクロールバーの色 */
+        border-radius: 4px; /* スクロールバーを丸く */
+    }
+
+
+    .policy-box {
+        font-size: 1.4rem;
+
+    }
+
+    .policy-highlight {
+        font-size: 1.8rem;
+    }
+
+    .policy-text {
+        font-size: 1.5rem;
+    }
+
+    .business-policy {
+        padding: 0;
+    }
+
+    .content-wrapper {
+        padding: 35px 25px;
+    }
+
+
+}
+

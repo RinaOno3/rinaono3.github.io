@@ -1,0 +1,331 @@
+@charset "UTF-8";
+
+/* === 全体のレイアウト === */
+.contact-section {
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.contact-container {
+    max-width: 500px;
+    margin: 0 auto;
+    color: #4b4b4b;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-left: 3px solid #D80C18;
+}
+
+/* === ヘッダーエリア（会社名と赤いバー） === */
+.contact-header {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem 15px 0;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.contact-header h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+}
+
+/* === 電話番号エリア（SP対応） === */
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.phone-area {
+    font-size: 4.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #4b4b4b;
+}
+
+.phone-number {
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    color: #4b4b4b;
+    font-weight: bold;
+}
+
+.phone-number:hover {
+    opacity: 0.7;
+}
+
+/* === 情報エリア === */
+.contact-info {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #555;
+}
+
+/* === 区切り線 === */
+.separator {
+    width: 90%;
+    margin: 0 auto;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/* === ヘッダーセクション（全体） === */
+.section-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 500px;
+}
+   
+
+.section-header_wrp {
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-left: 3px solid #D80C18;
+    max-width: 500px;
+}
+
+
+/* === タイトル（テキスト） === */
+.section-header h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0;
+   
+}
+
+.sec_1 h2,
+.sec_2 h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4b4b4b;
+    margin-bottom: 0;
+    padding: 20px 20px 40px;
+}
+.sec_1 h2::after,
+.sec_2 h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #D80C18 15%, #777 15%);
+}
+
+.sec_1 p {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 0;
+}
+
+.tel_info_area {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+    gap: 120px;
+}
+
+.tel_box {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 750px;
+    width: 750px;
+
+}
+
+.phone-link {
+    display: block;
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 3.5rem;
+    color: #4b4b4b;
+    border: 1px solid #707070;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
+}
+
+.phone-link:nth-child(1) .phone-number::before {
+    content: "東京 ";
+    font-weight: bold;
+    left: 2%;
+}
+
+.phone-link:nth-child(2) .phone-number::before {
+    content: "名古屋 ";
+    font-weight: bold;
+    left: 2%;
+}
+
+.phone-link:nth-child(3) .phone-number::before {
+    content: "大阪 ";
+    font-weight: bold;
+    left: 2%;
+}
+
+.section-header_link {
+    cursor: pointer;
+    text-decoration: none; /* 下線を消す（必要に応じて） */
+    color: inherit; /* 親の色を継承 */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.section-header_link:hover {
+    opacity: 0.7;
+    box-shadow: 0 2px 0 #004080; /* 影を内側にする */
+    transform: translateY(3px); /* 押し込んだようにする */
+}
+
+.note {
+    font-size: 1.5rem;
+    color: #4b4b4b;
+    padding-top: 40px;
+}
+
+
+/* === PC版のレイアウト（横並び） === */
+@media screen and (min-width: 769px) {
+    .contact-container {
+        max-width: 1000px;
+    }
+
+    .contact-box {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 80px;
+    }
+
+    .phone-area {
+        text-align: left;
+        font-size: 3.5rem;
+    }
+
+    .contact-info {
+        font-size: 1.6rem;
+        text-align: right;
+        font-weight: normal;
+    }
+    .contact-info p{
+        text-align: left;
+       margin-top: 0;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sec_1 p {
+        font-size: 1.5rem;
+    }
+
+    .tel_info_area {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0;
+    }
+
+    .tel_box {
+        width: 100%;
+    }
+
+    .phone-number {
+        font-size: 2.4rem;
+    }
+
+    .phone-link:nth-child(1) .phone-number::before {
+       font-size: 1.5rem;
+    }
+    
+    .phone-link:nth-child(2) .phone-number::before {
+        font-size: 1.5rem;
+    }
+    
+    .phone-link:nth-child(3) .phone-number::before {
+        font-size: 1.5rem;
+    }
+
+    .phone-number {
+        align-items: center;
+    }
+
+    .img_tel {
+        width: 87px;
+        height: 87px;
+    }
+
+    .phone-link {
+        border-radius: 0;
+        padding: 5px;
+        gap: 20px;
+    }
+
+    .contact-accident .content-wrapper {
+        padding:30px 35px;
+
+    }
+
+    .sec_1 h2, .sec_2 h2 {
+        padding: 0 0 30px 0;
+    }
+
+    .sec_1 p {
+        padding: 0 0 30px;
+        text-align: left;
+    }
+
+    .sec_1 {
+        margin-bottom: 80px;
+    }
+    
+    .contact-header {
+        padding-top: 2rem;
+    }
+
+    .contact-header h3 {
+        font-size: 1.8rem;
+    }
+
+    .contact-container {
+        border-left: 15px solid #D80C18;
+    }
+
+    .contact-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .contact-box {
+        text-align: left;
+        align-items: flex-start;
+    }
+    .contact-info {
+        text-align: left;
+    }
+
+    .phone-area {
+        text-align: left;
+    }
+
+    .note {
+        font-size: 1.2rem;
+    }
+
+    .section-header {
+        padding: 0;
+        display: block;
+    }
+
+    .section-header_wrp {
+        border-left: 15px solid #D80C18;
+        padding: 20px;
+        max-width: 100%;
+        width: 100%;
+    }
+}

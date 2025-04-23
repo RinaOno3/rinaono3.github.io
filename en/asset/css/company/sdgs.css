@@ -1,0 +1,410 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+section {
+  margin: 0;
+  padding: 0;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+/* SDGsへの取り組み */
+
+.heading {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: #D80C18;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.text {
+  width: 80%;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  color: #333333;
+  line-height: 1.6;
+  margin-bottom: 50px;
+  margin-inline: auto;
+  text-align: justify;
+  padding-left: 6em;
+}
+
+
+/* コンテンツ */
+.container1 {
+  width: 100%;
+  background: #F6F6F6;
+}
+
+.container2 {
+  width: 100%;
+  background: #ffffff;
+}
+
+.content {
+  padding: 20px;
+}
+
+.subtitle_1 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #D80C18;
+}
+
+.title_1 {
+  font-family: "Outfit", sans-serif;
+  font-size: 70px;
+  font-weight: normal;
+  color: #D80C18;
+  margin-bottom: 20px;
+}
+
+.innercontainer1 {
+  width: 1100px;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  background: #F6F6F6;
+}
+
+.innercontainer2 {
+  width: 1100px;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  background: #fff;
+}
+
+.circle {
+  width: 92px;
+  height: 92px;
+  background-color: #D80C18;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -46px;
+  /* ボックスAの上半分に重ねる */
+  z-index: 2;
+}
+
+.number {
+  font-family: "Outfit", sans-serif;
+  font-size: 50px;
+  color: #fff;
+  margin: 0;
+}
+
+.box-a {
+  width: 759px;
+  height: 119px;
+  background-color: #fff;
+  border-radius: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: -50px;
+}
+
+.box-a-2 {
+  width: 759px;
+  height: 119px;
+  background-color: #F7F9F9;
+  border-radius: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: -50px;
+}
+
+.box-a-title {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  color: #D80C18;
+  margin-top: 50px;
+  z-index: 1;
+}
+
+.box-b {
+  display: grid;
+  width: 1006px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 80px 30px 30px 30px;
+  box-sizing: border-box;
+}
+
+.box-b-2 {
+  display: grid;
+  width: 1006px;
+  background-color: #F7F9F9;
+  border-radius: 20px;
+  padding: 80px 30px 30px 30px;
+  box-sizing: border-box;
+}
+
+.box-b-text {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  color: #333333;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.subtitle-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.dashed-line {
+  width: 100%;
+  border-bottom: 1px dashed #707070;
+  padding: 25px;
+  z-index: -1;
+}
+
+.box-b-subtitle {
+  width: 224px;
+  height: 48px;
+  background-color: #fff;
+  border-radius: 24px;
+  border: 1px solid #333333;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: normal;
+  font-size: 1.8rem;
+  color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -25px auto;
+}
+
+.columns {
+  justify-content: space-between;
+}
+
+.column {
+  display: flex;
+  width: 100%;
+  margin: 50px 0;
+}
+
+.innercolumn {
+  display: grid;
+  width: 100%;
+  padding: 0 88px 0 20px;
+  align-items: center;
+}
+
+.column-image {
+  width: 36%;
+  height: auto;
+  padding: 0 20px;
+}
+
+.column-subtitle {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+  font-size: 2.4rem;
+  color: #333333;
+}
+
+.column-text {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: #333333;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.column-text li {
+  list-style: none;               /* デフォルトの・を消す */
+  position: relative;
+  padding-left: 2.5em;            /* ・の分だけ左に余白 */
+  text-indent: -1em; 
+}
+
+
+/*  サスティナビリティに戻るボタン   */
+.backsus_button {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  background: none;
+  padding-bottom: 150px;
+  cursor: pointer;
+}
+
+.sdgs .page-btn-wrapper {
+  padding-bottom: 50px;
+}
+
+
+@media (max-width: 767px) {
+
+  .sdgs .page-btn--next::before {
+    left: 19rem;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
+
+  }
+
+  /* SDGsへの取り組み */
+  .container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .text {
+    font-size: 1.6rem;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  /* コンテンツ */
+  .innercontainer1,
+  .innercontainer2 {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  .circle {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0px;
+  }
+
+  .number {
+    font-size: 30px;
+  }
+
+
+  .box-a,
+  .box-a-2 {
+    display: contents;
+    width: 76%;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 40px;
+    margin-bottom: -50px;
+  }
+
+  .box-a-title {
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 1.2em;
+    text-align: justify;
+  }
+
+  .box-b,
+  .box-b-2 {
+    background: none;
+    width: 90%;
+    padding: 0px;
+    border-radius: 10px;
+  }
+
+  .box-b-text {
+    font-size: 16px;
+  }
+
+  .box-b-subtitle {
+    width: 180px;
+    height: 40px;
+    font-size: 1.8rem;
+    border-radius: 20px;
+    margin: -20px auto;
+  }
+
+  .dashed-line {
+    padding: 20px;
+  }
+
+  .columns {
+    flex-direction: column;
+  }
+
+  .column {
+    width: 100%;
+    margin: 30px 0;
+    flex-direction: column;
+  }
+
+  .column-image {
+    width: 100%;
+    padding: 0;
+  }
+
+  .innercolumn {
+    padding: 20px 0 10px 0;
+  }
+
+  .column-subtitle {
+    font-size: 20px;
+  }
+
+  .column-text {
+    line-height: 2;
+    font-weight: normal;
+    font-size: 1.5rem;
+  }
+
+  .column-text li {
+    padding-left: 1em;            /* ・の分だけ左に余白 */
+
+  }
+
+  /* サスティナビリティに戻るボタン */
+  .backsus_button {
+    padding-bottom: 50px;
+  }
+
+  .content {
+    padding: 0;
+  }
+
+  .sec1 {
+    padding: 50px 20px 100px;
+  }
+
+  .sec2 {
+    padding: 75px 20px 60px;
+  }
+
+  .sec3 {
+    padding: 90px 20px 60px;
+  }
+}
+

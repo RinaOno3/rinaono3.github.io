@@ -1,0 +1,171 @@
+@charset "UTF-8";
+
+.page-sp-only {
+    display: none;
+}
+/* 共通のスタイル */
+.philosophy-section {
+    position: relative;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* うっすらした背景の英字 */
+.philosophy-section::before {
+    content: "Management philosophy";
+    position: absolute;
+    top: -3%;
+    left: 10%;
+    font-size: 6rem;
+    font-weight: bold;
+    color: rgba(200, 200, 200, 0.2);
+    z-index: -1;
+}
+
+.philosophy-section:nth-child(2)::before {
+    content: "Management vision";
+}
+
+.philosophy-section:nth-child(3)::before {
+    content: "MST Way";
+}
+
+/* 赤枠のボックス */
+.philosophy-box {
+    position: relative;
+    background: white;
+    border: 2px solid #D80C18;
+    padding: 40px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 15px 15px 0px 0px #d80c18;
+    border-radius: 0px;
+}
+
+/* 見出しのスタイル */
+.philosophy-title {
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: #D80C18;
+    margin-bottom: 5px;
+}
+
+/* サブタイトルのスタイル */
+.philosophy-subtitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #D80C18;
+    margin: 0px;
+}
+
+/* テキストのスタイル */
+.philosophy-text {
+    font-size: 2.8rem;
+    color: #333;
+    line-height: 1.6;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.philosophy-box .tx_b {
+    color: #333;
+}
+
+.sec_3 .philosophy-box .philosophy-text {
+    color: #4B4B4B;
+    font-size: 2rem;
+  
+}
+
+.sec_3 .philosophy-box .philosophy-text span {
+     font-size: 2.8rem;
+}
+
+.action_area {
+        display: block;
+        margin-inline: auto;
+    }
+
+
+.sec_4 {
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+picture img {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+
+    .page-sp-only {
+        display: inline;
+    }
+
+    .philosophy-title {
+        font-size: 3.2rem;
+        line-height: 1;
+    }
+    .philosophy-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .philosophy-text {
+        font-size: 1.8rem;
+    }
+
+    .philosophy-box {
+        box-shadow: 5px 5px 0px 0px #d80c18;
+        padding: 20px;
+    }
+
+    .sec_3 .philosophy-box .philosophy-text {
+        font-size: 1.8rem;
+    }
+
+    .philosophy-section::before {
+        content: "Management philosophy";
+        position: absolute;
+        top: 3%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+        font-size: 3rem; /* スマホ用に少し小さくする */
+        text-align: center;
+        width: 100%;
+    }
+
+    .philosophy-section:nth-child(2)::before {
+        content: "Management vision";
+    }
+
+    .philosophy-section:nth-child(3)::before {
+        content: "MST Way";
+        top: 0%;
+        transform: translate(-50%, 0%); /* translateの調整 */
+    }
+
+    .philosophy-section {
+        padding: 40px 30px;
+    }
+
+    .philosophy-text {
+        margin-top: 3rem;
+    }
+
+    .sec_3 .philosophy-box .philosophy-text span {
+        font-size: 2rem;
+    }
+
+    .sec_3 .philosophy-box .philosophy-text {
+        font-size: 1.2rem;
+    }
+
+    .sec_4 {
+       padding: 20px 30px;
+    }
+
+    .philosophy .page-btn--prev::before {
+        left: 16rem;
+    }
+    
+}

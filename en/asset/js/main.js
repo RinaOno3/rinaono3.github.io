@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("✅ `main.js` の実行開始");
 
-    const isTopPage = window.location.pathname === "/" || window.location.pathname === "/index.html";
+    const isTopPage = window.location.pathname === "/en/" || window.location.pathname === "/en/index.html";
 
     // ✅ ヘッダーの読み込み
     const headerContainerId = isTopPage ? "header-top" : "header-sub";
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (headerContainer) {
         document.body.classList.add("loading"); // ✅ 追加：ハンバーガー操作無効化
 
-        fetch(`/includes/${isTopPage ? "header-top.html" : "header-sub.html"}?v=${Date.now()}`)
+        fetch(`/en/includes/${isTopPage ? "header-top.html" : "header-sub.html"}?v=${Date.now()}`)
             .then(response => response.text())
             .then(data => {
                 headerContainer.innerHTML = data;
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         topScrollDiv.innerHTML = `<a href="#" class="button_top">TOP</a>`;
         footerContainer.parentNode.insertBefore(topScrollDiv, footerContainer);
 
-        fetch(`/includes/${isTopPage ? "footer-top.html" : "footer-sub.html"}?v=${Date.now()}`)
+        fetch(`/en/includes/${isTopPage ? "footer-top.html" : "footer-sub.html"}?v=${Date.now()}`)
             .then(response => response.text())
             .then(data => {
                 footerContainer.innerHTML = data;

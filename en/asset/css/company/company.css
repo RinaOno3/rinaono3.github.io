@@ -1,0 +1,251 @@
+@charset "UTF-8";
+
+.page-sp-only {
+    display: none;
+}
+
+.company-details {
+    margin: 0 auto;
+    padding: 20px 0px 60px 60px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+/* 表のスタイル */
+.details-table {
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+    margin-inline: auto;
+}
+
+/* ヘッダー（左側のタイトル部分） */
+.details-table th {
+    display: table-cell;
+    /* テーブルセルとして動作 */
+    font-weight: bold;
+    color: #333;
+    text-align: justify;
+    text-align-last: justify;
+    padding: 15px 50px;
+    width: 150px;
+    /* 左側の幅を統一 */
+    border-bottom: 1px solid red;
+    /* 赤い線 */
+    white-space: nowrap;
+    vertical-align: text-top;
+    letter-spacing: 0.1em;
+}
+
+/* 内容（右側のデータ部分） */
+.details-table td {
+    text-align: left;
+    padding: 12px 50px;
+    border-bottom: 1px solid #777;
+    /* グレーの線 */
+    font-size: 1.5rem;
+}
+.details-table td img {
+    margin: 10px 0;
+    max-width: 90%;
+}
+
+.details-table th.no-border{
+    border-bottom: none;
+}
+
+.details-table td.no-border{
+    border-bottom: none;
+    text-align: center;
+}
+
+.details-table th.top-border{
+    border-top: 1px solid red;
+}
+
+.details-table td.top-border{
+    border-top: 1px solid #777;
+}
+
+.details-table td .sub_contents{
+    text-align: right;
+    font-size: 1.2rem;
+    vertical-align: text-top;
+}
+
+
+
+/* ボタンのデザイン */
+.expand-button {
+    font-family: "Yu Gothic", "YuGothic", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN",
+        "メイリオ", Meiryo, sans-serif;
+    margin-top: 10px;
+    padding: 0px 40px 0 10px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    background-color: #D80C18;
+    color: white;
+    border: none;
+    position: relative;
+    margin-inline: auto;
+}
+
+.expand-button:hover {
+    opacity: 0.8;
+}
+
+.expand-button::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    position: absolute;
+    top: 20%;
+    background-image: url(/asset/img/icon_zoom.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:center;
+
+}
+
+/* モーダル全体のスタイル */
+.image-modal {
+    display: none; /* 初期状態では非表示 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* 半透明の背景 */
+    z-index: 1000;
+    overflow-y: auto; /* 縦スクロールを許可 */
+    text-align: center;
+}
+
+/* モーダル内のコンテンツ */
+.modal-content {
+    position: relative;
+    margin: 5% auto; /* 上下5%の余白を確保 */
+    width: 75%;
+    max-width: 800px; /* 最大幅の制限 */
+}
+
+/* 画像のスタイル */
+.modal-image {
+    width: 100%;
+    height: auto; /* 縦に拡大可能 */
+    display: block;
+    margin: auto;
+    background:white;
+    padding:30px;
+}
+
+/* 閉じるボタン */
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.sub_note {
+    font-size: 1.2rem;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .page-sp-only {
+        display: block;
+    }
+
+    .details-table th.top-border{
+        border-top: none;
+    }
+
+    .details-table td.top-border{
+        border-top: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .details-table {
+        width: 100%;
+        display: block;
+    }
+
+    .details-table tbody {
+        display: block;
+        width: 100%;
+    }
+
+    .details-table tr {
+        display: block;
+        width: 100%;
+    }
+
+    /* th をブロック要素にして、下にボーダーをつける */
+    .details-table th {
+        display: block;
+        width: 100%;
+        text-align: left;
+        text-align-last: left;
+        font-size: 1.6rem;
+        padding: 10px;
+        position: relative;
+        border-bottom: none;
+    }
+
+    .details-table th::after {
+        content: "";
+        display: block;
+        width: 100%; 
+        height: 3px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(to right, #D80C18 30%, #777 20%);
+    }
+
+    /* td もブロック要素にして、th の下に配置 */
+    .details-table td {
+        display: block;
+        width: 100%;
+        text-align: left;
+        font-size: 1.4rem;
+        padding: 10px;
+        border-bottom: none; /* PC版のボーダーを消す */
+    }
+
+    /* 画像の幅を調整 */
+    .details-table img {
+        max-width: 100%;
+        height: auto;
+        margin-inline: auto;
+    }
+
+    .philosophy .page-btn--prev::before {
+        left: 9rem;
+    }
+
+    .philosophy .page-btn--next::before {
+        left: 13rem;
+    }
+
+    .expand-button {
+        display: block;
+    }
+
+    .company-details {
+        padding: 0px;
+    }
+
+    .modal-content {
+        position: relative;
+        margin: 30% auto;
+        width: 90%;
+        max-width: 800px;
+    }
+}

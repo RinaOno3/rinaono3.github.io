@@ -499,7 +499,7 @@ body.loading #hamburger {
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    right: 16px;
+    right: 25px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -631,11 +631,11 @@ body.loading #hamburger {
 
 
     .footer-column h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .footer-column ul {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .footer-top {
@@ -651,7 +651,7 @@ body.loading #hamburger {
     }
 
     .footer-links {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .footer-bottom {

@@ -1,0 +1,652 @@
+/*---------------------- 
+    共通 
+  ----------------------*/
+.section-title {
+    color: #D80C18;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 16px;
+}
+
+.pc-only {
+    display: block;
+}
+
+.sp-only {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 24px;
+    }
+
+    .pc-only {
+        display: none;
+    }
+
+    .sp-only {
+        display: block;
+    }
+}
+
+/*---------------------- 
+    OneSureとは 
+----------------------*/
+.what-is p {
+    padding: 0 60px;
+}
+
+.what-is img {
+    display: block;
+    width: 300px;
+    margin: auto;
+}
+
+/*---------------------- 
+    法人保険の課題 
+----------------------*/
+.content-wrapper-b {
+    position: relative;
+    background-color: #E6E6E6;
+}
+
+.content-wrapper-b::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 35px solid #E6E6E6;
+}
+
+.issues {
+    padding: 60px;
+    margin: auto;
+    max-width: 1000px;
+}
+
+.issues h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.issues-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.issue-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.issue-icon {
+    max-width: 150px;
+    width: 100%;
+    height: 150px;
+}
+
+.issue-content h3 {
+    background: #333;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 2px 10px;
+    margin-bottom: 20px;
+}
+
+.issue-content ul {
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+}
+
+.issue-content li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+
+.solution-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 0px 60px 20px;
+    align-items: stretch;
+    /* 各solution-itemの高さを統一 */
+}
+
+.solution-item {
+    position: relative;
+    background: #fff;
+    border: 2px solid #D80C18;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* 均等に配置 */
+    flex-grow: 1;
+    /* 高さを均等に */
+}
+
+/* すべての solution-item の要素の高さを揃える */
+.solution-item .number {
+    font-size: 30px;
+    color: #D80C18;
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+    flex-grow: 0;
+    /* 数字の高さは固定 */
+}
+
+.solution-item h3 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #D80C18;
+    text-align: center;
+    flex-grow: 1;
+    /* タイトルの高さを揃える */
+    display: flex;
+    align-items: center;
+    /* 縦方向の中央揃え */
+    justify-content: center;
+}
+
+.solution-item img {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+    height: auto;
+    flex-grow: 0;
+    /* 画像の高さは固定 */
+}
+
+.solution-item p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+    line-height: 1.5;
+    flex-grow: 1;
+    /* 説明文の高さを揃える */
+    display: flex;
+    align-items: flex-start;
+    /* 縦方向の中央揃え */
+    justify-content: center;
+}
+
+/* 画像のサイズを統一 */
+.solution-item .solution-icon {
+    width: 85%;
+    /* アイコンのサイズを統一 */
+    height: auto;
+    flex-grow: 0;
+}
+
+.one-sure .page-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #D80C18;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 2rem;
+    min-width: 300px;
+    padding: 8px 36px;
+
+}
+
+.issue-content li {
+    position: relative;
+    padding-left: 28px;
+    /* 擬似要素分の余白を確保 */
+    margin-bottom: 20px;
+    text-align: left;
+    list-style: none;
+    /* デフォルトの・を消す */
+    font-weight: bold;
+}
+
+.issue-content li::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 2px;
+    width: 16px;
+    /* 画像の幅 */
+    height: 16px;
+    /* 画像の高さ */
+    background-image: url("/asset/img/pickup/one-sure/icon_cross.png");
+    /* 画像のパス */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+@media (max-width: 768px) {
+    .issues {
+        padding: 15px;
+    }
+
+    .issues-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .issue-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .issue-icon {
+        width: 115px;
+    }
+
+    .solution-item .solution-icon {
+        width: 50%;
+    }
+
+    .issue-content h3 {
+        display: inline-block;
+        padding: 2px 20px;
+
+    }
+
+    .solution-item .number {
+        text-align: left;
+        margin-bottom: 0;
+        display: none;
+    }
+
+    .solution-item h3 {
+        margin-bottom: 10px;
+    }
+}
+
+/*---------------------- 
+    OneSureの解決策
+----------------------*/
+.solution {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.solution h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #D80C18;
+    margin-bottom: 40px;
+}
+
+
+.solution-item {
+    position: relative;
+    background: #fff;
+    border: 2px solid #D80C18;
+    padding: 20px;
+    max-width: 280px;
+}
+
+.solution-item::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 100%;
+    height: 100%;
+    background: #D80C18;
+    z-index: -1;
+}
+
+.number {
+    font-size: 30px;
+    color: #D80C18;
+    display: block;
+    margin-bottom: 40px;
+}
+
+.solution-item h3 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #D80C18;
+}
+
+.solution-item img {
+    display: block;
+    margin: 0 auto;
+}
+
+.solution-item p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.solution-icon {
+    max-width: 100px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.free-text {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 60px 0 120px;
+}
+
+.highlight {
+    color: #D80C18;
+    font-size: 36px;
+    font-weight: 400;
+    padding-left: 20px;
+}
+
+.free-box {
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    padding: 5px 40px;
+    border-radius: 10px;
+    font-size: 55px;
+    margin: 0 20px;
+    background: linear-gradient(to bottom, #F3683E, #D60C16);
+}
+
+.underline-red {
+    border-bottom: 5px solid #D80C18;
+    padding-bottom: 10px;
+}
+
+.video-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.video-title {
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #D80C18;
+}
+
+.video-title img {
+    width: 40px;
+}
+
+.video-wrapper {
+    width: 100%;
+    max-width: 700px; /* 最大幅を700pxに制限 */
+    margin: 0 auto; /* 中央揃え */
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: auto;
+}
+
+.video-wrapper iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+.video-embed {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9のアスペクト比 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .solution-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .solution-item {
+        padding: 15px;
+        max-width: 340px;
+    }
+    .underline-red {
+        padding-bottom: 0px;
+    }
+     /* .solution-grid でカウンターをリセット（最初の値を0にする） */
+    .solution-grid {
+        counter-reset: item-num;
+    }
+
+    .solution-item h3::before {
+        content: counter(item-num); /* "." を削除して番号のみ表示 */
+        counter-increment: item-num; /* 各 .solution-item ごとにカウントを増やす */
+        font-weight: bold;
+        color: #D80C18; /* 番号の色 */
+        margin-right: 10px;
+        font-size: 3rem;
+    }
+
+
+
+    .free-text {
+        font-size: 2.2rem;
+        margin: 30px 0 60px;
+    }
+
+    .video-section img {
+        margin: auto;
+        width: 50px;
+    }
+
+    .video-title {
+        font-size: 16px;
+    }
+
+    .solution h2 {
+        margin-bottom: 20px;
+
+    }
+}
+
+/*---------------------- 
+    OneSureの特長
+----------------------*/
+.content-wrapper-c {
+    background-color: #F9F4F4;
+}
+
+.features {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 40px 75px;
+    margin: 0 auto;
+    max-width: 740px;
+    width: 100%;
+    min-height: 470px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    gap: 70px;
+}
+
+.feature-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature-text h3 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #D80C18;
+}
+
+.feature-icon {
+    width: 100%;
+    display: block;
+}
+
+.fi-sm {
+    max-width: 120px;
+}
+
+.fi-md {
+    max-width: 150px;
+}
+
+.feature-text p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 30px;
+    align-self: flex-start;
+    text-align: left;
+}
+
+.feature-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*---------------------- 
+    お問合せボタン 
+----------------------*/
+.contact-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.contact-section p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact-btn {
+    background: #D80C18;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: opacity 0.2s;
+    width: 300px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .feature-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .feature-text {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .feature-image img {
+        max-width: 100%;
+        max-width: 230px;
+    }
+
+    .contact-btn {
+        width: 80%;
+    }
+
+    .one-sure .page-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background-color: #D80C18;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 0.3s;
+        font-size: 2rem;
+        min-width: 300px;
+        padding: 8px 36px;
+    
+    }
+    /* 下の黒い線 */
+    .one-sure .page-btn::after {
+    content: "";
+    position: absolute;
+    top: auto;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    transition: 0.3s;
+    clip-path: none;
+}
+
+.one-sure .page-btn-wrapper{
+    margin: 0;
+}
+}

@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+.message-content {
+    padding: 80px 0 50px;
+}
+
+.message-content h2 {
+    font-size: 2.8rem;
+    text-align: center;
+}
+
+.message-content__text {
+    font-size: 1.6rem;
+    font-weight: normal;
+    line-height: 1.6;
+}
+
+.companyname-ceo_wrp {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.companyname-ceo {
+    font-size: 2.8rem;
+    font-weight: bold;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 要素全体を右に寄せる */
+}
+
+.companyname-ceo__text,
+.companyname-ceo__name {
+    display: block;
+    text-align: center;
+    /* テキストを中央揃え */
+    width: 100%;
+    /* 親要素いっぱいに広げる */
+}
+
+
+.companyname-ceo__text {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.companyname-ceo__name {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+@media (max-width: 768px) {
+    .message-content {
+        padding: 0;
+    }
+
+    .message-content h2 {
+        font-size: 1.6rem;
+        margin-bottom: 3rem;
+    }
+
+    .message-content__text p {
+        font-size: 1.6rem;
+    }
+
+    .companyname-ceo__text {
+        font-size: 1.2rem;
+    }
+
+    .companyname-ceo__name {
+        font-size: 2.4rem;
+
+    }
+    .page_fv {
+        margin-top: 40px;
+    }
+
+   
+}

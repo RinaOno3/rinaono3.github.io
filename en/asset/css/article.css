@@ -1,0 +1,144 @@
+@charset "UTF-8";
+body {
+    font-family: "Meiryo", "Verdana", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Osaka", "ＭＳ Ｐゴシック", "sans-serif";
+    line-height: 1.6;
+}
+
+p {
+    font-size: 14px;
+    margin: 0;
+    padding: 0 0 15px 0;
+}
+
+.content-wrapper {
+    max-width: 1200px;
+}
+.container{
+    display: flex;
+    margin: auto;
+}
+/* SP向け */
+@media (max-width: 768px) {
+    .container{
+        display: block;
+    }
+    .content-wrapper {
+        padding: 0;
+    }
+}
+
+#contentWrap {
+    flex: 4;
+    padding: 20px;
+}
+#sideWrap {
+    flex: 1;
+    padding: 20px;
+}
+.newsTitle{
+    clear: both;
+    margin: 30px 0 20px 0;
+    border-bottom: 3px solid #cc141d;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 130%;
+    letter-spacing: 2px;
+}
+/* SP向け */
+@media (max-width: 768px) {
+    .newsTitle{
+       font-size: 18px;
+    }
+}
+
+.newsDate{
+    font-size: 14px;
+}
+.newsDescription{
+    font-size: 14px;
+}
+
+.newsDescription a{
+    color: #0066cc;
+    text-decoration: underline;
+}
+.news-content {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.news-list {
+    list-style: none;
+    padding: 0;
+    margin-top:10px;
+}
+
+.cat-1,.cat-2,.cat-3,.cat-4,.cat-5 {
+    display: inline-block;
+    color: white;
+    padding: 2px 20px;
+    border-radius: 20px; /* 丸みのあるデザイン */
+    border: none;
+}
+
+.news-title {
+    display: block;
+    padding: 12px 15px;
+    border: 3px solid #cc141d;
+    background: #D80C18;;
+    color: #fff !important;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    margin-top:30px;
+}
+.news-list li {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top:10px;
+}
+
+.news-list li::before {
+    content: "";
+    display: inline-block;
+    width: 12px; /* 画像の幅 */
+    height: 12px; /* 画像の高さ */
+    background-image: url('/asset/img/arrow_red_h.png'); /* 画像パス */
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px; /* 文字との間隔 */
+}
+
+.news-list li a {
+    text-decoration: none;
+}
+
+.news-list li a:hover {
+    text-decoration: underline;
+}
+
+.page-btn-wrapper{
+    margin: 30px 0;
+    justify-content: flex-end;
+}
+
+/* SP向け */
+@media (max-width: 768px) {
+    .news-list {
+        padding: 10px;
+    }
+    
+    .news-tag {
+        padding: 0 20px ;
+        margin-right: 0;
+        font-size: 1.2rem;
+        white-space: nowrap;
+    }
+    
+    .page-btn-wrapper{
+        margin: 0;
+        gap:0;
+    }
+}
+

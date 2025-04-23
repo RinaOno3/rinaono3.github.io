@@ -1,0 +1,127 @@
+:where(:any-link, :enabled, summary) {
+  --default: initial;
+  --hover: ;
+}
+:where(:any-link, :enabled, summary):focus-visible {
+  --default: ;
+  --hover: initial;
+}
+/* 使い方 */
+/* .button {
+  color: var(--default, #246A92) var(--hover, #FFF);
+  background-color: var(--hover, #246A92);
+  border: 2px solid var(--hover, #246A92);
+} */
+:where(:focus-visible) {
+  outline: 2px solid #005FCC;
+  outline-offset: -2px;
+}
+:where(:focus):not(:where(:focus-visible)) {
+  outline: none;
+}
+html {
+  scroll-padding-top: 7rem;
+}
+.ly_personal_wrapper {
+
+  >*+* {
+  }
+}
+.bl_personalAnchor {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+.bl_personalAnchor_link {
+  background-color: #F8F8F8;
+  block-size: 100%;
+  border: 1px solid #D80C18;
+  border-radius: 20px;
+  color: #D80C18;
+  display: grid;
+  font-size: 1.2rem;
+  font-weight: 700;
+  gap: 2.13em 0;
+  line-height: calc(17 / 12);
+  padding-block: .8333em;
+  place-items: center;
+}
+.bl_personal_list {
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin-block-start: 2rem;
+    margin-block-end: 2rem;
+}
+.bl_personal_txt {
+  font-size: 1.5rem;
+  inline-size: 91%;
+  line-height: calc(20 / 15);
+  margin-block-end: 2.4rem;
+  margin-inline: auto;
+}
+.el_lv2Heading {
+  background-color: #F8F8F8;
+  border-inline-start: 15px solid currentColor;
+  color: #D80C18;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: calc(26 / 18);
+  margin-block-end: unset;
+  padding-block: .667em;
+  padding-inline: .539em;
+}
+@media screen and (768px <= width) {
+  .ly_personal_wrapper {
+
+    >*+* {
+    }
+  }
+  .bl_personalAnchor {
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    inline-size: 89.4%;
+    margin-inline: auto;
+    margin-block-end: 10rem;
+  }
+  .bl_personalAnchor_link {
+    font-size: 1.7rem;
+    gap: .77em 0;
+    padding-block: .882em;
+  }
+  .bl_personal_list {
+    gap: 1rem 2.4rem;
+    grid-template-columns: repeat(4, 1fr);
+    margin-block-start: 4rem;
+    margin-block-end: 4rem;
+    margin-left: 31px;
+  }
+  .el_lv2Heading {
+    border-inline-start-width: 31px;
+    font-size: 2.4rem;
+    line-height: calc(36 / 24);
+    padding-inline: 1.8335em;
+  }
+}
+@media screen and (1025px <= width) {
+  html {
+    scroll-padding-top: 13.7rem;
+  }
+  .bl_personal_txt {
+    display: none;
+  }
+}
+@media (any-hover: hover) {
+  :where(:any-link, :enabled, summary):hover {
+    --default: ;
+    --hover: initial;
+  }
+}
+
+.page-title .sub-title{
+    font-size: 14px;
+}
+
+
+/*# sourceMappingURL=sourcemaps/personal.css.map */

@@ -137,6 +137,7 @@
     min-width: 100px;
     text-align: center;
     color: #333;
+    width:150px;
 }
 
 .cat-1 {
@@ -1008,7 +1009,7 @@
     }
 
     .slide-caption {
-        min-height: 85px;
+        min-height: 110px;
     }
 
     .risk-management {
@@ -1441,7 +1442,7 @@
     .company-link {
         font-size: 1.8rem;
         max-height: 40px;
-        width: 80%;
+        width: 100%;
         height: 45px;
         max-width: 100%;
     }
