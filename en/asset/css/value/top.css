@@ -10,6 +10,10 @@ html {
     display: none;
 }
 
+.br-sp430 {
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
     .value .pc-only {
         display: none;
@@ -17,6 +21,13 @@ html {
 
     .value .sp-only {
         display: block;
+    }
+}
+
+/* 幅430px以下のときだけ表示 */
+@media screen and (max-width: 430px) {
+    .br-sp430 {
+        display: inline;
     }
 }
 
@@ -51,6 +62,11 @@ svg {
 }
 
 /* グローバルなセクションのコンテンツ */
+
+.value_tx_area {
+    line-height: 1.4;
+}
+
 .section-content {
     width: 100%;
     text-align: center;
@@ -59,7 +75,7 @@ svg {
     margin: 0 auto;
     padding: 20px;
     position: absolute;
-    top: 17%;
+    top: 16%;
 }
 
 
@@ -74,8 +90,8 @@ svg {
 .section-content p {
     text-align: center;
     font-size: 1.8rem;
-    margin-top: 60px;
-    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     color: #333;
 }
 
@@ -90,7 +106,7 @@ svg {
     width: 100%;
     margin-top: 1rem;
     text-align: left;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     padding-left: 30%;
 }
 
@@ -99,7 +115,7 @@ svg {
     /* アイコンとテキストを横並びにする */
     align-items: center;
     /* 縦位置を中央揃え */
-    padding: 3px 30px;
+    padding: 3px 20px;
     font-size: 1.8rem;
     line-height: 1.6;
     background-color: #d70c18;
@@ -175,24 +191,24 @@ svg {
 
 .info-item1-1 {
     position: absolute;
-    top: 125%;
-    left: 120px;
+    top: 120%;
+    left: 114px;
 }
 
 .info-item1-2 {
     position: absolute;
-    right: 85px;
-    top: 150%;
+    right: 6px;
+    top: 148%;
 }
 
 .info-item1-3 {
     position: absolute;
-    top: 218%;
-    right: 28%;
+    top: 214%;
+    right: 11%;
 }
 
 .info-item img {
-    max-height: 70px;
+    max-height: 55px;
     /* 画像サイズの上限 */
     height: auto;
 }
@@ -202,7 +218,7 @@ svg {
     text-align: center;
     position: absolute;
     width: 100%;
-    top: 255%;
+    top: 245%;
 
 }
 
@@ -359,7 +375,7 @@ svg {
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
 
     svg {
         width: 100%;
@@ -371,6 +387,23 @@ svg {
         width: 100%;
         max-width: 1000px;
         min-width: 800px;
+    }
+
+
+    .info-item img {
+        max-height: 45px;
+    }
+
+    .section-content h2 {
+        line-height: 1.3;
+    }
+
+    .info-item .info_tx {
+        font-size: 2.2rem;
+    }
+
+    .info-item .info_ttl {
+        font-size: 1.6rem;
     }
 
     #sec2 {
@@ -401,23 +434,25 @@ svg {
 
 
     .info-item1-1 {
-        top: 117%;
-        left: 18%;
+        top: 108%;
+        left: 17%;
     }
 
     .info-item1-2 {
-        right: 12%;
-        top: 136%;
+        right: 7%;
+        top: 133%;
     }
 
     .info-item1-3 {
-        top: 206%;
+        top: 193%;
+        right: 13%;
     }
 
     .global-network {
         width: 90%;
-        top: 240%;
+        top: 217%;
     }
+
 
     .global-network img {
         top: 65%;
@@ -455,13 +490,24 @@ svg {
         left: 8%;
     }
 
+    .block5 {
+        top: 85%;
+        right: 42%;
+    }
+
 
 }
 
 @media screen and (max-width: 860px) {
     .section-content p {
-        margin-top: 5%;
+        margin-top: 0%;
+        font-size: 1.5rem;
 
+    }
+
+    .section-content h2 {
+        line-height: 1.2;
+        margin-bottom: 0;
     }
 
     .section-content .top_tx_box2 {
@@ -469,11 +515,15 @@ svg {
     }
 
     .info-item img {
-        max-height: 56px;
+        max-height: 40px;
+    }
+
+    .info-item .info_ttl {
+        font-size: 1.4rem;
     }
 
     .info-item .info_tx {
-        font-size: 2.4rem;
+        font-size: 1.8rem;
     }
 
     .info-item1-1 {
@@ -481,15 +531,16 @@ svg {
     }
 
     .info-item1-2 {
-        top: 124%;
+        top: 132%;
+        right: 5%;
     }
 
     .info-item1-3 {
-        top: 181%;
+        top: 192%;
     }
 
     .global-network {
-        top: 211%;
+        top: 215%;
     }
 
     .content-block p {
@@ -504,6 +555,10 @@ svg {
         padding: 1px 3px;
         font-size: 1.2rem;
         width: 49%;
+    }
+
+    .content-block .last_message {
+        font-size: 2.8rem;
     }
 
 
@@ -567,27 +622,23 @@ svg {
         font-size: 2rem;
     }
 
-    .info-item img {
-        max-height: 50px;
-    }
-
     .info-item1-1 {
-        top: 147%;
-        left: 13%;
+        top: 126%;
+        left: 8%;
     }
 
     .info-item1-2 {
-        right: 12%;
-        top: 156%;
+        right: 4%;
+        top: 137%;
     }
 
     .info-item1-3 {
-        top: 200%;
-        right: 30%;
+        top: 176%;
+        right: 11%;
     }
 
     .global-network {
-        top: 219%;
+        top: 190%;
     }
 
     .global-network img {
@@ -630,7 +681,7 @@ svg {
 
     .block5 {
         top: 83%;
-        right: 25%;
+        right: 30%;
     }
 
 
@@ -649,45 +700,51 @@ svg {
 
     }
 
+    .section-content p {
+        font-size: 1.8rem;
+    }
+
 
 }
 
-@media screen and (max-width: 740px) {
 
-    .section-content .top_tx_box {
-        padding-left: 8%;
+@media screen and (max-width: 660px) {
+
+    .section-content {
+        top: 18%;
+    }
+
+    .info-item .info_ttl {
+        font-size: 1.3rem;
+    }
+
+    .info-item .info_tx {
+        font-size: 1.6rem;
     }
 
     .section-content .top_tx_box2 {
-        padding-left: 35%;
+        padding-left: 18%;
     }
 
     .info-item1-1 {
-        top: 140%;
+        top: 116%;
+        left: 9%;
+
     }
 
     .info-item1-2 {
-        top: 160%;
+        top: 124%;
+        right: 2%;
+
     }
 
     .info-item1-3 {
-        top: 209%;
+        top: 157%;
     }
+
 
     .global-network {
-        top: 230%;
-    }
-
-    .info-item1-2 {
-        top: 150%;
-    }
-
-    .info-item1-3 {
-        top: 194%;
-    }
-
-    .global-network {
-        top: 211%;
+        top: 170%;
     }
 
     .global-network h3 {
@@ -698,71 +755,10 @@ svg {
         font-size: 1.8rem;
     }
 
-
-
-
-}
-
-@media screen and (max-width: 700px) {
-    .info-item1-1 {
-        top: 133%;
-        left: 12%;
+    .block5 {
+        top: 85%;
+        right: 45%;
     }
-
-    .info-item1-2 {
-        top: 143%;
-    }
-
-    .info-item1-3 {
-        top: 184%;
-    }
-
-
-
-    .global-network {
-        top: 203%;
-    }
-
-
-}
-
-@media screen and (max-width: 660px) {
-
-    .section-content .top_tx_box2 {
-        padding-left: 25%;
-    }
-
-    .info-item1-1 {
-        top: 126%;
-        left: 11%;
-
-    }
-
-    .info-item1-2 {
-        top: 140%;
-    }
-
-    .info-item1-3 {
-        top: 182%;
-    }
-
-    .info-item1-2 {
-        top: 135%;
-    }
-
-
-
-
-    .global-network {
-        top: 192%;
-    }
-
-    .info-item1-3 {
-        top: 174%;
-    }
-
-
-
 }
 
 @media screen and (max-width: 630px) {
@@ -968,6 +964,7 @@ svg {
     .tags span {
         width: 70%;
     }
+
     .block1 {
         top: 18%;
         right: 3%;
@@ -984,6 +981,8 @@ svg {
 
 
 @media screen and (max-width: 450px) {
+
+
 
     .section-content {
         padding: 10px;
@@ -1012,7 +1011,7 @@ svg {
 
     .section-content .btn {
         font-size: 1.5rem;
-        padding: 10px 30px;
+        padding: 5px 20px;
         font-weight: normal;
     }
 
@@ -1022,11 +1021,11 @@ svg {
     }
 
     .info-item .info_tx {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
 
     .info-item img {
-        height: 28px;
+        height: 24px;
     }
 
     .content-block .last_message {
@@ -1065,21 +1064,21 @@ svg {
 
     .section-content p {
         margin-top: 0;
+        line-height: 1.2;
 
     }
 
     .info-item1-1 {
-        top: 123%;
+        top: 110%;
     }
 
     .info-item1-2 {
-        right: 53px;
-        top: 129%;
+        top: 116%;
     }
 
     .info-item1-3 {
-        top: 167%;
-        right: 56px;
+        top: 149%;
+        right: 5%;
     }
 
     .global-network h3 {
@@ -1088,7 +1087,7 @@ svg {
 
     .global-network {
         text-align: left;
-        top: 183%;
+        top: 167%;
     }
 
     .global-network_sub {
@@ -1102,31 +1101,16 @@ svg {
         top: 65%;
         z-index: -2;
     }
+
     .block5 {
         top: 86%;
-        right: 30%;
+        right: 36%;
     }
 
 
 }
 
 @media screen and (max-width: 440px) {
-
-    .info-item1-1 {
-        top: 112%;
-    }
-
-    .info-item1-2 {
-        top: 119%;
-    }
-
-    .info-item1-3 {
-        top: 154%;
-    }
-
-    .global-network {
-        top: 172%;
-    }
 
     .global-network img {
         transform: scale(1.3);
@@ -1244,9 +1228,17 @@ svg {
 
 @media screen and (max-width: 375px) {
 
+    .section-content {
+        top: 17%;
+    }
+
+    .info-item img {
+        height: 20px;
+    }
+
     .info-item1-1 {
-        top: 120%;
-        left: 37px;
+        top: 109%;
+        left: 9%;
     }
 
     .content-block img {
@@ -1258,16 +1250,17 @@ svg {
     }
 
     .info-item1-2 {
-        right: 53px;
-        top: 125%;
+        top: 116%;
+        right: 9%;
     }
 
     .info-item1-3 {
-        top: 164%;
+        top: 149%;
+        right: 5%;
     }
 
     .global-network {
-        top: 182%;
+        top: 165%;
     }
 
     .global-network img {
@@ -1280,7 +1273,7 @@ svg {
 
     .block5 {
         top: 85%;
-        right: 32%;
+        right: 49%;
     }
 
 }
