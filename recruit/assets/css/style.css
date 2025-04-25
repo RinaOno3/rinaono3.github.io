@@ -125,7 +125,7 @@ picture img {
     }
 
     .page_top_fv {
-        background: url('/recruit/assets/images/fv_w_sp.png') no-repeat center/cover;
+        background: url('/assets/images/fv_w_sp.png') no-repeat center/cover;
     }
 }
 
@@ -426,7 +426,7 @@ body {
 }
 
 .sub-menu li::before {
-    content: url(/recruit/assets/images/common/icon_nav_arrow.png);
+    content: url(/assets/images/common/icon_nav_arrow.png);
     position: absolute;
     left: 0;
     top: 50%;
@@ -488,7 +488,7 @@ body {
 }
 
 .sub-menu li::before {
-    content: url(/recruit/assets/images/common/icon_nav_arrow.png);
+    content: url(/assets/images/common/icon_nav_arrow.png);
     position: absolute;
     left: 0;
     top: 50%;
@@ -644,13 +644,21 @@ body {
         transform: translateX(100%);
         transition: transform 0.3s ease-in-out;
         z-index: 1000;
-
+        overflow-y: auto; /* これを追加 */
+        -webkit-overflow-scrolling: touch; /* iOSでスムーズスクロール */
     }
 
     .mobile-menu.open {
         transform: translateX(0);
     }
 
+body.menu-open {
+    overflow: hidden;
+}
+
+body.menu-open .mobile-menu {
+    overflow-y: auto;
+}
     /* メニューリスト */
     .menu-list {
         list-style: none;
@@ -684,7 +692,7 @@ body {
     }
 
     .menu-item li::after {
-        content: url(/recruit/assets/images/common/icon_nav_arrow.png);
+        content: url(/assets/images/common/icon_nav_arrow.png);
         position: absolute;
         left: 0;
         top: 30%;
@@ -908,7 +916,7 @@ body {
 
 .button--red::after {
     content: "";
-    background-image: url(/recruit/assets/images/common/icon_btn_r.svg);
+    background-image: url(/assets/images/common/icon_btn_r.svg);
     background-size: 55px;
     background-position: 0;
     background-repeat: no-repeat;
@@ -934,7 +942,7 @@ body {
 
 .button--blue::after {
     content: "";
-    background-image: url(/recruit/assets/images/common/icon_btn_b.svg);
+    background-image: url(/assets/images/common/icon_btn_b.svg);
     background-size: 55px;
     background-position: 0;
     background-repeat: no-repeat;
@@ -987,7 +995,7 @@ body {
 
 /* メインタイトル */
 .main_ttl {
-    background-image: url(/recruit/assets/images/faq/fv.jpg);
+    background-image: url(/assets/images/faq/fv.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1192,7 +1200,7 @@ body {
     width: 100%;
     height: 100vh;
     /* ビューポート全体をカバー */
-    background: url('/recruit/assets/images/fv_w.png') no-repeat center/cover;
+    background: url('/assets/images/fv_w.png') no-repeat center/cover;
     /* 背景画像 */
     z-index: 1;
     overflow: hidden;
@@ -1206,7 +1214,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('/recruit/assets/images/title.png') no-repeat center/cover;
+    background: url('/assets/images/title.png') no-repeat center/cover;
     /* 扉の画像 */
     opacity: 1;
     /* 初期状態は完全不透明 */
@@ -1565,7 +1573,7 @@ body {
 /* 募集要項　キャリア */
 
 .page_recruit-career .main_ttl {
-    background-image: url(/recruit/assets/images/recruit-career/fv.jpg);
+    background-image: url(/assets/images/recruit-career/fv.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1767,7 +1775,7 @@ dd span {
 @media (max-width: 768px) {
 
     .page_recruit-career .main_ttl {
-        background-image: url(/recruit/assets/images/recruit-career/fv_sp.jpg);
+        background-image: url(/assets/images/recruit-career/fv_sp.jpg);
     }
 
     .map-section {
@@ -1810,7 +1818,7 @@ dd span {
 /* 募集要項　新卒 */
 
 .page_recruit-new .main_ttl {
-    background-image: url(/recruit/assets/images/recruit-new/fv.jpg);
+    background-image: url(/assets/images/recruit-new/fv.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1857,7 +1865,7 @@ dd span {
 @media (max-width: 768px) {
 
     .page_recruit-new .main_ttl {
-        background-image: url(/recruit/assets/images/recruit-new/fv_sp.jpg);
+        background-image: url(/assets/images/recruit-new/fv_sp.jpg);
     }
 
     .page_recruit-new .flex_item {
@@ -1872,7 +1880,7 @@ dd span {
 /* セクション全体 */
 
 .page_benefits .main_ttl {
-    background-image: url(/recruit/assets/images/benefits/fv.jpg);
+    background-image: url(/assets/images/benefits/fv.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -2088,7 +2096,7 @@ dd span {
 @media (max-width: 768px) {
 
     .page_benefits .main_ttl {
-        background-image: url(/recruit/assets/images/benefits/fv_sp.jpg);
+        background-image: url(/assets/images/benefits/fv_sp.jpg);
     }
 
     .page_benefits .sec_1 {
@@ -2159,7 +2167,7 @@ dd span {
 
 
 .page_training .main_ttl {
-    background-image: url(/recruit/assets/images/training/fv.jpg);
+    background-image: url(/assets/images/training/fv.jpg);
 }
 
 .training .page_wrp {
@@ -2427,7 +2435,7 @@ dd span {
     }
 
     .page_training .main_ttl {
-        background-image: url(/recruit/assets/images/training/fv_sp.jpg);
+        background-image: url(/assets/images/training/fv_sp.jpg);
     }
 
     .support-content {
@@ -2537,7 +2545,7 @@ dd span {
 /* 先輩紹介 */
 
 .page_members .main_ttl {
-    background-image: url(/recruit/assets/images/members/fv.jpg);
+    background-image: url(/assets/images/members/fv.jpg);
 }
 
 /* グローバルクラス: .page_members */
@@ -2605,7 +2613,7 @@ dd span {
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: url(/recruit/assets/images/members/icon_arrow.png) no-repeat;
+    background: url(/assets/images/members/icon_arrow.png) no-repeat;
     background-size: contain;
     background-position: center;
     margin-left: 30px;
@@ -2691,7 +2699,7 @@ dd span {
 .page_members__roundtable-info::after {
     content: "";
     position: absolute;
-    background: url(/recruit/assets/images/btn_arrow_white.png) no-repeat right center;
+    background: url(/assets/images/btn_arrow_white.png) no-repeat right center;
     background-size: 35px 35px;
     width: 47px;
     height: 47px;
@@ -2762,7 +2770,7 @@ dd span {
 @media (max-width: 768px) {
 
     .page_members .main_ttl {
-        background-image: url(/recruit/assets/images/members/fv_sp.jpg);
+        background-image: url(/assets/images/members/fv_sp.jpg);
     }
 
     .page_members__card-container {
@@ -2821,7 +2829,7 @@ dd span {
 
 /* MST保険サービスとは */
 .page_about-mst .main_ttl {
-    background-image: url(/recruit/assets/images/about-mst/fv.jpg);
+    background-image: url(/assets/images/about-mst/fv.jpg);
 }
 
 .page_about-mst .sec_1 {
@@ -2895,7 +2903,7 @@ dd span {
 
 @media (max-width: 768px) {
     .page_about-mst .main_ttl {
-        background-image: url(/recruit/assets/images/about-mst/fv_sp.jpg);
+        background-image: url(/assets/images/about-mst/fv_sp.jpg);
     }
 
     .page_about-mst .sec_1 {
@@ -2970,7 +2978,7 @@ dd span {
 }
 
 .page_about-agent .main_ttl {
-    background-image: url(/recruit/assets/images/about-agent/fv.jpg);
+    background-image: url(/assets/images/about-agent/fv.jpg);
 }
 
 .page_about-agent p {
@@ -3128,7 +3136,7 @@ dd span {
 
 @media (max-width: 768px) {
     .page_about-agent .main_ttl {
-        background-image: url(/recruit/assets/images/about-agent/fv_sp.jpg);
+        background-image: url(/assets/images/about-agent/fv_sp.jpg);
     }
 
     .page_about-agent .slide-map-container {
@@ -3724,7 +3732,7 @@ dd span {
 /* 職種紹介 */
 
 .page_job .main_ttl {
-    background-image: url(/recruit/assets/images/jobs/fv.jpg);
+    background-image: url(/assets/images/jobs/fv.jpg);
 }
 
 .page_jobs {
@@ -3882,7 +3890,7 @@ dd span {
 
 .page_jobs__mentors-heading::after {
     content: "";
-    background-image: url(/recruit/assets/images/jobs/icon_fukidashi.png);
+    background-image: url(/assets/images/jobs/icon_fukidashi.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -3945,7 +3953,7 @@ dd span {
 
 @media (max-width: 768px) {
     .page_job .main_ttl {
-        background-image: url(/recruit/assets/images/jobs/fv_sp.jpg);
+        background-image: url(/assets/images/jobs/fv_sp.jpg);
     }
 
     .page_jobs__section {

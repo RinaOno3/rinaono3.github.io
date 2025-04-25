@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>職種紹介｜採用情報｜エムエスティ保険サービス株式会社</title>
+    <meta name="description" content="損害保険・生命保険代理店、エムエスティ保険サービスの採用情報、職種紹介のページです。エムエスティ保険サービスの職種・部門および仕事内容について紹介します。">
+    <!-- Google Fonts 読み込み -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- スタイルシートの読み込み -->
+    <link rel="stylesheet" href="/recruit/assets/css/normalize.css">
+    <link rel="stylesheet" href="/recruit/assets/css/style.css">
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header class="header fixed-header">
+        <div class="header-container">
+            <!-- ロゴ -->
+             <div class="logo_area_wrp">
+                <a class="logo" href="/recruit/">
+                    <picture>
+                        <source srcset="/recruit/assets/images/common/logo_sp.png" media="(max-width: 768px)">
+                        <img src="/recruit/assets/images/common/logo.png" alt="エムエスティロゴ">
+                    </picture>
+                    <span class="pc-nav">RECRUIT SITE</span>
+                </a>
+                <div class="entry_btn_area">
+                <a class="st-header_btn st-header_btn--last" href="https://job.axol.jp/qd/s/mst-is_26/entry/" target="_blank">26年卒<br>ENTRY</a>
+            </div>
+        </div>
+            <!-- PCナビゲーション -->
+            <nav class="nav pc-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">会社・仕事を知る</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">人を知る</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">働く環境</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">採用情報</a>
+                    </li>
+                </ul>
+                <!-- サブメニュー全体 -->
+                <div class="sub-menu-container">
+                    <ul class="sub-menu">
+                        <li><a href="/recruit/about/message.html">メッセージ</a></li>
+                        <li><a href="/recruit/about/agent.html">保険代理店とは</a></li>
+                        <li><a href="/recruit/about/mst.html">エムエスティ保険サービスとは</a></li>
+                        <li><a href="/recruit/about/jobs.html">職種紹介</a></li>
+                    </ul>
+                    <ul class="sub-menu">
+                        <li><a href="/recruit/member/members.html">先輩紹介</a></li>
+                        <li><a href="/recruit/member/dialogue.html">座談会</a></li>
+                    </ul>
+                    <ul class="sub-menu">
+                        <li><a href="/recruit/works/training.html">人材育成</a></li>
+                        <li><a href="/recruit/works/benefits.html">福利厚生・働く環境</a></li>
+                    </ul>
+                    <ul class="sub-menu">
+                        <li><a href="/recruit/recruit/new.html">募集要項（新卒）</a></li>
+                        <li><a href="/recruit/recruit/career.html">募集要項（キャリア）</a></li>
+                        <li><a href="/recruit/recruit/faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- ハンバーガーメニュー（スマホ版） -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- スマホ版ナビゲーション -->
+            <nav class="mobile-menu" id="mobileMenu">
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <span class="menu-heading">会社・仕事を知る</span>
+                        <ul>
+                            <li><a href="/recruit/about/message.html">メッセージ</a></li>
+                            <li><a href="/recruit/about/agent.html">保険代理店とは</a></li>
+                            <li><a href="/recruit/about/mst.html">エムエスティ保険サービスとは</a></li>
+                            <li><a href="/recruit/about/jobs.html">職種紹介</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <span class="menu-heading">人を知る</span>
+                        <ul>
+                            <li><a href="/recruit/member/members.html">先輩紹介</a></li>
+                            <li><a href="/recruit/member/dialogue.html">座談会</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <span class="menu-heading">働く環境</span>
+                        <ul>
+                            <li><a href="/recruit/works/training.html">人材育成</a></li>
+                            <li><a href="/recruit/works/benefits.html">福利厚生・働く環境</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <span class="menu-heading">採用情報</span>
+                        <ul>
+                            <li><a href="/recruit/recruit/new.html">募集要項（新卒）</a></li>
+                            <li><a href="/recruit/recruit/career.html">募集要項（キャリア）</a></li>
+                            <li><a href="/recruit/recruit/faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="page_job">
+        <!-- メインタイトル -->
+        <div class="main_ttl">
+            <h1>職種紹介</h1>
+            <p>エムエスティ保険サービスの職種・部門および仕事内容について紹介します。</p>
+        </div>
+        <!-- セクション1 -->
+        <section class="sec_1 anchor" id="Corporate_sales">
+            <section class="page_jobs__section">
+                <div class="page_jobs__content">
+                    <div class="page_jobs__title" >
+                        <h2 class="page_jobs__heading">Corporate sales</h2>
+                        <p class="page_jobs__subheading">法人営業</p>
+                    </div>
+                    <div class="page_jobs__description">
+                        <p>エムエスティ保険サービスのビジネスの中核である法人向け保険の企画・提案営業を担当する職種です。生命保険・損害保険の多様な保険商品の中から、お客さまである企業・団体が事業を展開する上で直面する多様なリスクに対して、それぞれに適切な保険商品をカスタマイズしてご提案します。エリアごとに分かれた担当営業に加えて、大企業を主要顧客とする部署、中小企業を主要顧客とする部署など、さまざまな営業部門があります。
+                        </p>
+                    </div>
+                </div>
+                <div class="page_jobs__image">
+                    <picture>
+                        <source srcset="/recruit/assets/images/jobs/item1_1.jpg" media="(max-width: 768px)">
+                        <img src="/recruit/assets/images/jobs/item1_1.jpg" alt="法人営業イメージ">
+                    </picture>
+                </div>
+            </section>
+            <section class="page_jobs__mentors">
+                <h3 class="page_jobs__mentors-heading">法人営業の先輩</h3>
+                <div class="page_jobs__mentors-list">
+                    <div class="page_jobs__mentor">
+                        <a href="/recruit/member/members/introduction01.html"><img src="/recruit/assets/images/jobs/box_01.jpg" alt="東京"></a>
+                    </div>
+                    <div class="page_jobs__mentor">
+                        <a href="/recruit/member/members/introduction02.html"><img src="/recruit/assets/images/jobs/box_02.jpg" alt="名古屋"></a>
+                    </div>
+                    <div class="page_jobs__mentor">
+                        <a href="/recruit/member/members/introduction03.html"><img src="/recruit/assets/images/jobs/box_03.jpg" alt="大阪"></a>
+                    </div>
+                    <div class="page_jobs__mentor">
+                        <a href="/recruit/member/members/introduction04.html"><img src="/recruit/assets/images/jobs/box_04.jpg" alt="東京"></a>
+                    </div>
+                    <div class="page_jobs__mentor">
+                        <a href="/recruit/member/members/introduction11.html"><img src="/recruit/assets/images/jobs/box_05.jpg" alt="名古屋"></a>
+                    </div>
+                    <div class="page_jobs__mentor">
+                        <a href="/recruit/member/members/introduction12.html"><img src="/recruit/assets/images/jobs/box_06.jpg" alt="東京"></a>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="sec_2 anchor" id="Retail_sales">
+            <section class="page_jobs__section row_content">
+                <div class="page_jobs__content">
+                    <div class="page_jobs__title">
+                        <h2 class="page_jobs__heading">Retail sales</h2>
+                        <p class="page_jobs__subheading">リテール営業</p>
+                    </div>
+                    <div class="page_jobs__description">
+                        <p>個人のお客さまを対象とした保険商品の提供を担当する職種です。企業が福利厚生の一環として、従業員に向けた自動車保険・火災保険・医療保険などの保険を用意することがありますが、これらの保険商品を主に取り扱います。社内（バックオフィス）での勤務が中心で、契約更改や新規提案のサポート、成約後の手続きやアフターフォローなどの業務に携わります。基本的にチームでお客さまへの対応を行い、法人営業担当者と連携してお客さまをご訪問することもあります。
+                        </p>
+                    </div>
+                </div>	
+                <div class="page_jobs__image">
+                    <picture>
+                        <source srcset="/recruit/assets/images/jobs/item2_1.jpg" media="(max-width: 768px)">
+                        <img src="/recruit/assets/images/jobs/item2_1.jpg" alt="法人営業イメージ">
+                    </picture>
+                </div>
+            </section>
+            <section class="page_jobs__mentors">
+                <h3 class="page_jobs__mentors-heading">リテール営業の先輩</h3>
+                <div class="page_jobs__mentors-list">
+                    <div class="page_jobs__mentor">
+                        <a href="/recruit/member/members/introduction05.html"><img src="/recruit/assets/images/jobs/box_07.jpg" alt="東京"></a>
+                    </div>
+
+                </div>
+            </section>
+        </section>
+        <section class="sec_3 anchor" id="Overseas_sales">
+            <section class="page_jobs__section ">
+                <div class="page_jobs__content">
+                    <div class="page_jobs__title">
+                        <h2 class="page_jobs__heading">Overseas sales</h2>
+                        <p class="page_jobs__subheading">海外営業</p>
+                    </div>
+                    <div class="page_jobs__description">
+                        <p>日本企業が海外で事業展開するにあたっては、さまざまなリスクへの備えが必要となります。しかしながら日本国内の保険を海外で適用することはできず、現地での法律に基づいた保険サービスの提供が求められます。海外営業はこうした海外保険商品の提供を通じて、企業活動を支援する業務です。グローバルなグループネットワークを生かして海外のグループ企業への出向や海外赴任の機会も多い職種です。
+                        </p>
+                    </div>
+                </div>
+                <div class="page_jobs__image">
+                    <picture>
+                        <source srcset="/recruit/assets/images/jobs/item3_1.jpg" media="(max-width: 768px)">
+                        <img src="/recruit/assets/images/jobs/item3_1.jpg" alt="法人営業イメージ">
+                    </picture>
+                </div>
+            </section>
+            <section class="page_jobs__mentors">
+                <h3 class="page_jobs__mentors-heading">海外営業の先輩</h3>
+                <div class="page_jobs__mentors-list">
+                    <div class="page_jobs__mentor">
+                        <a href="/recruit/member/members/introduction06.html"><img src="/recruit/assets/images/jobs/box_08.jpg" alt="東京"></a>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="sec_4 anchor" id="consulting">
+            <section class="page_jobs__section row_content">
+                <div class="page_jobs__content">
+                    <div class="page_jobs__title">
+                        <h2 class="page_jobs__heading">Risk consulting</h2>
+                        <p class="page_jobs__subheading">リスクコンサルティング</p>
+                    </div>
+                    <div class="page_jobs__description">
+                        <p>法人のお客さまに対して、多様なリスクの洗い出しや評価などのコンサルティングサービスを提供します。またコンサルティングを通じて保険プログラムの最適化を図り、お客さまへの設計・提案を行います。グループのMSTリスクコンサルティング・MSTマーシュなどへの出向を通じて、より専門的なスキルを身に付けることができます。
+                        </p>
+                    </div>
+                </div>
+                <div class="page_jobs__image">
+                    <picture>
+                        <source srcset="/recruit/assets/images/jobs/item4_1.jpg" media="(max-width: 768px)">
+                        <img src="/recruit/assets/images/jobs/item4_1.jpg" alt="法人営業イメージ">
+                    </picture>
+                </div>
+            </section>
+            <section class="page_jobs__mentors">
+                <h3 class="page_jobs__mentors-heading">グループ企業の先輩</h3>
+                <div class="page_jobs__mentors-list">
+                    <div class="page_jobs__mentor">
+                        <a href="/recruit/member/members/introduction07.html"><img src="/recruit/assets/images/jobs/box_09.jpg" alt="リスクコンサル"></a>
+                    </div>
+                    <div class="page_jobs__mentor">
+                        <a href="/recruit/member/members/introduction08.html"><img src="/recruit/assets/images/jobs/box_10.jpg" alt="MSTマーシュ"></a>
+                    </div>
+                    <div class="page_jobs__mentor">
+                        <a href="/recruit/member/members/introduction08.html"><img src="/recruit/assets/images/jobs/box_10_1.jpg" alt="MSTマーシュ"></a>
+                    </div>
+
+                </div>
+            </section>
+        </section>
+        <section class="sec_5 anchor" id="Planning_department">
+            <section class="page_jobs__section">
+                <div class="page_jobs__content">
+                    <div class="page_jobs__title">
+                        <h2 class="page_jobs__heading">Planning department</h2>
+                        <p class="page_jobs__subheading">企画</p>
+                    </div>
+                    <div class="page_jobs__description">
+                        <p>経営陣のスタッフとして事業計画の策定や業績評価の運営を行うほか、MSTグループや子会社の管理運営、広報対応や会社全体に係わる重要な事項全般にかかる広範な役割を担っています。社内外からの様々な課題に対し、多様なバックグラウンドを持つ人材の英知を結集し、具体的な解決策を導き出し実行していきます。また、イノベーション・ラボ事業も担当しており、先駆的な取り組みにもチャレンジするなど、やりがいのある仕事です。
+                        </p>
+                    </div>
+                </div>
+                <div class="page_jobs__image">
+                    <picture>
+                        <source srcset="/recruit/assets/images/jobs/item5_1.jpg" media="(max-width: 768px)">
+                        <img src="/recruit/assets/images/jobs/item5_1.jpg" alt="法人営業イメージ">
+                    </picture>
+                </div>
+            </section>
+            <!-- 法人営業の先輩エリア -->
+            <section class="page_jobs__mentors">
+                <h3 class="page_jobs__mentors-heading">企画の先輩</h3>
+                <div class="page_jobs__mentors-list">
+                    <div class="page_jobs__mentor">
+                        <a href="/recruit/member/members/introduction09.html"><img src="/recruit/assets/images/jobs/box_11.jpg" alt="東京"></a>
+                    </div>
+                    <div class="page_jobs__mentor">
+                        <a href="/recruit/member/members/introduction10.html"><img src="/recruit/assets/images/jobs/box_12.jpg" alt="名古屋"></a>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <div class="button-wrapper bottom_bnt_area">
+            <a href="/recruit/member/members.html" class="button button--rounded">
+                先輩紹介
+            </a>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <a href="https://mst-is.co.jp/" class="footer-link" target="_blank" rel="noopener noreferrer">
+                エムエスティ保険サービス株式会社　コーポレートサイト
+                <img src="/recruit/assets/images/common/icon_link_r.svg" alt="responsive">
+            </a>
+        </div>
+    </footer>
+
+
+    <!-- JavaScriptの読み込み -->
+    <script src="/recruit/assets/js/main.js"></script>
+</body>
+
+</html>

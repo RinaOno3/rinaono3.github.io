@@ -117,7 +117,7 @@
 
 .insurance-merit__item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 30px;
 }
 
@@ -128,6 +128,9 @@
     color: #d80c18;
     text-align: center;
     line-height: 1.2;
+    display: flex;
+    align-items: center;
+    height:100%;
 }
 
 .insurance-merit__content {
@@ -141,6 +144,9 @@
     margin: 0;
 }
 
+.insurance-merit__3gyo {
+    min-height: 4.5em;
+}
 .insurance-merit__text {
     font-weight: bold;
     font-size: 1.6rem;
@@ -164,6 +170,10 @@
     .insurance-merit__number {
         font-size: 50px;
         min-width: 50px;
+    }
+
+    .insurance-merit__3gyo {
+        min-height: 0em;
     }
 }
 
@@ -286,15 +296,6 @@
 	}
 }
 
-.insurance-buy__item:nth-child(n + 2) .insurance-buy__wrap {
-	gap: 1.25rem;
-}
-@media screen and (max-width: 767px) {
-	.insurance-buy__item:nth-child(n + 2) .insurance-buy__wrap {
-		gap: 0.6875rem;
-	}
-}
-
 .insurance-buy__item:nth-child(5) .insurance-buy__wrap {
 	gap: 2.1875rem;
 }
@@ -330,6 +331,12 @@
 	line-height: 1.25;
 }
 @media screen and (max-width: 767px) {
+	.insurance-buy__name {
+	    text-align: left;
+	}
+	.insurance-buy__name {
+	    text-align: left;
+	}
 	.insurance-buy__text {
 		width: 95%;
 		margin-inline: auto;
@@ -339,7 +346,7 @@
 }
 
 .insurance-buy__item p.insurance-buy__text {
-	margin-top: 2.9rem;
+	margin-top: 0rem;
 }
 @media screen and (max-width: 767px) {
 	.insurance-buy__item p.insurance-buy__text {
@@ -347,20 +354,11 @@
 	}
 }
 
-.insurance-buy__item:nth-child(n + 2) .insurance-buy__text {
-	margin-top: 1.3125rem;
+.insurance-buy__item:nth-child(1) .insurance-buy__text,.insurance-buy__item:nth-child(2) .insurance-buy__text,.insurance-buy__item:nth-child(5) .insurance-buy__text {
+	margin-top: 7.5rem;
 }
 @media screen and (max-width: 767px) {
-	.insurance-buy__item:nth-child(n + 2) .insurance-buy__text {
-		margin-top: 0;
-	}
-}
-
-.insurance-buy__item:nth-child(5) .insurance-buy__text {
-	margin-top: 2.9rem;
-}
-@media screen and (max-width: 767px) {
-	.insurance-buy__item:nth-child(5) .insurance-buy__text {
+	.insurance-buy__item:nth-child(1) .insurance-buy__text,.insurance-buy__item:nth-child(2) .insurance-buy__text,.insurance-buy__item:nth-child(5) .insurance-buy__text {
 		margin-top: 0;
 	}
 }
@@ -546,6 +544,7 @@
     font-size: 16px;
     font-weight: bold;
     padding: 10px;
+    min-height: 4.5em;
 }
 
 /* テキスト部分 */

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>保険代理店とは｜採用情報｜エムエスティ保険サービス株式会社</title>
+    <meta name="description" content="損害保険・生命保険代理店、エムエスティ保険サービスの採用情報、保険代理店とはのページです。保険業界で働くことを検討されている方へ、保険代理店の役割・特徴について紹介します。">
+    <!-- Google Fonts 読み込み -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- スタイルシートの読み込み -->
+    <link rel="stylesheet" href="/recruit/assets/css/normalize.css">
+    <link rel="stylesheet" href="/recruit/assets/css/style.css">
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header class="header fixed-header">
+        <div class="header-container">
+            <!-- ロゴ -->
+             <div class="logo_area_wrp">
+                <a class="logo" href="/recruit">
+                    <picture>
+                        <source srcset="/recruit/assets/images/common/logo_sp.png" media="(max-width: 768px)">
+                        <img src="/recruit/assets/images/common/logo.png" alt="エムエスティロゴ">
+                    </picture>
+                    <span class="pc-nav">RECRUIT SITE</span>
+                </a>
+                <div class="entry_btn_area">
+                <a class="st-header_btn st-header_btn--last" href="https://job.axol.jp/qd/s/mst-is_26/entry/" target="_blank">26年卒<br>ENTRY</a>
+            </div>
+        </div>
+            <!-- PCナビゲーション -->
+            <nav class="nav pc-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">会社・仕事を知る</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">人を知る</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">働く環境</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">採用情報</a>
+                    </li>
+                </ul>
+                <!-- サブメニュー全体 -->
+                <div class="sub-menu-container">
+                    <ul class="sub-menu">
+                        <li><a href="/recruit/about/message.html">メッセージ</a></li>
+                        <li><a href="/recruit/about/agent.html">保険代理店とは</a></li>
+                        <li><a href="/recruit/about/mst.html">エムエスティ保険サービスとは</a></li>
+                        <li><a href="/recruit/about/jobs.html">職種紹介</a></li>
+                    </ul>
+                    <ul class="sub-menu">
+                        <li><a href="/recruit/member/members.html">先輩紹介</a></li>
+                        <li><a href="/recruit/member/dialogue.html">座談会</a></li>
+                    </ul>
+                    <ul class="sub-menu">
+                        <li><a href="/recruit/works/training.html">人材育成</a></li>
+                        <li><a href="/recruit/works/benefits.html">福利厚生・働く環境</a></li>
+                    </ul>
+                    <ul class="sub-menu">
+                        <li><a href="/recruit/recruit/new.html">募集要項（新卒）</a></li>
+                        <li><a href="/recruit/recruit/career.html">募集要項（キャリア）</a></li>
+                        <li><a href="/recruit/recruit/faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- ハンバーガーメニュー（スマホ版） -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- スマホ版ナビゲーション -->
+            <nav class="mobile-menu" id="mobileMenu">
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <span class="menu-heading">会社・仕事を知る</span>
+                        <ul>
+                            <li><a href="/recruit/about/message.html">メッセージ</a></li>
+                            <li><a href="/recruit/about/agent.html">保険代理店とは</a></li>
+                            <li><a href="/recruit/about/mst.html">エムエスティ保険サービスとは</a></li>
+                            <li><a href="/recruit/about/jobs.html">職種紹介</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <span class="menu-heading">人を知る</span>
+                        <ul>
+                            <li><a href="/recruit/member/members.html">先輩紹介</a></li>
+                            <li><a href="/recruit/member/dialogue.html">座談会</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <span class="menu-heading">働く環境</span>
+                        <ul>
+                            <li><a href="/recruit/works/training.html">人材育成</a></li>
+                            <li><a href="/recruit/works/benefits.html">福利厚生・働く環境</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <span class="menu-heading">採用情報</span>
+                        <ul>
+                            <li><a href="/recruit/recruit/new.html">募集要項（新卒）</a></li>
+                            <li><a href="/recruit/recruit/career.html">募集要項（キャリア）</a></li>
+                            <li><a href="/recruit/recruit/faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="page_about-agent">
+        <!-- メインタイトル -->
+        <div class="main_ttl">
+            <h1>保険代理店とは</h1>
+            <p>保険業界で働くことを検討されている方へ、<br>
+                保険代理店の役割・特徴について紹介します。</p>
+        </div>
+        <!-- メイン -->
+        <section class="about-agent">
+            <div class="page_wrp">
+                <!-- セクション見出し -->
+                <section class="sec_1">
+                    <h2 class="sec-heading sec-heading--red">保険会社と保険代理店</h2>
+                    <p>保険会社は、例えて言うなら「メーカー」、保険代理店は「商社」という側面があります。保険代理店は、お客さま（保険契約者）と保険会社（損害保険・生命保険）のパイプ役になります。
+                    </p>
+                
+                    <!-- 横スライドのラッパー -->
+                    <div class="slide-map-wrapper">
+                        <!-- 横にスライド可能な画像コンテナ -->
+                        <div class="slide-map-container">
+                            <img src="/recruit/assets/images/about-agent/item_01.jpg" alt="流れ表画像">
+                        </div>
+                        <!-- スライドバー -->
+                        <div class="slide-bar">
+                            <div class="slide-bar-fill"></div>
+                        </div>
+                    </div>                    
+                </section>
+                
+                <section class="page_wrp ">
+                    <div class="bg_gray sec_2">
+                        <div class="page_wrp-inner">
+                            <!-- 豊富な取引実績を持つ総合保険代理店 -->
+                            <h2 class="sec-heading sec-heading--red">専業代理店と兼業代理店</h2>
+                            <p>保険販売を専業とする代理店を「専業代理店」といいます。一方、その他の業務もあわせて営んでいる代理店を「兼業代理店」といい、例えば自動車ディーラー、不動産業者、旅行代理店などがあります。私たちエムエスティ保険サービスは<span>「専業代理店」</span>にあたります。</p>
+                            <!-- エムエスティ表 -->
+                            <div class="flex_item">
+                                <img src="/recruit/assets/images/about-agent/item2_1.png" alt="専業代理点">
+                                <img src="/recruit/assets/images/about-agent/item2_2.png" alt="兼業代理点">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section--group-dynamics sec_3">
+                    <!-- セクションタイトルと説明 -->
+                    <h2 class="sec-heading sec-heading--red">法人向けと個人向け</h2>
+                    <p>保険代理店としてまずイメージするのは、いわゆる「保険ショップ」などかもしれません。こうした保険代理店は「個人向け」商品を扱う保険代理店です。</p>
+                    <p>一方で「法人（企業）向け」の保険代理店もあります。法人向け保険は企業が事業を行う上での様々なリスクに備えるもので、保険代理店は、数ある保険商品の中からその企業に必要な保険をプロの目線で選定し、提案する役割を担います。
+                    </p>
+
+                    <!-- 全幅の画像 -->
+                    <div class="flex_item">
+                        <img src="/recruit/assets/images/about-agent/item3_1.png" alt="法人向け">
+                        <img src="/recruit/assets/images/about-agent/item3_2.png" alt="個人向け" class="make_img">
+                    </div>
+                    <p>保険業界と、そこでの保険代理店の役割についてご理解いただけましたでしょうか。<br>
+                        <span class="tx_red">次は、保険代理店の中の「エムエスティ保険サービス」の位置づけ・特徴について</span>ご説明します。</p>
+                        <div class="button-wrapper bottom_bnt_area">
+                            <a href="/recruit/about/mst.html" class="button button--rounded">
+                                エムエスティ保険サービスとは
+                            </a>
+                        </div>
+                </section>
+            </div>
+           
+        </section>
+       
+    </main>
+    <!-- メイン -->
+    <footer class="footer">
+        <div class="footer-container">
+            <a href="https://mst-is.co.jp/" class="footer-link" target="_blank" rel="noopener noreferrer">
+                エムエスティ保険サービス株式会社　コーポレートサイト
+                <img src="/recruit/assets/images/common/icon_link_r.svg" alt="responsive">
+            </a>
+        </div>
+    </footer>
+    <!-- JavaScriptの読み込み -->
+    <script src="/recruit/assets/js/main.js"></script>
+</body>
+
+</html>

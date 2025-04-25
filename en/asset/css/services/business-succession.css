@@ -118,7 +118,6 @@
 
 .case-list {
 	list-style-type: square;
-	padding-left: 30px;
 	font-size: 14px;
 	font-weight: bold;
 }
@@ -221,7 +220,7 @@
 .content-wrapper--business p.business-risk__name {
 	margin-top: 1.5rem;
 	margin-bottom: 1.5rem;
-	height: 59px;
+	height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -767,12 +766,13 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 1.8rem;
+	font-size: 1.4rem;
 	font-weight: bold;
 	line-height: 1.4444444444;
 	background-color: #d80c18;
 	color: #ffffff;
 	margin: 0;
+	padding-left: 10px;
 }
 @media screen and (max-width: 767px) {
 	.business-case__group-label {
@@ -781,6 +781,7 @@
 		font-size: 1.4rem;
 		line-height: 1.4;
 		margin-bottom: 0;
+    	padding-left: 0px;
 	}
 }
 
